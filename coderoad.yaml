@@ -1,0 +1,34 @@
+version: '0.0.1'
+config:
+  setup:
+    commands:
+      - sudo service postgresql stop
+      - cd .freeCodeCamp && npm install
+      - sudo cp ~/project/.freeCodeCamp/.bashrc ~
+      - sudo chmod 777 ~/project/.freeCodeCamp/test/pg.log
+      - sudo cp ~/project/.freeCodeCamp/.psqlrc ~
+      - sudo cp ~/project/.freeCodeCamp/postgresql.conf /etc/postgresql/12/main/postgresql.conf
+      - sudo cp ~/project/.freeCodeCamp/pg_hba.conf /etc/postgresql/12/main/pg_hba.conf
+      - sudo service postgresql start
+      - sudo -u postgres psql -c "CREATE USER freecodecamp WITH CREATEDB;"
+  testRunner:
+    command: npm run programmatic-test
+    args:
+      tap: --reporter=mocha-tap-reporter
+    directory: .freeCodeCamp
+  repo:
+    uri: https://github.com/moT01/.learn-sql-joins-and-functions
+    branch: v0.0.1
+  reset:
+    commands:
+      - 'echo test'
+  dependencies:
+    - name: node
+      version: '>=10'
+levels:
+  - id: '10'
+    steps:
+      - id: '10.1'
+        setup:
+          watchers:
+            - ../.bash_history
