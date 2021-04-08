@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { getLastCommand, getDirectoryContents, getCwd } = require('./utils');
 
 describe('You', () => {
@@ -9,4 +9,4 @@ describe('You', () => {
 
     assert(!directoryContents.includes('students_test.csv') && lastCommand[0] === 'rm' && /students_test\.csv/g.test(lastCommand[1]) && cwd === '/home/strove/project');
   });
-});
+});*/
