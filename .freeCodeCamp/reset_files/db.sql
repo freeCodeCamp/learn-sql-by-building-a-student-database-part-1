@@ -210,6 +210,7 @@ INSERT INTO public.majors_courses VALUES (1, 1);
 -- Data for Name: students; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.students VALUES (1, 'Rhea', 'Kellems', 1, 2.5);
 
 
 --
@@ -230,7 +231,7 @@ SELECT pg_catalog.setval('public.majors_major_id_seq', 1, true);
 -- Name: students_student_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.students_student_id_seq', 1, false);
+SELECT pg_catalog.setval('public.students_student_id_seq', 1, true);
 
 
 --
