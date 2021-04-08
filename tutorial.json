@@ -18,7 +18,7 @@
         "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\""
       ],
       "commits": [
-        "11c806b0519f3064394d92ece47a249ab1338995"
+        "a094c70da12534a435ed76ece3d958885689df2c"
       ]
     },
     "testRunner": {
@@ -58,7 +58,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "bf779e02394de83a2439745652ad26d270c94100"
+              "ec1c788cb67c3771476f527b05f6bf89685a0c13"
             ]
           },
           "content": "**The first thing you need to do is start the terminal.** Do that by clicking the \"hamburger\" menu at the top left of the screen, going to the \"terminal\" section, and clicking \"new terminal\". Once you open a new one, type `echo hello world` into the terminal and press enter.",
@@ -82,7 +82,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "ef25f3fed612a210dc4792bf99c642928f4e0e6c"
+              "f00c820ca8b7e7adbfa4b705c7e5fbeeaf53677d"
             ]
           },
           "content": "psql login",
@@ -105,7 +105,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "598e42bcbdf6ec8c72dd8abf432a2c2aa9843dc5"
+              "5d4f5c7f6b704d14a10e51b70be5f1981c96fcf2"
             ]
           },
           "content": "\\l",
@@ -128,7 +128,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "a1eda2086ad2d12dba8b08f4b797de8a97467d99"
+              "3be30888ce960f9dd45aa6d8b41b9cf948fb2ad8"
             ]
           },
           "content": "CREATE DATABASE students;",
@@ -151,7 +151,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "1156de32c2d80b9f668b3123c4123a985dc96070"
+              "aaec14ec51781abe36428784af548742955f3143"
             ]
           },
           "content": "\\l",
@@ -174,7 +174,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "ecbdbecc14ed6deefe17fbee2148eac10d2644a5"
+              "4d9c516ac055fa023441b04caf1abb5a1365dfaf"
             ]
           },
           "content": "\\c students",
@@ -197,7 +197,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "498596a11188068cd9eb6033dfd963c50dc0cba8"
+              "58167bf7afc0ed5322566bfc8a7cf53a31b5e94f"
             ]
           },
           "content": "CREATE TABLE students",
@@ -220,7 +220,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "8f6bb2a7a00d6da86f3cf27706c06f1ace78cce5"
+              "68679a29dbb559b0e6c5f8206a7e7020d70a6709"
             ]
           },
           "content": "CREATE TABLE majors",
@@ -243,7 +243,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "33ce79b305b9959e91434133664e668232caaac1"
+              "d356179024a9a4142aee9b8f4373f5fa2dcacc44"
             ]
           },
           "content": "CREATE TABLE gps",
@@ -266,7 +266,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "6c4ffc0876237d5cf4c351028c28ab9d566f3b2c"
+              "ea65a4beb1f4268b2a098c0873760045545fbb39"
             ]
           },
           "content": "CREATE TABLE students_majors",
@@ -289,7 +289,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "a970b9e3c4d48c4f697f3c7de56e78baf607be28"
+              "bb2ca2e8f74a1e7010ea2520b18181cecf0f71ab"
             ]
           },
           "content": "\\d",
@@ -312,7 +312,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "fa80d542e8955b5d57511d494770755edf522a3f"
+              "2bf73c446bfbbd3e68713897011b69e0ed073377"
             ]
           },
           "content": "create student_id - serial primary key",
@@ -335,7 +335,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "63b3947edf835198ffc47fae1862c6850bb51da4"
+              "1c0a1607239982a2275e6ae6d3562b1b1664e1b6"
             ]
           },
           "content": "Create first_name column - varchar(50) not null",
@@ -358,7 +358,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "01e4b56d32af47848996d118f1c131c359d985c9"
+              "e09dac3068dde6e218b93d51dd98b9bf276dee4c"
             ]
           },
           "content": "Create last_name column - varchar(50) not null",
@@ -381,7 +381,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "55b2ff3253eb28f0e5a7a1c70feca20065db94de"
+              "d15c0f1d890dbfffa1a2dfa1ff4d0d890afd2acc"
             ]
           },
           "content": "\\d students",
@@ -404,7 +404,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "8c0af7efdd6452211b897bbca6c7442fc54fada4"
+              "809be8f7e05e439e05d92c857e262ac7daf161dd"
             ]
           },
           "content": "Create major_id column - serial primary key",
@@ -427,7 +427,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "47b6a2fcd10b259a90a827439b43b5b83589ccd4"
+              "12a9cbc6611707b6abdca62e358a4b36fb1c3f56"
             ]
           },
           "content": "Create major column - varchar(50) not null",
@@ -450,7 +450,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "3e24ced56cb15debe1f18325930b3caefcbff65e"
+              "1a095d6d355e927d381a66438223f73d487192b6"
             ]
           },
           "content": "\\d majors",
@@ -473,7 +473,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "e22a58073adc03b10f27d03355ffc1b61abd3476"
+              "edef11fec02994f12cc98e9bf2d51a232098910a"
             ]
           },
           "content": "Create student_id column in gpas - int primary key",
@@ -496,7 +496,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "56534a906ea695de9f1a7ace5584e4f58b7e24c8"
+              "ef388ccd789d21d72c2c27c3d26a2b8fe05822c9"
             ]
           },
           "content": "Set student_id in gpas as foreign key",
@@ -519,7 +519,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "db645da6cf74f6913d92ba03e624dad3a63462ca"
+              "94358623b4275b4ab8f47d8cdba03835cbffc96b"
             ]
           },
           "content": "Create gpa column - numeric(2, 1) not null",
@@ -542,7 +542,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "e2dab9ed062ad85726db62d603405ed603c8575d"
+              "8a14f62767dbee37ca8894604694d437119bc516"
             ]
           },
           "content": "\\d gpas",
@@ -565,7 +565,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "7174132dd9356a120ae10b9b41266cd2ff7087a5"
+              "4f53b16531fd04bbc3828b29b4de90ad3429bbe0"
             ]
           },
           "content": "Create student_id column - int not null - in s_m",
@@ -588,7 +588,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d59708e2440c56ca4d336938f6502ecddb332b28"
+              "30a046c56fdb3d619f06c8a1ef50841bdc598e70"
             ]
           },
           "content": "set student_id foreign key",
@@ -611,7 +611,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2ac2107e558e3820f5d22001a3247d6cbdd958d6"
+              "25d56eeea273cb35e93545a7aadfc18630b4f67b"
             ]
           },
           "content": "Create major_id column - int not null",
@@ -634,7 +634,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "6e76f8b649960d3f9242c92b485a56e77f972162"
+              "dd31d1d7c348ad289fae748f885df443494574e4"
             ]
           },
           "content": "set major_id fkey",
@@ -657,7 +657,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "42a0f55afd71a94235244b0e29e971f02f0a2cc1"
+              "e0590e2a004c7a8a5dd8e33696419c9194147b2a"
             ]
           },
           "content": "\\d students_majors",
@@ -680,7 +680,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "bd9b469690984e54ce338caa6a32ec62dc8e7f37"
+              "921fce8d9eb30ca234b39f8c225b57a2116f2d40"
             ]
           },
           "content": "Create componsite pKey - alter table _ add primary key (s_id, m_id);",
@@ -703,7 +703,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "dd832acb3bf13694b268a0b9cbfc7c2438e9d818"
+              "269a9cf1d6e4eb28ae75f951e5c4a2d46d70d635"
             ]
           },
           "content": "\\d students_majors",
@@ -726,7 +726,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "51b177365830d0402d25c9694ecd9d2242154f76"
+              "7625bd3be158d675c1f3874843e9ed2bdcc71f6e"
             ]
           },
           "content": "\\d",
@@ -749,7 +749,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "01f7dfaa0122b2ed07ea57719660295282a37992"
+              "801c9114afeba7caa79500a15685352b2d5fc347"
             ]
           },
           "content": "\\d students",
@@ -772,7 +772,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "ef1d9ce2bb53568fddbef8e9c6696d1ae49bc775"
+              "40daf121af258d032dbebf4cb53fb96455a02cab"
             ]
           },
           "content": "INSERT INTO students ('Rhea', 'Kellems')",
@@ -795,7 +795,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "998c9d3d218eaf5762b7c631939f96fbaf68c851"
+              "da5032de0a1b89fe67f820ffe251813d8f0f71cd"
             ]
           },
           "content": "\\d gpas",
@@ -818,7 +818,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "be1518b71234925309ef6d66751816f896bfe510"
+              "35e13c60f029f4dae57f34fbf0c42670de3b1561"
             ]
           },
           "content": "SELECT * FROM students",
@@ -841,7 +841,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "fd19c50e5c80e824993a4678c1b655506058b928"
+              "4e9e10fb15a31dc51acc60768ff585f29d0edeff"
             ]
           },
           "content": "INSERT INTO gpas (1, '2.5')",
@@ -864,7 +864,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "613669d917441acb836717714e92f58aa42bdffd"
+              "f5638b70b53a91558f1bc3a2fff6eb3e3942bf29"
             ]
           },
           "content": "SELECT * FROM gpas;",
@@ -887,7 +887,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "8c12c0279378ba5d756b1bc0d0b5f198bf6e275d"
+              "225688b42203b4fb6a9403b5d2a30daa0eb737ac"
             ]
           },
           "content": "\\d majors",
@@ -910,7 +910,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "ece3c37b8c4a65b0e4d27286c4a9fd51b4c80ae4"
+              "6e83593ae7c14db329577b22868a6be65a52a82e"
             ]
           },
           "content": "INSERT INTO majors ('db admin')",
@@ -933,7 +933,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "05125f02e868aa1368dd46e8075b03a5237be0cc"
+              "5a162e54f7006f151fc6b77a0ced1927f15585d7"
             ]
           },
           "content": "SELECT * FROM majors;",
@@ -956,7 +956,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "9ae71c70b244067c4ca4bce84710a06268564c36"
+              "ec158c2c57798e7d63a69e40c5cc7c20ef94b13f"
             ]
           },
           "content": "\\d students_majors",
@@ -979,7 +979,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "4e7f62905847225a22aea9ad97a92799b35caeeb"
+              "15d8b6e4c04aacfd922e97a237a505924a51879c"
             ]
           },
           "content": "SELECT * FROM majors",
@@ -1002,7 +1002,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "b7aaa0c73dafa567704136857ff01133edd77497"
+              "4d6040994b9d38160531836b9c42cdcc596d1d70"
             ]
           },
           "content": "INSERT INTO students_majors (1,1)",
@@ -1025,7 +1025,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "8e34b1b4dbe1864688988c35ac4cc9f4a459a397"
+              "ccfad58c32fa325a934431a38f5a9df2a48bd97d"
             ]
           },
           "content": "SELECT * FROM students_majors",
@@ -1048,7 +1048,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "7e9b17dad6e2f4ac2871f8d9c017e4c1d5a856c1"
+              "bbaff1cc154bcf75936616b72a1075252928ec0d"
             ]
           },
           "content": "touch insert_data.sh",
@@ -1071,7 +1071,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "6256368a056ee3df701907a2441e24c2788e61bc"
+              "fc41bf7ad61bdca8e146027508dc4dc48ea88d40"
             ]
           },
           "content": "chmod +x insert_data.sh",
@@ -1094,7 +1094,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c218510ed04e424b403a028be08280bf63dc63d3"
+              "3bfe782ffefbe9ca87b34f6ed341692f9db5e523"
             ]
           },
           "content": "Add shebang",
@@ -1117,7 +1117,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "cdd1276264e88db87ef7232e0d4aede50ff704ac"
+              "7fdc3dddd7a8ac01807cacf77e077ece0967e08d"
             ]
           },
           "content": "Add comment - Script to insert data from students.csv into students database",
@@ -1140,7 +1140,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "309e2900dc60642abcd2b61273ea1234872542a6"
+              "0155704fd71c932fc2a0e28f9971d8914030a1e0"
             ]
           },
           "content": "add cat students.csv",
@@ -1163,7 +1163,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "cef4fbbc80221572ef42c9f7f6fd47e46695d150"
+              "de3301aff65e1aa77ce12df2512dc3b2e4d16f45"
             ]
           },
           "content": "./insert_data.sh",
@@ -1186,7 +1186,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d3dfa12b4e436259758b2fd8ded7e9cf64a33f97"
+              "e51016f548af5de6eb604606906d803e13150392"
             ]
           },
           "content": "Add | while read\ndo \n  echo $something\ndone",
@@ -1209,7 +1209,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "64e534640575890bcb69b9224b2411701f625ab2"
+              "2668c04b125db95bce45e7a4edda801fa2f251d8"
             ]
           },
           "content": "./insert_data",
@@ -1232,7 +1232,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "a4aaf182e153dd66f5b89509b9469c06331cff9e"
+              "223dad98e50ed3232189adcf027c2d6d30399025"
             ]
           },
           "content": "Add IFS",
@@ -1255,7 +1255,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "fcff64f28cdded148bc4844ba09cdcc4f5c41de6"
+              "c736f66f19d4775268cc49272567b6bdbe5f5231"
             ]
           },
           "content": "./insert_data.sh",
@@ -1278,7 +1278,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "bcb50dcfe3e6b90d8fe699148e48047a339279e7"
+              "7bc78e9506ed83ec51986ae5b86f8d2b2bac8334"
             ]
           },
           "content": "Delete echo",
@@ -1301,7 +1301,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "29925231731b6aaf3d1ec1f63797e8d8240487c9"
+              "7e55065fd89e117a511ec4f834e028c84fef2258"
             ]
           },
           "content": "Add psuedo code",
@@ -1324,7 +1324,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "b5a77a7b4f3b64083c4507d31e14d079993912ba"
+              "397b1b1216c5262e5092905e7976cac767f6a024"
             ]
           },
           "content": "Add PSQL Variable",
@@ -1347,7 +1347,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d4c2c0aa95fc9ad322e1e19deedd2d82fe008a55"
+              "bb42f816abfeef7662f8deb2262d19479a09ed40"
             ]
           },
           "content": "Add INSERT_STUDENT_RESULT",
@@ -1370,7 +1370,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "0b1d76115b3c89de0c88e301ee5032adfce5f7d3"
+              "cf423747dac586085d30bc9f066dfe64a0dfb93c"
             ]
           },
           "content": "Add echo INSERT_STUDENT_RESULT",
@@ -1393,7 +1393,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "477d5aa34466171887bb0edfdeb2ef4f4a6ec5c6"
+              "5b5163bb4ee73d471150643a1a5263705fd673b7"
             ]
           },
           "content": "touch students_test.csv",
@@ -1416,7 +1416,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "f5946fddad456f70471aa61e1574861e14726351"
+              "eb9a2095444a78fa0196db5bf973ca8f80c8993c"
             ]
           },
           "content": "Add three records to students_test.csv",
@@ -1439,7 +1439,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "b7ddfe5e951756ab7cf6fd21862d5106b7b6b45e"
+              "ee7f6f23b8c7e9c1aab7cf8545f97d5080c32864"
             ]
           },
           "content": "Change to cat students_test.csv",
@@ -1462,7 +1462,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "607ae22c4b89cdfff968c471f80f965afe90275d"
+              "663163d564150d33ce2ab9fa03b4ca4829fdb5b1"
             ]
           },
           "content": "./insert_data.sh",
@@ -1485,7 +1485,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c50bc213e69dce010a4ed8dcc2914891cd227da9"
+              "1d6fbdf955168a0a6a941e20aee30ce5d0e4b1b7"
             ]
           },
           "content": "SELECT * FROM students;",
@@ -1508,7 +1508,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "8a2b3db8cb0d4d5436a103a239a6df691afd0f56"
+              "3a7cc0dd21c463d9f0da30f19e281694073743c1"
             ]
           },
           "content": "TRUNCATE students",
@@ -1531,7 +1531,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "41ef64b0fac34cc00a5a989819632cf8a7300f9e"
+              "4aed2ae295d2d6f639d6fc3dc048b55d6fc43751"
             ]
           },
           "content": "TRUNCATE students, gpas",
@@ -1554,7 +1554,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "290b8d11c051d35e62b4515c1a9b9db047536b2c"
+              "7ea4af9f2dad688c3ba227cbb01603cd2449adbe"
             ]
           },
           "content": "TRUNCATE students, gpas, students_majors",
@@ -1577,7 +1577,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c69857dc0d2cb8fa37ae05b972ec0f9de4763973"
+              "f1630ab68e753cccbb391e7f640432955f835470"
             ]
           },
           "content": "SELECT * FROM students",
@@ -1600,7 +1600,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2423d30ee9615de3b9473362556981ef853f9ba9"
+              "5f3f09de950491fab18aff51fbe1a2f8ecb8e591"
             ]
           },
           "content": "SELECT * FROM gpas",
@@ -1623,7 +1623,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "bfa3e0ffdfb97daca39e3fc09a14368d78d6e2fa"
+              "09b9b6d99c9d6753913aa4b847c14259d7b5c377"
             ]
           },
           "content": "SELECT * FROM students_majors",
@@ -1646,7 +1646,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "215ac836f1733c6f39b3c7bac91fc2b1b884135e"
+              "989d0974d53ff5cff28ede7b522ee2af6fd9eed9"
             ]
           },
           "content": "SELECT * FROM majors",
@@ -1669,7 +1669,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "af0bec06eca7f22b66c26a17a2a98acd1ecaf75d"
+              "20341c05fb6960cb2ac50d8e01f4d20002642c1e"
             ]
           },
           "content": "TRUNCATE majors, students_majors",
@@ -1692,7 +1692,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "b5af5a6951b8633d784d3020fbdae9da5781938f"
+              "a083b14a7b7731af23b924194478d6841fe362fa"
             ]
           },
           "content": "SELECT * FROM majors",
@@ -1715,7 +1715,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d4dc4711d23ce597798807e79e68852b4f4923f4"
+              "2a91e918ba40b0f33d4a6eebbb6fe71951639540"
             ]
           },
           "content": "./insert_data.sh",
@@ -1738,7 +1738,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "4aa621a672c92c705f48f339c21fba4dfd054289"
+              "8517f3625ce0c3095460eb6b82c440e65c4acd61"
             ]
           },
           "content": "SELECT * FROM students",
@@ -1761,7 +1761,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "0e17688d8dc1cdebfa47ddbf9593c0e77320044a"
+              "b01fe777c5dc0188e277c761cd3ca5d6b151ebd6"
             ]
           },
           "content": "Add if [[ $FIRST != first_name ]]",
@@ -1784,7 +1784,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c00f60c01ad200e041ab19f1b31a0df9574c5a88"
+              "64facd77bafdbb22dd311f58849eb690d920361d"
             ]
           },
           "content": "TRUNCATE students CASCADE",
@@ -1807,7 +1807,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "5a20b3c226d23ae2090a8ef0662b04eb7461b427"
+              "6a88fa2218da84a3d13dadd9f81a326a164c0832"
             ]
           },
           "content": "SELECT * FROM students;",
@@ -1830,7 +1830,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "8d18f9282cb1bce847f3130a37cdf8bda2e56d72"
+              "833531e948a1152bad83cebfeb947401b3d592d7"
             ]
           },
           "content": "./insert_data.sh",
@@ -1853,7 +1853,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2344aa2f22d6813801616acf021889c8e4f3548e"
+              "567cac508da04469bdf9136467494be8998adb44"
             ]
           },
           "content": "SELECT * FROM students",
@@ -1876,7 +1876,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c69005c6ed024d77e6cc4446b947a591cd2bd9b4"
+              "a5e5ce7be048f70c619cc5deefc35c49c98c408b"
             ]
           },
           "content": "Delete echo INSERT_STUDENT_RESULT",
@@ -1899,7 +1899,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2cdea89bb1cdde47a611f2d0a6d879c539a15041"
+              "bb17432d620b51503b3889b77d46dc268b26a403"
             ]
           },
           "content": "add if [[ $INSERT_STUDENT_RESULT == \"INSERT 0 1\" ]]\nthen\n  echo success message\nfi",
@@ -1922,7 +1922,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "35b976eab077e510637b97afe148322b4a3ddb3a"
+              "13f60da3a5a18706a29b9fc39efe5ad4457651c1"
             ]
           },
           "content": "TRUNCATE students CASCADE;",
@@ -1945,7 +1945,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "022d3b4e9e08110bc7f5af932ed0b15a28cf6ce8"
+              "77a933f7c2748c9203adc6de74097f6773da39c0"
             ]
           },
           "content": "insert_data.sh",
@@ -1968,7 +1968,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "0ec7ee6b5aae1c87993dd8bd5e6422ab8b402b18"
+              "c887cc73222abde75e3a30e5c1b808597ddccb86"
             ]
           },
           "content": "Add STUDENT_ID = $($PSQL ...)",
@@ -1991,7 +1991,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c5468b527d5ecdf8c8685653f90dc0052fe1fcaf"
+              "fbaa092db10abed882aef239978c56db6b79a593"
             ]
           },
           "content": "add echo $STUDENT_ID",
@@ -2014,7 +2014,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d7dea0ff27f6b67ccddf0c497988a38d4f1bd99b"
+              "8083c3d823a24bf43e0b3a360ea9278ae7706b4b"
             ]
           },
           "content": "TRUNCATE students CASCADE",
@@ -2037,7 +2037,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2166bad97071de868140eacc497bd131f94edf45"
+              "b7ab3602be63eb9b4aff46864a0a78beaf97f76c"
             ]
           },
           "content": "./insert_data.sh",
@@ -2060,7 +2060,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "30ad3f4af80c76cb839f46cee766955e0629d64d"
+              "a449c5f6bf6e8d0b5222d0fff4ae67f5f0068a03"
             ]
           },
           "content": "Add echo $($PSQL \"TRUNCATE students, gpas, majors, students_majors;\")",
@@ -2083,7 +2083,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "e1276598f65586bf7c6405bfb1954d89cc191dcf"
+              "88f38277c0fa9a74d58864292123b714ba0f33af"
             ]
           },
           "content": "./insert_data.sh",
@@ -2106,7 +2106,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "cc2132ddb517552d648b20e895a20d7c4b02bdbc"
+              "9ea2ab9817019c1df35d0d862ca8940d3ac70e58"
             ]
           },
           "content": "SELECT * FROM students",
@@ -2129,7 +2129,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "a08d4d81116b0dff613116729dffcb29c12e5647"
+              "90b80453ea313f0790c0ba912dd983149b5acfdb"
             ]
           },
           "content": "Add INSERT_GPA_RESULT=",
@@ -2152,7 +2152,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "b07b06bdfcc6a38b4bc5c1dd8f8516e05ed1c680"
+              "5d3c30d6f2a5d78d4da37954d24c3c1997b743b9"
             ]
           },
           "content": "Add if [[ $INSERT_GPA_RESULT == \"INSERT 0 1\" ]]\nthen\n  echo success\nfi",
@@ -2175,7 +2175,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "7f4a21e0c61b1ebf6024230ab7035e3901b1eb53"
+              "02f9545e522894ae884f4bab4c4b82b54c0760a2"
             ]
           },
           "content": "./insert_data.sh",
@@ -2198,7 +2198,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "e6e2b26dacd3ea418eb184fcefa5cacc58e7fe93"
+              "7eefb96677f2413072a254baf156a45c3ace5852"
             ]
           },
           "content": "Delete echo STUDENT_ID",
@@ -2221,7 +2221,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "eafc682a99198735d160624642819a5019a72a6f"
+              "10a5f5fb2f5d86496c75781647f670d16c48a406"
             ]
           },
           "content": "SELECT * FROM STUDENTS",
@@ -2244,7 +2244,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "7f1ddac9983f592fdaed9c6e5afd65815de80166"
+              "cd794c0592e89148d370a3869c9f07be87e530d5"
             ]
           },
           "content": "SELECT * FROM gpas;",
@@ -2267,7 +2267,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "008dfa5a298a2b9b13527308de908eaf8de7dbe4"
+              "01c43241d2f91e6f7fc19ba59de733f97f08753d"
             ]
           },
           "content": "Add MAJOR_ID = $(...)",
@@ -2290,7 +2290,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2cd18a3d6725d360b80d683a65806e33feee9d96"
+              "0b8242423f89d29b29e799ef10855bbdaceaf500"
             ]
           },
           "content": "Add if [[ -z $MAJOR_ID ]]\nthen\n  echo major_id not found\nfi",
@@ -2313,7 +2313,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "ea06f2a5a3ac4a104b2a7d73d9b0f77746104de9"
+              "f73e5f92d8b2a4dd603a9ab45c869daae8e9014a"
             ]
           },
           "content": "Add INSERT_MAJOR_RESULT",
@@ -2336,7 +2336,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "77db94e37c7082f5b4c0705e76b6305c826d60cc"
+              "4ff622b8b2740cc90f9045cf03c87cba012d9bc3"
             ]
           },
           "content": "Add if [[ INSERT_MAJOR RESULT == \"INSERT 0 1\" ]]\nthen\n  echo success\nfi",
@@ -2359,7 +2359,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "e82e8d567ea97813f555520cf2eba8c4e3ee659c"
+              "401e4948a3a60365800a100f6cbf24b9dac1787b"
             ]
           },
           "content": "./insert_data.sh",
@@ -2382,7 +2382,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "98be31178aa93c61521834fb919b504478787895"
+              "6548bd2540c5a80b3e08be4139ddbdd0570f2f5a"
             ]
           },
           "content": "SELECT * FROM majors;",
@@ -2405,7 +2405,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "4ee4385878c51884314b53e06373c1622b09c0e5"
+              "5207ce2f9853b1f8a2b345adfb4b51ea21a20d71"
             ]
           },
           "content": "SELECT * FROM students",
@@ -2428,7 +2428,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "47b2d9fb08024cadba3237055bb2976ee90b19ab"
+              "cd98d3b8a0c2770f58e87826f0583345078b1651"
             ]
           },
           "content": "SELECT * FROM gpas;",
@@ -2451,7 +2451,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c25e9bfa794688414cd6c05105761ec8a793c199"
+              "5adb15f0f97fb92a34b252173894bc6da904ecd3"
             ]
           },
           "content": "Add MAJOR_ID=",
@@ -2474,7 +2474,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "0085080990aa642746e59ad4754e93115c740a61"
+              "81dc6abad6f4ef299e6886c6570f7f35b670e704"
             ]
           },
           "content": "Add INSERT_S_M_RESULT",
@@ -2497,7 +2497,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "de3723e15a8517e13d0b10014d60941997b0a379"
+              "05b5601c5dd45a513c25bf29fa8cfe870368e1b1"
             ]
           },
           "content": "Add if [[ INSERT_S_M_RESULT == INSERT 0 1 ]]\nthen\n echo success\nfi",
@@ -2520,7 +2520,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "262f11342fde2491d7f782e00c8dd04cd548eb54"
+              "11f33ca2850c4860c626052bc309338b4c3c51d2"
             ]
           },
           "content": "./insert_data.sh",
@@ -2543,7 +2543,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "db0c92cffe2b7a21b18792973281d5d84a2ce73b"
+              "cdd0013eae412d8078ed3160317a64071f479717"
             ]
           },
           "content": "SELECT * FROM students",
@@ -2566,7 +2566,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "225d3e018879620db063558c63f75f150c822e91"
+              "efad42a91dc772f1e5ffd1a9a9a12d703bde9f9a"
             ]
           },
           "content": "SELECT * FROM gpas",
@@ -2589,7 +2589,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "44bad53ba2b4d0893d41a41d954e1b93a8da739e"
+              "445f352ca6c1421fe2ba69c1c0bf9f6f791c764e"
             ]
           },
           "content": "SELECT * FROM majors",
@@ -2612,7 +2612,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "af1a6ee1a57d6cf640e28430af75cd799ad64b86"
+              "d64eb44fe1f341eee7ef0386618f8156fc692d59"
             ]
           },
           "content": "SELECT * FROM students_majors",
@@ -2635,7 +2635,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "e63cd5bd8feb5b92e284deab2b46a6367ada6ad6"
+              "648e5ec5366de8946625c34723a96109595403a3"
             ]
           },
           "content": "Change to cat students.csv",
@@ -2658,7 +2658,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "899c3a086eda7cef2187b095ea140b43c85e0764"
+              "eb0b4436c0f929d6898c0484ac894be5ff2aba01"
             ]
           },
           "content": "./insert_data.sh",
@@ -2681,7 +2681,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "b77dffe086013c5adde3524bf158d9e8825c7568"
+              "8d901eef640e1cc34a572f6294e63b94dcba6a96"
             ]
           },
           "content": "SELECT * FROM students",
@@ -2704,7 +2704,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "1a0bd3191def0984b43d9fd2c205a006b023e84f"
+              "ac85dfa6cddd39ffd59571ee75a25a0455c7aa8a"
             ]
           },
           "content": "SELECT * FROM gpas",
@@ -2727,7 +2727,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "e69b4232767b3c3abc9cd3c6c0c6dc059125a8fc"
+              "05eca8d04e62bf06eeddf3ef11e493cc39406810"
             ]
           },
           "content": "SELECT * FROM majors",
@@ -2750,7 +2750,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "760be12427c177f6acc10f72be1b494f749d8030"
+              "c5b7ec0cc883d342739a39f02a131012681a4087"
             ]
           },
           "content": "SELECT * FROM students_majors",
@@ -2773,7 +2773,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "f3c2e0840d7e1157b5459a0f3be8b3095d2286d5"
+              "dacc068ccc1df9d8f60f7f2e2f861850651981cc"
             ]
           },
           "content": "ls",
@@ -2796,7 +2796,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "a71f07439137a71337c041c85286669186557beb"
+              "a9925240e7fc208c8ad581a7de719065c23580e5"
             ]
           },
           "content": "rm students_test.csv",
@@ -2819,7 +2819,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "62858f3fd239e872ff88ae04e22f9a78204eae41"
+              "27394ffb531216bf406f0df013771d1c8e73a9db"
             ]
           },
           "content": "ls",
@@ -2842,7 +2842,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c96b811ad5a088c006e6a6c6cda86b8836716997"
+              "bd5cc3041e4f2c44d9de7931abcca9dea02e634c"
             ]
           },
           "content": "touch student_info.sh",
@@ -2865,7 +2865,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "775f51d27a749d43f013ffdadaf878e02e1cdb77"
+              "e92a85ac1e062c9ca8f77ae9263ac590925669c6"
             ]
           },
           "content": "chmod +x student_info.sh",
@@ -2888,7 +2888,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "e487d558204141a47914d3ef364c0e204c0d4b5d"
+              "25ba8d5e03ff0966e8ced2f51358d375b89ff97a"
             ]
           },
           "content": "Add shebang",
@@ -2911,7 +2911,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "b5527c49913c38294a3564b7b520c89eed0887b1"
+              "4c395e781b760890e55b393d82bf01ec0bbb6afa"
             ]
           },
           "content": "Add comment # Info about my computer science students from students database",
@@ -2934,7 +2934,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "b5d9e40344777a6e05d0f7bee5077e713b13ccd3"
+              "018d3479ffc4a3c5f994bfab91dac98ad04af447"
             ]
           },
           "content": "Add echo -e \"\\n~~ My Computer Science Students ~~\\n\"",
@@ -2957,7 +2957,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "112c143491bff4f074bada56a440396d8664074b"
+              "96f71f534abec97c0f5824edeb30bb3fa887defe"
             ]
           },
           "content": "Add PSQL Variable",
