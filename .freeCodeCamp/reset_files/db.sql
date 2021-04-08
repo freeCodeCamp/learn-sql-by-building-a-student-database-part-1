@@ -98,6 +98,7 @@ ALTER TABLE public.majors OWNER TO freecodecamp;
 --
 
 CREATE TABLE public.majors_courses (
+    major_id integer
 );
 
 
