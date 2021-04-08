@@ -19,3 +19,4 @@ sudo service postgresql stop && sudo service postgresql start && echo "SELECT 'C
 # Rebuild database
 psql -U postgres < ./.freeCodeCamp/reset_files/db.sql
 cp ./.freeCodeCamp/reset_files/insert_data.sh .
+cp ./.freeCodeCamp/reset_files/courses_test.csv .
