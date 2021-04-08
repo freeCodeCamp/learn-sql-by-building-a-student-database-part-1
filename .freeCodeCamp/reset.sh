@@ -19,3 +19,4 @@ echo "SELECT 'CREATE USER freecodecamp WITH CREATEDB' WHERE NOT EXISTS (SELECT F
 
 # Rebuild database
 psql -U postgres < ./.freeCodeCamp/reset_files/db.sql
+cp ./.freeCodeCamp/reset_files/insert_data.sh .
