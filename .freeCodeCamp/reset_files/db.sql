@@ -48,6 +48,16 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
+-- Name: courses; Type: TABLE; Schema: public; Owner: freecodecamp
+--
+
+CREATE TABLE public.courses (
+);
+
+
+ALTER TABLE public.courses OWNER TO freecodecamp;
+
+--
 -- Name: majors; Type: TABLE; Schema: public; Owner: freecodecamp
 --
 
@@ -66,6 +76,12 @@ CREATE TABLE public.students (
 
 
 ALTER TABLE public.students OWNER TO freecodecamp;
+
+--
+-- Data for Name: courses; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+--
+
+
 
 --
 -- Data for Name: majors; Type: TABLE DATA; Schema: public; Owner: freecodecamp
