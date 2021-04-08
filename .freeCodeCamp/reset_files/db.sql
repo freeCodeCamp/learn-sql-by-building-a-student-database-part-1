@@ -85,7 +85,8 @@ CREATE TABLE public.students (
     student_id integer NOT NULL,
     first_name character varying(50) NOT NULL,
     last_name character varying(50) NOT NULL,
-    major_id integer
+    major_id integer,
+    gpa numeric(2,1)
 );
 
 
