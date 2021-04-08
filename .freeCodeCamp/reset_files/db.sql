@@ -22,6 +22,7 @@ SET row_security = off;
 
 ALTER TABLE ONLY public.students DROP CONSTRAINT students_major_id_fkey;
 ALTER TABLE ONLY public.majors_courses DROP CONSTRAINT majors_courses_major_id_fkey;
+ALTER TABLE ONLY public.majors_courses DROP CONSTRAINT majors_courses_course_id_fkey;
 ALTER TABLE ONLY public.students DROP CONSTRAINT students_pkey;
 ALTER TABLE ONLY public.majors DROP CONSTRAINT majors_pkey;
 ALTER TABLE ONLY public.courses DROP CONSTRAINT courses_pkey;
@@ -244,6 +245,14 @@ ALTER TABLE ONLY public.majors
 
 ALTER TABLE ONLY public.students
     ADD CONSTRAINT students_pkey PRIMARY KEY (student_id);
+
+
+--
+-- Name: majors_courses majors_courses_course_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.majors_courses
+    ADD CONSTRAINT majors_courses_course_id_fkey FOREIGN KEY (course_id) REFERENCES public.courses(course_id);
 
 
 --
