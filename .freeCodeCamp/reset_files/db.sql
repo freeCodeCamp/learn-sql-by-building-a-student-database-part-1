@@ -43,6 +43,26 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: students; Type: TABLE; Schema: public; Owner: freecodecamp
+--
+
+CREATE TABLE public.students (
+);
+
+
+ALTER TABLE public.students OWNER TO freecodecamp;
+
+--
+-- Data for Name: students; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+--
+
+
+
 --
 -- PostgreSQL database dump complete
 --
