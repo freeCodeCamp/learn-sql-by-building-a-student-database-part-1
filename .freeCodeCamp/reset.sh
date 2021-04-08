@@ -14,3 +14,6 @@ sudo cp ./.freeCodeCamp/pg_hba.conf /etc/postgresql/12/main/pg_hba.conf
 sudo chown -R postgres:postgres /var/lib/postgresql/12/main
 sudo service postgresql restart
 sudo -u postgres psql -c "CREATE USER freecodecamp WITH CREATEDB;"
+
+# Rebuild database
+psql -U postgres < ./.freeCodeCamp/reset_files/db.sql
