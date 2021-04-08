@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'students';
@@ -22,4 +22,4 @@ describe('The "students" database', () => {
       await client.end();
     }
   });
-});
+});*/
