@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { getFileContents } = require('./utils');
 
 describe('Your script', () => {
@@ -7,4 +7,4 @@ describe('Your script', () => {
 
     assert(/^[ \t]*cat[ \t]+students_test\.csv[ \t]*\|[ \t]*while/gm.test(scriptFile));
   });
-});
+});*/
