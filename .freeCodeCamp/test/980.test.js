@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { getFileContents } = require('./utils');
 
 describe('Your script', () => {
@@ -7,4 +7,4 @@ describe('Your script', () => {
 
     assert(/MAJOR_ID[\s\S]*if[ \t]+\[\[[ \t]+-z[ \t]+\$MAJOR_ID[ \t]+\]\]([ \t]*;\s*|\s*\n+\s*)then\s+fi[\s\S]*fi/gm.test(scriptFile));
   });
-});
+});*/
