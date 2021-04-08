@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { getFileContents } = require('./utils');
 
 describe('Your script', () => {
@@ -7,4 +7,4 @@ describe('Your script', () => {
 
     assert(/INSERT_MAJOR_RESULT[\s\S]*fi[\s\S]*MAJOR_ID=\$\([ \t]*\$PSQL[ \t]*"SELECT[ \t]+major_id[ \t]+FROM[ \t]+majors[ \t]+WHERE[ \t]+major[ \t]*=[ \t]*'\$MAJOR'[ \t]*;?[ \t]*"[ \t]*\)[\s\S]*fi[\s\S]*fi/gm.test(scriptFile));
   });
-});
+});*/
