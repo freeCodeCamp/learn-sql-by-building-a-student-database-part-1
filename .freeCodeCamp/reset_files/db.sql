@@ -49,7 +49,8 @@ ALTER TABLE public.courses OWNER TO freecodecamp;
 --
 
 CREATE TABLE public.majors (
-    major_id integer NOT NULL
+    major_id integer NOT NULL,
+    major character varying(50) NOT NULL
 );
 
 
