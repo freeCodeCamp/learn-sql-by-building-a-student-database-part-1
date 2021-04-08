@@ -82,10 +82,40 @@ ALTER TABLE public.majors_courses OWNER TO freecodecamp;
 --
 
 CREATE TABLE public.students (
+    student_id integer NOT NULL
 );
 
 
 ALTER TABLE public.students OWNER TO freecodecamp;
+
+--
+-- Name: students_student_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
+--
+
+CREATE SEQUENCE public.students_student_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.students_student_id_seq OWNER TO freecodecamp;
+
+--
+-- Name: students_student_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
+--
+
+ALTER SEQUENCE public.students_student_id_seq OWNED BY public.students.student_id;
+
+
+--
+-- Name: students student_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.students ALTER COLUMN student_id SET DEFAULT nextval('public.students_student_id_seq'::regclass);
+
 
 --
 -- Data for Name: courses; Type: TABLE DATA; Schema: public; Owner: freecodecamp
@@ -109,6 +139,21 @@ ALTER TABLE public.students OWNER TO freecodecamp;
 -- Data for Name: students; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+
+
+--
+-- Name: students_student_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
+--
+
+SELECT pg_catalog.setval('public.students_student_id_seq', 1, false);
+
+
+--
+-- Name: students students_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT students_pkey PRIMARY KEY (student_id);
 
 
 --
