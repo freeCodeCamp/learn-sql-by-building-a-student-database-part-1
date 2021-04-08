@@ -255,6 +255,14 @@ ALTER TABLE ONLY public.students
 
 
 --
+-- Name: majors_courses majors_courses_course_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.majors_courses
+    ADD CONSTRAINT majors_courses_course_id_fkey FOREIGN KEY (course_id) REFERENCES public.courses(course_id);
+
+
+--
 -- Name: majors_courses majors_courses_major_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
