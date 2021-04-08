@@ -195,10 +195,6 @@ ALTER TABLE ONLY public.students ALTER COLUMN student_id SET DEFAULT nextval('pu
 -- Data for Name: majors; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.majors VALUES (5, 'major');
-INSERT INTO public.majors VALUES (6, 'Database Administration');
-INSERT INTO public.majors VALUES (7, 'Web Development');
-INSERT INTO public.majors VALUES (8, 'Data Science');
 
 
 --
