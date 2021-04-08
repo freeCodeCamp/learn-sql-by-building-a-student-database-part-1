@@ -43,7 +43,8 @@ SET default_table_access_method = heap;
 --
 
 CREATE TABLE public.courses (
-    course_id integer NOT NULL
+    course_id integer NOT NULL,
+    course character varying(100) NOT NULL
 );
 
 
