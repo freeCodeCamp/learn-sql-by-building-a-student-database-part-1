@@ -203,6 +203,7 @@ INSERT INTO public.majors VALUES (1, 'Database Administration');
 -- Data for Name: majors_courses; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.majors_courses VALUES (1, 1);
 
 
 --
