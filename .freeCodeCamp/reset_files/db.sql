@@ -68,6 +68,16 @@ CREATE TABLE public.majors (
 ALTER TABLE public.majors OWNER TO freecodecamp;
 
 --
+-- Name: majors_courses; Type: TABLE; Schema: public; Owner: freecodecamp
+--
+
+CREATE TABLE public.majors_courses (
+);
+
+
+ALTER TABLE public.majors_courses OWNER TO freecodecamp;
+
+--
 -- Name: students; Type: TABLE; Schema: public; Owner: freecodecamp
 --
 
@@ -85,6 +95,12 @@ ALTER TABLE public.students OWNER TO freecodecamp;
 
 --
 -- Data for Name: majors; Type: TABLE DATA; Schema: public; Owner: freecodecamp
+--
+
+
+
+--
+-- Data for Name: majors_courses; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
 
