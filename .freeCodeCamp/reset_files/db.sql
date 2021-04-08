@@ -25,6 +25,7 @@ ALTER TABLE ONLY public.majors_courses DROP CONSTRAINT majors_courses_major_id_f
 ALTER TABLE ONLY public.majors_courses DROP CONSTRAINT majors_courses_course_id_fkey;
 ALTER TABLE ONLY public.students DROP CONSTRAINT students_pkey;
 ALTER TABLE ONLY public.majors DROP CONSTRAINT majors_pkey;
+ALTER TABLE ONLY public.majors_courses DROP CONSTRAINT majors_courses_pkey;
 ALTER TABLE ONLY public.courses DROP CONSTRAINT courses_pkey;
 ALTER TABLE public.students ALTER COLUMN student_id DROP DEFAULT;
 ALTER TABLE public.majors ALTER COLUMN major_id DROP DEFAULT;
@@ -91,8 +92,8 @@ ALTER TABLE public.majors OWNER TO freecodecamp;
 --
 
 CREATE TABLE public.majors_courses (
-    major_id integer,
-    course_id integer
+    major_id integer NOT NULL,
+    course_id integer NOT NULL
 );
 
 
@@ -229,6 +230,14 @@ SELECT pg_catalog.setval('public.students_student_id_seq', 1, false);
 
 ALTER TABLE ONLY public.courses
     ADD CONSTRAINT courses_pkey PRIMARY KEY (course_id);
+
+
+--
+-- Name: majors_courses majors_courses_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.majors_courses
+    ADD CONSTRAINT majors_courses_pkey PRIMARY KEY (major_id, course_id);
 
 
 --
