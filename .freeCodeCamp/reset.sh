@@ -15,3 +15,6 @@ sudo chmod 777 /workspace/pg.log
 sudo chmod 777 /workspace/queryResults.log
 sudo chown -R postgres:postgres /var/lib/postgresql/12/main
 sudo service postgresql stop && sudo service postgresql start && echo "SELECT 'CREATE USER freecodecamp WITH CREATEDB' WHERE NOT EXISTS (SELECT FROM pg_catalog.pg_roles WHERE rolname='freecodecamp')\gexec" | psql -U postgres -X
+
+# Rebuild database
+psql -U postgres < ./.freeCodeCamp/reset_files/db.sql
