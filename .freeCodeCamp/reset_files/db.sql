@@ -52,10 +52,33 @@ SET default_table_access_method = heap;
 --
 
 CREATE TABLE public.courses (
+    course_id integer NOT NULL
 );
 
 
 ALTER TABLE public.courses OWNER TO freecodecamp;
+
+--
+-- Name: courses_course_id_seq; Type: SEQUENCE; Schema: public; Owner: freecodecamp
+--
+
+CREATE SEQUENCE public.courses_course_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.courses_course_id_seq OWNER TO freecodecamp;
+
+--
+-- Name: courses_course_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: freecodecamp
+--
+
+ALTER SEQUENCE public.courses_course_id_seq OWNED BY public.courses.course_id;
+
 
 --
 -- Name: majors; Type: TABLE; Schema: public; Owner: freecodecamp
@@ -139,6 +162,13 @@ ALTER SEQUENCE public.students_student_id_seq OWNED BY public.students.student_i
 
 
 --
+-- Name: courses course_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.courses ALTER COLUMN course_id SET DEFAULT nextval('public.courses_course_id_seq'::regclass);
+
+
+--
 -- Name: majors major_id; Type: DEFAULT; Schema: public; Owner: freecodecamp
 --
 
@@ -177,6 +207,13 @@ ALTER TABLE ONLY public.students ALTER COLUMN student_id SET DEFAULT nextval('pu
 
 
 --
+-- Name: courses_course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
+--
+
+SELECT pg_catalog.setval('public.courses_course_id_seq', 1, false);
+
+
+--
 -- Name: majors_major_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
@@ -188,6 +225,14 @@ SELECT pg_catalog.setval('public.majors_major_id_seq', 1, false);
 --
 
 SELECT pg_catalog.setval('public.students_student_id_seq', 1, false);
+
+
+--
+-- Name: courses courses_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.courses
+    ADD CONSTRAINT courses_pkey PRIMARY KEY (course_id);
 
 
 --
