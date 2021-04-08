@@ -37,7 +37,7 @@ levels:
       - id: '20.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ../.freeCodeCamp/test/pg.log
   - id: '30'
     steps:
       - id: '30.1'
