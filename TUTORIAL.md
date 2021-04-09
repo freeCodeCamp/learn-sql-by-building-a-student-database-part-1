@@ -403,11 +403,11 @@ SELECT * FROM majors;
 
 - hint1
 
-## 410. SELECT * FROM majors
+## 410. SELECT * FROM students
 
 ### 410.1
 
-SELECT * FROM majors
+SELECT * FROM students
 
 #### HINTS
 
