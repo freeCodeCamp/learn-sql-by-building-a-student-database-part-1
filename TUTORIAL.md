@@ -227,7 +227,7 @@ Create gpa column - numeric(2, 1) not null
 
 ### 230.1
 
-Create student_id column - int not null - in s_m
+Create student_id column - int - in s_m
 
 #### HINTS
 
@@ -247,7 +247,7 @@ set student_id foreign key
 
 ### 250.1
 
-Create major_id column - int not null
+Create major_id column - int
 
 #### HINTS
 
