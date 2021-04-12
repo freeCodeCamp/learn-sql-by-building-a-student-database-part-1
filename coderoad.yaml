@@ -49,7 +49,7 @@ levels:
       - id: '40.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '50'
     steps:
       - id: '50.1'
@@ -67,25 +67,25 @@ levels:
       - id: '70.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '80'
     steps:
       - id: '80.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '90'
     steps:
       - id: '90.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '100'
     steps:
       - id: '100.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '110'
     steps:
       - id: '110.1'
@@ -97,19 +97,19 @@ levels:
       - id: '120.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '130'
     steps:
       - id: '130.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '140'
     steps:
       - id: '140.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '150'
     steps:
       - id: '150.1'
@@ -121,13 +121,13 @@ levels:
       - id: '160.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '170'
     steps:
       - id: '170.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '180'
     steps:
       - id: '180.1'
@@ -139,19 +139,19 @@ levels:
       - id: '190.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '200'
     steps:
       - id: '200.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '210'
     steps:
       - id: '210.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '220'
     steps:
       - id: '220.1'
@@ -163,25 +163,25 @@ levels:
       - id: '230.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '240'
     steps:
       - id: '240.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '250'
     steps:
       - id: '250.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '260'
     steps:
       - id: '260.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '270'
     steps:
       - id: '270.1'
@@ -193,7 +193,7 @@ levels:
       - id: '280.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '290'
     steps:
       - id: '290.1'
@@ -217,7 +217,7 @@ levels:
       - id: '320.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '330'
     steps:
       - id: '330.1'
@@ -235,7 +235,7 @@ levels:
       - id: '350.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '360'
     steps:
       - id: '360.1'
@@ -253,7 +253,7 @@ levels:
       - id: '380.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '390'
     steps:
       - id: '390.1'
@@ -277,7 +277,7 @@ levels:
       - id: '420.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '430'
     steps:
       - id: '430.1'
