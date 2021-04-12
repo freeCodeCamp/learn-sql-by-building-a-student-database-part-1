@@ -125,7 +125,7 @@
           "id": "40.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "5f4226688f4b4550aac90658509aef48bc8c4797"
@@ -194,7 +194,7 @@
           "id": "70.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "535d55d48567fb42e07d2e0f17c1ff0d95a332ee"
@@ -217,7 +217,7 @@
           "id": "80.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "efeacd582aeada4e094a67e72f818284ed16e879"
@@ -240,7 +240,7 @@
           "id": "90.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "33cff2f2f8c6df496dd7c5d30a11510a9a300b49"
@@ -263,7 +263,7 @@
           "id": "100.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "e5b39262eda0786a734c37518fae89c8a5a50d2c"
@@ -309,7 +309,7 @@
           "id": "120.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "f2cfc92d798dda6d35df7afd39a860851f1edcd2"
@@ -332,7 +332,7 @@
           "id": "130.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "bc51768c2e5f6a45945ff45d64a5cffc436b63e9"
@@ -355,7 +355,7 @@
           "id": "140.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "47ee6b5eabec7d536c6c21a18dac81aa061ce70d"
@@ -401,7 +401,7 @@
           "id": "160.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "b978d3524a7db27064ccbcaa24858176d2988c89"
@@ -424,7 +424,7 @@
           "id": "170.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "c7ecc18115c9da064bb542157111687a42145087"
@@ -470,7 +470,7 @@
           "id": "190.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "b0a58ad0e44c9772d97ea91fb9411566c59d87e2"
@@ -493,7 +493,7 @@
           "id": "200.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "889a62cd5d32335f6fb5abda5201af816ab9f8bf"
@@ -516,7 +516,7 @@
           "id": "210.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "a039fbd54b4545bd5450aee0b0b91fe61f8c5f58"
@@ -562,7 +562,7 @@
           "id": "230.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "96a089e3a5d5abf3a7cf8d4d45589c04b892734f"
@@ -585,7 +585,7 @@
           "id": "240.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "e8a4847014dbfd46026943368760c912f166b04b"
@@ -608,7 +608,7 @@
           "id": "250.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "2af714c4b079fa539ac6d822c35b9692d0db7aec"
@@ -631,7 +631,7 @@
           "id": "260.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "db7a261d9c710bfed433924c3e27419a69cc94c9"
@@ -677,7 +677,7 @@
           "id": "280.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "5840cd69afbfcbd03959992f99c8b96919927e87"
@@ -769,7 +769,7 @@
           "id": "320.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "edc53dea40defdcd2ef32853f7315a11d51b8b04"
@@ -838,7 +838,7 @@
           "id": "350.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "e0ebe11fe2c44d1a53cea110c38c460a5f30c8d5"
@@ -907,7 +907,7 @@
           "id": "380.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "4b341d8dea9423190d08e066ff2536dc05d3dbb8"
@@ -999,7 +999,7 @@
           "id": "420.1",
           "setup": {
             "watchers": [
-              "./.freeCodeCamp/test/pg.log"
+              "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
               "21cb758c6e407d2ad340faa223e0a20a4f28a392"
