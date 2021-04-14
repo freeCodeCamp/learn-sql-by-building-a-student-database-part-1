@@ -516,6 +516,16 @@ done
 
 - hint1
 
+## 515. declare -p IFS
+
+### 515.1
+
+declare -p IFS
+
+#### HINTS
+
+- hint1
+
 ## 520. Add IFS
 
 ### 520.1
