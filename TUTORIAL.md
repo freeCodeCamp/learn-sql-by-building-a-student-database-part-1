@@ -546,6 +546,26 @@ Add IFS
 
 - hint1
 
+## 533. Add echo all variables
+
+### 533.1
+
+Add echo $FIRST $LAST $MAJOR $GPA
+
+#### HINTS
+
+- hint1
+
+## 536. ./insert_data.sh
+
+### 536.1
+
+./insert_data.sh
+
+#### HINTS
+
+- hint1
+
 ## 540. Delete echo
 
 ### 540.1

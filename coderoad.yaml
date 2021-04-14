@@ -351,6 +351,18 @@ levels:
         setup:
           watchers:
             - ../.bash_history
+  - id: '533'
+    steps:
+      - id: '533.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
+  - id: '536'
+    steps:
+      - id: '536.1'
+        setup:
+          watchers:
+            - ../.bash_history
   - id: '540'
     steps:
       - id: '540.1'
