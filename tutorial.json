@@ -19,7 +19,7 @@
         "sudo cp ~/project/.freeCodeCamp/reset_files/students.csv ~/project"
       ],
       "commits": [
-        "05f7625bced51c650fae961ea6e4617b75043849"
+        "66127e0b5bb3328341f9ab3ea16c8b225a22960f"
       ]
     },
     "testRunner": {
@@ -59,7 +59,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d6d580e0a36141c300301480e335717986ae64b4"
+              "13624ee8507e2572d929be2100394c233846fb9d"
             ]
           },
           "content": "**The first thing you need to do is start the terminal.** Do that by clicking the \"hamburger\" menu at the top left of the screen, going to the \"terminal\" section, and clicking \"new terminal\". Once you open a new one, type `echo hello world` into the terminal and press enter.",
@@ -83,7 +83,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "8e8d2e810ff28d9d56ee70e73b9571c7d34e5e93"
+              "de5b18e1af65d3c8d122c62db72d9017f8ae2352"
             ]
           },
           "content": "psql login",
@@ -106,7 +106,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "0eef1c312949c010f7c08f365b2f040c5a2da2d7"
+              "c1ca5ed5d38786daff1c12f7bb7312fe84e61bc5"
             ]
           },
           "content": "\\l",
@@ -129,7 +129,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c756c673d4c07271904cea31fb5fa2085d7e4584"
+              "1ee30a73de2b447bb35ae79a28b8d6835d565882"
             ]
           },
           "content": "CREATE DATABASE students;",
@@ -152,7 +152,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "31afc505c716e878a8cc2c1383e28b363a551188"
+              "35d2e3d09611a64969e146050fc4fb7a976355da"
             ]
           },
           "content": "\\l",
@@ -175,7 +175,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "efec8b7ffcaeffb28b98a8185d7d105e94b5757c"
+              "e45d68b27fffc54d797513e28cc9cde98c2587d0"
             ]
           },
           "content": "\\c students",
@@ -198,7 +198,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "96673bbd303bb281f1e1ef7e144498957020a4ec"
+              "8ab2682242ffeadb4a5c43db07c5a3a6d0b07319"
             ]
           },
           "content": "CREATE TABLE students",
@@ -221,7 +221,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "108c8b8b258a06baf3da639324ce9b09731358fd"
+              "09ba01d5a19fe93192ffb29e0605de65a5863932"
             ]
           },
           "content": "CREATE TABLE majors",
@@ -244,7 +244,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "76d40b141859401155343bc643e83d22fd44a413"
+              "6bed29f95eff41fac378914fcc4461b0d31b57b7"
             ]
           },
           "content": "CREATE TABLE gps",
@@ -267,7 +267,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "1c74f8f329bf175034eb76284f06974a2de2a4ec"
+              "96fdb3cde608c5aa9caeffe003a72c03d3f3a0ef"
             ]
           },
           "content": "CREATE TABLE students_majors",
@@ -290,7 +290,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "5c6ae90070d15a115f6b65e323b93b41cd695aa6"
+              "46a1123943de6e8f2324b43b645d7ba84bf67959"
             ]
           },
           "content": "\\d",
@@ -313,7 +313,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "0a26ba1044e20a0a27f9e4ec696a63b5a7cadf15"
+              "c35087c473243c26d32a216ddbfea9831584ab2a"
             ]
           },
           "content": "create student_id - serial primary key",
@@ -336,7 +336,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "cde527ed24d94e69a6af065628b2671c1fa72a3d"
+              "1c2574b620021930eee819769e20a4f8afceff0f"
             ]
           },
           "content": "Create first_name column - varchar(50) not null",
@@ -359,7 +359,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "43414ae36b81039d5edff85f691da7d8429f08ff"
+              "b7f462e0a89cb9ec76a133cda318829c13b32379"
             ]
           },
           "content": "Create last_name column - varchar(50) not null",
@@ -382,7 +382,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "05a93030fa641404780c2868438bc1ec4edf5b17"
+              "e3be570e11df78b484180ae7704ddfb22313d00c"
             ]
           },
           "content": "\\d students",
@@ -405,7 +405,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "4bdb567baababa7075d9b2cb01f7ed4f353b7190"
+              "7a81e647cb239268d87ef7f5440470027df8468f"
             ]
           },
           "content": "Create major_id column - serial primary key",
@@ -428,7 +428,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "3fbb5258e48c9ab4166214aeeca565a19490cd9c"
+              "2672e93f24b1410dee3fecf51c015a5f36481f59"
             ]
           },
           "content": "Create major column - varchar(50) not null",
@@ -451,7 +451,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "6a4b5b921d8c8e94b1e9dfee917ae20066baf63d"
+              "58f3f2d583fe1b476441bb7128253f4f79c0b30e"
             ]
           },
           "content": "\\d majors",
@@ -474,7 +474,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c2d9e1cc0db4565e626029ed685a2918ba38d07f"
+              "aa395eae1dd034d4fddc17499a9f913be5a0bfe2"
             ]
           },
           "content": "Create student_id column in gpas - int primary key",
@@ -497,7 +497,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "108177db772b0bf818e4af04c363783fecf91d91"
+              "d358be89bba704b528e9c26a7162f823a6fe99af"
             ]
           },
           "content": "Set student_id in gpas as foreign key",
@@ -520,7 +520,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "fc44e9764059d855f83cca7c3efdef4ff425468e"
+              "cbe11b23969f01b8cf2be56d173f7918192ea2f9"
             ]
           },
           "content": "Create gpa column - numeric(2, 1) not null",
@@ -543,7 +543,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "657659d7676587e44b2434a034cb3e54fa44084c"
+              "3da00c05c1189a529c17cb06991890356071c868"
             ]
           },
           "content": "\\d gpas",
@@ -566,7 +566,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "eab2a41635b4e3c862b1bb00611e936677aea027"
+              "83579c8ba322c8253a4046e9443f684225136119"
             ]
           },
           "content": "Create student_id column - int - in s_m",
@@ -589,7 +589,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "9c82026c56a2df1711d00b55efbf7b2e33745caa"
+              "ab40c08f281ec9932714e2287d731ef2b9a1bdf4"
             ]
           },
           "content": "set student_id foreign key",
@@ -612,7 +612,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "4b6a2511a051459eb93107a78db0041c416fc96e"
+              "7da814ba72c03f27baac03688e73227fb98b4783"
             ]
           },
           "content": "Create major_id column - int",
@@ -635,7 +635,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "a54b8f128a1e293962c8ca7546ac9c5bc8d57a4a"
+              "e6e38b2b3d17be7164500c72c05af1472df2cf49"
             ]
           },
           "content": "set major_id fkey",
@@ -658,7 +658,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "4dce3e35a95fdcf9baab30d55b4f6d67a794fe37"
+              "3809a56c142fa414422543039269f9fab5e97d9b"
             ]
           },
           "content": "\\d students_majors",
@@ -681,7 +681,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "4ec140657f7361248d0142e2257130154d106b8d"
+              "4f996f0ca2e49abb2f9e9bb89c444b9df306aaf7"
             ]
           },
           "content": "Create componsite pKey - alter table _ add primary key (s_id, m_id);",
@@ -704,7 +704,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "5cbfd57643adf0351916d69cad3530d3a2c84280"
+              "5d99b50d8d469a9f086037e192dcede1f9fba9e7"
             ]
           },
           "content": "\\d students_majors",
@@ -727,7 +727,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "a7fca8b6880c000d382776bbc93b6fa83451a82f"
+              "189492ea151c05bff39ec4a4ef2628c20520c262"
             ]
           },
           "content": "\\d",
@@ -750,7 +750,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "5f8c2586f5baf1a0d159f2ac5bb5564089ba6c88"
+              "b07b45f86b0bcc2fd69ef93bc771bfb522ac6b50"
             ]
           },
           "content": "\\d students",
@@ -773,7 +773,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "7e0762e286c39813a8811037d95566c06d568ad6"
+              "0d0029d4f8c2ab2ebcbaad80d6a9cf63a2221d2b"
             ]
           },
           "content": "INSERT INTO students ('Rhea', 'Kellems')",
@@ -796,7 +796,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "fbded68b972896d0d7a0b0faab19b67f7e60f4a7"
+              "fb32cc6700391454eb98ea03f0be5fe472d24b12"
             ]
           },
           "content": "\\d gpas",
@@ -819,7 +819,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "325c98a97f357432ba77f9ca2c12bdc6414bc12a"
+              "308ea3f696a4ec51d880f350d259701f5f340d1e"
             ]
           },
           "content": "SELECT * FROM students",
@@ -842,7 +842,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "a7256aa26549f87ca3286c5be81c179b3d7107e1"
+              "65199f7f07701214e1289c51f134dfbde2cc8e9a"
             ]
           },
           "content": "INSERT INTO gpas (1, '2.5')",
@@ -865,7 +865,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "29ba624767c6043e31ea2c65c88dd618d4960390"
+              "559e267c65f80e825181f72bd2298ed556103713"
             ]
           },
           "content": "SELECT * FROM gpas;",
@@ -888,7 +888,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "3879763bac1ec4bcaee8fbe823f5ee8ab9665ae6"
+              "83bed6932abe5566255a196f854aae6defcdeb10"
             ]
           },
           "content": "\\d majors",
@@ -911,7 +911,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "06306ca4b1cfa3c4055e186866daf8a9965ccdb5"
+              "2362fef309ba41aa13e55838ffca4651b6230181"
             ]
           },
           "content": "INSERT INTO majors ('db admin')",
@@ -934,7 +934,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1f9b7d6ebc173b95367a6a5d63fc9a4714f176d0"
+              "8e70a6304c7c6c9547815cc3ffed90c447fe47f9"
             ]
           },
           "content": "SELECT * FROM majors;",
@@ -957,7 +957,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "31b41cf9166b112251b043b46a11921f593c36d0"
+              "d27aafdf2d3047a7928b2fea89336f89635a0872"
             ]
           },
           "content": "\\d students_majors",
@@ -980,7 +980,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "2ee0a1766fe49c02dbc6ab6d8817f07c596588ee"
+              "f0e0b7b5866d8f312789b3bc1819d0577ef468c4"
             ]
           },
           "content": "SELECT * FROM students",
@@ -1003,7 +1003,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "aff7cb123cdbfea3144bc762bfbc50c5d9388f8d"
+              "355989ad45eab0075e91c1d9f41249a9fed28af1"
             ]
           },
           "content": "INSERT INTO students_majors (1,1)",
@@ -1026,7 +1026,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "96d573ab455da52d62ab9359534e46e10cfb8cc5"
+              "594b9334592180e9674a8d79fb20861dab95f4ed"
             ]
           },
           "content": "SELECT * FROM students_majors",
@@ -1049,7 +1049,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "0643e3bca99352b6263e01e40be601e46596050e"
+              "c6fdf674ad8aa04f808adcb9797ba0acb1e1db65"
             ]
           },
           "content": "touch insert_data.sh",
@@ -1072,7 +1072,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "0e9f5ee4da02c8cdb5184b14a4ecb631215fb695"
+              "3e55183273afa58d717a2419b3efd1c60d5bd386"
             ]
           },
           "content": "chmod +x insert_data.sh",
@@ -1095,7 +1095,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "5219e8284ef4d0bd8cdafa2d81b8c343e6e9a7e2"
+              "5a15e49ad96f38d4933675191398fb6ea5f4260a"
             ]
           },
           "content": "Add shebang",
@@ -1118,7 +1118,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "1ddd25c52af8150998952e8ad5727e7120702707"
+              "cd5a722998f9c6e38093bddae52dd136a97f6fb7"
             ]
           },
           "content": "Add comment - Script to insert data from students.csv into students database",
@@ -1141,7 +1141,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "47a1edbb34c53c378ecbaf3314240509cf306421"
+              "1182a14c072415989b2f637d9308531e5e106a16"
             ]
           },
           "content": "add cat students.csv",
@@ -1164,7 +1164,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "f85721e2c0e83c45390577ce9c68c706a1cea097"
+              "77975311aded3a8a578a6d6809a239913c5fac82"
             ]
           },
           "content": "./insert_data.sh",
@@ -1187,7 +1187,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "538657097615ebde5eeea64fb57854b70049e21e"
+              "56774170ef6405be727881abe6cc7306dea07c42"
             ]
           },
           "content": "Add | while read\ndo \n  echo $something\ndone",
@@ -1210,7 +1210,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "40117534c80c63c0421d396247507bb51da2eb06"
+              "c9f5e07dc80ecdf38d7981f49f60b9d819c9570a"
             ]
           },
           "content": "./insert_data",
@@ -1233,7 +1233,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c6ed85519032fcfdb00891a63950b6b149c0a876"
+              "6d9b7f646655d289bec2e0830093ddd3f00da5f6"
             ]
           },
           "content": "declare -p IFS",
@@ -1256,7 +1256,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "f0d3db7ffc17bc170d94548edcd17d7535074e72"
+              "233470ed08fcc8c315ab6a9bcbe78885a57df22a"
             ]
           },
           "content": "Add IFS",
@@ -1279,7 +1279,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "5e78cf1adcab3b9ddd3ceceba6889484ce2c6fa3"
+              "d6b78259ef6f7259b26388ec595c09b4d88fd303"
             ]
           },
           "content": "./insert_data.sh",
@@ -1302,7 +1302,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "df671b6efad5374084a19223358c20c9c70efe67"
+              "b891de4022d5f3a62c413b8d83ce2438e38fb5a8"
             ]
           },
           "content": "Add echo $FIRST $LAST $MAJOR $GPA",
@@ -1325,7 +1325,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "36cbc50c0735fcb4f173b30f969996610f8cce6d"
+              "53341b68f437775f7a11a797e69e446e3a2f9940"
             ]
           },
           "content": "./insert_data.sh",
@@ -1348,7 +1348,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "ad60f0b3931d5f42f59dcbab10530ab76a98efac"
+              "86de3747fdb731555da2b93be90c1195b0b43b4f"
             ]
           },
           "content": "Delete echo",
@@ -1371,7 +1371,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "bb2f249843bd6e733e23de49cee42cab7f740fe0"
+              "58850d93f19af0f47060d8dde0164de6b4b55051"
             ]
           },
           "content": "Add psuedo code",
@@ -1394,7 +1394,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "6d7007b21f838a3f3725f284ae798028520ae25c"
+              "aecd9d4ab115bf3d255921e4556072a46df935b8"
             ]
           },
           "content": "Add PSQL Variable",
@@ -1417,7 +1417,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "cedd33fdfcfe1eba21bed2e4d19d692a3db68399"
+              "e024e4e43c1ac058a02f3f69a3cfb7b7028c6831"
             ]
           },
           "content": "Add INSERT_STUDENT_RESULT",
@@ -1440,7 +1440,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "cbac62bb693ca76bfaffe611d135539e14b96136"
+              "b2ff4d239b4cc67df347a0b867207098664d4052"
             ]
           },
           "content": "Add echo INSERT_STUDENT_RESULT",
@@ -1452,7 +1452,7 @@
     },
     {
       "id": "590",
-      "title": "touch students_test.csv",
+      "title": "cp students.csv",
       "summary": "",
       "content": "",
       "steps": [
@@ -1463,10 +1463,10 @@
               "../.bash_history"
             ],
             "commits": [
-              "4ff31f588f7cba682d7f1e917445ae7e91749f5a"
+              "b73401f3a7abaaa6d72a019ba7c8a6dd66f2f81a"
             ]
           },
-          "content": "touch students_test.csv",
+          "content": "cp students.csv students_test.csv",
           "hints": [
             "hint1"
           ]
@@ -1486,7 +1486,7 @@
               "./students_test.csv"
             ],
             "commits": [
-              "69360b9bbdf7c0b4b11e7d7a5adf646eedbb931c"
+              "b10b10c74ada7ce8f0073fd6df4d6474bb6a4e32"
             ]
           },
           "content": "Add three records to students_test.csv",
@@ -1509,7 +1509,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "9aba685a7e60f4c39b2d7245074a5994ce7692c5"
+              "ca078791b8e5bf36addddaad171b1139a2bab118"
             ]
           },
           "content": "Change to cat students_test.csv",
@@ -1532,7 +1532,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "90725838153be88bee3558887d884ebc2e258dd7"
+              "a3981ba5cdc4ba8e40bc50ded0e1672b2362795b"
             ]
           },
           "content": "./insert_data.sh",
@@ -1555,7 +1555,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "a9e5468c1a6c3cb17b59f8dc89ca1feca6256bb9"
+              "752216172439ccef6d852fab6c5daa6109f74d83"
             ]
           },
           "content": "SELECT * FROM students;",
@@ -1578,7 +1578,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "e62d768da8e9f2e666986dbddcd8e07e4f533063"
+              "6c2026f31f407ce6e82873782e6b22f4b6389a34"
             ]
           },
           "content": "TRUNCATE students",
@@ -1601,7 +1601,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "e6b6e657c75513c8d1923f021738a01e4552a8d6"
+              "aa4c519b47fc5fc7bb49c3a2923bc1731e368bf3"
             ]
           },
           "content": "TRUNCATE students, gpas",
@@ -1624,7 +1624,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "5745311a845b8526aaff7cd1319ddeb09b714aa5"
+              "827edcee160cd654298300aab5ef9929ce597b3a"
             ]
           },
           "content": "TRUNCATE students, gpas, students_majors",
@@ -1647,7 +1647,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "d03a7457b675e437c3de782f3bbe07cb4e012589"
+              "0e4ecad1678a40eaa217b0aa01f80f710fddab9c"
             ]
           },
           "content": "SELECT * FROM students",
@@ -1670,7 +1670,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "8849629042f5d41ce5f8b241801b0154f22a2612"
+              "ccea7b015096478912eba749002203fa5f821b4f"
             ]
           },
           "content": "SELECT * FROM gpas",
@@ -1693,7 +1693,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "2adf0d3e41e90618001d73b93fc244c3833a1567"
+              "a6cc94552090f493dcc1ce404ca33f244a0d4e9f"
             ]
           },
           "content": "SELECT * FROM students_majors",
@@ -1716,7 +1716,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "b6433d55eefd66f792f9eda4d94c78b83fca7b87"
+              "125a6d080cb53473c5f5e29c89acfdc929b12eb3"
             ]
           },
           "content": "SELECT * FROM majors",
@@ -1739,7 +1739,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "a321a5fb91344dd3e29b02cb359f25ff65717adc"
+              "f22ace5363cd9cf3163e654af8a78a1452923537"
             ]
           },
           "content": "TRUNCATE majors, students_majors",
@@ -1762,7 +1762,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "e2cb7a8e612ddda3ece15b39243e9594494cab10"
+              "cfd1fb892cea37a85375048c9067ba34abd8c315"
             ]
           },
           "content": "SELECT * FROM majors",
@@ -1785,7 +1785,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "5ee04d48085d0c6d14d07a234b9267be7587ecb6"
+              "c5644236d99039fac2151a45c9c845a9a01c5a6d"
             ]
           },
           "content": "./insert_data.sh",
@@ -1808,7 +1808,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "f20a86a9f77813c348fb1ee066c6be717e889e54"
+              "3a26c3bd8e82d907a04a16e4619c706a52cc264a"
             ]
           },
           "content": "SELECT * FROM students",
@@ -1828,10 +1828,10 @@
           "id": "750.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "99b3378389b997bd2c0d9541e65f68d98683d274"
+              "484a78aac04f0bf090963f5ad07962e4d25df05b"
             ]
           },
           "content": "Add if [[ $FIRST != first_name ]]",
@@ -1851,10 +1851,10 @@
           "id": "760.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "50fedfb5c29cf173f99e27b933289040d6dcb296"
+              "2333df7dcfc9792ba05543829a325ef24cf259e8"
             ]
           },
           "content": "TRUNCATE students CASCADE",
@@ -1874,10 +1874,10 @@
           "id": "770.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "d83bba3993f49fcfa25bf330a3fb31e52de3bfe9"
+              "e282997a4b09f4e48cccfe3f9c93d9fac7fa6c03"
             ]
           },
           "content": "SELECT * FROM students;",
@@ -1900,7 +1900,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "f857a962f5e59a6777831a94e25377982cfa698c"
+              "1677f42a52879b9a8ae34f11a183f01d9eee36b5"
             ]
           },
           "content": "./insert_data.sh",
@@ -1920,10 +1920,10 @@
           "id": "790.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "294dc73cede9eb7ae17e9bdfd007ddf0f76cdcbf"
+              "42c485246a86a0211d0f72304955a1876b345bf6"
             ]
           },
           "content": "SELECT * FROM students",
@@ -1943,10 +1943,10 @@
           "id": "800.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "ba47df68699ced1fbf32a47daca55e6dd957b43f"
+              "a7c60c271ebab7ca698c55c3437b618762a83f3a"
             ]
           },
           "content": "Delete echo INSERT_STUDENT_RESULT",
@@ -1966,10 +1966,10 @@
           "id": "810.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "226220eae4fca81841186f8d0d427e0ced20ce03"
+              "a1e2aafc5c2703d1f0c9d2e7bf57b780d87c5a28"
             ]
           },
           "content": "add if [[ $INSERT_STUDENT_RESULT == \"INSERT 0 1\" ]]\nthen\n  echo success message\nfi",
@@ -1989,10 +1989,10 @@
           "id": "820.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "cb185914612678c0dd712c0e89d225a27c122fbe"
+              "e87fb09b34c1bd318964f0f9d86b7a76ded9ab83"
             ]
           },
           "content": "TRUNCATE students CASCADE;",
@@ -2015,7 +2015,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "bd7785b62393ad114e592f701e52dbbdb5bac123"
+              "51a48d02ff759d7cb489ad302ba73aaf5c2564d8"
             ]
           },
           "content": "insert_data.sh",
@@ -2035,10 +2035,10 @@
           "id": "840.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "7cbc1596e1ba594539fd64c06a99bbab9e07f177"
+              "deb477acb03edbfb3f0ec8ce70c48d944e0154a2"
             ]
           },
           "content": "Add STUDENT_ID = $($PSQL ...)",
@@ -2058,10 +2058,10 @@
           "id": "850.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "f921013ca78c45a41de74d5543325bd8b21fecbe"
+              "d67501d06e7146afea7a189169d6dd69b085fbd9"
             ]
           },
           "content": "add echo $STUDENT_ID",
@@ -2081,10 +2081,10 @@
           "id": "860.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "84007a4c72e44777fe8939d6a959a164eef857a2"
+              "64a2b9c0f4821a3c4d4ccf966c484fefaa41fd49"
             ]
           },
           "content": "TRUNCATE students CASCADE",
@@ -2107,7 +2107,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "61839f691e60ad2c99e51bae5ae3d59165b7c925"
+              "e08afe2b82ae67ce422ef15d29511da80050eeb6"
             ]
           },
           "content": "./insert_data.sh",
@@ -2127,10 +2127,10 @@
           "id": "880.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "64741c10fa47ba5005476b089eb1fa410d8f40a1"
+              "498285c99cb542fdb9c0f18c4923d6a94b5c12a2"
             ]
           },
           "content": "Add echo $($PSQL \"TRUNCATE students, gpas, majors, students_majors;\")",
@@ -2153,7 +2153,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "144b9370f616196c23e4ed834f9d1dc528618d44"
+              "dc1376746b04ef784e47f0a3d00a8e4ca8b34918"
             ]
           },
           "content": "./insert_data.sh",
@@ -2173,10 +2173,10 @@
           "id": "900.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "dab92ee63b5f3a39671450419204feda6cda601f"
+              "7afd5d050fd9cb5d0014c224e36994dce10a58f9"
             ]
           },
           "content": "SELECT * FROM students",
@@ -2196,10 +2196,10 @@
           "id": "910.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "816c2f049b996e54f61354c5e29083e43922d4b1"
+              "a229f46f62af68675b64bde7bc8643b63255994e"
             ]
           },
           "content": "Add INSERT_GPA_RESULT=",
@@ -2219,10 +2219,10 @@
           "id": "920.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "30010f2671aa6ad040b59daf4f9965b44bc8d15b"
+              "8cd7164966be6621e55d4f11daa91cefbb74963d"
             ]
           },
           "content": "Add if [[ $INSERT_GPA_RESULT == \"INSERT 0 1\" ]]\nthen\n  echo success\nfi",
@@ -2245,7 +2245,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "6a190dd174398f396430bd12b6a50fcb7446b137"
+              "f4d36e3dc0467df8c1d6a302dde90894b2282265"
             ]
           },
           "content": "./insert_data.sh",
@@ -2265,10 +2265,10 @@
           "id": "940.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "7e6ac7a769094e5d2b216106d6f7e13ea6b5339f"
+              "17daec779081ae980aa427ce872255b2674d3449"
             ]
           },
           "content": "Delete echo STUDENT_ID",
@@ -2288,10 +2288,10 @@
           "id": "950.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "30d2e855bd52f87a2db0b6daba8f78a7e0699b42"
+              "746d79ba5e12f07ae1d018f2c22c605cd3a9d32d"
             ]
           },
           "content": "SELECT * FROM STUDENTS",
@@ -2311,10 +2311,10 @@
           "id": "960.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "e231dbfc42f1dee8f4005c1635267dc75dd9afdc"
+              "40ae1c6b0ee05219ffd42a1f51c25ff0dc6c0c13"
             ]
           },
           "content": "SELECT * FROM gpas;",
@@ -2334,10 +2334,10 @@
           "id": "970.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "f2a433d506979fc19612d85b19becf154af4e35a"
+              "90caa25924eb0dd6a83854289b1d9e4f51fa0628"
             ]
           },
           "content": "Add MAJOR_ID = $(...)",
@@ -2357,10 +2357,10 @@
           "id": "980.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "8400191fcbb1c3e347e0c64ded7aa56a790eb53c"
+              "3d4cb274a7d0181701e0a4bf1e266f238aac05b4"
             ]
           },
           "content": "Add if [[ -z $MAJOR_ID ]]\nthen\n  echo major_id not found\nfi",
@@ -2380,10 +2380,10 @@
           "id": "990.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "02f028a1b44214b0f98192c8bbaeeb0d6697976d"
+              "b51e6a6c815a0e0f98fda9c902521d6836a9e420"
             ]
           },
           "content": "Add INSERT_MAJOR_RESULT",
@@ -2403,10 +2403,10 @@
           "id": "1000.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "7b45ae2ba247e6ae64e594abb6079d36239d49d1"
+              "31112413b32d734101e097e239b39cc762425db9"
             ]
           },
           "content": "Add if [[ INSERT_MAJOR RESULT == \"INSERT 0 1\" ]]\nthen\n  echo success\nfi",
@@ -2429,7 +2429,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "ffbc94a28cbe5e499798251a65ee0cf54d7ce7be"
+              "0ba8d6d0b87c36c5335fdadc540eb95dd485c56a"
             ]
           },
           "content": "./insert_data.sh",
@@ -2449,10 +2449,10 @@
           "id": "1020.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "565e0fdd3c37530150cfa18aac91c84f8a18faf7"
+              "1b866b9b81a512be7291e4db87f10d8689d51326"
             ]
           },
           "content": "SELECT * FROM majors;",
@@ -2472,10 +2472,10 @@
           "id": "1030.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "e6ed3e53eea7d7332d43b229ed02f8100c3fd2e2"
+              "d53da7e041d09cca7666f6e00c68deee143d1c36"
             ]
           },
           "content": "SELECT * FROM students",
@@ -2495,10 +2495,10 @@
           "id": "1040.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "366159a9f26a2a4b960ce7c76c466d0dc1d3f53b"
+              "29496778c3ba33d803573339ae674571abad5572"
             ]
           },
           "content": "SELECT * FROM gpas;",
@@ -2518,10 +2518,10 @@
           "id": "1050.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "75775f93c08140df23bd0d731726fe6cc6b91a39"
+              "374455400696cf25e960c2779d2cad6d8e32ac62"
             ]
           },
           "content": "Add MAJOR_ID=",
@@ -2541,10 +2541,10 @@
           "id": "1060.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "cc696d9ed32a5546ce498aaffe809e7df9fe92f8"
+              "c47aeed1704d7a52a4a555aa0fc97e5c2e0dfbe3"
             ]
           },
           "content": "Add INSERT_S_M_RESULT",
@@ -2564,10 +2564,10 @@
           "id": "1070.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "4dd17265bf735c1968f0a48b16179a13cf47b9a2"
+              "592e028148bd74d8546072e70832c6811a006451"
             ]
           },
           "content": "Add if [[ INSERT_S_M_RESULT == INSERT 0 1 ]]\nthen\n echo success\nfi",
@@ -2590,7 +2590,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "8c8bcc06de56b0d6abd90561fc1770c15b083580"
+              "613ceb071867ccba8bb740d4ac0ab41870a279ff"
             ]
           },
           "content": "./insert_data.sh",
@@ -2610,10 +2610,10 @@
           "id": "1090.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "2605340cc0ca670bce69879e0f56fdbfbca708ff"
+              "f5b95b75d5f24f855b17de41cd6c35ea67535c75"
             ]
           },
           "content": "SELECT * FROM students",
@@ -2633,10 +2633,10 @@
           "id": "1100.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ada5f7d8c780b58012fad02f53d2616be67745de"
+              "94279c45eaa3d7359af73b6b3c74d5a7edc4382c"
             ]
           },
           "content": "SELECT * FROM gpas",
@@ -2656,10 +2656,10 @@
           "id": "1110.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1055501d0ddd784ef3df494900aa268945a43bd1"
+              "2fcdcad4f0741180787d91377cf5cf2b4b91bb80"
             ]
           },
           "content": "SELECT * FROM majors",
@@ -2679,10 +2679,10 @@
           "id": "1120.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "139d6b4fb2ac9b5108c0759b5d203749b684ce1e"
+              "325dd0dcb843afb594509a781d26a5b6938d846c"
             ]
           },
           "content": "SELECT * FROM students_majors",
@@ -2702,10 +2702,10 @@
           "id": "1130.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./insert_data.sh"
             ],
             "commits": [
-              "d65f240fb0449b2907c9cd0217de0a3bc5677369"
+              "de9b0ca3d97a7523b4a87341053cf45851005bf7"
             ]
           },
           "content": "Change to cat students.csv",
@@ -2728,7 +2728,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "08ad380621d2a73f3d5fa25ba785ea50b0dccd4a"
+              "a9c19b6a51265d6093be4f550e1df926751e947b"
             ]
           },
           "content": "./insert_data.sh",
@@ -2748,10 +2748,10 @@
           "id": "1150.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "670a24007eb21a5928609f5f256a53359e1f1010"
+              "eee0b7734bcda0e92494878025aefaaea7abfe15"
             ]
           },
           "content": "SELECT * FROM students",
@@ -2771,10 +2771,10 @@
           "id": "1160.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "3c408ee898e458cc763f80641db498b299f9c50f"
+              "976e7028dc71aba12c049f43bed811f35b8a8a35"
             ]
           },
           "content": "SELECT * FROM gpas",
@@ -2794,10 +2794,10 @@
           "id": "1170.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "52a5a28deb252bd8a9edd51becf603cd6d538447"
+              "f3adc0592ad16f6829e1f655d80c9b0db642ed01"
             ]
           },
           "content": "SELECT * FROM majors",
@@ -2817,10 +2817,10 @@
           "id": "1180.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "85b36fb5862b360336afe3d4a974d5a8d846f9ca"
+              "119969a933f77013e96ad842724c40687239600c"
             ]
           },
           "content": "SELECT * FROM students_majors",
@@ -2843,7 +2843,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "7add01fbea068f26f7d4b5b3e5f2f341a37b2741"
+              "0897cf4e2f36dc197af3239134f44dc8ded646cb"
             ]
           },
           "content": "ls",
@@ -2866,7 +2866,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "b6359f3545c1fde9f5303025900d6ddd32ab56bc"
+              "f2bb2febe0d2b0f18c7ce909954ea37cd7cc1885"
             ]
           },
           "content": "rm students_test.csv",
@@ -2889,7 +2889,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "714437a2fb81a946e52eb347e6c6a5edc2d2f647"
+              "1f96b654c489cd5a1f72140215b0e564602cf1f7"
             ]
           },
           "content": "ls",
@@ -2912,7 +2912,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "0ad2606695a154769a40ba5a505b1a7ed1b8419c"
+              "9c5c1641fb14bc226cde1281bc1ccfc0cd539baf"
             ]
           },
           "content": "touch student_info.sh",
@@ -2935,7 +2935,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "905934457cf0ac947c9f8d6245202ae8e3ad5160"
+              "7e5504407b4b3e09454de7631987582873d89e70"
             ]
           },
           "content": "chmod +x student_info.sh",
@@ -2955,10 +2955,10 @@
           "id": "1240.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./student_info.sh"
             ],
             "commits": [
-              "38fd64b38430dba5ae59943812faaa759df8eb04"
+              "3c0035dee177530025f592c354b60cd9fa4cbb9f"
             ]
           },
           "content": "Add shebang",
@@ -2978,10 +2978,10 @@
           "id": "1250.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./student_info.sh"
             ],
             "commits": [
-              "8a4283f4e096188f225fd97a2d037e9047298024"
+              "9ea1592ca69e40f83e953cd33b06b902bb312dfe"
             ]
           },
           "content": "Add comment # Info about my computer science students from students database",
@@ -3001,13 +3001,34 @@
           "id": "1260.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./student_info.sh"
             ],
             "commits": [
-              "7f6933928747bb741815ebc3d7ca1c45154099b0"
+              "074ec1506cfc04e9b87bba3ab250caf57319cd31"
             ]
           },
           "content": "Add echo -e \"\\n~~ My Computer Science Students ~~\\n\"",
+          "hints": [
+            "hint1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1265",
+      "title": "./student_info.sh",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1265.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": []
+          },
+          "content": "./student_info.sh",
           "hints": [
             "hint1"
           ]
@@ -3024,10 +3045,10 @@
           "id": "1270.1",
           "setup": {
             "watchers": [
-              "../.bash_history"
+              "./student_info.sh"
             ],
             "commits": [
-              "ae9a635bfa165d08fc7eab8b6c69a091cbcad11e"
+              "511bbb95c1bf816eb1eb0e9599f63c1068e9740d"
             ]
           },
           "content": "Add PSQL Variable",
