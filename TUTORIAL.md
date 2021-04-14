@@ -616,11 +616,11 @@ Add echo INSERT_STUDENT_RESULT
 
 - hint1
 
-## 590. touch students_test.csv
+## 590. cp students.csv
 
 ### 590.1
 
-touch students_test.csv
+cp students.csv students_test.csv
 
 #### HINTS
 
