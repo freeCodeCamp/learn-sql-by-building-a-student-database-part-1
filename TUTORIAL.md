@@ -1311,6 +1311,16 @@ Add echo -e "\n~~ My Computer Science Students ~~\n"
 
 - hint1
 
+## 1265. ./student_info.sh
+
+### 1265.1
+
+./student_info.sh
+
+#### HINTS
+
+- hint1
+
 ## 1270. Add PSQL Variable
 
 ### 1270.1

@@ -494,19 +494,19 @@ levels:
       - id: '750.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '760'
     steps:
       - id: '760.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '770'
     steps:
       - id: '770.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '780'
     steps:
       - id: '780.1'
@@ -518,25 +518,25 @@ levels:
       - id: '790.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '800'
     steps:
       - id: '800.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '810'
     steps:
       - id: '810.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '820'
     steps:
       - id: '820.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '830'
     steps:
       - id: '830.1'
@@ -548,19 +548,19 @@ levels:
       - id: '840.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '850'
     steps:
       - id: '850.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '860'
     steps:
       - id: '860.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '870'
     steps:
       - id: '870.1'
@@ -572,7 +572,7 @@ levels:
       - id: '880.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '890'
     steps:
       - id: '890.1'
@@ -584,19 +584,19 @@ levels:
       - id: '900.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '910'
     steps:
       - id: '910.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '920'
     steps:
       - id: '920.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '930'
     steps:
       - id: '930.1'
@@ -608,43 +608,43 @@ levels:
       - id: '940.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '950'
     steps:
       - id: '950.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '960'
     steps:
       - id: '960.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '970'
     steps:
       - id: '970.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '980'
     steps:
       - id: '980.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '990'
     steps:
       - id: '990.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '1000'
     steps:
       - id: '1000.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '1010'
     steps:
       - id: '1010.1'
@@ -656,37 +656,37 @@ levels:
       - id: '1020.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '1030'
     steps:
       - id: '1030.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '1040'
     steps:
       - id: '1040.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '1050'
     steps:
       - id: '1050.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '1060'
     steps:
       - id: '1060.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '1070'
     steps:
       - id: '1070.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '1080'
     steps:
       - id: '1080.1'
@@ -698,31 +698,31 @@ levels:
       - id: '1090.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '1100'
     steps:
       - id: '1100.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '1110'
     steps:
       - id: '1110.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '1120'
     steps:
       - id: '1120.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '1130'
     steps:
       - id: '1130.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./insert_data.sh
   - id: '1140'
     steps:
       - id: '1140.1'
@@ -734,25 +734,25 @@ levels:
       - id: '1150.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '1160'
     steps:
       - id: '1160.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '1170'
     steps:
       - id: '1170.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '1180'
     steps:
       - id: '1180.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./.freeCodeCamp/test/pg.log
   - id: '1190'
     steps:
       - id: '1190.1'
@@ -788,16 +788,22 @@ levels:
       - id: '1240.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./student_info.sh
   - id: '1250'
     steps:
       - id: '1250.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./student_info.sh
   - id: '1260'
     steps:
       - id: '1260.1'
+        setup:
+          watchers:
+            - ./student_info.sh
+  - id: '1265'
+    steps:
+      - id: '1265.1'
         setup:
           watchers:
             - ../.bash_history
@@ -806,4 +812,4 @@ levels:
       - id: '1270.1'
         setup:
           watchers:
-            - ../.bash_history
+            - ./student_info.sh
