@@ -189,28 +189,28 @@ ALTER TABLE ONLY public.students ALTER COLUMN student_id SET DEFAULT nextval('pu
 -- Data for Name: courses; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.courses VALUES (14, 'Data Structures and Algorithms');
-INSERT INTO public.courses VALUES (15, 'Web Programming');
-INSERT INTO public.courses VALUES (16, 'Database Systems');
+INSERT INTO public.courses VALUES (17, 'Data Structures and Algorithms');
+INSERT INTO public.courses VALUES (18, 'Web Programming');
+INSERT INTO public.courses VALUES (19, 'Database Systems');
 
 
 --
 -- Data for Name: majors; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.majors VALUES (27, 'Database Administration');
-INSERT INTO public.majors VALUES (28, 'Web Development');
-INSERT INTO public.majors VALUES (29, 'Data Science');
+INSERT INTO public.majors VALUES (30, 'Database Administration');
+INSERT INTO public.majors VALUES (31, 'Web Development');
+INSERT INTO public.majors VALUES (32, 'Data Science');
 
 
 --
 -- Data for Name: majors_courses; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.majors_courses VALUES (27, 14);
-INSERT INTO public.majors_courses VALUES (28, 15);
-INSERT INTO public.majors_courses VALUES (27, 16);
-INSERT INTO public.majors_courses VALUES (29, 14);
+INSERT INTO public.majors_courses VALUES (30, 17);
+INSERT INTO public.majors_courses VALUES (31, 18);
+INSERT INTO public.majors_courses VALUES (30, 19);
+INSERT INTO public.majors_courses VALUES (32, 17);
 
 
 --
@@ -223,14 +223,14 @@ INSERT INTO public.majors_courses VALUES (29, 14);
 -- Name: courses_course_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.courses_course_id_seq', 16, true);
+SELECT pg_catalog.setval('public.courses_course_id_seq', 19, true);
 
 
 --
 -- Name: majors_major_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.majors_major_id_seq', 29, true);
+SELECT pg_catalog.setval('public.majors_major_id_seq', 32, true);
 
 
 --
