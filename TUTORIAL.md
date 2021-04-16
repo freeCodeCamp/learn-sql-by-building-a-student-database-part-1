@@ -83,21 +83,21 @@ CREATE TABLE majors
 
 - hint1
 
-## 90. CREATE TABLE gpas
+## 90. CREATE TABLE courses
 
 ### 90.1
 
-CREATE TABLE gps
+CREATE TABLE courses
 
 #### HINTS
 
 - hint1
 
-## 100. CREATE TABLE students_majors
+## 100. CREATE TABLE majors_courses
 
 ### 100.1
 
-CREATE TABLE students_majors
+CREATE TABLE majors_courses
 
 #### HINTS
 
@@ -143,6 +143,26 @@ Create last_name column - varchar(50) not null
 
 - hint1
 
+## 143. Create major_id Column
+
+### 143.1
+
+Create major_id column - int
+
+#### HINTS
+
+- hint1
+
+## 146. Create gpa Column
+
+### 146.1
+
+Create gpa column - numeric(2,1);
+
+#### HINTS
+
+- hint1
+
 ## 150. \d students
 
 ### 150.1
@@ -183,91 +203,101 @@ Create major column - varchar(50) not null
 
 - hint1
 
-## 190. Create student_id Column
+## 183. Create major_id foreign key
+
+### 183.1
+
+Add major_id fkey to students
+
+#### HINTS
+
+- hint1
+
+## 187. \d students
+
+### 187.1
+
+\d students
+
+#### HINTS
+
+- hint1
+
+## 190. Create course_id Column
 
 ### 190.1
 
-Create student_id column in gpas - int primary key
+Create course_id serial pkey
 
 #### HINTS
 
 - hint1
 
-## 200. Set student_id as Foreign Key
+## 200. Create course Column
 
 ### 200.1
 
-Set student_id in gpas as foreign key
+Create course column - varchar(100) not null
 
 #### HINTS
 
 - hint1
 
-## 210. Create gpa Column
-
-### 210.1
-
-Create gpa column - numeric(2, 1) not null
-
-#### HINTS
-
-- hint1
-
-## 220. \d gpas
+## 220. \d courses
 
 ### 220.1
 
-\d gpas
+\d courses
 
 #### HINTS
 
 - hint1
 
-## 230. Create student_id column
+## 230. Create major_id column
 
 ### 230.1
 
-Create student_id column - int - in s_m
+Create major_id column - int - in majors_courses
 
 #### HINTS
 
 - hint1
 
-## 240. Set student_id Foreign Key
+## 240. Set major_id Foreign Key
 
 ### 240.1
 
-set student_id foreign key
+set major_id foreign key - in majors_courses
 
 #### HINTS
 
 - hint1
 
-## 250. Create major_id Column
+## 250. Create course_id Column
 
 ### 250.1
 
-Create major_id column - int
+Create course_id column - int - in majors_courses
 
 #### HINTS
 
 - hint1
 
-## 260. Set major_id Foreign Key
+## 260. Set course_id Foreign Key
 
 ### 260.1
 
-set major_id fkey
+set course_id fkey - in majors_courses
 
 #### HINTS
 
 - hint1
 
-## 270. \d students_majors
+## 270. \d majors_courses
 
 ### 270.1
 
-\d students_majors
+\d majors_courses
 
 #### HINTS
 
@@ -277,17 +307,17 @@ set major_id fkey
 
 ### 280.1
 
-Create componsite pKey - alter table _ add primary key (s_id, m_id);
+Create componsite pKey - alter table _ add primary key (m_id, c_id);
 
 #### HINTS
 
 - hint1
 
-## 290. \d students_majors
+## 290. \d majors_courses
 
 ### 290.1
 
-\d students_majors
+\d majors_courses
 
 #### HINTS
 
@@ -303,69 +333,9 @@ Create componsite pKey - alter table _ add primary key (s_id, m_id);
 
 - hint1
 
-## 310. \d students
+## 310. \d majors
 
 ### 310.1
-
-\d students
-
-#### HINTS
-
-- hint1
-
-## 320. INSERT INTO students
-
-### 320.1
-
-INSERT INTO students ('Rhea', 'Kellems')
-
-#### HINTS
-
-- hint1
-
-## 330. \d gpas
-
-### 330.1
-
-\d gpas
-
-#### HINTS
-
-- hint1
-
-## 340. SELECT * FROM students
-
-### 340.1
-
-SELECT * FROM students
-
-#### HINTS
-
-- hint1
-
-## 350. INSERT INTO gpas
-
-### 350.1
-
-INSERT INTO gpas (1, '2.5')
-
-#### HINTS
-
-- hint1
-
-## 360. SELECT * FROM gpas
-
-### 360.1
-
-SELECT * FROM gpas;
-
-#### HINTS
-
-- hint1
-
-## 370. \d majors
-
-### 370.1
 
 \d majors
 
@@ -373,61 +343,111 @@ SELECT * FROM gpas;
 
 - hint1
 
-## 380. INSERT INTO majors
+## 320. INSERT INTO majors
+
+### 320.1
+
+INSERT INTO majors ('dba')
+
+#### HINTS
+
+- hint1
+
+## 340. SELECT * FROM majors
+
+### 340.1
+
+SELECT * FROM majors
+
+#### HINTS
+
+- hint1
+
+## 350. INSERT INTO courses
+
+### 350.1
+
+INSERT INTO courses ('Data Structures and Algorithms')
+
+#### HINTS
+
+- hint1
+
+## 360. SELECT * FROM courses
+
+### 360.1
+
+SELECT * FROM courses;
+
+#### HINTS
+
+- hint1
+
+## 370. \d majors_courses
+
+### 370.1
+
+\d majors_courses
+
+#### HINTS
+
+- hint1
+
+## 380. INSERT INTO majors_courses
 
 ### 380.1
 
-INSERT INTO majors ('db admin')
+INSERT INTO majors_courses (1,1)
 
 #### HINTS
 
 - hint1
 
-## 390. SELECT * FROM majors
+## 390. SELECT * FROM majors_courses
 
 ### 390.1
 
-SELECT * FROM majors;
+SELECT * FROM majors_courses;
 
 #### HINTS
 
 - hint1
 
-## 400. \d students_majors
+## 400. \d students
 
 ### 400.1
 
-\d students_majors
+\d students
 
 #### HINTS
 
 - hint1
 
-## 410. SELECT * FROM students
+## 410. SELECT * FROM majors
 
 ### 410.1
 
-SELECT * FROM students
+SELECT * FROM majors
 
 #### HINTS
 
 - hint1
 
-## 420. INSERT INTO students_majors
+## 420. INSERT INTO students
 
 ### 420.1
 
-INSERT INTO students_majors (1,1)
+INSERT INTO students ('Rhea', 'Kellems', 1, 2.5)
 
 #### HINTS
 
 - hint1
 
-## 430. SELECT * FROM students_majors
+## 430. SELECT * FROM students
 
 ### 430.1
 
-SELECT * FROM students_majors
+SELECT * FROM students
 
 #### HINTS
 
@@ -473,11 +493,11 @@ Add comment - Script to insert data from students.csv into students database
 
 - hint1
 
-## 480. Add cat students.csv
+## 480. Add cat courses.csv
 
 ### 480.1
 
-add cat students.csv
+add cat courses.csv
 
 #### HINTS
 
@@ -497,9 +517,9 @@ add cat students.csv
 
 ### 500.1
 
-Add | while read
+Add | while read MAJOR COURSE
 do 
-  echo $something
+  echo $MAJOR
 done
 
 #### HINTS
@@ -530,7 +550,7 @@ declare -p IFS
 
 ### 520.1
 
-Add IFS
+Add IFS=","
 
 #### HINTS
 
@@ -550,7 +570,7 @@ Add IFS
 
 ### 533.1
 
-Add echo $FIRST $LAST $MAJOR $GPA
+Add echo $MAJOR $COURSE
 
 #### HINTS
 
@@ -596,51 +616,91 @@ Add PSQL Variable
 
 - hint1
 
-## 570. Add INSERT_STUDENT_RESULT
+## 562. Add MAJOR_ID
+
+### 562.1
+
+MAJOR_ID
+
+#### HINTS
+
+- hint1
+
+## 564. Add echo MAJOR_ID
+
+### 564.1
+
+Add echo MAJOR_ID
+
+#### HINTS
+
+- hint1
+
+## 566. ./insert_data.sh
+
+### 566.1
+
+./insert_data.sh
+
+#### HINTS
+
+- hint1
+
+## 568. Add if -z MAJOR_ID
+
+### 568.1
+
+Add PSQL Variable
+
+#### HINTS
+
+- hint1
+
+## 570. Add INSERT_MAJOR_RESULT
 
 ### 570.1
 
-Add INSERT_STUDENT_RESULT
+Add INSERT_MAJOR_RESULT
 
 #### HINTS
 
 - hint1
 
-## 580. Add echo INSERT_STUDENT_RESULT
+## 580. Add echo INSERT_MAJOR_RESULT
 
 ### 580.1
 
-Add echo INSERT_STUDENT_RESULT
+Add echo INSERT_MAJOR_RESULT
 
 #### HINTS
 
 - hint1
 
-## 590. cp students.csv
+## 590. cp courses.csv
 
 ### 590.1
 
-cp students.csv students_test.csv
+cp courses.csv courses_test.csv
 
 #### HINTS
 
 - hint1
 
-## 600. Add three records to students_test.csv
+## 600. Add four records to courses_test.csv
 
 ### 600.1
 
-Add three records to students_test.csv
+Add three records to courses_test.csv
 
 #### HINTS
 
 - hint1
 
-## 610. Change to cat students_test.csv
+## 610. Change to cat courses_test.csv
 
 ### 610.1
 
-Change to cat students_test.csv
+Change to cat courses_test.csv
 
 #### HINTS
 
@@ -656,49 +716,79 @@ Change to cat students_test.csv
 
 - hint1
 
-## 630. SELECT * FROM students
+## 625. Delete echo MAJOR_ID
+
+### 625.1
+
+Delete echo MAJOR_ID
+
+#### HINTS
+
+- hint1
+
+## 630. SELECT * FROM majors
 
 ### 630.1
 
-SELECT * FROM students;
+SELECT * FROM majors;
 
 #### HINTS
 
 - hint1
 
-## 640. TRUNCATE students
+## 640. TRUNCATE majors
 
 ### 640.1
 
-TRUNCATE students
+TRUNCATE majors
 
 #### HINTS
 
 - hint1
 
-## 650. TRUNCATE students, gpas
+## 650. TRUNCATE majors, students
 
 ### 650.1
 
-TRUNCATE students, gpas
+TRUNCATE majors, students
 
 #### HINTS
 
 - hint1
 
-## 660. TRUNCATE students, gpas, students_majors
+## 660. TRUNCATE majors, students, majors_courses
 
 ### 660.1
 
-TRUNCATE students, gpas, students_majors
+TRUNCATE majors, students, majors_courses
 
 #### HINTS
 
 - hint1
 
-## 670. SELECT * FROM students
+## 670. SELECT * FROM majors
 
 ### 670.1
+
+SELECT * FROM majors
+
+#### HINTS
+
+- hint1
+
+## 680. SELECT * FROM majors_courses
+
+### 680.1
+
+SELECT * FROM majors_courses
+
+#### HINTS
+
+- hint1
+
+## 690. SELECT * FROM students
+
+### 690.1
 
 SELECT * FROM students
 
@@ -706,51 +796,31 @@ SELECT * FROM students
 
 - hint1
 
-## 680. SELECT * FROM gpas
-
-### 680.1
-
-SELECT * FROM gpas
-
-#### HINTS
-
-- hint1
-
-## 690. SELECT * FROM students_majors
-
-### 690.1
-
-SELECT * FROM students_majors
-
-#### HINTS
-
-- hint1
-
-## 700. SELECT * FROM majors
+## 700. SELECT * FROM courses
 
 ### 700.1
 
-SELECT * FROM majors
+SELECT * FROM courses
 
 #### HINTS
 
 - hint1
 
-## 710. TRUNCATE majors, students_majors
+## 710. TRUNCATE courses, majors_courses
 
 ### 710.1
 
-TRUNCATE majors, students_majors
+TRUNCATE courses, majors_courses
 
 #### HINTS
 
 - hint1
 
-## 720. SELECT * FROM majors
+## 720. SELECT * FROM courses
 
 ### 720.1
 
-SELECT * FROM majors
+SELECT * FROM courses
 
 #### HINTS
 
@@ -766,41 +836,41 @@ SELECT * FROM majors
 
 - hint1
 
-## 740. SELECT * FROM students
+## 740. SELECT * FROM majors
 
 ### 740.1
 
-SELECT * FROM students
+SELECT * FROM majors
 
 #### HINTS
 
 - hint1
 
-## 750. Add if first_name
+## 750. Add if major
 
 ### 750.1
 
-Add if [[ $FIRST != first_name ]]
+Add if [[ $MAJOR != "major" ]]
 
 #### HINTS
 
 - hint1
 
-## 760. TRUNCATE students CASCADE
+## 760. TRUNCATE majors CASCADE
 
 ### 760.1
 
-TRUNCATE students CASCADE
+TRUNCATE majors CASCADE
 
 #### HINTS
 
 - hint1
 
-## 770. SELECT * FROM students
+## 770. SELECT * FROM majors
 
 ### 770.1
 
-SELECT * FROM students;
+SELECT * FROM majors;
 
 #### HINTS
 
@@ -816,44 +886,44 @@ SELECT * FROM students;
 
 - hint1
 
-## 790. SELECT * FROM students
+## 790. SELECT * FROM majors
 
 ### 790.1
 
-SELECT * FROM students
+SELECT * FROM majors
 
 #### HINTS
 
 - hint1
 
-## 800. Delete echo INSERT_STUDENT_RESULT
+## 800. Delect echo INSERT_MAJOR_RESULT
 
 ### 800.1
 
-Delete echo INSERT_STUDENT_RESULT
+Delete echo INSERT_MAJOR_RESULT
 
 #### HINTS
 
 - hint1
 
-## 810. Add if INSERT_STUDENT_RESULT
+## 810. Add if INSERT_MAJOR_RESULT
 
 ### 810.1
 
-add if [[ $INSERT_STUDENT_RESULT == "INSERT 0 1" ]]
+add if [[ $INSERT_MAJOR_RESULT == "INSERT 0 1" ]]
 then
-  echo success message
+  echo Inserted into majors, $MAJOR
 fi
 
 #### HINTS
 
 - hint1
 
-## 820. TRUNCATE students CASCADE
+## 820. TRUNCATE majors CASCADE
 
 ### 820.1
 
-TRUNCATE students CASCADE;
+TRUNCATE majors CASCADE;
 
 #### HINTS
 
@@ -869,31 +939,65 @@ insert_data.sh
 
 - hint1
 
-## 840. Add STUDENT_ID
+## 835. Add MAJOR_ID
+
+### 835.1
+
+Add get new MAJOR_ID
+
+#### HINTS
+
+- hint1
+
+## 840. Add COURSE_ID
 
 ### 840.1
 
-Add STUDENT_ID = $($PSQL ...)
+Add COURSE_ID = $($PSQL ...)
 
 #### HINTS
 
 - hint1
 
-## 850. echo STUDENT_ID
+## 850. Add if -z COURSE_ID
 
 ### 850.1
 
-add echo $STUDENT_ID
+add if -z course_id
+  (empty)
+fi
 
 #### HINTS
 
 - hint1
 
-## 860. TRUNCATE students CASCADE
+## 853. Add INSERT_COURSE_RESULT
+
+### 853.1
+
+Add INSERT_COURSE_RESULT
+
+#### HINTS
+
+- hint1
+
+## 857. Add if INSERT_COURSE_RESULT
+
+### 857.1
+
+add if INSERT_COURSE_RESULT
+  echo Inserted into courses, $COURSE
+fi
+
+#### HINTS
+
+- hint1
+
+## 860. TRUNCATE majors CASCADE
 
 ### 860.1
 
-TRUNCATE students CASCADE
+TRUNCATE majors CASCADE
 
 #### HINTS
 
@@ -909,11 +1013,31 @@ TRUNCATE students CASCADE
 
 - hint1
 
+## 873. SELECT * FROM majors
+
+### 873.1
+
+SELECT * FROM majors
+
+#### HINTS
+
+- hint1
+
+## 877. SELECT * FROM courses
+
+### 877.1
+
+SELECT * FROM courses
+
+#### HINTS
+
+- hint1
+
 ## 880. Add echo TRUNCATE tables
 
 ### 880.1
 
-Add echo $($PSQL "TRUNCATE students, gpas, majors, students_majors;")
+Add echo $($PSQL "TRUNCATE students, majors, courses, majors_courses")
 
 #### HINTS
 
@@ -929,33 +1053,33 @@ Add echo $($PSQL "TRUNCATE students, gpas, majors, students_majors;")
 
 - hint1
 
-## 900. SELECT * FROM students
+## 900. Add COURSE_ID
 
 ### 900.1
 
-SELECT * FROM students
+Add get new COURSE_ID
 
 #### HINTS
 
 - hint1
 
-## 910. Add INSERT_GPA_RESULT
+## 910. Add INSERT_MAJORS_COURSES_RESULT
 
 ### 910.1
 
-Add INSERT_GPA_RESULT=
+Add INSERT_MAJORS_COURSES_RESULT
 
 #### HINTS
 
 - hint1
 
-## 920. Add if INSERT_GPA_RESULT
+## 920. Add if INSERT_MAJORS_COURSES_RESULT
 
 ### 920.1
 
-Add if [[ $INSERT_GPA_RESULT == "INSERT 0 1" ]]
+Add if [[ $INSERT_MAJORS_COURSES_RESULT == "INSERT 0 1" ]]
 then
-  echo success
+  echo Inserted into majors_courses, $MAJOR : $COURSE
 fi
 
 #### HINTS
@@ -972,85 +1096,69 @@ fi
 
 - hint1
 
-## 940. Delete echo STUDENT_ID
-
-### 940.1
-
-Delete echo STUDENT_ID
-
-#### HINTS
-
-- hint1
-
-## 950. SELECT * FROM students
+## 950. SELECT * FROM majors
 
 ### 950.1
 
-SELECT * FROM STUDENTS
+SELECT * FROM majors
 
 #### HINTS
 
 - hint1
 
-## 960. SELECT * FROM gpas
+## 960. SELECT * FROM courses
 
 ### 960.1
 
-SELECT * FROM gpas;
+SELECT * FROM courses;
 
 #### HINTS
 
 - hint1
 
-## 970. Add MAJOR_ID
+## 965. SELECT * FROM majors_courses
+
+### 965.1
+
+SELECT * FROM majors_courses;
+
+#### HINTS
+
+- hint1
+
+## 970. cp students.csv
 
 ### 970.1
 
-Add MAJOR_ID = $(...)
+cp students.csv students_test.csv
 
 #### HINTS
 
 - hint1
 
-## 980. Add if -z MAJOR_ID
+## 975. Remove all but fours lines
+
+### 975.1
+
+Remove all but four rows from students_test
+
+#### HINTS
+
+- hint1
+
+## 980. Add cat students_test.csv
 
 ### 980.1
 
-Add if [[ -z $MAJOR_ID ]]
-then
-  echo major_id not found
-fi
+add cat students_test.csv
 
 #### HINTS
 
 - hint1
 
-## 990. Add INSERT_MAJOR_RESULT
+## 985. ./insert_data.sh
 
-### 990.1
-
-Add INSERT_MAJOR_RESULT
-
-#### HINTS
-
-- hint1
-
-## 1000. Add if INSERT_MAJOR_RESULT
-
-### 1000.1
-
-Add if [[ INSERT_MAJOR RESULT == "INSERT 0 1" ]]
-then
-  echo success
-fi
-
-#### HINTS
-
-- hint1
-
-## 1010. ./insert_data.sh
-
-### 1010.1
+### 985.1
 
 ./insert_data.sh
 
@@ -1058,63 +1166,200 @@ fi
 
 - hint1
 
-## 1020. SELECT * FROM majors
+## 990. Add while read
+
+### 990.1
+
+Add | while read FIRST LAST MAJOR GPA
+do
+  echo $FIRST
+done
+
+#### HINTS
+
+- hint1
+
+## 995. ./insert_data.sh
+
+### 995.1
+
+./insert_data.sh
+
+#### HINTS
+
+- hint1
+
+## 1000. Add IFS
+
+### 1000.1
+
+Add IFS=","
+
+#### HINTS
+
+- hint1
+
+## 1005. ./insert_data.sh
+
+### 1005.1
+
+./insert_data.sh
+
+#### HINTS
+
+- hint1
+
+## 1010. Add echo all variables
+
+### 1010.1
+
+Add echo all variables
+
+#### HINTS
+
+- hint1
+
+## 1015. ./insert_data.sh
+
+### 1015.1
+
+./insert_data.sh
+
+#### HINTS
+
+- hint1
+
+## 1020. Delete echo all variables
 
 ### 1020.1
 
-SELECT * FROM majors;
+Delete echo all variables
 
 #### HINTS
 
 - hint1
 
-## 1030. SELECT * FROM students
+## 1025. Add comments
+
+### 1025.1
+
+Add comments
+
+#### HINTS
+
+- hint1
+
+## 1030. Add MAJOR_ID
 
 ### 1030.1
 
-SELECT * FROM students
+Add MAJOR_ID
 
 #### HINTS
 
 - hint1
 
-## 1040. SELECT * FROM gpas
+## 1033. Add echo MAJOR_ID
+
+### 1033.1
+
+Add echo MAJOR_ID
+
+#### HINTS
+
+- hint1
+
+## 1037. ./insert_data.sh
+
+### 1037.1
+
+./insert_data.sh
+
+#### HINTS
+
+- hint1
+
+## 1040. Add if first_name
 
 ### 1040.1
 
-SELECT * FROM gpas;
+Add if [[ $FIRST != "first_name" ]]
+  (existing code)
+fi
 
 #### HINTS
 
 - hint1
 
-## 1050. Add MAJOR_ID
+## 1043. ./insert_data.sh
+
+### 1043.1
+
+./insert_data.sh
+
+#### HINTS
+
+- hint1
+
+## 1047. Add if -z MAJOR_ID
+
+### 1047.1
+
+Add if [[ -z MAJOR_ID ]]
+  MAJOR_ID=null
+fi
+
+#### HINTS
+
+- hint1
+
+## 1050. ./insert_data.sh
 
 ### 1050.1
 
-Add MAJOR_ID=
+./insert_data.sh
 
 #### HINTS
 
 - hint1
 
-## 1060. Add INSERT_S_M_RESULT
+## 1053. Delete echo MAJOR_ID
+
+### 1053.1
+
+Delete echo MAJOR_ID
+
+#### HINTS
+
+- hint1
+
+## 1057. \d students
+
+### 1057.1
+
+\d students
+
+#### HINTS
+
+- hint1
+
+## 1060. Add INSERT_STUDENT_RESULT
 
 ### 1060.1
 
-Add INSERT_S_M_RESULT
+Add INSERT_STUDENT_RESULT
 
 #### HINTS
 
 - hint1
 
-## 1070. Add if INSERT_S_M_RESULT
+## 1070. Add if INSERT_STUDENT_RESULT
 
 ### 1070.1
 
-Add if [[ INSERT_S_M_RESULT == INSERT 0 1 ]]
+Add if [[ INSERT_STUDENT_RESULT == INSERT 0 1 ]]
 then
- echo success
+  echo Inserted into students, $FIRST $LAST
 fi
 
 #### HINTS
@@ -1141,31 +1386,11 @@ SELECT * FROM students
 
 - hint1
 
-## 1100. SELECT * FROM gpas
-
-### 1100.1
-
-SELECT * FROM gpas
-
-#### HINTS
-
-- hint1
-
-## 1110. SELECT * FROM majors
-
-### 1110.1
-
-SELECT * FROM majors
-
-#### HINTS
-
-- hint1
-
-## 1120. SELECT * FROM students_majors
+## 1120. Change to cat courses.csv
 
 ### 1120.1
 
-SELECT * FROM students_majors
+Change to cat courses.csv
 
 #### HINTS
 
@@ -1201,19 +1426,9 @@ SELECT * FROM students
 
 - hint1
 
-## 1160. SELECT * FROM gpas
+## 1160. SELECT * FROM majors
 
 ### 1160.1
-
-SELECT * FROM gpas
-
-#### HINTS
-
-- hint1
-
-## 1170. SELECT * FROM majors
-
-### 1170.1
 
 SELECT * FROM majors
 
@@ -1221,11 +1436,21 @@ SELECT * FROM majors
 
 - hint1
 
-## 1180. SELECT * FROM students_majors
+## 1170. SELECT * FROM courses
+
+### 1170.1
+
+SELECT * FROM courses
+
+#### HINTS
+
+- hint1
+
+## 1180. SELECT * FROM majors_courses
 
 ### 1180.1
 
-SELECT * FROM students_majors
+SELECT * FROM majors_courses
 
 #### HINTS
 
@@ -1246,6 +1471,16 @@ ls
 ### 1200.1
 
 rm students_test.csv
+
+#### HINTS
+
+- hint1
+
+## 1205. rm courses_test.csv
+
+### 1205.1
+
+rm courses_test.csv
 
 #### HINTS
 

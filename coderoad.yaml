@@ -1,4 +1,4 @@
-version: '0.0.1'
+version: '0.0.2'
 config:
   setup:
     commands:
@@ -12,6 +12,7 @@ config:
       - sudo service postgresql start
       - sudo -u postgres psql -c "CREATE USER freecodecamp WITH CREATEDB;"
       - sudo cp ~/project/.freeCodeCamp/reset_files/students.csv ~/project
+      - sudo cp ~/project/.freeCodeCamp/reset_files/courses.csv ~/project
   testRunner:
     command: npm run programmatic-test
     args:
@@ -19,7 +20,7 @@ config:
     directory: .freeCodeCamp
   repo:
     uri: https://github.com/moT01/.learn-sql-joins-and-functions-by-building-a-student-database
-    branch: v0.0.1
+    branch: v0.0.2
   reset:
     commands:
       - './.freeCodeCamp/reset.sh'
@@ -111,6 +112,18 @@ levels:
         setup:
           watchers:
             - ./.freeCodeCamp/test/queryResults.log
+  - id: '143'
+    steps:
+      - id: '143.1'
+        setup:
+          watchers:
+            - ./.freeCodeCamp/test/queryResults.log
+  - id: '146'
+    steps:
+      - id: '146.1'
+        setup:
+          watchers:
+            - ./.freeCodeCamp/test/queryResults.log
   - id: '150'
     steps:
       - id: '150.1'
@@ -135,6 +148,18 @@ levels:
         setup:
           watchers:
             - ./.freeCodeCamp/test/pg.log
+  - id: '183'
+    steps:
+      - id: '183.1'
+        setup:
+          watchers:
+            - ./.freeCodeCamp/test/queryResults.log
+  - id: '187'
+    steps:
+      - id: '187.1'
+        setup:
+          watchers:
+            - ./.freeCodeCamp/test/pg.log
   - id: '190'
     steps:
       - id: '190.1'
@@ -144,12 +169,6 @@ levels:
   - id: '200'
     steps:
       - id: '200.1'
-        setup:
-          watchers:
-            - ./.freeCodeCamp/test/queryResults.log
-  - id: '210'
-    steps:
-      - id: '210.1'
         setup:
           watchers:
             - ./.freeCodeCamp/test/queryResults.log
@@ -219,12 +238,6 @@ levels:
         setup:
           watchers:
             - ./.freeCodeCamp/test/queryResults.log
-  - id: '330'
-    steps:
-      - id: '330.1'
-        setup:
-          watchers:
-            - ./.freeCodeCamp/test/pg.log
   - id: '340'
     steps:
       - id: '340.1'
@@ -381,6 +394,30 @@ levels:
         setup:
           watchers:
             - ./insert_data.sh
+  - id: '562'
+    steps:
+      - id: '562.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
+  - id: '564'
+    steps:
+      - id: '564.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
+  - id: '566'
+    steps:
+      - id: '566.1'
+        setup:
+          watchers:
+            - ../.bash_history
+  - id: '568'
+    steps:
+      - id: '568.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
   - id: '570'
     steps:
       - id: '570.1'
@@ -404,7 +441,7 @@ levels:
       - id: '600.1'
         setup:
           watchers:
-            - ./students_test.csv
+            - ./courses_test.csv
   - id: '610'
     steps:
       - id: '610.1'
@@ -417,6 +454,12 @@ levels:
         setup:
           watchers:
             - ../.bash_history
+  - id: '625'
+    steps:
+      - id: '625.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
   - id: '630'
     steps:
       - id: '630.1'
@@ -543,6 +586,12 @@ levels:
         setup:
           watchers:
             - ../.bash_history
+  - id: '835'
+    steps:
+      - id: '835.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
   - id: '840'
     steps:
       - id: '840.1'
@@ -552,6 +601,18 @@ levels:
   - id: '850'
     steps:
       - id: '850.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
+  - id: '853'
+    steps:
+      - id: '853.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
+  - id: '857'
+    steps:
+      - id: '857.1'
         setup:
           watchers:
             - ./insert_data.sh
@@ -567,6 +628,18 @@ levels:
         setup:
           watchers:
             - ../.bash_history
+  - id: '873'
+    steps:
+      - id: '873.1'
+        setup:
+          watchers:
+            - ./.freeCodeCamp/test/pg.log
+  - id: '877'
+    steps:
+      - id: '877.1'
+        setup:
+          watchers:
+            - ./.freeCodeCamp/test/pg.log
   - id: '880'
     steps:
       - id: '880.1'
@@ -603,12 +676,6 @@ levels:
         setup:
           watchers:
             - ../.bash_history
-  - id: '940'
-    steps:
-      - id: '940.1'
-        setup:
-          watchers:
-            - ./insert_data.sh
   - id: '950'
     steps:
       - id: '950.1'
@@ -621,33 +688,69 @@ levels:
         setup:
           watchers:
             - ./.freeCodeCamp/test/pg.log
+  - id: '965'
+    steps:
+      - id: '965.1'
+        setup:
+          watchers:
+            - ./.freeCodeCamp/test/pg.log
   - id: '970'
     steps:
       - id: '970.1'
         setup:
           watchers:
-            - ./insert_data.sh
+            - ../.bash_history
+  - id: '975'
+    steps:
+      - id: '975.1'
+        setup:
+          watchers:
+            - ./students_test.csv
   - id: '980'
     steps:
       - id: '980.1'
         setup:
           watchers:
             - ./insert_data.sh
+  - id: '985'
+    steps:
+      - id: '985.1'
+        setup:
+          watchers:
+            - ../.bash_history
   - id: '990'
     steps:
       - id: '990.1'
         setup:
           watchers:
             - ./insert_data.sh
+  - id: '995'
+    steps:
+      - id: '995.1'
+        setup:
+          watchers:
+            - ../.bash_history
   - id: '1000'
     steps:
       - id: '1000.1'
         setup:
           watchers:
             - ./insert_data.sh
+  - id: '1005'
+    steps:
+      - id: '1005.1'
+        setup:
+          watchers:
+            - ../.bash_history
   - id: '1010'
     steps:
       - id: '1010.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
+  - id: '1015'
+    steps:
+      - id: '1015.1'
         setup:
           watchers:
             - ../.bash_history
@@ -656,25 +759,67 @@ levels:
       - id: '1020.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./insert_data.sh
+  - id: '1025'
+    steps:
+      - id: '1025.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
   - id: '1030'
     steps:
       - id: '1030.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./insert_data.sh
+  - id: '1033'
+    steps:
+      - id: '1033.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
+  - id: '1037'
+    steps:
+      - id: '1037.1'
+        setup:
+          watchers:
+            - ../.bash_history
   - id: '1040'
     steps:
       - id: '1040.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./insert_data.sh
+  - id: '1043'
+    steps:
+      - id: '1043.1'
+        setup:
+          watchers:
+            - ../.bash_history
+  - id: '1047'
+    steps:
+      - id: '1047.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
   - id: '1050'
     steps:
       - id: '1050.1'
         setup:
           watchers:
+            - ../.bash_history
+  - id: '1053'
+    steps:
+      - id: '1053.1'
+        setup:
+          watchers:
             - ./insert_data.sh
+  - id: '1057'
+    steps:
+      - id: '1057.1'
+        setup:
+          watchers:
+            - ./.freeCodeCamp/test/pg.log
   - id: '1060'
     steps:
       - id: '1060.1'
@@ -699,24 +844,12 @@ levels:
         setup:
           watchers:
             - ./.freeCodeCamp/test/pg.log
-  - id: '1100'
-    steps:
-      - id: '1100.1'
-        setup:
-          watchers:
-            - ./.freeCodeCamp/test/pg.log
-  - id: '1110'
-    steps:
-      - id: '1110.1'
-        setup:
-          watchers:
-            - ./.freeCodeCamp/test/pg.log
   - id: '1120'
     steps:
       - id: '1120.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./insert_data.sh
   - id: '1130'
     steps:
       - id: '1130.1'
@@ -762,6 +895,12 @@ levels:
   - id: '1200'
     steps:
       - id: '1200.1'
+        setup:
+          watchers:
+            - ../.bash_history
+  - id: '1205'
+    steps:
+      - id: '1205.1'
         setup:
           watchers:
             - ../.bash_history
