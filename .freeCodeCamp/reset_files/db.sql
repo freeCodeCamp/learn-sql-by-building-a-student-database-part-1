@@ -20,23 +20,29 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-ALTER TABLE ONLY public.students DROP CONSTRAINT students_major_id_fkey;
-ALTER TABLE ONLY public.majors_courses DROP CONSTRAINT majors_courses_major_id_fkey;
-ALTER TABLE ONLY public.majors_courses DROP CONSTRAINT majors_courses_course_id_fkey;
-ALTER TABLE ONLY public.students DROP CONSTRAINT students_pkey;
-ALTER TABLE ONLY public.majors DROP CONSTRAINT majors_pkey;
-ALTER TABLE ONLY public.majors_courses DROP CONSTRAINT majors_courses_pkey;
-ALTER TABLE ONLY public.courses DROP CONSTRAINT courses_pkey;
-ALTER TABLE public.students ALTER COLUMN student_id DROP DEFAULT;
-ALTER TABLE public.majors ALTER COLUMN major_id DROP DEFAULT;
-ALTER TABLE public.courses ALTER COLUMN course_id DROP DEFAULT;
-DROP SEQUENCE public.students_student_id_seq;
-DROP TABLE public.students;
-DROP SEQUENCE public.majors_major_id_seq;
-DROP TABLE public.majors_courses;
-DROP TABLE public.majors;
-DROP SEQUENCE public.courses_course_id_seq;
-DROP TABLE public.courses;
+DROP DATABASE students;
+--
+-- Name: students; Type: DATABASE; Schema: -; Owner: freecodecamp
+--
+
+CREATE DATABASE students WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'C.UTF-8' LC_CTYPE = 'C.UTF-8';
+
+
+ALTER DATABASE students OWNER TO freecodecamp;
+
+\connect students
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
@@ -191,6 +197,9 @@ INSERT INTO public.courses VALUES (1, 'Data Structures and Algorithms');
 --
 
 INSERT INTO public.majors VALUES (1, 'Database Administration');
+INSERT INTO public.majors VALUES (2, 'major');
+INSERT INTO public.majors VALUES (3, 'Web Development');
+INSERT INTO public.majors VALUES (4, 'Data Science');
 
 
 --
@@ -218,7 +227,7 @@ SELECT pg_catalog.setval('public.courses_course_id_seq', 1, true);
 -- Name: majors_major_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.majors_major_id_seq', 1, true);
+SELECT pg_catalog.setval('public.majors_major_id_seq', 4, true);
 
 
 --
