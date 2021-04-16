@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { getLastCommand, getDirectoryContents, getCwd } = require('./utils');
 
 describe('You', () => {
@@ -7,6 +7,6 @@ describe('You', () => {
     const directoryContents = await getDirectoryContents(`..`);
     const lastCommand = await getLastCommand();
 
-    assert(!directoryContents.includes('students_test.csv') && lastCommand[0] === 'rm' && /students_test\.csv/g.test(lastCommand[1]) && cwd === '/home/strove/project');
+    assert(!directoryContents.includes('courses_test.csv') && lastCommand[0] === 'rm' && /courses_test\.csv/g.test(lastCommand[1]) && cwd === '/home/strove/project');
   });
-});*/
+});
