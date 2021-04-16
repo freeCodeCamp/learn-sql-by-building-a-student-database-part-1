@@ -20,6 +20,7 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
+ALTER TABLE ONLY public.students DROP CONSTRAINT students_major_id_fkey;
 ALTER TABLE ONLY public.students DROP CONSTRAINT students_pkey;
 ALTER TABLE ONLY public.majors DROP CONSTRAINT majors_pkey;
 ALTER TABLE public.students ALTER COLUMN student_id DROP DEFAULT;
@@ -191,6 +192,14 @@ ALTER TABLE ONLY public.majors
 
 ALTER TABLE ONLY public.students
     ADD CONSTRAINT students_pkey PRIMARY KEY (student_id);
+
+
+--
+-- Name: students students_major_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.students
+    ADD CONSTRAINT students_major_id_fkey FOREIGN KEY (major_id) REFERENCES public.majors(major_id);
 
 
 --
