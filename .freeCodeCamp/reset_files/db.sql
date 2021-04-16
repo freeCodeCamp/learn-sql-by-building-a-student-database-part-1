@@ -197,6 +197,9 @@ INSERT INTO public.courses VALUES (1, 'Data Structures and Algorithms');
 --
 
 INSERT INTO public.majors VALUES (1, 'Database Administration');
+INSERT INTO public.majors VALUES (2, 'major');
+INSERT INTO public.majors VALUES (3, 'Web Development');
+INSERT INTO public.majors VALUES (4, 'Data Science');
 
 
 --
@@ -224,7 +227,7 @@ SELECT pg_catalog.setval('public.courses_course_id_seq', 1, true);
 -- Name: majors_major_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.majors_major_id_seq', 1, true);
+SELECT pg_catalog.setval('public.majors_major_id_seq', 4, true);
 
 
 --
