@@ -21,3 +21,4 @@ echo "SELECT 'CREATE USER freecodecamp WITH CREATEDB' WHERE NOT EXISTS (SELECT F
 psql -U postgres < ./.freeCodeCamp/reset_files/db.sql
 cp ./.freeCodeCamp/reset_files/insert_data.sh .
 cp ./.freeCodeCamp/reset_files/courses_test.csv .
+cp ./.freeCodeCamp/reset_files/students_test.csv .
