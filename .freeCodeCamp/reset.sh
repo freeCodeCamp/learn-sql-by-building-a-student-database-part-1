@@ -19,3 +19,4 @@ sudo -u postgres psql -c "CREATE USER freecodecamp WITH CREATEDB;"
 psql -U postgres < ./.freeCodeCamp/reset_files/db.sql
 cp ./.freeCodeCamp/reset_files/insert_data.sh .
 cp ./.freeCodeCamp/reset_files/courses_test.csv .
+cp ./.freeCodeCamp/reset_files/students_test.csv .
