@@ -83,7 +83,8 @@ ALTER TABLE public.majors_courses OWNER TO freecodecamp;
 
 CREATE TABLE public.students (
     student_id integer NOT NULL,
-    first_name character varying(50) NOT NULL
+    first_name character varying(50) NOT NULL,
+    last_name character varying(50) NOT NULL
 );
 
 
