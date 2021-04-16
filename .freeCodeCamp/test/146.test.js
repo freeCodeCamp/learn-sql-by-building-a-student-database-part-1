@@ -1,4 +1,4 @@
-/*const assert = require('assert');
+const assert = require('assert');
 const { Client } = require('pg');
 
 const database = 'students';
@@ -9,8 +9,8 @@ const client = new Client({
 });
 
 describe('The "students" table', () => {
-  it('should have the correct "major_id" column', async () => {
-    const query = `SELECT table_name, column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name='students' AND column_name='major_id' AND data_type='integer'`;
+  it('should have the correct "gpa" column', async () => {
+    const query = `SELECT table_name, column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name='students' AND column_name='gpa' AND data_type='numeric' AND numeric_precision=2 AND numeric_scale=1`;
 
     try {
       await client.connect();
@@ -23,4 +23,4 @@ describe('The "students" table', () => {
       await client.end();
     }
   });
-});*/
+});
