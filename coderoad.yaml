@@ -718,45 +718,15 @@ levels:
         setup:
           watchers:
             - ../.bash_history
-  - id: '990'
-    steps:
-      - id: '990.1'
-        setup:
-          watchers:
-            - ./insert_data.sh
-  - id: '995'
-    steps:
-      - id: '995.1'
-        setup:
-          watchers:
-            - ../.bash_history
-  - id: '1000'
-    steps:
-      - id: '1000.1'
-        setup:
-          watchers:
-            - ./insert_data.sh
-  - id: '1005'
-    steps:
-      - id: '1005.1'
-        setup:
-          watchers:
-            - ../.bash_history
-  - id: '1010'
-    steps:
-      - id: '1010.1'
-        setup:
-          watchers:
-            - ./insert_data.sh
-  - id: '1015'
-    steps:
-      - id: '1015.1'
-        setup:
-          watchers:
-            - ../.bash_history
   - id: '1020'
     steps:
       - id: '1020.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
+  - id: '1022'
+    steps:
+      - id: '1022.1'
         setup:
           watchers:
             - ./insert_data.sh
@@ -781,18 +751,6 @@ levels:
   - id: '1037'
     steps:
       - id: '1037.1'
-        setup:
-          watchers:
-            - ../.bash_history
-  - id: '1040'
-    steps:
-      - id: '1040.1'
-        setup:
-          watchers:
-            - ./insert_data.sh
-  - id: '1043'
-    steps:
-      - id: '1043.1'
         setup:
           watchers:
             - ../.bash_history

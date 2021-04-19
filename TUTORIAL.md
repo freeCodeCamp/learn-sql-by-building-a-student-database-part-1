@@ -650,7 +650,9 @@ Add echo MAJOR_ID
 
 ### 568.1
 
-Add PSQL Variable
+Add if -z MAJOR_ID
+#two comments here
+fi
 
 #### HINTS
 
@@ -896,7 +898,7 @@ SELECT * FROM majors
 
 - hint1
 
-## 800. Delect echo INSERT_MAJOR_RESULT
+## 800. Delete echo INSERT_MAJOR_RESULT
 
 ### 800.1
 
@@ -964,7 +966,7 @@ Add COURSE_ID = $($PSQL ...)
 ### 850.1
 
 add if -z course_id
-  (empty)
+  two comments here
 fi
 
 #### HINTS
@@ -1150,7 +1152,10 @@ Remove all but four rows from students_test
 
 ### 980.1
 
-add cat students_test.csv
+cat students_test.csv | while IFS="," read FIRST LAST MAJOR GPA
+do
+  echo $FIRST
+done
 
 #### HINTS
 
@@ -1166,74 +1171,23 @@ add cat students_test.csv
 
 - hint1
 
-## 990. Add while read
-
-### 990.1
-
-Add | while read FIRST LAST MAJOR GPA
-do
-  echo $FIRST
-done
-
-#### HINTS
-
-- hint1
-
-## 995. ./insert_data.sh
-
-### 995.1
-
-./insert_data.sh
-
-#### HINTS
-
-- hint1
-
-## 1000. Add IFS
-
-### 1000.1
-
-Add IFS=","
-
-#### HINTS
-
-- hint1
-
-## 1005. ./insert_data.sh
-
-### 1005.1
-
-./insert_data.sh
-
-#### HINTS
-
-- hint1
-
-## 1010. Add echo all variables
-
-### 1010.1
-
-Add echo all variables
-
-#### HINTS
-
-- hint1
-
-## 1015. ./insert_data.sh
-
-### 1015.1
-
-./insert_data.sh
-
-#### HINTS
-
-- hint1
-
 ## 1020. Delete echo all variables
 
 ### 1020.1
 
 Delete echo all variables
+
+#### HINTS
+
+- hint1
+
+## 1022. Add if first_name
+
+### 1022.1
+
+Add if [[ $FIRST != "first_name" ]]
+  (existing code)
+fi
 
 #### HINTS
 
@@ -1272,28 +1226,6 @@ Add echo MAJOR_ID
 ## 1037. ./insert_data.sh
 
 ### 1037.1
-
-./insert_data.sh
-
-#### HINTS
-
-- hint1
-
-## 1040. Add if first_name
-
-### 1040.1
-
-Add if [[ $FIRST != "first_name" ]]
-  (existing code)
-fi
-
-#### HINTS
-
-- hint1
-
-## 1043. ./insert_data.sh
-
-### 1043.1
 
 ./insert_data.sh
 
