@@ -1245,9 +1245,9 @@ fi
 
 - hint1
 
-## 1047. Set MAJOR_ID to null
+## 1048. Set MAJOR_ID to null
 
-### 1047.1
+### 1048.1
 
 set MAJOR_ID=null
 
