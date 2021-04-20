@@ -1238,8 +1238,28 @@ Add echo MAJOR_ID
 ### 1047.1
 
 Add if [[ -z MAJOR_ID ]]
-  MAJOR_ID=null
+<comment>
 fi
+
+#### HINTS
+
+- hint1
+
+## 1047. Set MAJOR_ID to null
+
+### 1047.1
+
+set MAJOR_ID=null
+
+#### HINTS
+
+- hint1
+
+## 1049. move echo MAJOR_ID
+
+### 1049.1
+
+move echo MAJOR_ID
 
 #### HINTS
 

@@ -760,6 +760,18 @@ levels:
         setup:
           watchers:
             - ./insert_data.sh
+  - id: '1048'
+    steps:
+      - id: '1048.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
+  - id: '1049'
+    steps:
+      - id: '1049.1'
+        setup:
+          watchers:
+            - ./insert_data.sh
   - id: '1050'
     steps:
       - id: '1050.1'
