@@ -1568,7 +1568,7 @@
           "content": "You used the `psql` command to log in and interact with the database. You can use it to just run a single command and exit. Above your loop, add a `PSQL` variable that looks like this: `PSQL=\"psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c\"`. This will allow you to query your database from your script. The important parts are the `username`, `dbname`, and the `-c` flag that is for running a single command and exiting. The rest of the flags are for formatting.",
           "hints": [
             "Add the suggested variable between your first command and the loop",
-            "The suggested area should look like this:\n```sh"
+            "The suggested area should look like this:\n```sh\nPSQL=\"psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c\"\n```"
           ]
         }
       ]
