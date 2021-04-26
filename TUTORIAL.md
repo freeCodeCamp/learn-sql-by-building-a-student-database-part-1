@@ -798,11 +798,7 @@ You used the `psql` command to log in and interact with the database. You can us
 - Add the suggested variable between your first command and the loop
 - The suggested area should look like this:
 ```sh
-# Program to insert data from courses.csv and students.csv into students database
-
 PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
-
-cat courses.csv | while IFS="," read MAJOR COURSE
 ```
 
 ## 562. Add MAJOR_ID
