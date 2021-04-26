@@ -4,6 +4,8 @@ config:
     commands:
       - sudo service postgresql stop
       - sudo cp ~/project/.freeCodeCamp/.bashrc ~
+      - sudo cp ~/project/.freeCodeCamp/reset_files/students.csv ~/project
+      - sudo cp ~/project/.freeCodeCamp/reset_files/courses.csv ~/project
       - sudo chmod 777 ~/project/.freeCodeCamp/test/pg.log
       - sudo cp ~/project/.freeCodeCamp/.psqlrc ~
       - sudo cp ~/project/.freeCodeCamp/postgresql.conf /etc/postgresql/12/main/postgresql.conf
@@ -11,8 +13,6 @@ config:
       - cd .freeCodeCamp && npm install
       - sudo service postgresql start
       - sudo -u postgres psql -c "CREATE USER freecodecamp WITH CREATEDB;"
-      - sudo cp ~/project/.freeCodeCamp/reset_files/students.csv ~/project
-      - sudo cp ~/project/.freeCodeCamp/reset_files/courses.csv ~/project
   testRunner:
     command: npm run programmatic-test
     args:
@@ -280,12 +280,6 @@ levels:
         setup:
           watchers:
             - ./.freeCodeCamp/test/pg.log
-  - id: '410'
-    steps:
-      - id: '410.1'
-        setup:
-          watchers:
-            - ./.freeCodeCamp/test/pg.log
   - id: '420'
     steps:
       - id: '420.1'
@@ -472,12 +466,6 @@ levels:
         setup:
           watchers:
             - ./.freeCodeCamp/test/pg.log
-  - id: '650'
-    steps:
-      - id: '650.1'
-        setup:
-          watchers:
-            - ./.freeCodeCamp/test/pg.log
   - id: '660'
     steps:
       - id: '660.1'
@@ -628,12 +616,6 @@ levels:
         setup:
           watchers:
             - ../.bash_history
-  - id: '873'
-    steps:
-      - id: '873.1'
-        setup:
-          watchers:
-            - ./.freeCodeCamp/test/pg.log
   - id: '877'
     steps:
       - id: '877.1'
