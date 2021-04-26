@@ -786,7 +786,6 @@ do
 done
 ```
 
-
 ## 560. Add PSQL Variable
 
 ### 560.1
@@ -1192,7 +1191,7 @@ It only showed three inserts, that's a good sign. View all the data in `majors` 
 
 ### 800.1
 
-There's three unique majors in your test data. Those were the three added to the database so it looks like it's working. Delete the line where you print `INSERT_MAJOR_RESULT`.
+There's three unique majors in your test data. Those were the three added to the database, so it looks like it's working. Delete the line where you print `INSERT_MAJOR_RESULT`.
 
 #### HINTS
 
@@ -1612,37 +1611,60 @@ done
 
 ### 1025.1
 
-Add comments
+All the columns in the CSV file can be inserted directly into the database except for the major. You will need to get the `major_id` again for that. There's some `null` values in there as well, so you will need to use `null` if the `major_id` isn't found. Add four single line comments in your loop; `get major_id`, `if not found`, `set to null`, and `insert student` in that order.
 
 #### HINTS
 
-- hint1
+- Here's an example of a single comment: `# <comment>`
+- Add the four suggested single line comments, each on their own line, in the order given in the `if` part of your new loop
+- It should look like this:
+```sh
+cat students_test.csv | while IFS="," read FIRST LAST MAJOR GPA
+do
+  if [[ $FIRST != "first_name" ]]
+  then
+    # get major_id
+
+    # if not found
+
+    # set to null
+
+    # insert student
+
+  fi
+done
+```
 
 ## 1030. Add MAJOR_ID
 
 ### 1030.1
 
-Add MAJOR_ID
+Below the new `get major_id` comment, set the `MAJOR_ID` variable to a query that gets the `major_id` for the current students major.
 
 #### HINTS
 
-- hint1
+- Here's an example of how it looks: `MAJOR_ID=$($PSQL "<query_here>")`
+- For the query, you want to use the `SELECT`, `FROM`, and `WHERE` keywords
+- Here's an example of how the query part looks: `SELECT <column_name> FROM <table_name> WHERE <condition>`
+- The condition you want is `major_id='$MAJOR'`
+- Here's how the query should look: `SELECT major_id FROM majors WHERE major='$MAJOR'`
+- Here's how the whole line should look: `MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")`
 
 ## 1033. Add echo MAJOR_ID
 
 ### 1033.1
 
-Add echo MAJOR_ID
+Below that, use `echo` to print the variable so you can see if it's working.
 
 #### HINTS
 
-- hint1
+- Add `echo $MAJOR_ID` below the `MAJOR_ID` variable you just created
 
 ## 1037. ./insert_data.sh
 
 ### 1037.1
 
-./insert_data.sh
+Run the script to see what happens.
 
 #### HINTS
 
@@ -1654,39 +1676,54 @@ Add echo MAJOR_ID
 
 ### 1047.1
 
-Add if [[ -z MAJOR_ID ]]
-<comment>
-fi
+Looking at the test data, it found the id for all of it except the `null` value. Below the newest `if not found` comment, add an `if` that checks if the variable is empty. Put the `set to null` comment in its statements area.
 
 #### HINTS
 
-- hint1
+- It looks similar to the `if` condition in your first loop
+- The condition you want is `[[ -z $MAJOR_ID ]]`
+- Makr sure the `set to null` comment is in the statements area
+- It should look like this:
+```sh
+if [[ -z $MAJOR_ID ]]
+then
+  # set to null
+
+fi
+```
 
 ## 1048. Set MAJOR_ID to null
 
 ### 1048.1
 
-set MAJOR_ID=null
+When you go to insert the student data, you want to use the `MAJOR_ID` if it's found, or `null` if not. Below the `set to null` comment, set the `MAJOR_ID` variable to `null` so you can use it to insert the data.
 
 #### HINTS
 
-- hint1
+- It should look like this:
+```sh
+if [[ -z $MAJOR_ID ]]
+then
+  # set to null
+  MAJOR_ID=null
+fi
+```
 
 ## 1049. move echo MAJOR_ID
 
 ### 1049.1
 
-move echo MAJOR_ID
+Move the `echo $MAJOR_ID` line to below the `if` statement so you can run the script and see the value of the variable if the `major_id` is or isn't found.
 
 #### HINTS
 
-- hint1
+- Move the suggested line below the closing `fi` of the `if [[ -z $MAJOR_ID ]]` statement
 
 ## 1050. ./insert_data.sh
 
 ### 1050.1
 
-./insert_data.sh
+Run the script.
 
 #### HINTS
 
@@ -1698,50 +1735,66 @@ move echo MAJOR_ID
 
 ### 1053.1
 
-Delete echo MAJOR_ID
+Okay, that should work for inserting the student. Delete the `echo $MAJOR_ID` line.
 
 #### HINTS
 
-- hint1
+- Delete the `echo $MAJOR_ID` line from the file
 
 ## 1057. \d students
 
 ### 1057.1
 
-\d students
+One last thing to add. In the psql prompt, view the details of the `students` table so you can see what columns to add.
 
 #### HINTS
 
-- hint1
+- Use the **d**isplay shortcut command
+- Add the table name after the command
+- It's the `\d` command
+- Here's an example: `\d <table_name>`
+- Type `\d students` into the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1060. Add INSERT_STUDENT_RESULT
 
 ### 1060.1
 
-Add INSERT_STUDENT_RESULT
+You will need to set the four columns when adding the student info. All of them except `student_id`. Below the `insert student` comment, create an `INSERT_STUDENT_RESULT` variable that adds the student to the database. Add the columns in the order they appear in the data, and make sure to only put the two `VARCHAR` columns in single quotes.
 
 #### HINTS
 
-- hint1
+- Here's an example: `INSERT_STUDENT_RESULT=$($PSQL "<query_here>")`
+- For the query, you want to use the `INSERT INTO`, and `VALUES` keywords
+- Here's an example of how the query part looks: `INSERT INTO <table_name>(<column_1>, <column_N>) VALUES(<value_1>, <value_N>)`
+- In your query, make sure the columns to add are in this order: `first_name`, `last_name`, `major_id`, and `gpa`
+- The query you want is: `INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('$FIRST', '$LAST', $MAJOR_ID, $GPA)`
+- Here's how the whole line should look: `INSERT_STUDENT_RESULT=$($PSQL "INSERT INTO students(first_name, last_name, major_id, gpa) VALUES('$FIRST', '$LAST', $MAJOR_ID, $GPA)")`
 
 ## 1070. Add if INSERT_STUDENT_RESULT
 
 ### 1070.1
 
-Add if [[ INSERT_STUDENT_RESULT == INSERT 0 1 ]]
-then
-  echo Inserted into students, $FIRST $LAST
-fi
+Below the variable you just created, add an `if` statement that checks if it's equal to `INSERT 0 1` like the others. If it is, use `echo` to print `Inserted into students, <first_name> <last_name>`.
 
 #### HINTS
 
-- hint1
+- The condition should look like this: `if [[ $INSERT_STUDENT_RESULT == "INSERT 0 1" ]]`
+- Use the `FIRST` and `LAST` variables to print the students name
+- The `echo` should look like this: `echo Inserted into students, $FIRST $LAST`
+- The whole thing should look like this:
+```sh
+if [[ $INSERT_STUDENT_RESULT == "INSERT 0 1" ]]
+then
+  echo "Inserted into students, $FIRST $LAST"
+fi
+```
 
 ## 1080. ./insert_data.sh
 
 ### 1080.1
 
-./insert_data.sh
+Run the script to see if the students are getting added.
 
 #### HINTS
 
@@ -1753,31 +1806,35 @@ fi
 
 ### 1090.1
 
-SELECT * FROM students
+I think it's working. View all the data in the `students` table to make sure it matches the CSV file.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1120. Change to cat courses.csv
 
 ### 1120.1
 
-Change to cat courses.csv
+Excellent. It added all the students from the test data. Time to try it with the original files. Change the `cat courses_test.csv` line to use the original file again.
 
 #### HINTS
 
-- hint1
+- Change `cat courses_test.csv` to `cat courses.csv`
+- The suggested line should look like this: `cat courses.csv | while IFS="," read MAJOR COURSE`
 
 ## 1130. Change to cat students.csv
 
 ### 1130.1
 
-Change to cat students.csv
+Next, change the `cat students_test.csv` line to use the original file as well.
 
 #### HINTS
 
-- hint1
+- Change the `cat students_test.csv` to `cat students.csv`
+- The suggested line should look like this: `cat students.csv | while IFS="," read FIRST LAST MAJOR GPA`
 
 ## 1140. ./insert_data.sh
 
@@ -1795,148 +1852,179 @@ Time for the moment of truth. Run the script and see if it works.
 
 ### 1150.1
 
-SELECT * FROM students
+That was cool. View all the data in the `students` table to see what you ended up with.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1160. SELECT * FROM majors
 
 ### 1160.1
 
-SELECT * FROM majors
+31 rows. That's how many are in the CSV file. Perfect. Next, check the `majors` table.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM majors;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1170. SELECT * FROM courses
 
 ### 1170.1
 
-SELECT * FROM courses
+7 rows. There must be 7 unique majors in the CSV file. View what's in the `courses` table.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1180. SELECT * FROM majors_courses
 
 ### 1180.1
 
-SELECT * FROM majors_courses
+Looks like there's 17 unique courses in the CSV file. Last, view the data in `majors_courses`. This should have the same number of rows at the CSV file.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM majors_courses;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1190. ls
 
 ### 1190.1
 
-ls
+In the terminal, use the list command to check what files are in your project folder.
 
 #### HINTS
 
-- hint1
+- It's the `ls` command
+- Don't use any flags with the command
+- Enter `ls` in the terminal
 
 ## 1200. rm students_test.csv
 
 ### 1200.1
 
-rm students_test.csv
+You don't need the test files anymore. In the terminal, use the remove command (`rm`) to delete the `students_test.csv` file.
 
 #### HINTS
 
-- hint1
+- Here's an example `rm <filename>`
+- Enter `rm students_test.csv` in the terminal
 
 ## 1205. rm courses_test.csv
 
 ### 1205.1
 
-rm courses_test.csv
+Use the same command to delete the `courses_test.csv` file.
 
 #### HINTS
 
-- hint1
+- Here's an example `rm <filename>`
+- Enter `rm courses_test.csv` in the terminal
 
 ## 1210. ls
 
 ### 1210.1
 
-ls
+List the contents of the folder again to make sure they're gone.
 
 #### HINTS
 
-- hint1
+- Use the **l**ist command
+- It's the `ls` command
+- Don't use any flags with the command
+- Enter `ls` in the terminal
 
 ## 1220. touch student_info.sh
 
 ### 1220.1
 
-touch student_info.sh
+All the data is in the database :smile: Next, you are going to make a script to print info about your students. In the terminal, use `touch` to create a `student_info.sh` file.
 
 #### HINTS
 
-- hint1
+- Here's an example: `touch <filename>`
+- Enter `touch student_info.sh` in the terminal
+- Make sure you are in the `project` folder first
 
 ## 1230. chmod +x student_info.sh
 
 ### 1230.1
 
-chmod +x student_info.sh
+Give your file executable permissions.
 
 #### HINTS
 
-- hint1
+- It's the `chmod` command with the `+x` flag
+- Here's an example: `chmod +x <filename>`
+- Type `chmod +x student_info.sh` in the terminal and press enter
 
 ## 1240. Add shebang
 
 ### 1240.1
 
-Add shebang
+Add shebang that uses bash to your new script.
 
 #### HINTS
 
-- hint1
+- The shebang you want is `#!/bin/bash`
+- Add the text, `#!/bin/bash` to your `student_info.sh` file
 
 ## 1250. Add comment
 
 ### 1250.1
 
-Add comment # Info about my computer science students from students database
+Below the shebang, add a comment that says `Info about my computer science students from students database`.
 
 #### HINTS
 
-- hint1
+- Make sure it's a single line comment
+- A comment look like this: `# <comment>`
+- Add `# Info about my computer science students from students database` below the "shebang" in your `student_info.sh` file
 
 ## 1260. Add echo title
 
 ### 1260.1
 
-Add echo -e "\n~~ My Computer Science Students ~~\n"
+In the new script, use `echo` to print `~~ My Computer Science Students ~~`. Use the `-e` flag with it to put at the beginning and end of the text.
 
 #### HINTS
 
-- hint1
+- The new line character is `\n`
+- Here's an example: `echo -e "\n<text>\n"`
+- Add `echo -e "\n~~ My Computer Science Students ~~\n"` below the comment in your `student_info.sh` file
 
 ## 1265. ./student_info.sh
 
 ### 1265.1
 
-./student_info.sh
+Run the script to make sure it's working.
 
 #### HINTS
 
-- hint1
+- Run your `student_info.sh` script by executing it
+- Type `./student_info.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
 ## 1270. Add PSQL Variable
 
 ### 1270.1
 
-Add PSQL Variable
+You will want to query the database again to get info about the students to display. Add the same `PSQL` variable from your other script.
 
 #### HINTS
 
-- hint1
+
+- Make sure to use all the same flags in the same order
+- Add the following to the bottom of the `student_info.sh` file:
+```sh
+PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
+```
