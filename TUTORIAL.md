@@ -804,7 +804,6 @@ PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only
 
 cat courses.csv | while IFS="," read MAJOR COURSE
 ```
-- Make sure it looks exactly like suggested
 
 ## 562. Add MAJOR_ID
 
