@@ -1,4 +1,4 @@
-version: '0.0.3'
+version: '0.0.4'
 config:
   setup:
     commands:
@@ -20,7 +20,7 @@ config:
     directory: .freeCodeCamp
   repo:
     uri: https://github.com/moT01/.learn-sql-joins-and-functions-by-building-a-student-database
-    branch: v0.0.3
+    branch: v0.0.4
   reset:
     commands:
       - './.freeCodeCamp/reset.sh'
