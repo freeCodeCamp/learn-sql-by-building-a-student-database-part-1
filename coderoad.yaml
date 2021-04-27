@@ -639,7 +639,7 @@ levels:
       - id: '900.1'
         setup:
           watchers:
-            - ./.freeCodeCamp/test/pg.log
+            - ./insert_data.sh
   - id: '910'
     steps:
       - id: '910.1'
