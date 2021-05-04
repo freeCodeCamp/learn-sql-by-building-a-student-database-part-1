@@ -1,4 +1,4 @@
-const assert = require('assert');
+/*const assert = require('assert');
 const { getCommandOutput } = require('./utils');
 
 describe('Your script', () => {
@@ -7,4 +7,4 @@ describe('Your script', () => {
 
     assert(/\n\nFirst name, last name, and GPA of students with a 4\.0 GPA:\n{1}$/g.test(output));
   });
-});
+});*/
