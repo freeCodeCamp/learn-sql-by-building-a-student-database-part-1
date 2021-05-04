@@ -1,6 +1,6 @@
-# Learn SQL Joins and Functions by Building a Student Database
+# Learn SQL by Building a Student Database
 
-> Welcome to the SQL Joins and Functions Lessons!
+> Welcome to the SQL Lessons!
 
 ## 10. Start the Terminal
 
@@ -1900,7 +1900,7 @@ Looks like there's 17 unique courses in the CSV file. Last, view the data in `ma
 
 ### 1190.1
 
-In the terminal, use the list command to check what files are in your project folder.
+28 rows, same as the CSV file. I think all the data got added correctly. You don't need your test files anymore. In the terminal, use the list command to check what files are in your project folder.
 
 #### HINTS
 
@@ -1912,7 +1912,7 @@ In the terminal, use the list command to check what files are in your project fo
 
 ### 1200.1
 
-You don't need the test files anymore. In the terminal, use the remove command (`rm`) to delete the `students_test.csv` file.
+Use the remove command (`rm`) to delete the `students_test.csv` file.
 
 #### HINTS
 
@@ -1947,7 +1947,7 @@ List the contents of the folder again to make sure they're gone.
 
 ### 1220.1
 
-All the data is in the database :smile: Next, you are going to make a script to print info about your students. In the terminal, use `touch` to create a `student_info.sh` file.
+Next, you are going to make a script to print info about your students. In the terminal, use `touch` to create a `student_info.sh` file.
 
 #### HINTS
 
@@ -2028,3 +2028,1206 @@ You will want to query the database again to get info about the students to disp
 ```sh
 PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
 ```
+
+## 1280. Add “echo first name, last name and gpa of students with a 4.0 gpa:”
+
+### 1280.1
+
+Add “echo first name, last name and gpa of students with a 4.0 gpa:”
+
+#### HINTS
+
+- hint1
+
+## 1290. Title
+
+### 1290.1
+
+Select * from students; - to see all the data in the table
+
+#### HINTS
+
+- hint1
+
+## 1300. Title
+
+### 1300.1
+
+Select first_name from students;
+
+#### HINTS
+
+- hint1
+
+## 1310. Title
+
+### 1310.1
+
+Select first_name, last_name, gpa from students;
+
+#### HINTS
+
+- hint1
+
+## 1320. Title
+
+### 1320.1
+
+Select first_name, last_name, gpa from students where gpa < 2.5
+
+#### HINTS
+
+- hint1
+
+## 1330. Title
+
+### 1330.1
+
+select first_name, last_name, gpa from students where gpa <= 1.3
+
+#### HINTS
+
+- hint1
+
+## 1340. Title
+
+### 1340.1
+
+Select first_name, last_name, gpa from students where gpa != 4.0
+
+#### HINTS
+
+- hint1
+
+## 1350. Title
+
+### 1350.1
+
+Select first_name, last_name, gpa from students where gpa > 1;
+
+#### HINTS
+
+- hint1
+
+## 1360. Title
+
+### 1360.1
+
+Add echo select first_name, last_name gpa from students where gpa = 4.0;
+
+#### HINTS
+
+- hint1
+
+## 1370. ./student_info.sh
+
+### 1370.1
+
+./student_info.sh
+
+#### HINTS
+
+- hint1
+
+## 1380. Add All course names whose first letter starts with a letter before D
+
+### 1380.1
+
+Add echo All course names whose first letter starts with a letter **before** ‘D’
+
+#### HINTS
+
+- hint1
+
+## 1390. Title
+
+### 1390.1
+
+select * from majors
+
+#### HINTS
+
+- hint1
+
+## 1400. Title
+
+### 1400.1
+
+Select * from majors where major = ‘Game Design’
+
+#### HINTS
+
+- hint1
+
+## 1410. Title
+
+### 1410.1
+
+select * from majors where major != ‘Game Design’
+
+#### HINTS
+
+- hint1
+
+## 1420. Title
+
+### 1420.1
+
+Select * from majors where major > ’Game Design’
+
+#### HINTS
+
+- hint1
+
+## 1430. Title
+
+### 1430.1
+
+Select * from majors where major >= ’Game Design’
+
+#### HINTS
+
+- hint1
+
+## 1440. Title
+
+### 1440.1
+
+select * from majors where major < ‘G’;
+
+#### HINTS
+
+- hint1
+
+## 1450. Title
+
+### 1450.1
+
+add echo “SELECT course from courses where first_name < ‘D’”
+
+#### HINTS
+
+- hint1
+
+## 1460. ./student_info.sh
+
+### 1460.1
+
+./student_info.sh
+
+#### HINTS
+
+- hint1
+
+## 1470. Title
+
+### 1470.1
+
+Add echo first name, last name, and gpa of students who’s last name begins with a letter ‘R’ or after and have a GPA greater than 3.5 or less than 2.5
+
+#### HINTS
+
+- hint1
+
+## 1480. Title
+
+### 1480.1
+
+Select * from students;
+
+#### HINTS
+
+- hint1
+
+## 1490. Title
+
+### 1490.1
+
+select * from students where last_name < ‘M’
+
+#### HINTS
+
+- hint1
+
+## 1500. Title
+
+### 1500.1
+
+select * from students where last_name < ‘M’ OR gpa=3.9
+
+#### HINTS
+
+- hint1
+
+## 1510. Title
+
+### 1510.1
+
+select * from students where last_name < ‘M’ AND gpa=3.9
+
+#### HINTS
+
+- hint1
+
+## 1520. Title
+
+### 1520.1
+
+select * from students where last_name < ‘M’ AND gpa=3.9 OR gpa < 2.3;
+
+#### HINTS
+
+- hint1
+
+## 1530. Title
+
+### 1530.1
+
+select * from students where last_name < ‘M’ AND (gpa=3.9 OR gpa < 2.3);
+
+#### HINTS
+
+- hint1
+
+## 1540. Title
+
+### 1540.1
+
+Add echo “select * from students where last_name >= 'R' AND (GPA > 3.5 OR gpa < 2.5);”
+
+#### HINTS
+
+- hint1
+
+## 1550. ./student_info
+
+### 1550.1
+
+./student_info
+
+#### HINTS
+
+- hint1
+
+## 1560. Title
+
+### 1560.1
+
+Add echo “Last name of students whose last name have `sa` (case insensitive) in it or have an `r` as the second to last letter
+
+#### HINTS
+
+- hint1
+
+## 1570. Title
+
+### 1570.1
+
+select * from courses;
+
+#### HINTS
+
+- hint1
+
+## 1580. Title
+
+### 1580.1
+
+select * from courses where course like ‘_lgorithms';
+
+#### HINTS
+
+- hint1
+
+## 1590. Title
+
+### 1590.1
+
+select * from courses where course like '%lgorithms';
+
+#### HINTS
+
+- hint1
+
+## 1600. Title
+
+### 1600.1
+
+select * from courses where course like ‘Web%’;
+
+#### HINTS
+
+- hint1
+
+## 1610. Title
+
+### 1610.1
+
+select * from courses where course like ‘_e%’;
+
+#### HINTS
+
+- hint1
+
+## 1620. Title
+
+### 1620.1
+
+Select * from courses WHERE course LIKE '% %';
+
+#### HINTS
+
+- hint1
+
+## 1630. Title
+
+### 1630.1
+
+Select * from courses WHERE course NOT LIKE '% %';
+
+#### HINTS
+
+- hint1
+
+## 1640. Title
+
+### 1640.1
+
+select * from courses where course like ‘%A%’;
+
+#### HINTS
+
+- hint1
+
+## 1650. Title
+
+### 1650.1
+
+select * from courses where course ilike ‘%A%’;
+
+#### HINTS
+
+- hint1
+
+## 1660. Title
+
+### 1660.1
+
+select * from courses where course not like ‘%s%’;
+
+#### HINTS
+
+- hint1
+
+## 1670. Title
+
+### 1670.1
+
+select * from courses where course NOT ILIKE ‘%s%’;
+
+#### HINTS
+
+- hint1
+
+## 1680. Title
+
+### 1680.1
+
+select * from courses where course not ILIKE ‘%s%’ AND course LIKE ‘% %’;
+
+#### HINTS
+
+- hint1
+
+## 1690. Title
+
+### 1690.1
+
+Add echo “select last_name from students where last_name ilike '%an%' or last_name like ‘%r_’”
+
+#### HINTS
+
+- hint1
+
+## 1700. ./student_info.sh
+
+### 1700.1
+
+./student_info.sh
+
+#### HINTS
+
+- hint1
+
+## 1710. Title
+
+### 1710.1
+
+Add echo first name, last name, and gpa of students who have not selected a major and either their first name begins with ‘D’ or they have a gpa greater than 3.0
+
+#### HINTS
+
+- hint1
+
+## 1720. Title
+
+### 1720.1
+
+Select * from students where gpa IS NULL;
+
+#### HINTS
+
+- hint1
+
+## 1730. Title
+
+### 1730.1
+
+Select * from students where gpa IS NOT NULL;
+
+#### HINTS
+
+- hint1
+
+## 1740. Title
+
+### 1740.1
+
+select * from students where major_id is null;
+
+#### HINTS
+
+- hint1
+
+## 1750. Title
+
+### 1750.1
+
+select * from students where major_id is null and gpa is not null;
+
+#### HINTS
+
+- hint1
+
+## 1760. Title
+
+### 1760.1
+
+select * from students where major_id is null and gpa is null;
+
+#### HINTS
+
+- hint1
+
+## 1770. Title
+
+### 1770.1
+
+Add echo “select first_name, last_name, gpa from students where major_id is null and (first_name like ‘D$’ or gpa > 3.0)”
+
+#### HINTS
+
+- hint1
+
+## 1780. ./student_info.sh
+
+### 1780.1
+
+./student_info.sh
+
+#### HINTS
+
+- hint1
+
+## 1790. Title
+
+### 1790.1
+
+add Echo course name of the first five courses, in reverse alphabetical order, that have an ‘e’ as the second letter or end with an ’s’
+
+#### HINTS
+
+- hint1
+
+## 1800. Title
+
+### 1800.1
+
+Select * from students ORDER by gpa;
+
+#### HINTS
+
+- hint1
+
+## 1810. Title
+
+### 1810.1
+
+Select * from students ORDER by gpa desc;
+
+#### HINTS
+
+- hint1
+
+## 1820. Title
+
+### 1820.1
+
+Select * from students order by gpa desc, first_name;
+
+#### HINTS
+
+- hint1
+
+## 1830. Title
+
+### 1830.1
+
+Select * from students order by gpa desc, first_name LIMIT 10;
+
+#### HINTS
+
+- hint1
+
+## 1840. Title
+
+### 1840.1
+
+Add echo select course from courses where course like ‘_e%’ OR course like ‘%s’ order by course desc limit 5;
+
+#### HINTS
+
+- hint1
+
+## 1850. ./student_info.sh
+
+### 1850.1
+
+./student_info.sh
+
+#### HINTS
+
+- hint1
+
+## 1860. Title
+
+### 1860.1
+
+Add Echo Average GPA of all students rounded to two decimal places:
+
+#### HINTS
+
+- hint1
+
+## 1870. Title
+
+### 1870.1
+
+Select min(major_id) from students;
+
+#### HINTS
+
+- hint1
+
+## 1880. Title
+
+### 1880.1
+
+Select max(major_id) from students;
+
+#### HINTS
+
+- hint1
+
+## 1890. Title
+
+### 1890.1
+
+Select sum(major_id) from students;
+
+#### HINTS
+
+- hint1
+
+## 1900. Title
+
+### 1900.1
+
+Select avg(major_id) from students;
+
+#### HINTS
+
+- hint1
+
+## 1910. Title
+
+### 1910.1
+
+select ceil(avg(major_id) from students;
+
+#### HINTS
+
+- hint1
+
+## 1920. Title
+
+### 1920.1
+
+Select round(avg(major_id)) from students;
+
+#### HINTS
+
+- hint1
+
+## 1930. Title
+
+### 1930.1
+
+Select round(avg(major_id), 5) from students;
+
+#### HINTS
+
+- hint1
+
+## 1940. Title
+
+### 1940.1
+
+Add echo select round(avg(gpa), 2) from students;
+
+#### HINTS
+
+- hint1
+
+## 1950. ./student_info.sh
+
+### 1950.1
+
+./student_info.sh
+
+#### HINTS
+
+- hint1
+
+## 1960. Title
+
+### 1960.1
+
+Add echo major_id, count of students named number_of_students, and average gpa rounded to two decimal places named average_gpa, for each major_id in the students table having a student count greater than 1:
+
+#### HINTS
+
+- hint1
+
+## 1970. Title
+
+### 1970.1
+
+Select count(*) from majors;
+
+#### HINTS
+
+- hint1
+
+## 1980. Title
+
+### 1980.1
+
+Select count(*) from students;
+
+#### HINTS
+
+- hint1
+
+## 1990. Title
+
+### 1990.1
+
+Select count(major_id) from students;
+
+#### HINTS
+
+- hint1
+
+## 2000. Title
+
+### 2000.1
+
+Select distinct(major_id) from students;
+
+#### HINTS
+
+- hint1
+
+## 2010. Title
+
+### 2010.1
+
+Select major_id from students group by major_id;
+
+#### HINTS
+
+- hint1
+
+## 2020. Title
+
+### 2020.1
+
+select major_id, count(*) from students group by major_id; - any columns must be in group by or use aggregate()
+
+#### HINTS
+
+- hint1
+
+## 2030. Title
+
+### 2030.1
+
+Select major_id, max(gpa) from students group by major_id;
+
+#### HINTS
+
+- hint1
+
+## 2040. Title
+
+### 2040.1
+
+select major_id, min(gpa), max(gpa) FROM students group by major_id;
+
+#### HINTS
+
+- hint1
+
+## 2050. Title
+
+### 2050.1
+
+Select major_id min(gpa), max(gpa) from students group by major_id having max(gpa) = 4;
+
+#### HINTS
+
+- hint1
+
+## 2060. Title
+
+### 2060.1
+
+Select major_id min(gpa) AS min_gpa, max(gpa) from students group by major_id having max(gpa) = 4;
+
+#### HINTS
+
+- hint1
+
+## 2070. Title
+
+### 2070.1
+
+Select major_id min(gpa) AS min_gpa, max(gpa) AS max_gpa from students group by major_id having max(gpa) = 4;
+
+#### HINTS
+
+- hint1
+
+## 2080. Title
+
+### 2080.1
+
+Select major_id, count(*) AS number_of_students FROM students group by major_id having count(*) < 8;
+
+#### HINTS
+
+- hint1
+
+## 2090. Title
+
+### 2090.1
+
+select major_id, count(*) AS number_of_students, round(avg(gpa),2) AS average_gpa, from students group by major_id having count(*) > 1;
+
+#### HINTS
+
+- hint1
+
+## 2100. ./student_info.sh
+
+### 2100.1
+
+./student_info.sh
+
+#### HINTS
+
+- hint1
+
+## 2110. Title
+
+### 2110.1
+
+Add echo List of majors, in alphabetical order, that either no student is taking or has a student whose first name contains a case incentive ‘ma’:
+
+#### HINTS
+
+- hint1
+
+## 2120. Title
+
+### 2120.1
+
+select * from students FULL join majors on students.major_id = majors.major_id;
+ = will show all students and all majors
+ = if you want to see all students and all majors
+
+#### HINTS
+
+- hint1
+
+## 2130. Title
+
+### 2130.1
+
+select * from students LEFT join majors on students.major_id = majors.major_id;
+ = will show all students but only majors if there’s a linked major_id in the students table
+ = if you want to see all students but only majors if there’s a student taking it
+
+#### HINTS
+
+- hint1
+
+## 2140. Title
+
+### 2140.1
+
+select * from students RIGHT join majors on students.major_id = majors.major_id;
+ = will show all majors whether there’s a student with that major_id or not
+ = if you want to see all majors but only students that are enrolled in a major 
+
+#### HINTS
+
+- hint1
+
+## 2150. Title
+
+### 2150.1
+
+select * from students INNER join majors on students.major_id = majors.major_id;
+ = will only show students that have a major and majors that have a student
+ = if you only want to see students that have a major
+
+#### HINTS
+
+- hint1
+
+## 2160. Title
+
+### 2160.1
+
+Use a left join to show all majors but only students that are enrolled in a major
+=When querying the database, you only want to get the exact info you need… These different types of join will help 
+
+#### HINTS
+
+- hint1
+
+## 2170. Title
+
+### 2170.1
+
+Use a right join to show all students but only majors if a student is enrolled in it
+
+#### HINTS
+
+- hint1
+
+## 2180. Title
+
+### 2180.1
+
+Use the appropriate join to show only students that are enrolled in a major, and only majors that have a student enrolled in it
+
+#### HINTS
+
+- hint1
+
+## 2190. Title
+
+### 2190.1
+
+Use the appropriate join to show all students and all majors
+= SELECT * FROM students FULL JOIN majors ON students.major_id=majors.major_id;
+
+#### HINTS
+
+- hint1
+
+## 2200. Title
+
+### 2200.1
+
+“List of majors students are taking:” INNER JOIN
+SELECT * FROM students INNER JOIN majors ON students.major_id=majors.major_id;
+
+#### HINTS
+
+- hint1
+
+## 2210. Title
+
+### 2210.1
+
+SELECT major FROM students INNER JOIN majors ON students.major_id=majors.major_id;
+
+#### HINTS
+
+- hint1
+
+## 2220. Title
+
+### 2220.1
+
+SELECT DISTINCT(major) FROM students INNER JOIN majors ON students.major_id=majors.major_id;
+
+#### HINTS
+
+- hint1
+
+## 2230. Title
+
+### 2230.1
+
+“List of majors students aren’t taking:” right join
+SELECT * FROM students RIGHT JOIN MAJORS ON students.major_id=majors.major_id;
+
+#### HINTS
+
+- hint1
+
+## 2240. Title
+
+### 2240.1
+
+SELECT * FROM Students RIGHT JOIN majors on students.major_id=majors.major_id WHERE student_id IS NULL;
+
+#### HINTS
+
+- hint1
+
+## 2250. Title
+
+### 2250.1
+
+“First name, last_name, gpa, and major of students who are taking data science or have a gpa of 3.8 or greater”: left join
+
+#### HINTS
+
+- hint1
+
+## 2260. Title
+
+### 2260.1
+
+SELECT * FROM students LEFT JOIN majors ON students.major_id=majors.major_id WHERE major='Data Science' OR gpa >= 3.8;
+
+#### HINTS
+
+- hint1
+
+## 2270. Title
+
+### 2270.1
+
+”List of majors that no student is taking or has a student with a 4.0 gpa”: full join
+SELECT * FROM students FULL JOIN majors ON students.major_id=majors.major_id;
+
+#### HINTS
+
+- hint1
+
+## 2280. Title
+
+### 2280.1
+
+SELECT * FROM students FULL JOIN majors ON students.major_id=majors.major_id WHERE student_id IS NULL OR gpa = 4.0;
+
+#### HINTS
+
+- hint1
+
+## 2290. Title
+
+### 2290.1
+
+SELECT major FROM students FULL JOIN majors ON students.major_id=majors.major_id WHERE student_id IS NULL OR gpa = 4.0;
+
+#### HINTS
+
+- hint1
+
+## 2300. Title
+
+### 2300.1
+
+SELECT DISTINCT(major) FROM students FULL JOIN majors ON students.major_id=majors.major_id WHERE student_id IS NULL OR gpa = 4.0;
+
+#### HINTS
+
+- hint1
+
+## 2310. Title
+
+### 2310.1
+
+Add echo “select * from students RIGHT JOIN majors on students.major_id=majors.major_id WHERE student_id IS NULL OR first_name ILIKE '%ma%';”
+
+#### HINTS
+
+- hint1
+
+## 2320. ./student_info.sh
+
+### 2320.1
+
+./student_info.sh
+
+#### HINTS
+
+- hint1
+
+## 2330. Title
+
+### 2330.1
+
+Add echo List of unique courses, in alphabetical order, that no student or ‘Obie Hilpert’ is taking:
+
+#### HINTS
+
+- hint1
+
+## 2340. Title
+
+### 2340.1
+
+SELECT * FROM students FULL JOIN majors ON students.major_id=majors.major_id;
+
+#### HINTS
+
+- hint1
+
+## 2350. Title
+
+### 2350.1
+
+select students.major_id from students FULL JOIN JOIN majors ON students.major_id = majors.major_id;
+
+#### HINTS
+
+- hint1
+
+## 2360. Title
+
+### 2360.1
+
+select * from students AS s FULL JOIN majors ON s.major_id=majors.major_id;
+
+#### HINTS
+
+- hint1
+
+## 2370. Title
+
+### 2370.1
+
+select * from students AS s FULL JOIN majors AS m ON s.major_id=m.major_id;
+
+#### HINTS
+
+- hint1
+
+## 2380. Title
+
+### 2380.1
+
+select s.major_id from students AS s FULL JOIN majors AS m ON s.major_id=m.major_id;
+
+#### HINTS
+
+- hint1
+
+## 2390. Title
+
+### 2390.1
+
+SELECT * FROM students FULL JOIN majors USING(major_id);
+
+#### HINTS
+
+- hint1
+
+## 2400. Title
+
+### 2400.1
+
+SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id);
+
+#### HINTS
+
+- hint1
+
+## 2410. Title
+
+### 2410.1
+
+SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id) FULL JOIN courses USING(course_id);
+
+#### HINTS
+
+- hint1
+
+## 2420. Title
+
+### 2420.1
+
+Add echo “SELECT DISTINCT(course) FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) WHERE (first_name = 'Obie' AND last_name = 'Hilpert') OR student_id IS NULL ORDER BY course;”
+
+#### HINTS
+
+- hint1
+
+## 2430. ./student_info.sh
+
+### 2430.1
+
+./student_info.sh
+
+#### HINTS
+
+- hint1
+
+## 2440. Title
+
+### 2440.1
+
+Add echo List of courses with only one student enrolled:
+
+#### HINTS
+
+- hint1
+
+## 2450. Title
+
+### 2450.1
+
+Add echo $PSQL SELECT count(course), course FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) group by course HAVING count(course)=1;
+
+#### HINTS
+
+- hint1
+
+## 2460. ./student_info.sh
+
+### 2460.1
+
+./student_info.sh
+
+#### HINTS
+
+- hint1
