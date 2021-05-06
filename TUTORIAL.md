@@ -3031,7 +3031,7 @@ SELECT major FROM Students RIGHT JOIN majors on students.major_id=majors.major_i
 
 - hint1
 
-## 2260. psql SELECT * students LEFT JOIN majors WHERE major = Data Science OR gpa >= 3.8
+## 2260. psql SELECT students LEFT JOIN majors WHERE major = Data Science OR gpa >= 3.8
 
 ### 2260.1
 
@@ -3041,7 +3041,7 @@ SELECT * FROM students LEFT JOIN majors ON students.major_id=majors.major_id WHE
 
 - hint1
 
-## 2265. psql SELECT columns students LEFT JOIN majors WHERE major = Data Science OR gpa >= 3.8
+## 2265. psql SELECT columns LEFT JOIN WHERE major = Data Science OR gpa >= 3.8
 
 ### 2265.1
 
