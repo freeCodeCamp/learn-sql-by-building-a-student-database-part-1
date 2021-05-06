@@ -1486,6 +1486,12 @@ levels:
         setup:
           watchers:
             - ./.freeCodeCamp/test/pg.log
+  - id: '2245'
+    steps:
+      - id: '2245.1'
+        setup:
+          watchers:
+            - ./.freeCodeCamp/test/pg.log
   - id: '2250'
     steps:
       - id: '2250.1'
@@ -1495,6 +1501,12 @@ levels:
   - id: '2260'
     steps:
       - id: '2260.1'
+        setup:
+          watchers:
+            - ./.freeCodeCamp/test/pg.log
+  - id: '2265'
+    steps:
+      - id: '2265.1'
         setup:
           watchers:
             - ./.freeCodeCamp/test/pg.log

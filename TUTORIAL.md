@@ -3011,6 +3011,16 @@ SELECT * FROM Students RIGHT JOIN majors on students.major_id=majors.major_id WH
 
 - hint1
 
+## 2245. psql SELECT major students RIGHT JOIN majors WHERE student_id IS NULL
+
+### 2245.1
+
+SELECT major FROM Students RIGHT JOIN majors on students.major_id=majors.major_id WHERE student_id IS NULL;
+
+#### HINTS
+
+- hint1
+
 ## 2250. psql SELECT * students LEFT JOIN majors
 
 ### 2250.1
@@ -3026,6 +3036,16 @@ SELECT * FROM Students RIGHT JOIN majors on students.major_id=majors.major_id WH
 ### 2260.1
 
 SELECT * FROM students LEFT JOIN majors ON students.major_id=majors.major_id WHERE major='Data Science' OR gpa >= 3.8;
+
+#### HINTS
+
+- hint1
+
+## 2265. psql SELECT columns students LEFT JOIN majors WHERE major = Data Science OR gpa >= 3.8
+
+### 2265.1
+
+SELECT first_name, last_name, gpa FROM students LEFT JOIN majors ON students.major_id=majors.major_id WHERE major='Data Science' OR gpa >= 3.8;
 
 #### HINTS
 
