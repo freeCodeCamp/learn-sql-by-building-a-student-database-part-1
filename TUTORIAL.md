@@ -2029,7 +2029,7 @@ You will want to query the database again to get info about the students to disp
 PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
 ```
 
-## 1280. Add “echo first name, last name and gpa of students with a 4.0 gpa:”
+## 1280. Add echo students with 4.0
 
 ### 1280.1
 
@@ -2039,7 +2039,7 @@ Add “echo first name, last name and gpa of students with a 4.0 gpa:”
 
 - hint1
 
-## 1290. Title
+## 1290. psql SELECT * FROM students
 
 ### 1290.1
 
@@ -2049,7 +2049,7 @@ Select * from students; - to see all the data in the table
 
 - hint1
 
-## 1300. Title
+## 1300. psql SELECT first_name
 
 ### 1300.1
 
@@ -2059,7 +2059,7 @@ Select first_name from students;
 
 - hint1
 
-## 1310. Title
+## 1310. psql SELECT first_name, last_name, gpa
 
 ### 1310.1
 
@@ -2069,7 +2069,7 @@ Select first_name, last_name, gpa from students;
 
 - hint1
 
-## 1320. Title
+## 1320. psql SELECT WHERE gpa < 2.5
 
 ### 1320.1
 
@@ -2079,7 +2079,7 @@ Select first_name, last_name, gpa from students where gpa < 2.5
 
 - hint1
 
-## 1330. Title
+## 1330. psql SELECT WHERE gpa <= 1.3
 
 ### 1330.1
 
@@ -2089,7 +2089,7 @@ select first_name, last_name, gpa from students where gpa <= 1.3
 
 - hint1
 
-## 1340. Title
+## 1340. psql SELECT WHERE != 4.0
 
 ### 1340.1
 
@@ -2099,7 +2099,7 @@ Select first_name, last_name, gpa from students where gpa != 4.0
 
 - hint1
 
-## 1350. Title
+## 1350. psql SELECT WHERE gpa > 1
 
 ### 1350.1
 
@@ -2109,7 +2109,7 @@ Select first_name, last_name, gpa from students where gpa > 1;
 
 - hint1
 
-## 1360. Title
+## 1360. Add echo query result
 
 ### 1360.1
 
@@ -2129,7 +2129,7 @@ Add echo select first_name, last_name gpa from students where gpa = 4.0;
 
 - hint1
 
-## 1380. Add All course names whose first letter starts with a letter before D
+## 1380. Add echo courses before D
 
 ### 1380.1
 
@@ -2139,7 +2139,7 @@ Add echo All course names whose first letter starts with a letter **before** ‘
 
 - hint1
 
-## 1390. Title
+## 1390. psql SELECT * FROM majors
 
 ### 1390.1
 
@@ -2149,7 +2149,7 @@ select * from majors
 
 - hint1
 
-## 1400. Title
+## 1400. psql SELECT WHERE major = Game Design
 
 ### 1400.1
 
@@ -2159,7 +2159,7 @@ Select * from majors where major = ‘Game Design’
 
 - hint1
 
-## 1410. Title
+## 1410. psql SELECT WHERE major !- Game Design
 
 ### 1410.1
 
@@ -2169,7 +2169,7 @@ select * from majors where major != ‘Game Design’
 
 - hint1
 
-## 1420. Title
+## 1420. psql SELECT WHERE major > Game Design
 
 ### 1420.1
 
@@ -2179,7 +2179,7 @@ Select * from majors where major > ’Game Design’
 
 - hint1
 
-## 1430. Title
+## 1430. psql SELECT WHERE major >= Game Design
 
 ### 1430.1
 
@@ -2189,7 +2189,7 @@ Select * from majors where major >= ’Game Design’
 
 - hint1
 
-## 1440. Title
+## 1440. psql SELECT WHERE major < G
 
 ### 1440.1
 
@@ -2199,7 +2199,7 @@ select * from majors where major < ‘G’;
 
 - hint1
 
-## 1450. Title
+## 1450. Add echo query result
 
 ### 1450.1
 
@@ -2219,7 +2219,7 @@ add echo “SELECT course from courses where first_name < ‘D’”
 
 - hint1
 
-## 1470. Title
+## 1470. Add echo students after R with gpa above 3.8 or below 2.0 
 
 ### 1470.1
 
@@ -2229,7 +2229,7 @@ Add echo first name, last name, and gpa of students who’s last name begins wit
 
 - hint1
 
-## 1480. Title
+## 1480. psql SELECT * FROM students
 
 ### 1480.1
 
@@ -2239,7 +2239,7 @@ Select * from students;
 
 - hint1
 
-## 1490. Title
+## 1490. psql SELECT WHERE last_name < M
 
 ### 1490.1
 
@@ -2249,7 +2249,7 @@ select * from students where last_name < ‘M’
 
 - hint1
 
-## 1500. Title
+## 1500. SELECT WHERE last_name < M OR gpa = 3.9
 
 ### 1500.1
 
@@ -2259,7 +2259,7 @@ select * from students where last_name < ‘M’ OR gpa=3.9
 
 - hint1
 
-## 1510. Title
+## 1510. psql SELECT WHERE last_name < M AND gpa = 3.9
 
 ### 1510.1
 
@@ -2269,7 +2269,7 @@ select * from students where last_name < ‘M’ AND gpa=3.9
 
 - hint1
 
-## 1520. Title
+## 1520. psql SELECT WHERE last_name < M AND gpa = 3.9 OR gpa < 2.3
 
 ### 1520.1
 
@@ -2279,7 +2279,7 @@ select * from students where last_name < ‘M’ AND gpa=3.9 OR gpa < 2.3;
 
 - hint1
 
-## 1530. Title
+## 1530. psql SELECT WHERE last_name < M AND (gpa = 3.9 OR gpa < 2.3)
 
 ### 1530.1
 
@@ -2289,7 +2289,7 @@ select * from students where last_name < ‘M’ AND (gpa=3.9 OR gpa < 2.3);
 
 - hint1
 
-## 1540. Title
+## 1540. Add echo query result
 
 ### 1540.1
 
@@ -2309,7 +2309,7 @@ Add echo “select * from students where last_name >= 'R' AND (GPA > 3.5 OR gpa 
 
 - hint1
 
-## 1560. Title
+## 1560. Add echo students containing sa or r as second to last letter
 
 ### 1560.1
 
@@ -2319,7 +2319,7 @@ Add echo “Last name of students whose last name have `sa` (case insensitive) i
 
 - hint1
 
-## 1570. Title
+## 1570. psql SELECT * FROM courses
 
 ### 1570.1
 
@@ -2329,7 +2329,7 @@ select * from courses;
 
 - hint1
 
-## 1580. Title
+## 1580. psql SELECT WHERE course LIKE _lgorithms
 
 ### 1580.1
 
@@ -2339,7 +2339,7 @@ select * from courses where course like ‘_lgorithms';
 
 - hint1
 
-## 1590. Title
+## 1590. psql SELECT WHERE course LIKE %lgorithms
 
 ### 1590.1
 
@@ -2349,7 +2349,7 @@ select * from courses where course like '%lgorithms';
 
 - hint1
 
-## 1600. Title
+## 1600. psql SELECT WHERE course LIKE Web%
 
 ### 1600.1
 
@@ -2359,7 +2359,7 @@ select * from courses where course like ‘Web%’;
 
 - hint1
 
-## 1610. Title
+## 1610. psql SELECT WHERE course LIKE _e%
 
 ### 1610.1
 
@@ -2369,7 +2369,7 @@ select * from courses where course like ‘_e%’;
 
 - hint1
 
-## 1620. Title
+## 1620. psql SELECT WHERE course LIKE % %
 
 ### 1620.1
 
@@ -2379,7 +2379,7 @@ Select * from courses WHERE course LIKE '% %';
 
 - hint1
 
-## 1630. Title
+## 1630. psql SELECT WHERE course NOT LIKE % %
 
 ### 1630.1
 
@@ -2389,7 +2389,7 @@ Select * from courses WHERE course NOT LIKE '% %';
 
 - hint1
 
-## 1640. Title
+## 1640. psql SELECT WHERE course LIKE %A%
 
 ### 1640.1
 
@@ -2399,7 +2399,7 @@ select * from courses where course like ‘%A%’;
 
 - hint1
 
-## 1650. Title
+## 1650. psql SELECT WHERE course ILIKE %A%
 
 ### 1650.1
 
@@ -2409,7 +2409,7 @@ select * from courses where course ilike ‘%A%’;
 
 - hint1
 
-## 1660. Title
+## 1660. psql SELECT WHERE course NOT LIKE %s%
 
 ### 1660.1
 
@@ -2419,7 +2419,7 @@ select * from courses where course not like ‘%s%’;
 
 - hint1
 
-## 1670. Title
+## 1670. psql SELECT WHERE course NOT ILIKE %s%
 
 ### 1670.1
 
@@ -2429,7 +2429,7 @@ select * from courses where course NOT ILIKE ‘%s%’;
 
 - hint1
 
-## 1680. Title
+## 1680. psql SELECT WHERE course NOT ILIKE %s% AND LIKE % %
 
 ### 1680.1
 
@@ -2439,7 +2439,7 @@ select * from courses where course not ILIKE ‘%s%’ AND course LIKE ‘% %’
 
 - hint1
 
-## 1690. Title
+## 1690. Add echo query result
 
 ### 1690.1
 
@@ -2459,7 +2459,7 @@ Add echo “select last_name from students where last_name ilike '%an%' or last_
 
 - hint1
 
-## 1710. Title
+## 1710. Add echo students without major begin with D or gpa > 3.0
 
 ### 1710.1
 
@@ -2469,7 +2469,7 @@ Add echo first name, last name, and gpa of students who have not selected a majo
 
 - hint1
 
-## 1720. Title
+## 1720. psql SELECT * FROM students WHERE gpa IS NULL
 
 ### 1720.1
 
@@ -2479,7 +2479,7 @@ Select * from students where gpa IS NULL;
 
 - hint1
 
-## 1730. Title
+## 1730. psql SELECT WHERE gpa IS NOT NULL
 
 ### 1730.1
 
@@ -2489,7 +2489,7 @@ Select * from students where gpa IS NOT NULL;
 
 - hint1
 
-## 1740. Title
+## 1740. psql SELECT WHERE major IS NULL
 
 ### 1740.1
 
@@ -2499,7 +2499,7 @@ select * from students where major_id is null;
 
 - hint1
 
-## 1750. Title
+## 1750. psql SELECT WHERE major IS NULL and gpa IS NOT NULL
 
 ### 1750.1
 
@@ -2509,7 +2509,7 @@ select * from students where major_id is null and gpa is not null;
 
 - hint1
 
-## 1760. Title
+## 1760. psql SELECT WHERE major_id IS NULL AND gpa IS NULL
 
 ### 1760.1
 
@@ -2519,7 +2519,7 @@ select * from students where major_id is null and gpa is null;
 
 - hint1
 
-## 1770. Title
+## 1770. Add echo query result
 
 ### 1770.1
 
@@ -2539,7 +2539,7 @@ Add echo “select first_name, last_name, gpa from students where major_id is nu
 
 - hint1
 
-## 1790. Title
+## 1790. Add echo first five courses
 
 ### 1790.1
 
@@ -2549,7 +2549,7 @@ add Echo course name of the first five courses, in reverse alphabetical order, t
 
 - hint1
 
-## 1800. Title
+## 1800. psql SELECT students ORDER BY gpa
 
 ### 1800.1
 
@@ -2559,7 +2559,7 @@ Select * from students ORDER by gpa;
 
 - hint1
 
-## 1810. Title
+## 1810. psql SELECT students ORDER BY gpa desc
 
 ### 1810.1
 
@@ -2569,7 +2569,7 @@ Select * from students ORDER by gpa desc;
 
 - hint1
 
-## 1820. Title
+## 1820. psql SELECT students ORDER BY gpa desc, first_name
 
 ### 1820.1
 
@@ -2579,7 +2579,7 @@ Select * from students order by gpa desc, first_name;
 
 - hint1
 
-## 1830. Title
+## 1830. psql SELECT students ORDER BY gpa desc, first_name LIMIT 10
 
 ### 1830.1
 
@@ -2589,7 +2589,7 @@ Select * from students order by gpa desc, first_name LIMIT 10;
 
 - hint1
 
-## 1840. Title
+## 1840. Add echo query result
 
 ### 1840.1
 
@@ -2609,7 +2609,7 @@ Add echo select course from courses where course like ‘_e%’ OR course like �
 
 - hint1
 
-## 1860. Title
+## 1860. Add echo average GPA to two decimal places
 
 ### 1860.1
 
@@ -2619,7 +2619,7 @@ Add Echo Average GPA of all students rounded to two decimal places:
 
 - hint1
 
-## 1870. Title
+## 1870. psql SELECT MIN
 
 ### 1870.1
 
@@ -2629,7 +2629,7 @@ Select min(major_id) from students;
 
 - hint1
 
-## 1880. Title
+## 1880. psql SELECT MAX
 
 ### 1880.1
 
@@ -2639,7 +2639,7 @@ Select max(major_id) from students;
 
 - hint1
 
-## 1890. Title
+## 1890. psql SELECT SUM
 
 ### 1890.1
 
@@ -2649,7 +2649,7 @@ Select sum(major_id) from students;
 
 - hint1
 
-## 1900. Title
+## 1900. psql SELECT AVG
 
 ### 1900.1
 
@@ -2659,7 +2659,7 @@ Select avg(major_id) from students;
 
 - hint1
 
-## 1910. Title
+## 1910. psql SELECT CEIL(AVG)
 
 ### 1910.1
 
@@ -2669,7 +2669,7 @@ select ceil(avg(major_id) from students;
 
 - hint1
 
-## 1920. Title
+## 1920. psql SELECT ROUND(AVG)
 
 ### 1920.1
 
@@ -2679,7 +2679,7 @@ Select round(avg(major_id)) from students;
 
 - hint1
 
-## 1930. Title
+## 1930. psql SELECT ROUND(AVG(),5)
 
 ### 1930.1
 
@@ -2689,7 +2689,7 @@ Select round(avg(major_id), 5) from students;
 
 - hint1
 
-## 1940. Title
+## 1940. Add echo query result
 
 ### 1940.1
 
@@ -2709,7 +2709,7 @@ Add echo select round(avg(gpa), 2) from students;
 
 - hint1
 
-## 1960. Title
+## 1960. Add echo count of students per major with more than one student
 
 ### 1960.1
 
@@ -2719,7 +2719,7 @@ Add echo major_id, count of students named number_of_students, and average gpa r
 
 - hint1
 
-## 1970. Title
+## 1970. psql SELECT COUNT(*) FROM majors
 
 ### 1970.1
 
@@ -2729,7 +2729,7 @@ Select count(*) from majors;
 
 - hint1
 
-## 1980. Title
+## 1980. psql SELECT COUNT(*) FROM students
 
 ### 1980.1
 
@@ -2739,7 +2739,7 @@ Select count(*) from students;
 
 - hint1
 
-## 1990. Title
+## 1990. psql SELECT COUNT(major_id) FROM students
 
 ### 1990.1
 
@@ -2749,7 +2749,7 @@ Select count(major_id) from students;
 
 - hint1
 
-## 2000. Title
+## 2000. psql SELECT DISTINCT(major_id) FROM students
 
 ### 2000.1
 
@@ -2759,7 +2759,7 @@ Select distinct(major_id) from students;
 
 - hint1
 
-## 2010. Title
+## 2010. psql SELECT FROM students GROUP BY major_id
 
 ### 2010.1
 
@@ -2769,7 +2769,7 @@ Select major_id from students group by major_id;
 
 - hint1
 
-## 2020. Title
+## 2020. psql SELECT count(*) FROM students GROUP BY major_id
 
 ### 2020.1
 
@@ -2779,7 +2779,7 @@ select major_id, count(*) from students group by major_id; - any columns must be
 
 - hint1
 
-## 2030. Title
+## 2030. psql SELECT MAX(gpa) FROM students GROUP BY major_id
 
 ### 2030.1
 
@@ -2789,7 +2789,7 @@ Select major_id, max(gpa) from students group by major_id;
 
 - hint1
 
-## 2040. Title
+## 2040. psql SELECT MIN(gpa), MAX(gpa) FROM students GROUP BY major_id
 
 ### 2040.1
 
@@ -2799,7 +2799,7 @@ select major_id, min(gpa), max(gpa) FROM students group by major_id;
 
 - hint1
 
-## 2050. Title
+## 2050. psql SELECT MIN(gpa), MAX(gpa) FROM students GROUP BY major_id HAVING MAX(gpa) = 4
 
 ### 2050.1
 
@@ -2809,7 +2809,7 @@ Select major_id min(gpa), max(gpa) from students group by major_id having max(gp
 
 - hint1
 
-## 2060. Title
+## 2060. psql SELECT MIN(gpa) AS, MAX(gpa) FROM students GROUP BY major_id HAVING MAX(gpa) = 4
 
 ### 2060.1
 
@@ -2819,7 +2819,7 @@ Select major_id min(gpa) AS min_gpa, max(gpa) from students group by major_id ha
 
 - hint1
 
-## 2070. Title
+## 2070. psql SELECT MIN(gpa) AS, MAX(gpa) AS FROM students GROUP BY major_id HAVING MAX(gpa) = 4
 
 ### 2070.1
 
@@ -2829,7 +2829,7 @@ Select major_id min(gpa) AS min_gpa, max(gpa) AS max_gpa from students group by 
 
 - hint1
 
-## 2080. Title
+## 2080. psql SELECT COUNT(*) AS FROM students GROUP BY major_id HAVING COUNT(*) < 8
 
 ### 2080.1
 
@@ -2839,7 +2839,7 @@ Select major_id, count(*) AS number_of_students FROM students group by major_id 
 
 - hint1
 
-## 2090. Title
+## 2090. Add echo query result
 
 ### 2090.1
 
@@ -2859,7 +2859,7 @@ select major_id, count(*) AS number_of_students, round(avg(gpa),2) AS average_gp
 
 - hint1
 
-## 2110. Title
+## 2110. Add echo majors with no students or student with ma
 
 ### 2110.1
 
@@ -2869,7 +2869,7 @@ Add echo List of majors, in alphabetical order, that either no student is taking
 
 - hint1
 
-## 2120. Title
+## 2120. psql students FULL JOIN majors
 
 ### 2120.1
 
@@ -2881,7 +2881,7 @@ select * from students FULL join majors on students.major_id = majors.major_id;
 
 - hint1
 
-## 2130. Title
+## 2130. psql students LEFT JOIN majors
 
 ### 2130.1
 
@@ -2893,7 +2893,7 @@ select * from students LEFT join majors on students.major_id = majors.major_id;
 
 - hint1
 
-## 2140. Title
+## 2140. psql students RIGHT JOIN majors
 
 ### 2140.1
 
@@ -2905,7 +2905,7 @@ select * from students RIGHT join majors on students.major_id = majors.major_id;
 
 - hint1
 
-## 2150. Title
+## 2150. psql students INNER JOIN majors
 
 ### 2150.1
 
@@ -2917,7 +2917,7 @@ select * from students INNER join majors on students.major_id = majors.major_id;
 
 - hint1
 
-## 2160. Title
+## 2160. psql majors LEFT JOIN students
 
 ### 2160.1
 
@@ -2928,7 +2928,7 @@ Use a left join to show all majors but only students that are enrolled in a majo
 
 - hint1
 
-## 2170. Title
+## 2170. psql majors LEFT JOIN students
 
 ### 2170.1
 
@@ -2938,7 +2938,7 @@ Use a right join to show all students but only majors if a student is enrolled i
 
 - hint1
 
-## 2180. Title
+## 2180. psql majors INNER JOIN students
 
 ### 2180.1
 
@@ -2948,7 +2948,7 @@ Use the appropriate join to show only students that are enrolled in a major, and
 
 - hint1
 
-## 2190. Title
+## 2190. psql majors FULL JOIN students
 
 ### 2190.1
 
@@ -2959,7 +2959,7 @@ Use the appropriate join to show all students and all majors
 
 - hint1
 
-## 2200. Title
+## 2200. psql SELECT * students INNER JOIN majors
 
 ### 2200.1
 
@@ -2970,7 +2970,7 @@ SELECT * FROM students INNER JOIN majors ON students.major_id=majors.major_id;
 
 - hint1
 
-## 2210. Title
+## 2210. psql SELECT major students INNER JOIN majors
 
 ### 2210.1
 
@@ -2980,7 +2980,7 @@ SELECT major FROM students INNER JOIN majors ON students.major_id=majors.major_i
 
 - hint1
 
-## 2220. Title
+## 2220. psql SELECT DISTINCT(major) students INNER JOIN majors
 
 ### 2220.1
 
@@ -2990,7 +2990,7 @@ SELECT DISTINCT(major) FROM students INNER JOIN majors ON students.major_id=majo
 
 - hint1
 
-## 2230. Title
+## 2230. psql SELECT * students RIGHT JOIN majors
 
 ### 2230.1
 
@@ -3001,7 +3001,7 @@ SELECT * FROM students RIGHT JOIN MAJORS ON students.major_id=majors.major_id;
 
 - hint1
 
-## 2240. Title
+## 2240. psql SELECT * students RIGHT JOIN majors WHERE student_id IS NULL
 
 ### 2240.1
 
@@ -3011,7 +3011,7 @@ SELECT * FROM Students RIGHT JOIN majors on students.major_id=majors.major_id WH
 
 - hint1
 
-## 2250. Title
+## 2250. psql SELECT * students LEFT JOIN majors
 
 ### 2250.1
 
@@ -3021,7 +3021,7 @@ SELECT * FROM Students RIGHT JOIN majors on students.major_id=majors.major_id WH
 
 - hint1
 
-## 2260. Title
+## 2260. psql SELECT * students LEFT JOIN majors WHERE major = Data Science OR gpa >= 3.8
 
 ### 2260.1
 
@@ -3031,7 +3031,7 @@ SELECT * FROM students LEFT JOIN majors ON students.major_id=majors.major_id WHE
 
 - hint1
 
-## 2270. Title
+## 2270. psql SELECT * students FULL JOIN majors
 
 ### 2270.1
 
@@ -3042,7 +3042,7 @@ SELECT * FROM students FULL JOIN majors ON students.major_id=majors.major_id;
 
 - hint1
 
-## 2280. Title
+## 2280. psql SELECT * students FULL JOIN majors WHERE student_id IS NULL OR gpa = 4.0
 
 ### 2280.1
 
@@ -3052,7 +3052,7 @@ SELECT * FROM students FULL JOIN majors ON students.major_id=majors.major_id WHE
 
 - hint1
 
-## 2290. Title
+## 2290. psql SELECT major FROM students FULL JOIN majors WHERE student_id IS NULL OR gpa = 4.0
 
 ### 2290.1
 
@@ -3062,7 +3062,7 @@ SELECT major FROM students FULL JOIN majors ON students.major_id=majors.major_id
 
 - hint1
 
-## 2300. Title
+## 2300. psql SELECT DISTINCT(major) FROM students FULL JOIN majors WHERE student_id IS NULL OR gpa = 4.0
 
 ### 2300.1
 
@@ -3072,7 +3072,7 @@ SELECT DISTINCT(major) FROM students FULL JOIN majors ON students.major_id=major
 
 - hint1
 
-## 2310. Title
+## 2310. Add echo query result
 
 ### 2310.1
 
@@ -3092,7 +3092,7 @@ Add echo “select * from students RIGHT JOIN majors on students.major_id=majors
 
 - hint1
 
-## 2330. Title
+## 2330. Add echo courses with no students or Obie Hilpert
 
 ### 2330.1
 
@@ -3102,7 +3102,7 @@ Add echo List of unique courses, in alphabetical order, that no student or ‘Ob
 
 - hint1
 
-## 2340. Title
+## 2340. psql SELECT * FROM students FULL JOIN majors
 
 ### 2340.1
 
@@ -3112,7 +3112,7 @@ SELECT * FROM students FULL JOIN majors ON students.major_id=majors.major_id;
 
 - hint1
 
-## 2350. Title
+## 2350. psql SELECT students.major_id students FULL JOIN majors
 
 ### 2350.1
 
@@ -3122,7 +3122,7 @@ select students.major_id from students FULL JOIN JOIN majors ON students.major_i
 
 - hint1
 
-## 2360. Title
+## 2360. psql SELECT * FROM students AS s FULL JOIN majors
 
 ### 2360.1
 
@@ -3132,7 +3132,7 @@ select * from students AS s FULL JOIN majors ON s.major_id=majors.major_id;
 
 - hint1
 
-## 2370. Title
+## 2370. psql SELECT * FROM students AS s FULL JOIN majors AS m
 
 ### 2370.1
 
@@ -3142,7 +3142,7 @@ select * from students AS s FULL JOIN majors AS m ON s.major_id=m.major_id;
 
 - hint1
 
-## 2380. Title
+## 2380. psql s.major_id SELECT * FROM students AS s FULL JOIN majors AS m
 
 ### 2380.1
 
@@ -3152,7 +3152,7 @@ select s.major_id from students AS s FULL JOIN majors AS m ON s.major_id=m.major
 
 - hint1
 
-## 2390. Title
+## 2390. psql SELECT * FROM students FULL JOIN majors USING
 
 ### 2390.1
 
@@ -3162,7 +3162,7 @@ SELECT * FROM students FULL JOIN majors USING(major_id);
 
 - hint1
 
-## 2400. Title
+## 2400. psql SELECT * FROM students FULL JOIN majors USING FULL JOIN major_courses USING
 
 ### 2400.1
 
@@ -3172,7 +3172,7 @@ SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses
 
 - hint1
 
-## 2410. Title
+## 2410. psql SELECT * FROM students FULL JOIN majors USING FULL JOIN major_courses USING FULL JOIN courses USING
 
 ### 2410.1
 
@@ -3182,7 +3182,7 @@ SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses
 
 - hint1
 
-## 2420. Title
+## 2420. Add echo query result
 
 ### 2420.1
 
@@ -3202,7 +3202,7 @@ Add echo “SELECT DISTINCT(course) FROM students RIGHT JOIN majors USING(major_
 
 - hint1
 
-## 2440. Title
+## 2440. Add echo courses with only one student
 
 ### 2440.1
 
@@ -3212,7 +3212,7 @@ Add echo List of courses with only one student enrolled:
 
 - hint1
 
-## 2450. Title
+## 2450. Add echo query result
 
 ### 2450.1
 
