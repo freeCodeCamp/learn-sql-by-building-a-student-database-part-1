@@ -6022,7 +6022,7 @@
     },
     {
       "id": "2260",
-      "title": "psql SELECT * students LEFT JOIN majors WHERE major = Data Science OR gpa >= 3.8",
+      "title": "psql SELECT students LEFT JOIN majors WHERE major = Data Science OR gpa >= 3.8",
       "summary": "",
       "content": "",
       "steps": [
@@ -6045,7 +6045,7 @@
     },
     {
       "id": "2265",
-      "title": "psql SELECT columns students LEFT JOIN majors WHERE major = Data Science OR gpa >= 3.8",
+      "title": "psql SELECT columns LEFT JOIN WHERE major = Data Science OR gpa >= 3.8",
       "summary": "",
       "content": "",
       "steps": [

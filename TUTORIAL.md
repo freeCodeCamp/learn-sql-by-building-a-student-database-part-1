@@ -3082,7 +3082,7 @@ SELECT major FROM students FULL JOIN majors ON students.major_id=majors.major_id
 
 - hint1
 
-## 2300. psql SELECT DISTINCT(major) FROM students FULL JOIN majors WHERE student_id IS NULL OR gpa = 4.0
+## 2300. psql DISTINCT(major) students FULL JOIN majors WHERE student_id IS NULL OR gpa = 4.0
 
 ### 2300.1
 
@@ -3192,7 +3192,7 @@ SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses
 
 - hint1
 
-## 2410. psql SELECT * FROM students FULL JOIN majors USING FULL JOIN major_courses USING FULL JOIN courses USING
+## 2410. psql SELECT * students FULL JOIN majors USING JOIN major_courses USING JOIN courses USING
 
 ### 2410.1
 
