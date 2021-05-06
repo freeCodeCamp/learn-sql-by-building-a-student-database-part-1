@@ -6137,7 +6137,7 @@
     },
     {
       "id": "2300",
-      "title": "psql SELECT DISTINCT(major) FROM students FULL JOIN majors WHERE student_id IS NULL OR gpa = 4.0",
+      "title": "psql DISTINCT(major) students FULL JOIN majors WHERE student_id IS NULL OR gpa = 4.0",
       "summary": "",
       "content": "",
       "steps": [
@@ -6390,7 +6390,7 @@
     },
     {
       "id": "2410",
-      "title": "psql SELECT * FROM students FULL JOIN majors USING FULL JOIN major_courses USING FULL JOIN courses USING",
+      "title": "psql SELECT * students FULL JOIN majors USING JOIN major_courses USING JOIN courses USING",
       "summary": "",
       "content": "",
       "steps": [
