@@ -893,7 +893,7 @@ Below the variable you just created, use `echo` to print it.
 
 ### 590.1
 
-Instead of running through all the data in the CSV file, you should make some test data. Use the copy (`cp`) command to copy the `courses.csv` into a new file named `courses_test.csv`.
+Instead of running through all the data in the CSV file, you should make some test data. In the terminal, use the copy (`cp`) command to copy the `courses.csv` into a new file named `courses_test.csv`.
 
 #### HINTS
 
@@ -926,7 +926,7 @@ Data Science,Data Structures and Algorithms
 
 ### 610.1
 
-Change your `cat` command to loop through the test file instead of the full one.
+Back in the `insert_data.sh` script, change your `cat` command to loop through the test file instead of the full one.
 
 #### HINTS
 
@@ -1093,7 +1093,7 @@ It inserted four that time. In the psql prompt, view all the data in the `majors
 
 ### 750.1
 
-You won't want to add the first line from the CSV file since those are just titles. In your `insert_data.sh` script, add an `if` condition that checks if `$MAJOR != major`. Put all the code in your loop in it's statements area so it only does any of it if it's not the first line.
+You won't want to add the first line from the CSV file to the database since those are just titles. In your script, add an `if` condition at the top of your loop that checks if `$MAJOR != major`. Put all the existing code and comments in your loop in it's statements area so it only does any of it if it's not the first line.
 
 #### HINTS
 
@@ -1201,10 +1201,11 @@ There's three unique majors in your test data. Those were the three added to the
 
 ### 810.1
 
-You want a nicer message when something get's inserted so it's more infomative. Below your `INSERT_MAJOR_RESULT` variable, add an `if` statement that checks if the variable is equal to `INSERT 0 1`, which was what it was printing. Make sure to put the value in double quotes since it has spaces. Use `echo` to print `Inserted into majors, $MAJOR` in the statements area of the `if`.
+You want a nicer message when something get's inserted so it's more infomative. Below your `INSERT_MAJOR_RESULT` variable, add an `if` statement that checks if the variable is equal to `INSERT 0 1`, which was what it was printing. Use `echo` to print `Inserted into majors, $MAJOR` in the statements area of the `if`.
 
 #### HINTS
 
+- Make sure to put the test value (`INSERT 0 1`) in double quotes since it has spaces.
 - The condition you want is: `[[ $INSERT_MAJOR_RESULT == "INSERT 0 1" ]]`
 - The `echo` part looks like this: `echo "Inserted into majors, $MAJOR"`
 - The whole thing should look like this:
@@ -1261,7 +1262,7 @@ It's starting to come together. Below your `get new major_id` comment, set the `
 
 ### 840.1
 
-So the script will insert the majors correctly. Next is the courses. It will be the same steps as for the majors. Below your `get course_id` comment, add a `COURSE_ID` variable that get the `course_id` from the database. Remember that your `COURSE` variable will have the current course in the loop.
+So the script will insert the majors correctly. Next is the courses. It will be the same steps as for the majors. Below your `get course_id` comment, add a `COURSE_ID` variable that gets the `course_id` from the database. Remember that your `COURSE` variable will have the current course in the loop.
 
 #### HINTS
 
@@ -1276,7 +1277,7 @@ So the script will insert the majors correctly. Next is the courses. It will be 
 
 ### 850.1
 
-It's the same as the majors, so below the second `if not found` comment, add an `if` statement that checks if the query was empty so you can insert the course if needed. Place the `insert course` and `get new course_id` comments in the statements area of the `if`. 
+It's the same as the majors, so below the second `if not found` comment, add an `if` statement that checks if the query was empty so you can insert the course if needed. Place the existing `insert course` and `get new course_id` comments in the statements area of the `if`. 
 
 #### HINTS
 
@@ -1303,7 +1304,7 @@ fi
 
 ### 853.1
 
-Below the `insert course` comment, create an `INSERT_COURSE_RESULT` variable that insert the course into the database.
+Below the `insert course` comment, create an `INSERT_COURSE_RESULT` variable that inserts the course into the database.
 
 #### HINTS
 
@@ -1375,7 +1376,7 @@ It looks like it worked. The test data has three unique courses, and three got a
 
 ### 880.1
 
-Excellent. Instead of manually deleting the data each time you want to run the script, add the command to do it for you. Below your `PSQL` variable, use `echo` to query the database. In the query, truncate your four tables in this order: `students`, `majors`, `courses`, `majors_courses`.
+Excellent. Instead of manually deleting the data each time you want to run the script, add the command to do it for you. Neat the top of the file below your `PSQL` variable, use `echo` to query the database. In the query, truncate your four tables in this order: `students`, `majors`, `courses`, `majors_courses`.
 
 #### HINTS
 
@@ -1399,7 +1400,7 @@ Run the script to see if it works.
 
 ### 900.1
 
-Awesome. That makes it easier. Below your `get new course_id` comment, set the `COURSE_ID` to the new ID.
+Awesome. That makes it easier. Below your `get new course_id` comment, set the `COURSE_ID` to the newly inserted `course_id`.
 
 #### HINTS
 
@@ -1432,10 +1433,6 @@ One more thing to add for this file. Below the `insert into majors_courses` cour
 ### 920.1
 
 Below the variable you just created, add an if condition that checks if it's equal to `INSERT 0 1` like the others. In it's statements area, use `echo` to print `Inserted into majors_courses, $MAJOR : $COURSE`.
-Add if [[ $INSERT_MAJORS_COURSES_RESULT == "INSERT 0 1" ]]
-then
-  echo Inserted into majors_courses, $MAJOR : $COURSE
-fi
 
 #### HINTS
 
@@ -1453,7 +1450,7 @@ fi
 
 ### 930.1
 
-Run the script. All the data from the `courses_test.csv` file should get added.
+Run the script. Your tables should get truncated and then it should go through the loop and add all the data from the `courses_test.csv` into the three tables of the database.
 
 #### HINTS
 
@@ -1562,7 +1559,7 @@ done
 
 ### 985.1
 
-Run the script to see if it's print the `FIRST` (`first_name`) variable correctly. It will take a second since it has to go through the first loop.
+Run the script to see if it prints the `FIRST` (`first_name`) variable correctly. It will take a second since it has to go through the first loop.
 
 #### HINTS
 
@@ -2033,147 +2030,195 @@ PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only
 
 ### 1280.1
 
-Add “echo first name, last name and gpa of students with a 4.0 gpa:”
+Below the PSQL variable you just added, use `echo` to print `First name, last name, and GPA of students with a 4.0 GPA:`. Use the `-e` flag to put a new line at the begginning of the sentence.
 
 #### HINTS
 
-- hint1
+- The new line character is `\n`
+- Here's an example of the command: `echo -e "\n<text_here>"`
+- At the bottom of the `student_info.sh` file, add this:
+```sh
+echo -e "\nFirst name, last name, and GPA of students with a 4.0 GPA:"
+```
 
 ## 1290. psql SELECT * FROM students
 
 ### 1290.1
 
-Select * from students; - to see all the data in the table
+You will want to print what that sentece is asking for. You should know how to make that query, but lets see how to get there. `SQL` stands for "Structured Query Language". It's the language you have been using to manage your relational databases. In the psql prompt, view all the data in the students table like you have done many times.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1300. psql SELECT first_name
 
 ### 1300.1
 
-Select first_name from students;
+You should look at the column titles that were returned. The `*` gets all columns in a table with your query. You can return specific columns by putting the column name in the query instead of `*`. In the psql prompt, view just the `first_name` column from the `students` table.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT <column_name> FROM <table_name>;`
+- Enter `SELECT first_name FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1310. psql SELECT first_name, last_name, gpa
 
 ### 1310.1
 
-Select first_name, last_name, gpa from students;
+Just the `first_name` column was returned that time. You can specify as many columns you want returned by separating them with commas. View the `first_name`, `last_name` and `gpa` columns from the `students` table.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM` keywords
+- Here's an example: `SELECT <column_1>, <column_2>, FROM <table_name>;`
+- Enter `SELECT first_name, last_name, gpa FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+- Don't filter any rows
 
 ## 1320. psql SELECT WHERE gpa < 2.5
 
 ### 1320.1
 
+You can filter rows by adding `WHERE <condition>` to your query. This will only return rows that meet the condition. A condition can consist of a column, an operator, and a value. Use one of these to view the same columns as before but only rows `WHERE gpa < 2.5`.
+
 Select first_name, last_name, gpa from students where gpa < 2.5
 
 #### HINTS
 
-- hint1
+- Here's an example: `SELECT <columns> FROM <table_name> WHERE <condition>;`
+- The previous command you used was `SELECT first_name, last_name, gpa FROM students;`
+- The condition you want is `WHERE gpa < 2.5`
+- Enter `SELECT first_name, last_name, gpa FROM students WHERE gpa < 2.5;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1330. psql SELECT WHERE gpa <= 1.3
+## 1330. psql SELECT WHERE gpa >= 3.8
 
 ### 1330.1
 
+The `<` only return rows where the `gpa` column was less than `2.5`. Some other operators are: `<`, `>`, `<=`, `>=`. View the same columns, but only rows for students with a `gpa` greater than or equal to `3.8`.
 select first_name, last_name, gpa from students where gpa <= 1.3
 
 #### HINTS
 
-- hint1
+- The greater than or equal to operator is `>=`
+- Here's an example: `SELECT <columns> FROM <table_name> WHERE <condition>;`
+- The previous command you used was `SELECT first_name, last_name, gpa FROM students WHERE gpa < 2.5;`
+- The condition you want here is `WHERE gpa >= 3.8`
+- Enter `SELECT first_name, last_name, gpa FROM students WHERE gpa >= 3.8;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1340. psql SELECT WHERE != 4.0
 
 ### 1340.1
 
-Select first_name, last_name, gpa from students where gpa != 4.0
+There's equal (`=`) and not equal (`!=`) operators. View the same columns for students that don't have a 4.0 gpa.
 
 #### HINTS
 
-- hint1
-
-## 1350. psql SELECT WHERE gpa > 1
-
-### 1350.1
-
-Select first_name, last_name, gpa from students where gpa > 1;
-
-#### HINTS
-
-- hint1
+- Use the not equal (`!=`) operator
+- The previous command you used was `SELECT first_name, last_name, gpa FROM students WHERE gpa >= 3.8;`
+- The condition you want here is `WHERE gpa != 4.0`
+- Enter `SELECT first_name, last_name, gpa FROM students WHERE gpa != 4.0;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1360. Add echo query result
 
 ### 1360.1
 
-Add echo select first_name, last_name gpa from students where gpa = 4.0;
+These queries allow you to get the exact info from the database you are looking for. Back in your `student_info.sh` file, add an `echo` to the bottom that prints what the sentence above it asks for. Place double quotes around what you are echoing like this: `echo "$($PSQL "<query_here>")"`. This will make it so the output isn't all on one line.
 
 #### HINTS
 
-- hint1
+- Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
+- You previously used, `SELECT first_name, last_name, gpa FROM students WHERE gpa != 4.0;` in the psql prompt
+- The condition you want here is `WHERE gpa = 4.0`
+- Practice the query in the psql prompt to make sure it's getting what you want
+- If you run your script, the last echo statement should print:
+```sh
+Casares|Hijo|4.0
+Vanya|Hassanah|4.0
+Dejon|Howell|4.0
+```
+- Add `echo "$($PSQL "SELECT first_name, last_name, gpa FROM students WHERE gpa = 4.0")"` to the bottom of the `student_info.sh` file
 
 ## 1370. ./student_info.sh
 
 ### 1370.1
 
-./student_info.sh
+Run the script to see your students with the highest GPA's.
 
 #### HINTS
 
-- hint1
+- Run your `student_info.sh` script by executing it
+- Type `./student_info.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
 ## 1380. Add echo courses before D
 
 ### 1380.1
 
-Add echo All course names whose first letter starts with a letter **before** ‘D’
+Add another `echo` statment at the bottom of the script. Make it print `All course names whose first letter is before 'D' in the alphabet`. Put a new line in front of it.
 
 #### HINTS
 
-- hint1
+- Make sure to use the `-e` flag with the new line character
+- The new line character is `\n`
+- Here's an example of the command: `echo -e "\n<text_here>"`
+- At the bottom of the `student_info.sh` file, add this:
+```sh
+echo -e "\nAll course names whose first letter is before 'D' in the alphabet"
+```
 
 ## 1390. psql SELECT * FROM majors
 
 ### 1390.1
 
-select * from majors
+Use the psql prompt to view all the data in the `majors` table.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1400. psql SELECT WHERE major = Game Design
 
 ### 1400.1
 
-Select * from majors where major = ‘Game Design’
+The operators you used with numbers in the last section can be used on text as well. Use the `=` to view all majors named `Game Design`. Don't forget that You need single quotes around text values.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
+- Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
+- The condition you want is `major = 'Game Design'`
+- Enter `SELECT * FROM majors WHERE major='Game Design';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1410. psql SELECT WHERE major !- Game Design
 
 ### 1410.1
 
-select * from majors where major != ‘Game Design’
+View all the rows not equal to `Game Design`.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
+- Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
+- The condition you want is `major != 'Game Design'`
+- Enter `SELECT * FROM majors WHERE major='Game Design';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1420. psql SELECT WHERE major > Game Design
 
 ### 1420.1
 
-Select * from majors where major > ’Game Design’
+Use the greater than (`>`) operator to see majors that come after it alphabetically.
 
 #### HINTS
 
@@ -2183,7 +2228,7 @@ Select * from majors where major > ’Game Design’
 
 ### 1430.1
 
-Select * from majors where major >= ’Game Design’
+Try it with the greater than or equal to operator.
 
 #### HINTS
 
@@ -2193,7 +2238,7 @@ Select * from majors where major >= ’Game Design’
 
 ### 1440.1
 
-select * from majors where major < ‘G’;
+It included `Game Design` in the results that time. So if you want to see results that start with a `G` or after, you could use `major >= 'G'`. View the majors that come before `G`.
 
 #### HINTS
 
@@ -2203,7 +2248,7 @@ select * from majors where major < ‘G’;
 
 ### 1450.1
 
-add echo “SELECT course from courses where first_name < ‘D’”
+In your script, add an `echo` at the bottom to print the suggested info like you did before. Make sure to use double quotes where needed.
 
 #### HINTS
 
@@ -2213,11 +2258,13 @@ add echo “SELECT course from courses where first_name < ‘D’”
 
 ### 1460.1
 
-./student_info.sh
+Run the script to see what major names come before the letter `D`.
 
 #### HINTS
 
-- hint1
+- Run your `student_info.sh` script by executing it
+- Type `./student_info.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
 ## 1470. Add echo students after R with gpa above 3.8 or below 2.0 
 
@@ -2227,7 +2274,12 @@ Add echo first name, last name, and gpa of students who’s last name begins wit
 
 #### HINTS
 
-- hint1
+- The new line character is `\n`
+- Here's an example of the command: `echo -e "\n<text_here>"`
+- At the bottom of the `student_info.sh` file, add this:
+```sh
+echo -e "\n"
+```
 
 ## 1480. psql SELECT * FROM students
 
@@ -2317,13 +2369,18 @@ Add echo “Last name of students whose last name have `sa` (case insensitive) i
 
 #### HINTS
 
-- hint1
+- The new line character is `\n`
+- Here's an example of the command: `echo -e "\n<text_here>"`
+- At the bottom of the `student_info.sh` file, add this:
+```sh
+echo -e "\n"
+```
 
 ## 1570. psql SELECT * FROM courses
 
 ### 1570.1
 
-select * from courses;
+Start by viewing everything from the `courses` table in the psql prompt.
 
 #### HINTS
 
@@ -2333,6 +2390,7 @@ select * from courses;
 
 ### 1580.1
 
+You can use `LIKE` to find text matching patterns.
 select * from courses where course like ‘_lgorithms';
 
 #### HINTS
@@ -2453,11 +2511,13 @@ Add echo “select last_name from students where last_name ilike '%an%' or last_
 
 ### 1700.1
 
-./student_info.sh
+Run the script to see the output.
 
 #### HINTS
 
-- hint1
+- Run your `student_info.sh` script by executing it
+- Type `./student_info.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
 ## 1710. Add echo students without major begin with D or gpa > 3.0
 
@@ -2467,7 +2527,12 @@ Add echo first name, last name, and gpa of students who have not selected a majo
 
 #### HINTS
 
-- hint1
+- The new line character is `\n`
+- Here's an example of the command: `echo -e "\n<text_here>"`
+- At the bottom of the `student_info.sh` file, add this:
+```sh
+echo -e "\n"
+```
 
 ## 1720. psql SELECT * FROM students WHERE gpa IS NULL
 
@@ -2533,11 +2598,13 @@ Add echo “select first_name, last_name, gpa from students where major_id is nu
 
 ### 1780.1
 
-./student_info.sh
+Run the script to see the output.
 
 #### HINTS
 
-- hint1
+- Run your `student_info.sh` script by executing it
+- Type `./student_info.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
 ## 1790. Add echo first five courses
 
@@ -2547,7 +2614,12 @@ add Echo course name of the first five courses, in reverse alphabetical order, t
 
 #### HINTS
 
-- hint1
+- The new line character is `\n`
+- Here's an example of the command: `echo -e "\n<text_here>"`
+- At the bottom of the `student_info.sh` file, add this:
+```sh
+echo -e "\n"
+```
 
 ## 1800. psql SELECT students ORDER BY gpa
 
@@ -2603,11 +2675,13 @@ Add echo select course from courses where course like ‘_e%’ OR course like �
 
 ### 1850.1
 
-./student_info.sh
+Run the script to see the output.
 
 #### HINTS
 
-- hint1
+- Run your `student_info.sh` script by executing it
+- Type `./student_info.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
 ## 1860. Add echo average GPA to two decimal places
 
@@ -2617,7 +2691,12 @@ Add Echo Average GPA of all students rounded to two decimal places:
 
 #### HINTS
 
-- hint1
+- The new line character is `\n`
+- Here's an example of the command: `echo -e "\n<text_here>"`
+- At the bottom of the `student_info.sh` file, add this:
+```sh
+echo -e "\n"
+```
 
 ## 1870. psql SELECT MIN
 
@@ -2703,11 +2782,13 @@ Add echo select round(avg(gpa), 2) from students;
 
 ### 1950.1
 
-./student_info.sh
+Run the script to see the output.
 
 #### HINTS
 
-- hint1
+- Run your `student_info.sh` script by executing it
+- Type `./student_info.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
 ## 1960. Add echo count of students per major with more than one student
 
@@ -2717,7 +2798,12 @@ Add echo major_id, count of students named number_of_students, and average gpa r
 
 #### HINTS
 
-- hint1
+- The new line character is `\n`
+- Here's an example of the command: `echo -e "\n<text_here>"`
+- At the bottom of the `student_info.sh` file, add this:
+```sh
+echo -e "\n"
+```
 
 ## 1970. psql SELECT COUNT(*) FROM majors
 
@@ -2853,11 +2939,13 @@ select major_id, count(*) AS number_of_students, round(avg(gpa),2) AS average_gp
 
 ### 2100.1
 
-./student_info.sh
+Run the script to see the output.
 
 #### HINTS
 
-- hint1
+- Run your `student_info.sh` script by executing it
+- Type `./student_info.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
 ## 2110. Add echo majors with no students or student with ma
 
@@ -2867,7 +2955,12 @@ Add echo List of majors, in alphabetical order, that either no student is taking
 
 #### HINTS
 
-- hint1
+- The new line character is `\n`
+- Here's an example of the command: `echo -e "\n<text_here>"`
+- At the bottom of the `student_info.sh` file, add this:
+```sh
+echo -e "\n"
+```
 
 ## 2120. psql students FULL JOIN majors
 
@@ -3106,11 +3199,13 @@ Add echo “select * from students RIGHT JOIN majors on students.major_id=majors
 
 ### 2320.1
 
-./student_info.sh
+Run the script to see the output.
 
 #### HINTS
 
-- hint1
+- Run your `student_info.sh` script by executing it
+- Type `./student_info.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
 ## 2330. Add echo courses with no students or Obie Hilpert
 
@@ -3120,7 +3215,12 @@ Add echo List of unique courses, in alphabetical order, that no student or ‘Ob
 
 #### HINTS
 
-- hint1
+- The new line character is `\n`
+- Here's an example of the command: `echo -e "\n<text_here>"`
+- At the bottom of the `student_info.sh` file, add this:
+```sh
+echo -e "\n"
+```
 
 ## 2340. psql SELECT * FROM students FULL JOIN majors
 
@@ -3216,11 +3316,13 @@ Add echo “SELECT DISTINCT(course) FROM students RIGHT JOIN majors USING(major_
 
 ### 2430.1
 
-./student_info.sh
+Run the script to see the output.
 
 #### HINTS
 
-- hint1
+- Run your `student_info.sh` script by executing it
+- Type `./student_info.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
 ## 2440. Add echo courses with only one student
 
@@ -3230,7 +3332,12 @@ Add echo List of courses with only one student enrolled:
 
 #### HINTS
 
-- hint1
+- The new line character is `\n`
+- Here's an example of the command: `echo -e "\n<text_here>"`
+- At the bottom of the `student_info.sh` file, add this:
+```sh
+echo -e "\n"
+```
 
 ## 2450. Add echo query result
 
@@ -3246,8 +3353,10 @@ Add echo $PSQL SELECT count(course), course FROM students RIGHT JOIN majors USIN
 
 ### 2460.1
 
-./student_info.sh
+Run the script to see the output.
 
 #### HINTS
 
-- hint1
+- Run your `student_info.sh` script by executing it
+- Type `./student_info.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first

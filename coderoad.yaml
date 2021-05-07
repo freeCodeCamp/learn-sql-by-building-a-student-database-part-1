@@ -946,12 +946,6 @@ levels:
         setup:
           watchers:
             - ./.freeCodeCamp/test/pg.log
-  - id: '1350'
-    steps:
-      - id: '1350.1'
-        setup:
-          watchers:
-            - ./.freeCodeCamp/test/pg.log
   - id: '1360'
     steps:
       - id: '1360.1'
