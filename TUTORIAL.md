@@ -2045,7 +2045,7 @@ echo -e "\nFirst name, last name, and GPA of students with a 4.0 GPA:"
 
 ### 1290.1
 
-You will want to print what that sentece is asking for. You should know how to make that query, but lets see how to get there. `SQL` stands for "Structured Query Language". It's the language you have been using to manage your relational databases. In the psql prompt, view all the data in the students table like you have done many times.
+You will want to print what that sentence is asking for. You should know how to make that query, but lets practice a little first. `SQL` stands for "Structured Query Language". It's the language you have been using to manage your relational databases. In the psql prompt, view all the data in the students table like you have done many times.
 
 #### HINTS
 
@@ -2084,9 +2084,7 @@ Just the `first_name` column was returned that time. You can specify as many col
 
 ### 1320.1
 
-You can filter rows by adding `WHERE <condition>` to your query. This will only return rows that meet the condition. A condition can consist of a column, an operator, and a value. Use one of these to view the same columns as before but only rows `WHERE gpa < 2.5`.
-
-Select first_name, last_name, gpa from students where gpa < 2.5
+You can return only rows you want by adding `WHERE <condition>` to your query. A condition can consist of a column, an operator, and a value. Use one of these to view the same columns as before but only rows `WHERE gpa < 2.5`.
 
 #### HINTS
 
@@ -2101,7 +2099,6 @@ Select first_name, last_name, gpa from students where gpa < 2.5
 ### 1330.1
 
 The `<` only return rows where the `gpa` column was less than `2.5`. Some other operators are: `<`, `>`, `<=`, `>=`. View the same columns, but only rows for students with a `gpa` greater than or equal to `3.8`.
-select first_name, last_name, gpa from students where gpa <= 1.3
 
 #### HINTS
 
@@ -2116,7 +2113,7 @@ select first_name, last_name, gpa from students where gpa <= 1.3
 
 ### 1340.1
 
-There's equal (`=`) and not equal (`!=`) operators. View the same columns for students that don't have a 4.0 gpa.
+That only returned students with a GPA of 3.8 or better. There's equal (`=`) and not equal (`!=`) operators as well. View the same columns for students that don't have a 4.0 gpa.
 
 #### HINTS
 
@@ -2130,7 +2127,7 @@ There's equal (`=`) and not equal (`!=`) operators. View the same columns for st
 
 ### 1360.1
 
-These queries allow you to get the exact info from the database you are looking for. Back in your `student_info.sh` file, add an `echo` to the bottom that prints what the sentence above it asks for. Place double quotes around what you are echoing like this: `echo "$($PSQL "<query_here>")"`. This will make it so the output isn't all on one line.
+The right query will get you only the data you are looking for. Back in your `student_info.sh` file, add an `echo` command to the bottom that prints what the sentence above it asks for. Place double quotes around it like this: `echo "$($PSQL "<query_here>")"`. This will make it so the output isn't all on one line.
 
 #### HINTS
 
@@ -2162,16 +2159,16 @@ Run the script to see your students with the highest GPA's.
 
 ### 1380.1
 
-Add another `echo` statment at the bottom of the script. Make it print `All course names whose first letter is before 'D' in the alphabet`. Put a new line in front of it.
+Add another `echo` statment at the bottom of the script. Make it print `All course names whose first letter is before 'D' in the alphabet:`. Put a new line in front of it like the first sentence.
 
 #### HINTS
 
-- Make sure to use the `-e` flag with the new line character
+- Use `echo` with the `-e` flag and a new line character
 - The new line character is `\n`
 - Here's an example of the command: `echo -e "\n<text_here>"`
 - At the bottom of the `student_info.sh` file, add this:
 ```sh
-echo -e "\nAll course names whose first letter is before 'D' in the alphabet"
+echo -e "\nAll course names whose first letter is before 'D' in the alphabet:"
 ```
 
 ## 1390. psql SELECT * FROM majors
@@ -2197,10 +2194,10 @@ The operators you used with numbers in the last section can be used on text as w
 - Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
 - Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
 - The condition you want is `major = 'Game Design'`
-- Enter `SELECT * FROM majors WHERE major='Game Design';` in the psql prompt
+- Enter `SELECT * FROM majors WHERE major = 'Game Design';` in the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1410. psql SELECT WHERE major !- Game Design
+## 1410. psql SELECT WHERE major != Game Design
 
 ### 1410.1
 
@@ -2208,21 +2205,28 @@ View all the rows not equal to `Game Design`.
 
 #### HINTS
 
+- The not equal operator is `!=`
 - Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
 - Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
 - The condition you want is `major != 'Game Design'`
-- Enter `SELECT * FROM majors WHERE major='Game Design';` in the psql prompt
+- Enter `SELECT * FROM majors WHERE major != 'Game Design';` in the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1420. psql SELECT WHERE major > Game Design
 
 ### 1420.1
 
-Use the greater than (`>`) operator to see majors that come after it alphabetically.
+Use the greater than operator to see majors that come after it alphabetically.
 
 #### HINTS
 
-- hint1
+- The greater than operator is `>`
+- You want to see what rows are `> 'Game Design'`
+- Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
+- Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
+- The condition you want is `major > 'Game Design'`
+- Enter `SELECT * FROM majors WHERE major > 'Game Design';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1430. psql SELECT WHERE major >= Game Design
 
@@ -2232,7 +2236,13 @@ Try it with the greater than or equal to operator.
 
 #### HINTS
 
-- hint1
+- The greater than or equal to operator is `>=`
+- You want to see what rows are `>= 'Game Design'`
+- Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
+- Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
+- The condition you want is `major >= 'Game Design'`
+- Enter `SELECT * FROM majors WHERE major >= 'Game Design';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1440. psql SELECT WHERE major < G
 
@@ -2242,7 +2252,12 @@ It included `Game Design` in the results that time. So if you want to see result
 
 #### HINTS
 
-- hint1
+- Use the less than (`<`) operator to see rows that come before `G`
+- Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
+- Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
+- The condition you want is `major < 'G'`
+- Enter `SELECT * FROM majors WHERE major < 'G';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1450. Add echo query result
 
@@ -2252,13 +2267,27 @@ In your script, add an `echo` at the bottom to print the suggested info like you
 
 #### HINTS
 
-- hint1
+- Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
+- You previously used, `SELECT * FROM majors WHERE major < 'G';` in the psql prompt
+- The condition you want here is `WHERE course < 'D'`
+- You only want to get the `course` column from the `courses` table
+- Practice the query in the psql prompt to make sure it's getting what you want
+- If you run your script, the last echo statement should print:
+```sh
+Computer Networks
+Computer Systems
+Artificial Intelligence
+Calculus
+Algorithms
+```
+- Add `echo "$($PSQL "SELECT course FROM courses WHERE course < 'D'")"` to the bottom of the `student_info.sh` file
+
 
 ## 1460. ./student_info.sh
 
 ### 1460.1
 
-Run the script to see what major names come before the letter `D`.
+Run the script to see what course names come before the letter `D`.
 
 #### HINTS
 
@@ -2270,242 +2299,325 @@ Run the script to see what major names come before the letter `D`.
 
 ### 1470.1
 
-Add echo first name, last name, and gpa of students who’s last name begins with a letter ‘R’ or after and have a GPA greater than 3.5 or less than 2.5
+Add another sentence like the others that says: `First name, last name, and GPA of students whose last name begins with an 'R' or after and have a GPA greater than 3.8 or less than 2.0:`
 
 #### HINTS
 
+- At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence
 - The new line character is `\n`
 - Here's an example of the command: `echo -e "\n<text_here>"`
 - At the bottom of the `student_info.sh` file, add this:
 ```sh
-echo -e "\n"
+echo -e "\nFirst name, last name, and GPA of students whose last name begins with an 'R' or after and have a GPA greater than 3.8 or less than 2.0:"
 ```
 
 ## 1480. psql SELECT * FROM students
 
 ### 1480.1
 
-Select * from students;
+To find that, start by using the psql prompt to view all the data in the `students` table.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1490. psql SELECT WHERE last_name < M
 
 ### 1490.1
 
-select * from students where last_name < ‘M’
+It returned 31 rows. Use the same command, but only return the rows for students whose last name comes before `M` in the alphabet.
 
 #### HINTS
 
-- hint1
+- Use the less than (`<`) operator to see rows that come before `M`
+- Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
+- Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
+- The condition you want is `last_name < 'M'`
+- Enter `SELECT * FROM students WHERE last_name < 'M';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1500. SELECT WHERE last_name < M OR gpa = 3.9
 
 ### 1500.1
 
-select * from students where last_name < ‘M’ OR gpa=3.9
+That returned 18 rows. You can use multiple conditions after `WHERE` with `AND` or `OR`, among others. Just add the keyword and another condition. In the psql prompt, use the same command as before, but add an `OR` to also return rows of students with a 3.9 GPA.
 
 #### HINTS
 
-- hint1
+- The previous command was: `SELECT * FROM students WHERE last_name < 'M';`
+- Here's an example of the `WHERE` part: `WHERE <condition_1> OR <condition_2>`
+- Add an `OR <condition>` to the previous command
+- The condition you want to add is `OR gpa = 3.9`
+- The whole condition is `WHERE last_name < 'M' OR gpa = 3.9`
+- Enter `SELECT * FROM students WHERE last_name < 'M' OR gpa = 3.9;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1510. psql SELECT WHERE last_name < M AND gpa = 3.9
 
 ### 1510.1
 
-select * from students where last_name < ‘M’ AND gpa=3.9
+It showed rows where one of the conditions was true, there was one more than last time. Enter the previous command, but use `AND` to view only students that meet both conditions.
 
 #### HINTS
 
-- hint1
+- The previous command was: `SELECT * FROM students WHERE last_name < 'M' OR gpa = 3.9;`
+- Here's an example of the `WHERE` part: `WHERE <condition_1> AND <condition_2>`
+- Enter `SELECT * FROM students WHERE last_name < 'M' AND gpa = 3.9;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1520. psql SELECT WHERE last_name < M AND gpa = 3.9 OR gpa < 2.3
 
 ### 1520.1
 
-select * from students where last_name < ‘M’ AND gpa=3.9 OR gpa < 2.3;
+Now it only shows rows where both conditions are true, one person. Enter the previous command, but add a third condition of `OR gpa < 2.3`.
 
 #### HINTS
 
-- hint1
+- The previous command was: `SELECT * FROM students WHERE last_name < 'M' OR gpa = 3.9;`
+- Here's an example of the `WHERE` part: `WHERE <condition_1> AND <condition_2> OR <condition_2>`
+- The conditions look like this: `WHERE last_name < 'M' AND gpa = 3.9 OR gpa < 2.3;`
+- Enter `SELECT * FROM students WHERE last_name < 'M' AND gpa = 3.9 OR gpa < 2.3;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1530. psql SELECT WHERE last_name < M AND (gpa = 3.9 OR gpa < 2.3)
 
 ### 1530.1
 
-select * from students where last_name < ‘M’ AND (gpa=3.9 OR gpa < 2.3);
+This showed all students whose GPA is less than 2.3 because the final `OR` condition was true for them. It didn't matter what their last name started with. You can group conditions together with parenthesis like this: `WHERE <condition_1> AND (<condition_2> OR <condition_2>)`. This would only return rows where `<condition_1>` is true and one of the others is true. View students whose last name is before `M` that have a GPA of 3.9 or less than 2.3.
 
 #### HINTS
 
-- hint1
+- The previous command was: `SELECT * FROM students WHERE last_name < 'M' OR gpa = 3.9 OR gpa < 2.3;`
+- Enter the previous command but group your conditions with parenthesis to only view the suggested rows
+- Enter `SELECT * FROM students WHERE last_name < 'M' AND (gpa = 3.9 OR gpa < 2.3);` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1540. Add echo query result
 
 ### 1540.1
 
-Add echo “select * from students where last_name >= 'R' AND (GPA > 3.5 OR gpa < 2.5);”
+Back in the student info file, add an echo command at the bottom to print the suggested rows.
 
 #### HINTS
 
-- hint1
+- Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
+- You previously used `SELECT * FROM students WHERE last_name < 'M' AND (gpa = 3.9 OR gpa < 2.3);` in the psql prompt
+- Practice the query in the psql prompt to make sure it's getting what you want
+- The conditions should be `last_name >= 'R' AND (gpa > 3.8 OR gpa < 2.0)`
+- If you run your script, the last echo statement should print:
+```sh
+Efren|Reilly|3.9
+Mariana|Russel|1.8
+Mehdi|Vandenberghe|1.9
+```
+- Add `echo "$($PSQL "SELECT first_name, last_name, gpa FROM students WHERE last_name >= 'R' AND (gpa > 3.8 OR gpa < 2.0)")"` to the bottom of the `student_info.sh` file
 
 ## 1550. ./student_info
 
 ### 1550.1
 
-./student_info
+Run the script to see the results.
 
 #### HINTS
 
-- hint1
+- Run your `student_info.sh` script by executing it
+- Type `./student_info.sh` in the terminal and press enter
+- Make sure you are in the `project` folder first
 
 ## 1560. Add echo students containing sa or r as second to last letter
 
 ### 1560.1
 
-Add echo “Last name of students whose last name have `sa` (case insensitive) in it or have an `r` as the second to last letter
+Add another `echo` command, like the others, with a sentence that says: `Last name of students whose last name contains a case insensitive 'sa' or have an 'r' as the second to last letter:`
 
 #### HINTS
 
+- At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence
 - The new line character is `\n`
 - Here's an example of the command: `echo -e "\n<text_here>"`
 - At the bottom of the `student_info.sh` file, add this:
 ```sh
-echo -e "\n"
+echo -e "\nLast name of students whose last name contains a case insensitive 'sa' or have an 'r' as the second to last letter:"
 ```
 
 ## 1570. psql SELECT * FROM courses
 
 ### 1570.1
 
-Start by viewing everything from the `courses` table in the psql prompt.
+Start by viewing everything from the `courses` table in the psql prompt to see how you might be able to find this out.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1580. psql SELECT WHERE course LIKE _lgorithms
 
 ### 1580.1
 
-You can use `LIKE` to find text matching patterns.
-select * from courses where course like ‘_lgorithms';
+There's a few that contain the word `Algorithms`. You can use `LIKE` to find text matching patterns like this: `WHERE <column> LIKE '<pattern>'`. An underscore (`_`) in a pattern will return rows that have any character in that spot. View the rows in this table with a course name that matches the pattern `'_lgorithms'`.
 
 #### HINTS
 
-- hint1
+- Here's an example: `SELECT * FROM courses WHERE course LIKE '<pattern>';`
+- Enter `SELECT * FROM courses WHERE course LIKE '_lgorithms';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1590. psql SELECT WHERE course LIKE %lgorithms
 
 ### 1590.1
 
+That pattern matched only rows that had exactly one character, followed by `lgorithms`. Another pattern character is `%`. It means as many of anything can be there. To find names that start with `W`, you could use `W%`. View the courses that end in `lgorithms`.
+
 select * from courses where course like '%lgorithms';
 
 #### HINTS
 
-- hint1
+- Use `LIKE` and a pattern with `%` to view the courses ending in `lgorithms`
+- Here's an example: `SELECT * FROM courses WHERE course LIKE '<pattern>';`
+- The pattern you want is `%lgorithms`
+- Enter `SELECT * FROM courses WHERE course LIKE '%lgorithms';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1600. psql SELECT WHERE course LIKE Web%
 
 ### 1600.1
 
-select * from courses where course like ‘Web%’;
+It found two that time. Try viewing courses that start with `Web`.
 
 #### HINTS
 
-- hint1
+- Use `LIKE` and a pattern with `%` to view the courses starting with `Web`
+- Here's an example: `SELECT * FROM courses WHERE course LIKE '<pattern>';`
+- The pattern you want is `Web%`
+- Enter `SELECT * FROM courses WHERE course LIKE 'Web%';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1610. psql SELECT WHERE course LIKE _e%
 
 ### 1610.1
 
-select * from courses where course like ‘_e%’;
+Combine the two pattern matching characters to show courses that have a second letter of `e`.
 
 #### HINTS
 
-- hint1
+- Use `LIKE` and a pattern with `_` and `%` to view the courses whose second letter is `e`
+- Here's an example: `SELECT * FROM courses WHERE course LIKE '<pattern>';`
+- Remember that the `_` will match any single character and `%` will match any number of characters
+- The pattern you want is `_e%`
+- Enter `SELECT * FROM courses WHERE course LIKE '_e%';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1620. psql SELECT WHERE course LIKE % %
 
 ### 1620.1
 
-Select * from courses WHERE course LIKE '% %';
+Try viewing the courses with a space in their names.
 
 #### HINTS
 
-- hint1
+- Use `LIKE` and a pattern with two `%`'s to view the courses with a space
+- Here's an example: `SELECT * FROM courses WHERE course LIKE '<pattern>';`
+- The pattern you want is `% %`
+- Enter `SELECT * FROM courses WHERE course LIKE '% %';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1630. psql SELECT WHERE course NOT LIKE % %
 
 ### 1630.1
 
-Select * from courses WHERE course NOT LIKE '% %';
+You use `NOT LIKE` to find things that don't match a pattern. View courses that don't contain a space.
 
 #### HINTS
 
-- hint1
+- Use `NOT LIKE` and a pattern with two `%`'s to view the courses without a space
+- Here's an example: `SELECT * FROM courses WHERE course NOT LIKE '<pattern>';`
+- The pattern you want is `% %`
+- Enter `SELECT * FROM courses WHERE course NOT LIKE '% %';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1640. psql SELECT WHERE course LIKE %A%
 
 ### 1640.1
 
-select * from courses where course like ‘%A%’;
+Try finding the courses that contain an `A`.
 
 #### HINTS
 
-- hint1
+- Use `LIKE` and a pattern with two `%`'s to view the courses containing `A`
+- Here's an example: `SELECT * FROM courses WHERE course LIKE '<pattern>';`
+- The pattern you want is `%A%`
+- Enter `SELECT * FROM courses WHERE course LIKE '%A%';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1650. psql SELECT WHERE course ILIKE %A%
 
 ### 1650.1
 
-select * from courses where course ilike ‘%A%’;
+This showed all the courses with a capital `A`. `ILIKE` will ignore the case of the letters when matching. Use it to see the coureses with an `A` or `a`.
 
 #### HINTS
 
-- hint1
+- Use `ILIKE` and a pattern with two `%`'s to view the courses containing `A` in any case
+- Here's an example: `SELECT * FROM courses WHERE course ILIKE '<pattern>';`
+- The pattern you want is `%A%`
+- Enter `SELECT * FROM courses WHERE course ILIKE '%A%';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1660. psql SELECT WHERE course NOT LIKE %s%
-
-### 1660.1
-
-select * from courses where course not like ‘%s%’;
-
-#### HINTS
-
-- hint1
-
-## 1670. psql SELECT WHERE course NOT ILIKE %s%
+## 1670. psql SELECT WHERE course NOT ILIKE %a%
 
 ### 1670.1
 
-select * from courses where course NOT ILIKE ‘%s%’;
+You can put `NOT` in front of `ILIKE` as well. Use it to see the courses that don't contain an `A` or `a`.
+select * from courses where course NOT ILIKE ‘%A%’;
 
 #### HINTS
 
-- hint1
+- Use `NOT ILIKE` and a pattern with two `%`'s to view the courses not containing `A` in any case
+- Here's an example: `SELECT * FROM courses WHERE course NOT ILIKE '<pattern>';`
+- The pattern you want is `%A%`
+- Enter `SELECT * FROM courses WHERE course NOT ILIKE '%A%';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1680. psql SELECT WHERE course NOT ILIKE %s% AND LIKE % %
+## 1680. psql SELECT WHERE course NOT ILIKE %A% AND LIKE % %
 
 ### 1680.1
 
-select * from courses where course not ILIKE ‘%s%’ AND course LIKE ‘% %’;
+You combine these like any other conditions. View the courses that don't have a capital or lowercase `A` and have a space.
 
 #### HINTS
 
-- hint1
+- Use two conditions, one with `NOT ILIKE` and one with `LIKE`
+- Here's an example: `SELECT * FROM courses WHERE course NOT ILIKE '<pattern>' AND course LIKE <pattern> ;`
+- The two patterns you want are `%A%` and `% %`
+- Enter `SELECT * FROM courses WHERE course NOT ILIKE '%A%' AND course LIKE '% %';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1690. Add echo query result
 
 ### 1690.1
 
+In your student info script, add `echo` statemtent at the bottom like the other to print the results of the suggested query.
 Add echo “select last_name from students where last_name ilike '%an%' or last_name like ‘%r_’”
 
 #### HINTS
 
-- hint1
+- Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
+- You previously used `SELECT * FROM courses WHERE course NOT ILIKE '%A%' AND course LIKE '% %';` in the psql prompt
+- Practice the query in the psql prompt to make sure it's getting what you want
+- The conditions should be `last_name LIKE '%sa%' OR last_name LIKE %r_`
+- If you run your script, the last echo statement should print:
+```sh
+Gilbert
+Savage
+Saunders
+Hilpert
+Hassanah
+```
+- Add `echo "$($PSQL "SELECT last_name FROM students WHERE last_name LIKE '%sa' OR last_name LIKE '%r_'")"` to the bottom of the `student_info.sh` file
 
 ## 1700. ./student_info.sh
 
