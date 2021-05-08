@@ -1156,6 +1156,12 @@ levels:
         setup:
           watchers:
             - ./student_info.sh
+  - id: '1715'
+    steps:
+      - id: '1715.1'
+        setup:
+          watchers:
+            - ./.freeCodeCamp/test/pg.log
   - id: '1720'
     steps:
       - id: '1720.1'
@@ -1225,6 +1231,12 @@ levels:
   - id: '1830'
     steps:
       - id: '1830.1'
+        setup:
+          watchers:
+            - ./.freeCodeCamp/test/pg.log
+  - id: '1835'
+    steps:
+      - id: '1835.1'
         setup:
           watchers:
             - ./.freeCodeCamp/test/pg.log

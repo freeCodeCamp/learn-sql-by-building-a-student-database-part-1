@@ -2191,7 +2191,7 @@ The operators you used with numbers in the last section can be used on text as w
 
 #### HINTS
 
-- Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
+- Use the `SELECT`, `FROM`, and `WHERE` keywords with `*` to view the suggested rows
 - Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
 - The condition you want is `major = 'Game Design'`
 - Enter `SELECT * FROM majors WHERE major = 'Game Design';` in the psql prompt
@@ -2206,7 +2206,7 @@ View all the rows not equal to `Game Design`.
 #### HINTS
 
 - The not equal operator is `!=`
-- Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
+- Use the `SELECT`, `FROM`, and `WHERE` keywords with `*` to view the suggested rows
 - Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
 - The condition you want is `major != 'Game Design'`
 - Enter `SELECT * FROM majors WHERE major != 'Game Design';` in the psql prompt
@@ -2222,7 +2222,7 @@ Use the greater than operator to see majors that come after it alphabetically.
 
 - The greater than operator is `>`
 - You want to see what rows are `> 'Game Design'`
-- Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
+- Use the `SELECT`, `FROM`, and `WHERE` keywords with `*` to view the suggested rows
 - Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
 - The condition you want is `major > 'Game Design'`
 - Enter `SELECT * FROM majors WHERE major > 'Game Design';` in the psql prompt
@@ -2238,7 +2238,7 @@ Try it with the greater than or equal to operator.
 
 - The greater than or equal to operator is `>=`
 - You want to see what rows are `>= 'Game Design'`
-- Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
+- Use the `SELECT`, `FROM`, and `WHERE` keywords with `*` to view the suggested rows
 - Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
 - The condition you want is `major >= 'Game Design'`
 - Enter `SELECT * FROM majors WHERE major >= 'Game Design';` in the psql prompt
@@ -2253,7 +2253,7 @@ It included `Game Design` in the results that time. So if you want to see result
 #### HINTS
 
 - Use the less than (`<`) operator to see rows that come before `G`
-- Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
+- Use the `SELECT`, `FROM`, and `WHERE` keywords with `*` to view the suggested rows
 - Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
 - The condition you want is `major < 'G'`
 - Enter `SELECT * FROM majors WHERE major < 'G';` in the psql prompt
@@ -2332,7 +2332,7 @@ It returned 31 rows. Use the same command, but only return the rows for students
 #### HINTS
 
 - Use the less than (`<`) operator to see rows that come before `M`
-- Use the `SELECT` and `FROM`, and `WHERE` keywords with `*` to view the suggested rows
+- Use the `SELECT`, `FROM`, and `WHERE` keywords with `*` to view the suggested rows
 - Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
 - The condition you want is `last_name < 'M'`
 - Enter `SELECT * FROM students WHERE last_name < 'M';` in the psql prompt
@@ -2471,8 +2471,6 @@ There's a few that contain the word `Algorithms`. You can use `LIKE` to find tex
 ### 1590.1
 
 That pattern matched only rows that had exactly one character, followed by `lgorithms`. Another pattern character is `%`. It means as many of anything can be there. To find names that start with `W`, you could use `W%`. View the courses that end in `lgorithms`.
-
-select * from courses where course like '%lgorithms';
 
 #### HINTS
 
@@ -2635,82 +2633,128 @@ Run the script to see the output.
 
 ### 1710.1
 
-Add echo first name, last name, and gpa of students who have not selected a major and either their first name begins with ‘D’ or they have a gpa greater than 3.0
+Nice work! Add another `echo` command at the bottom, like the others. Make this one say: `First name, last name, and GPA of students who have not selected a major and either their first name begins with 'D' or they have a GPA greater than 3.0:`
 
 #### HINTS
 
+- At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence
 - The new line character is `\n`
 - Here's an example of the command: `echo -e "\n<text_here>"`
 - At the bottom of the `student_info.sh` file, add this:
 ```sh
-echo -e "\n"
+echo -e "\nFirst name, last name, and GPA of students who have not selected a major and either their first name begins with 'D' or they have a GPA greater than 3.0:"
 ```
+
+## 1715. psql SELECT * FROM students
+
+### 1715.1
+
+Start by looking at all the data in the students table.
+
+#### HINTS
+
+- Use the `SELECT` and `FROM` keywords with `*` to view all the data
+- Enter `SELECT * FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1720. psql SELECT * FROM students WHERE gpa IS NULL
 
 ### 1720.1
 
-Select * from students where gpa IS NULL;
+All the fields that are empty or blank are `null`. You can access them using `IS NULL` as a condition like this: `WHERE <column> IS NULL`. View the students who don't have a GPA.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT`, `FROM`, `WHERE`, and `IS NULL` keywords with `*` to view the suggested rows
+- Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
+- The condition you want is `gpa IS NULL`
+- Enter `SELECT * FROM students WHERE gpa IS NULL;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1730. psql SELECT WHERE gpa IS NOT NULL
 
 ### 1730.1
 
-Select * from students where gpa IS NOT NULL;
+Inversely, you can use `IS NOT NULL` to see rows that aren't null. View all the info on students that do have a GPA.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT`, `FROM`, `WHERE`, and `IS NOT NULL` keywords with `*` to view the suggested rows
+- Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
+- The condition you want is `gpa IS NULL`
+- Enter `SELECT * FROM students WHERE gpa IS NULL;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1740. psql SELECT WHERE major IS NULL
 
 ### 1740.1
 
-select * from students where major_id is null;
+View all the info on students who haven't chosen a major.
 
 #### HINTS
 
-- hint1
+- A null `major_id` field means that student hasen't chosen a major
+- Use the `SELECT`, `FROM`, `WHERE`, and `IS NULL` keywords with `*` to view the suggested rows
+- Here's an example: `SELECT <columns> FROM <table> WHERE <condition>;`
+- The condition you want is `major_id IS NULL`
+- Enter `SELECT * FROM students WHERE major_id IS NULL;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1750. psql SELECT WHERE major IS NULL and gpa IS NOT NULL
 
 ### 1750.1
 
-select * from students where major_id is null and gpa is not null;
+View the students who don't have a major, but don't include students without a GPA.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT`, `FROM`, `WHERE`, `IS NULL`, `AND` and `IS NOT NULL` keywords with `*` to view the suggested rows
+- Here's an example: `SELECT <columns> FROM <table> WHERE <condition_1> AND <condition_2>;`
+- The condition you want is `major_id IS NULL AND gpa IS NOT NULL`
+- Enter `SELECT * FROM students WHERE major_id IS NULL AND gpa IS NOT NULL;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1760. psql SELECT WHERE major_id IS NULL AND gpa IS NULL
 
 ### 1760.1
 
-select * from students where major_id is null and gpa is null;
+One more. View the students who don't have a major or gpa.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT`, `FROM`, `WHERE`, `IS NULL`, and `AND` keywords with `*` to view the suggested rows
+- Here's an example: `SELECT <columns> FROM <table> WHERE <condition_1> AND <condition_2>;`
+- The condition you want is `major_id IS NULL AND gpa IS NULL`
+- Enter `SELECT * FROM students WHERE major_id IS NULL AND gpa IS NULL;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1770. Add echo query result
 
 ### 1770.1
 
-Add echo “select first_name, last_name, gpa from students where major_id is null and (first_name like ‘D$’ or gpa > 3.0)”
+In your script, add an `echo` command at the bottom to print the results the sentence is looking for.
 
 #### HINTS
 
-- hint1
+- Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
+- Practice the query in the psql prompt to make sure it's getting what you want
+- You will need to use the `SELECT`, `FROM`, `WHERE`, `IS NULL`, `AND`, `LIKE`, and `OR` keywords
+- If you run your script, the last echo statement should print:
+```sh
+Noe|Savage|3.6
+Danh|Nhung|2.4
+Hugo|Duran|3.8
+```
+- You previously used `SELECT * FROM students WHERE last_name < 'M' AND (gpa = 3.9 OR gpa < 2.3);` in the psql prompt
+- Here's an example of the conditions you want: `WHERE <condition_1> AND (<condition_2> OR <condition_3>)`
+- The condtions should look like this: `WHERE major_id IS NULL AND (first_name LIKE 'D%' OR gpa > 3.0)`
+- Add `echo "$($PSQL "SELECT first_name, last_name, gpa FROM students WHERE major_id IS NULL AND (first_name LIKE 'D%' OR gpa > 3.0)")"` to the bottom of the `student_info.sh` file
 
 ## 1780. ./student_info.sh
 
 ### 1780.1
 
-Run the script to see the output.
+Run the script to see the students that meet those conditions.
 
 #### HINTS
 
@@ -2722,72 +2766,113 @@ Run the script to see the output.
 
 ### 1790.1
 
-add Echo course name of the first five courses, in reverse alphabetical order, that have an ‘e’ as the second letter or end with an ’s’
+Moving along. Add another sentence, like the others that says `Course name of the first five courses, in reverse alphabetical order, that have an 'e' as the second letter or end with an 's':`
 
 #### HINTS
 
+- At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence
 - The new line character is `\n`
 - Here's an example of the command: `echo -e "\n<text_here>"`
 - At the bottom of the `student_info.sh` file, add this:
 ```sh
-echo -e "\n"
+echo -e "\nCourse name of the first five courses, in reverse alphabetical order, that have an 'e' as the second letter or end with an 's':"
 ```
 
 ## 1800. psql SELECT students ORDER BY gpa
 
 ### 1800.1
 
-Select * from students ORDER by gpa;
+You can specify the order you want your results to be in by adding `ORDER BY <column_name>` at the end of a query. View all the info in the students table in order by the GPA's.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT`, `FROM`, `WHERE`, and `ORDER BY` keywords with `*` to view the suggested rows
+- Here's an example: `SELECT <columns> FROM <table> ORDER BY <column>;`
+- You want to use `ORDER BY gpa` at the end of the query
+- Enter `SELECT * FROM students ORDER BY gpa;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1810. psql SELECT students ORDER BY gpa desc
+## 1810. psql SELECT students ORDER BY gpa DESC
 
 ### 1810.1
 
-Select * from students ORDER by gpa desc;
+That put the lowest GPA's at the top. When using `ORDER BY`, it will be in ascending (`ASC`) order by default. Add `DESC` (descending) at the end of the last query to put the highest ones at the top.
 
 #### HINTS
 
-- hint1
+- The last command was `SELECT * FROM students ORDER BY gpa;`
+- Add `DESC` to the end of the last command
+- Enter `SELECT * FROM students ORDER BY gpa DESC;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1820. psql SELECT students ORDER BY gpa desc, first_name
+## 1820. psql SELECT students ORDER BY gpa DESC, first_name
 
 ### 1820.1
 
-Select * from students order by gpa desc, first_name;
+You can more columns to order things separating them with a comma like this: `ORDER BY <column_1>, <column_2>`. Any matching values in the first ordered column will then be ordered by the next. View all the student info with the highest GPA's at the top, and in alphabetical order by `first_name` if the GPA's match.
 
 #### HINTS
 
-- hint1
+- Here's an example: `SELECT <columns> FROM <table> ORDER BY <column_1> DESC, <column_2>;`
+- You want to use `ORDER BY gpa DESC, first_name` for the order
+- Enter `SELECT * FROM students ORDER BY gpa DESC, first_name;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1830. psql SELECT students ORDER BY gpa desc, first_name LIMIT 10
+## 1830. psql SELECT students ORDER BY gpa DESC, first_name LIMIT 10
 
 ### 1830.1
 
-Select * from students order by gpa desc, first_name LIMIT 10;
+Many times, you only want to return a certain number of rows. You can add `LIMIT <number>` at the end of the query to only get the amount you want. View the students in the same order as the last command, but only return the first 10 rows.
 
 #### HINTS
 
-- hint1
+- The last command was `SELECT * FROM students ORDER BY gpa DESC, first_name;`
+- Add `LIMIT 10` to the end of the last command
+- Enter `SELECT * FROM students ORDER BY gpa DESC, first_name LIMIT 10;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
+## 1835. psql SELECT students WHERE gpa IS NOT NULL ORDER BY gpa DESC, first_name LIMIT 10
+
+### 1835.1
+
+The order of the keywords in your query matters. You cannot put `LIMIT` before `ORDER BY`, or either of them before `WHERE`. View the same number of students, in the same order, but don't get the ones who don't have a GPA. 
+
+#### HINTS
+
+- The last command was `SELECT * FROM students ORDER BY gpa DESC, first_name LIMIT 10;`
+- The keywords you want are `SELECT`, `FROM`, `WHERE`, `IS NOT NULL`, `ORDER BY`, and `LIMIT`, in that order
+- Here's an example: `SELECT <columns> FROM <table> WHERE <condition> ORDER BY <column> LIMIT <number>;`
+- The condition you want is `gpa IS NOT NULL`
+- Enter `SELECT * FROM students WHERE gpa IS NOT NULL ORDER BY gpa DESC, first_name LIMIT 10;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1840. Add echo query result
 
 ### 1840.1
 
+In your script, add the `echo` command to print the rows the sentence is asking for.
 Add echo select course from courses where course like ‘_e%’ OR course like ‘%s’ order by course desc limit 5;
 
 #### HINTS
 
-- hint1
+- Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
+- If you run your script, the last echo statement should print:
+```sh
+Web Programming
+Web Applications
+Server Administration
+Network Security
+Database Systems
+```
+- Practice the query in the psql prompt to make sure it's getting what you want
+- You will need the `SELECT`, `FROM`, `WHERE`, `LIKE`, `OR`, `ORDER BY`, `DESC`, and `LIMIT` keywords
+- Add `echo "$($PSQL "SELECT course FROM courses WHERE course LIKE '_e%' OR course LIKE '%s' ORDER BY course DESC LIMIT 5")"` to the bottom of the `student_info.sh` file
 
 ## 1850. ./student_info.sh
 
 ### 1850.1
 
-Run the script to see the output.
+Run the script to make sure it worked.
 
 #### HINTS
 
@@ -2799,7 +2884,7 @@ Run the script to see the output.
 
 ### 1860.1
 
-Add Echo Average GPA of all students rounded to two decimal places:
+ :sunglasses: Add new `echo` command at the bottom of the script. Make this one say, `Average GPA of all students rounded to two decimal places:`
 
 #### HINTS
 
@@ -2807,94 +2892,124 @@ Add Echo Average GPA of all students rounded to two decimal places:
 - Here's an example of the command: `echo -e "\n<text_here>"`
 - At the bottom of the `student_info.sh` file, add this:
 ```sh
-echo -e "\n"
+echo -e "\nAverage GPA of all students rounded to two decimal places:"
 ```
 
-## 1870. psql SELECT MIN
+## 1870. psql SELECT MIN(gpa)
 
 ### 1870.1
 
-Select min(major_id) from students;
+There's a number of mathematic functions to use with numerical columns. One of them is `MIN`, you can use it when selecting a column like this: `SELECT MIN(<column>) FROM <table>`. It will find the lowest value in the column. In the psql prompt, view the lowest value in the `gpa` column of the `students` table.
 
 #### HINTS
 
-- hint1
+- Enter `SELECT MIN(gpa) FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1880. psql SELECT MAX
+## 1880. psql SELECT MAX(gpa)
 
 ### 1880.1
 
-Select max(major_id) from students;
+Another one is `MAX`, use it to see the largest `gpa` of the same table.
 
 #### HINTS
 
-- hint1
+- You previously used `SELECT MIN(gpa) FROM students;`
+- Enter `SELECT MAX(gpa) FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1890. psql SELECT SUM
+## 1890. psql SELECT SUM major_id
 
 ### 1890.1
 
+In the same fashion, use a `SUM` function find out what all the values of the `major_id` column in the `students` table add up to. 
 Select sum(major_id) from students;
 
 #### HINTS
 
-- hint1
+- Use `SUM` like you used `MIN` and `MAX`
+- You previously used `SELECT MAX(gpa) FROM students;`
+- Enter `SELECT SUM(major_id) FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1900. psql SELECT AVG
+## 1900. psql SELECT AVG(major_id)
 
 ### 1900.1
 
+`AVG` will give you the average of all the values in a column. Use it to see the average of the same column.
 Select avg(major_id) from students;
 
 #### HINTS
 
-- hint1
+- It's the `major_id` column in the `students` table
+- Use `AVG` like you used `SUM`, `MIN` and `MAX`
+- You previously used `SELECT SUM(major_id) FROM students;`
+- Enter `SELECT AVG(major_id) FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1910. psql SELECT CEIL(AVG)
+## 1910. psql SELECT CEIL(AVG(major_id))
 
 ### 1910.1
 
-select ceil(avg(major_id) from students;
+You can find the round decimals up or down to the nearest whole number with `CEIL` and `FLOOR`, respectively. Use `CEIL` to round the average `major_id` up to the nearest whole number. Here's an example: `CEIL(<number_to_round>)`.
 
 #### HINTS
 
-- hint1
+- Here's another example: `CEIL(<average_of_major_id's_here>)`
+- You previously used `SELECT AVG(major_id) FROM students;` to get the average
+- Put `AVG(major_id)` inside the parenthesis of the `CEIL` function
+- Enter `SELECT CEIL(AVG(major_id)) FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1920. psql SELECT ROUND(AVG)
+## 1920. psql SELECT ROUND(AVG(major_id))
 
 ### 1920.1
 
-Select round(avg(major_id)) from students;
+Or, you can round a number to the nearest whole number with `ROUND`. Use it to round the average of the `major_id` column to the nearest whole number.
 
 #### HINTS
 
-- hint1
+- Here's an example: `ROUND(<average_of_major_id's_here>)`
+- You previously used `SELECT CEIL(AVG(major_id)) FROM students;` to round a number up
+- Put `AVG(major_id)` inside the parenthesis of the `ROUND` function
+- Enter `SELECT ROUND(AVG(major_id)) FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 1930. psql SELECT ROUND(AVG(),5)
+## 1930. psql SELECT ROUND(AVG(major_id),5)
 
 ### 1930.1
 
-Select round(avg(major_id), 5) from students;
+You can round to a specific number of decimal places by adding a comma and number to `ROUND`, like this: `ROUND(<number_to_round>, <decimals_places>)`. Round the average of the `major_id` to five decimal places.
 
 #### HINTS
 
-- hint1
+- You previously used `SELECT ROUND(AVG(major_id)) FROM students;` to get the average
+- Put `AVG(major_id), 5` inside the parenthesis of the `ROUND` function
+- Enter `SELECT ROUND(AVG(major_id), 5) FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1940. Add echo query result
 
 ### 1940.1
 
-Add echo select round(avg(gpa), 2) from students;
+You should be able to find what your script is asking for now. Add the command to print what it is asking for.
 
 #### HINTS
 
-- hint1
+- Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
+- If you run your script, the last echo statement should print:
+```sh
+3.09
+```
+- Practice the query in the psql prompt to make sure it's getting what you want
+- You previously used `SELECT ROUND(AVG(major_id), 5) FROM students;` in the psql prompt
+- Add `echo "$($PSQL "SELECT ROUND(AVG(gpa), 2) FROM students")"` to the bottom of the `student_info.sh` file
 
 ## 1950. ./student_info.sh
 
 ### 1950.1
 
-Run the script to see the output.
+Run the script to see the average GPA of all your students.
 
 #### HINTS
 
