@@ -1991,7 +1991,7 @@ Below the shebang, add a comment that says `Info about my computer science stude
 
 ### 1260.1
 
-In the new script, use `echo` to print `~~ My Computer Science Students ~~`. Use the `-e` flag with it to put at the beginning and end of the text.
+In the new script, use `echo` to print `~~ My Computer Science Students ~~`. Use the `-e` flag with it to put a new line at the beginning and end of the text.
 
 #### HINTS
 
@@ -2888,6 +2888,7 @@ Run the script to make sure it worked.
 
 #### HINTS
 
+- At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence
 - The new line character is `\n`
 - Here's an example of the command: `echo -e "\n<text_here>"`
 - At the bottom of the `student_info.sh` file, add this:
@@ -3021,146 +3022,209 @@ Run the script to see the average GPA of all your students.
 
 ### 1960.1
 
-Add echo major_id, count of students named number_of_students, and average gpa rounded to two decimal places named average_gpa, for each major_id in the students table having a student count greater than 1:
+They're doing pretty good. Add another command to print `Major ID, total number of students in a column named 'number_of_students', and average GPA rounded to two decimal places in a column name 'average_gpa', for each major ID in the students table having a student count greater than 1:`
 
 #### HINTS
 
+- At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence
 - The new line character is `\n`
 - Here's an example of the command: `echo -e "\n<text_here>"`
 - At the bottom of the `student_info.sh` file, add this:
 ```sh
-echo -e "\n"
+echo -e "\nMajor ID, total number of students in a column named 'number_of_students', and average GPA rounded to two decimal places in a column name 'average_gpa', for each major ID in the students table having a student count greater than 1:"
 ```
 
 ## 1970. psql SELECT COUNT(*) FROM majors
 
 ### 1970.1
 
-Select count(*) from majors;
+Another function is `COUNT`. You can use it like this: `COUNT(<column>)`. It will tell you how many entries are in a table for the column. Try it out in the psql prompt by using `COUNT(*)` to see how many majors there are.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT`, `COUNT`, and `FROM` keywords
+- Here's an example `SELECT COUNT(<column>) FROM <table>;`
+- Use `*` for the column and `majors` for the table
+- Enter `SELECT COUNT(*) FROM majors;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1980. psql SELECT COUNT(*) FROM students
 
 ### 1980.1
 
-Select count(*) from students;
+Using the same method, check how many students you have.
 
 #### HINTS
 
-- hint1
+- You previously used: `SELECT COUNT(*) FROM majors;`
+- Use the `SELECT`, `COUNT`, and `FROM` keywords
+- Here's an example `SELECT COUNT(<column>) FROM <table>;`
+- Use `*` for the column and `students` for the table
+- Enter `SELECT COUNT(*) FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 1990. psql SELECT COUNT(major_id) FROM students
 
 ### 1990.1
 
-Select count(major_id) from students;
+Using `*` like that told you how many total rows are in the table. View the count of the `major_id` column in the `students` table to see how many of your students have picked a major.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT`, `COUNT`, and `FROM` keywords
+- Here's an example `SELECT COUNT(<column>) FROM <table>;`
+- Use `major_id` for the column and `students` for the table
+- Enter `SELECT COUNT(major_id) FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2000. psql SELECT DISTINCT(major_id) FROM students
 
 ### 2000.1
 
-Select distinct(major_id) from students;
+Using `major_id` didn't count the `null` values in that column. 23 students have a major. `DISTINCT` is a function that will show you only unique values. You can use it like this: `DISTINCT(<column>)`. View the unique `major_id` values in the `students` table.
 
 #### HINTS
 
-- hint1
+- Use the `SELECT`, `COUNT`, and `FROM` keywords
+- Here's an example `SELECT DISTINCT(<column>) FROM <table>;`
+- Use `major_id` for the column and `students` for the table
+- Enter `SELECT DISTINCT(major_id) FROM students;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2010. psql SELECT FROM students GROUP BY major_id
 
 ### 2010.1
 
-Select major_id from students group by major_id;
+You can get the same results with `GROUP BY`. Here's an example of how to use it: `SELECT <column> FROM <table> GROUP BY <column>`. Use this method to view the unique `major_id` values in the `students` table again.
 
 #### HINTS
 
-- hint1
+- You want to **select** and **group** the `major_id` column
+- Use the `SELECT`, `FROM`, and `GROUP BY` keywords
+- Here's an example `SELECT COUNT(<column>) FROM <table>;`
+- Use `major_id` for the column and `students` for the table
+- Enter `SELECT major_id FROM students GROUP BY major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 2020. psql SELECT count(*) FROM students GROUP BY major_id
+## 2020. psql SELECT major_id, count(*) FROM students GROUP BY major_id
 
 ### 2020.1
 
-select major_id, count(*) from students group by major_id; - any columns must be in group by or use aggregate()
+The output was the same as `DISTINCT`, but with `GROUP BY` you can add any of the aggregate functions (`MIN`, `MAX`, `COUNT`, etc) to it to find more information. For instance, if you wanted to see how many students were in each major you could use `SELECT COUNT(*) FROM students GROUP BY major_id`. View the `major_id` column **and** number of students in each `major_id`.
 
 #### HINTS
 
-- hint1
+- You want to `SELECT` two columns, `major_id` and the `COUNT` of all (`*`) the rows
+- Use the `SELECT`, `COUNT`, `FROM`, and `GROUP BY` keywords
+- Here's an example `SELECT <column_1>, COUNT(<column_2>) FROM <table> GROUP BY <column_1>;`
+- Enter `SELECT major_id, COUNT(*) FROM students GROUP BY major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 2030. psql SELECT MAX(gpa) FROM students GROUP BY major_id
+## 2030. psql SELECT major_id, MIN(gpa) FROM students GROUP BY major_id
 
 ### 2030.1
 
-Select major_id, max(gpa) from students group by major_id;
+When using `GROUP BY`, any columns in the `SELECT` area must be included in the `GROUP BY` area. Other columns must by used with any of the aggregate functions (`MAX`, `AVG`, `COUNT`, etc). View the unique `major_id` values with `GROUP BY` again, but see what the lowest GPA is in each of them.
 
 #### HINTS
 
-- hint1
+- The last query was `SELECT major_id, COUNT(*) FROM students GROUP BY major_id;`
+- Use the `SELECT`, `MIN`, `FROM`, and `GROUP BY` keywords
+- Here's an example `SELECT <column_1>, MIN(<column_2>) FROM <table> GROUP BY <column_1>;`
+- Enter `SELECT major_id, MIN(gpa) FROM students GROUP BY major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2040. psql SELECT MIN(gpa), MAX(gpa) FROM students GROUP BY major_id
 
 ### 2040.1
 
-select major_id, min(gpa), max(gpa) FROM students group by major_id;
+Cool. Enter the same query, but add a column that shows you the highest GPA in each major as well.
 
 #### HINTS
 
-- hint1
+- The last query was: `SELECT major_id, MIN(gpa) FROM students GROUP BY major_id;`
+- Use the `SELECT`, `MIN`, `MAX`, `FROM`, and `GROUP BY` keywords
+- Enter `SELECT major_id, MIN(gpa), MAX(gpa) FROM students GROUP BY major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2050. psql SELECT MIN(gpa), MAX(gpa) FROM students GROUP BY major_id HAVING MAX(gpa) = 4
 
 ### 2050.1
 
-Select major_id min(gpa), max(gpa) from students group by major_id having max(gpa) = 4;
+Another option with `GROUP BY` is `HAVING`. You can add it at the end like this: `SELECT <column> FROM <table> GROUP BY <column> HAVING <condition>`. The condition must be an aggregate function with a test. An example to might be to use `HAVING COUNT(*) > 0` to only show what whatever column is grouped that have at least one row. Use `HAVING` to only show rows from the last query that have a maximimum GPA of 4.0.
 
 #### HINTS
 
-- hint1
+- The last query was: `SELECT major_id, MIN(gpa), MAX(gpa) FROM students GROUP BY major_id;`
+- Use the `SELECT`, `MIN`, `MAX`, `FROM`, `GROUP BY`, and `HAVING` keywords
+- Here's an example `SELECT <column_1>, MIN(<column>), MAX(<column>) FROM <table> GROUP BY <column_1> HAVING <conditing>;`
+- The condition you want is `HAVING MAX(gpa) = 4.0`
+- Enter `SELECT major_id, MIN(gpa), MAX(gpa) FROM students GROUP BY major_id HAVING MAX(gpa) = 4.0;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2060. psql SELECT MIN(gpa) AS, MAX(gpa) FROM students GROUP BY major_id HAVING MAX(gpa) = 4
 
 ### 2060.1
 
-Select major_id min(gpa) AS min_gpa, max(gpa) from students group by major_id having max(gpa) = 4;
+Now it only showed the majors that have at least one student with a 4.0 GPA. Looking at the results, the column is named `min`. You can rename a column with `AS` like this: `SELECT <column> AS <new_column_name>` Enter the same command, but rename the `min` column to `min_gpa`.
 
 #### HINTS
 
-- hint1
+- The last query was: `SELECT major_id, MIN(gpa), MAX(gpa) FROM students GROUP BY major_id HAVING MAX(gpa) = 4.0;`
+- Use the `SELECT`, `MIN`, `AS`, `FROM`, and `GROUP BY` keywords
+- Rename the `MIN(gpa)` column like this: `MIN(gpa) AS min_gpa`
+- Enter `SELECT major_id, MIN(gpa) AS min_gpa, MAX(gpa) FROM students GROUP BY major_id HAVING MAX(gpa) = 4.0;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2070. psql SELECT MIN(gpa) AS, MAX(gpa) AS FROM students GROUP BY major_id HAVING MAX(gpa) = 4
 
 ### 2070.1
 
-Select major_id min(gpa) AS min_gpa, max(gpa) AS max_gpa from students group by major_id having max(gpa) = 4;
+Enter the same command, but rename the `max` column to `max_gpa`.
 
 #### HINTS
 
-- hint1
+- The last query was: `SELECT major_id, MIN(gpa) AS min_gpa, MAX(gpa) FROM students GROUP BY major_id HAVING MAX(gpa) = 4.0;`
+- Use the `SELECT`, `MIN`, `AS`, `FROM`, and `GROUP BY` keywords
+- Rename the `MAX(gpa)` column like this: `MAX(gpa) AS max_gpa`
+- Enter `SELECT major_id, MIN(gpa) AS min_gpa, MAX(gpa) AS max_gpa FROM students GROUP BY major_id HAVING MAX(gpa) = 4.0;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2080. psql SELECT COUNT(*) AS FROM students GROUP BY major_id HAVING COUNT(*) < 8
 
 ### 2080.1
 
-Select major_id, count(*) AS number_of_students FROM students group by major_id having count(*) < 8;
+Now, the custom columns are more descriptive. You can rename any columns like this. Use the `SELECT`, `COUNT`, `AS`, `FROM`, `GROUP BY`, and `HAVING` keywords to select the `major_id`, and number of students in each `major_id` in a column named `number_of_students` that have less than eight students in the major.
 
 #### HINTS
 
-- hint1
+- The last query was: `SELECT major_id, MIN(gpa) AS min_gpa, MAX(gpa) FROM students GROUP BY major_id HAVING MAX(gpa) = 4.0;`
+- Here's an example: `SELECT <column_1>, COUNT(*) AS <custom_column_name> FROM <table> GROUP BY <column_1> HAVING <condition>;`
+- You want to group the `major_id` column
+- The condition you want is `COUNT(*) < 8`
+- Enter `SELECT major_id, COUNT(*) FROM students GROUP BY major_id HAVING COUNT(*) < 8;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2090. Add echo query result
 
 ### 2090.1
 
-select major_id, count(*) AS number_of_students, round(avg(gpa),2) AS average_gpa, from students group by major_id having count(*) > 1;
+Nice job! Back in your script, add the command the print the suggested results.
 
 #### HINTS
 
-- hint1
+- Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
+- If you run your script, the last echo statement should print:
+```sh
+|8|2.97
+3|6|3.38
+4|4|2.73
+2|6|2.92
+7|6|3.53
+```
+- Practice the query in the psql prompt to make sure it's getting what you want
+- You previously used `SELECT major_id, COUNT(*) AS number_of_students FROM students GROUP BY major_id HAVING COUNT(*) < 8;` in the psql prompt
+- Add `echo "$($PSQL "SELECT major_id, COUNT(*) AS number_of_students, ROUND(AVG(gpa),2) AS average_gpa, FROM students GROUP BY major_id HAVING COUNR(*) > 1;")"` to the bottom of the `student_info.sh` file
 
 ## 2100. ./student_info.sh
 
@@ -3178,255 +3242,342 @@ Run the script to see the output.
 
 ### 2110.1
 
-Add echo List of majors, in alphabetical order, that either no student is taking or has a student whose first name contains a case incentive ‘ma’:
+Add an echo command to your script like the others that prints `List of majors, in alphabetical order, that either no student is taking or has a student whose first name contains a case insentive 'ma':`
 
 #### HINTS
 
+- At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence
 - The new line character is `\n`
 - Here's an example of the command: `echo -e "\n<text_here>"`
 - At the bottom of the `student_info.sh` file, add this:
 ```sh
-echo -e "\n"
+echo -e "\nList of majors, in alphabetical order, that either no student is taking or has a student whose first name contains a case insentive 'ma':"
 ```
 
 ## 2120. psql students FULL JOIN majors
 
 ### 2120.1
 
-select * from students FULL join majors on students.major_id = majors.major_id;
- = will show all students and all majors
- = if you want to see all students and all majors
+The `majors` and `students` table are linked with the `major_id` foreign key. If you want to see the name of a major that a student is taking, you need to `JOIN` the two tables into one. Here's an example of how to do that:
+`SELECT * FROM <table_1> FULL JOIN <table_2> ON <table_1>.<foreign_key_column> = <table_2>.<foreign_key_column>;`
+
+Join the two tables together with the above method. 
 
 #### HINTS
 
-- hint1
+- Join the `students` and `majors` table with the method in the example. Use the `students` table first where applicable
+- Enter `SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2130. psql students LEFT JOIN majors
 
 ### 2130.1
 
-select * from students LEFT join majors on students.major_id = majors.major_id;
- = will show all students but only majors if there’s a linked major_id in the students table
- = if you want to see all students but only majors if there’s a student taking it
+33 rows. You can see in the table that there are some students without a major, and some majors without any students. The `FULL JOIN` you used will include **all** rows from both tables, whether or not they have a row using that foreign key in the other. From there, you could use any of the previous methods to narrow down, group, order, etc. Use a `LEFT JOIN` to join the same two tables in the same way.
 
 #### HINTS
 
-- hint1
+- Join the `students` and `majors` table with a `LEFT JOIN`. Use the `students` table first where applicable
+- You previously entered: `SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id;`
+- Replace `FULL JOIN` from the previous command with `LEFT JOIN`
+- Enter `SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2140. psql students RIGHT JOIN majors
 
 ### 2140.1
 
-select * from students RIGHT join majors on students.major_id = majors.major_id;
- = will show all majors whether there’s a student with that major_id or not
- = if you want to see all majors but only students that are enrolled in a major 
+31 rows. In the `LEFT JOIN` you used, the `students` table was the left table since it was on the left side of the `JOIN`. `majors` was the right table. A `LEFT JOIN` gets all rows from the left table, but only rows from the right table that are linked to from the left one. Look at the data, you can see that every student was returned, but the majors without any students were not. Join the same two tables with a `RIGHT JOIN` this time.
 
 #### HINTS
 
-- hint1
+- Join the `students` and `majors` table with a `RIGHT JOIN`. Use the `students` table first where applicable
+- You previously entered: `SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id;`
+- Replace `LEFT JOIN` from the previous command with `RIGHT JOIN`
+- Enter `SELECT * FROM students RIGHT JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2150. psql students INNER JOIN majors
 
 ### 2150.1
 
-select * from students INNER join majors on students.major_id = majors.major_id;
- = will only show students that have a major and majors that have a student
- = if you only want to see students that have a major
+25 rows. The right join showed all the rows from the right table (`majors`), but only rows from the left table (`students`) if they have a major. There's one more type you should know about. Join the two tables with an `INNER JOIN`.
 
 #### HINTS
 
-- hint1
+- Join the `students` and `majors` table with an `INNER JOIN`. Use the `students` table first where applicable
+- You previously entered: `SELECT * FROM students RIGHT JOIN majors ON students.major_id = majors.major_id;`
+- Replace `RIGHT JOIN` from the previous command with `INNER JOIN`
+- Enter `SELECT * FROM students INNER JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2160. psql majors LEFT JOIN students
 
 ### 2160.1
 
-Use a left join to show all majors but only students that are enrolled in a major
-=When querying the database, you only want to get the exact info you need… These different types of join will help 
+The `INNER JOIN` only returned students if they have a major and majors that have a student. In other words, it only returned rows if they have a value in the foreign key column (`major_id`) of the opposite table. You should know a little about the four main types of joins now. Use a `LEFT JOIN` to show **all the majors** but only students that have a major.
 
 #### HINTS
 
-- hint1
+- You want to join the `students` and `majors` tables again
+- The left table is the on the left side of `LEFT JOIN`.
+- A `LEFT JOIN` will show all rows from the left table.
+- You previously entered: `SELECT * FROM students INNER JOIN majors ON students.major_id = majors.major_id;`
+- Enter `SELECT * FROM majors LEFT JOIN students ON majors.major_id = students.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2170. psql majors LEFT JOIN students
 
 ### 2170.1
 
-Use a right join to show all students but only majors if a student is enrolled in it
+Excellent. Use a right join to show all students but only majors if a student is enrolled in it.
 
 #### HINTS
 
-- hint1
+- You want to join the `students` and `majors` tables again
+- The left table is the on the left side of `RIGHT JOIN`.
+- A `RIGHT JOIN` will show all rows from the right table.
+- You previously entered: `SELECT * FROM students INNER JOIN majors ON students.major_id = majors.major_id;`
+- Enter `SELECT * FROM majors RIGHT JOIN students ON majors.major_id = students.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2180. psql majors INNER JOIN students
 
 ### 2180.1
 
-Use the appropriate join to show only students that are enrolled in a major, and only majors that have a student enrolled in it
+Use the appropriate join to show only students that are enrolled in a major, and only majors that have a student enrolled in it.
 
 #### HINTS
 
-- hint1
+- You want to join the `students` and `majors` tables again
+- Join them with the join that only shows rows if they have a value in the foreign key column of the other table
+- The previous query was: `SELECT * FROM majors RIGHT JOIN students ON majors.major_id = students.major_id;`
+- You want to use an `INNER JOIN` with the two tables
+- Enter `SELECT * FROM majors INNER JOIN students ON majors.major_id = students.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2190. psql majors FULL JOIN students
 
 ### 2190.1
 
-Use the appropriate join to show all students and all majors
-= SELECT * FROM students FULL JOIN majors ON students.major_id=majors.major_id;
+Use the appropriate with the same two table to show all rows in both tables whether they have a value in the foreign key column or not.
 
 #### HINTS
 
-- hint1
+- You want to join the `students` and `majors` tables again
+- Join them with the join that only shows rows if they have a value in the foreign key column of the other table
+- The previous query was: `SELECT * FROM majors INNER JOIN students ON majors.major_id = students.major_id;`
+- You want to use an `INNER JOIN` with the two tables
+- Enter `SELECT * FROM majors INNER JOIN students ON majors.major_id = students.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2200. psql SELECT * students INNER JOIN majors
 
 ### 2200.1
 
-“List of majors students are taking:” INNER JOIN
-SELECT * FROM students INNER JOIN majors ON students.major_id=majors.major_id;
+Lets do some more experiments with joins. Say you wanted to find a list of majors that students are taking. Use the most efficient `JOIN` to only get rows from the tables you need to find that.
 
 #### HINTS
 
-- hint1
+- You want to join the `students` and `majors` tables again
+- Use the join that shows you only students that have a major and only majors that have a student.
+- Only use the join, don't use a `WHERE`, `HAVING`, or any other filters
+- You previously used: `SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id;`
+- You want to use an `INNER JOIN`
+- Enter `SELECT * FROM students INNER JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2210. psql SELECT major students INNER JOIN majors
 
 ### 2210.1
 
-SELECT major FROM students INNER JOIN majors ON students.major_id=majors.major_id;
+Good. To get the list, you don't need all the columns, though. Enter the same command, but just get the column you need.
 
 #### HINTS
 
-- hint1
+- The previous query was `SELECT * FROM students INNER JOIN majors ON students.major_id = majors.major_id;`
+- Enter the previous query, but only get the column you need
+- You only need the `major` column
+- Enter `SELECT major FROM students INNER JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2220. psql SELECT DISTINCT(major) students INNER JOIN majors
 
 ### 2220.1
 
-SELECT DISTINCT(major) FROM students INNER JOIN majors ON students.major_id=majors.major_id;
+You also don't want any duplicates. Use `DISTINCT` to only return the unique ones to see the list of majors who have students.
 
 #### HINTS
 
-- hint1
+- The previous query was `SELECT major FROM students INNER JOIN majors ON students.major_id = majors.major_id;`
+- Enter the previous query, but only get the `DISTINCT` majors
+- Here's an example: `DISTINCT(<column>)`
+- You want to change `major` from the previous query to `DISTINCT(major)`
+- Enter `SELECT DISTINCT(major) FROM students INNER JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2230. psql SELECT * students RIGHT JOIN majors
 
 ### 2230.1
 
-“List of majors students aren’t taking:” right join
-SELECT * FROM students RIGHT JOIN MAJORS ON students.major_id=majors.major_id;
+There's your list of majors that students are taking :smile: Next, say you wanted a list of majors that students aren't taking. Use the most efficient join to get only the rows needed.
 
 #### HINTS
 
-- hint1
+- You want to join the `students` and `majors` tables again
+- Use the join that shows you all majors, but only students that have a major
+- Only use the join, don't use a `WHERE`, `HAVING`, or any other filters
+- You previously used: `SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id;`
+- You want to use an `RIGHT JOIN` with the `majors` table on the right of it
+- Enter `SELECT * FROM students RIGHT JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2240. psql SELECT * students RIGHT JOIN majors WHERE student_id IS NULL
 
 ### 2240.1
 
-SELECT * FROM Students RIGHT JOIN majors on students.major_id=majors.major_id WHERE student_id IS NULL;
+That got you all the majors, you can see the ones that don't have any students. Add a `WHERE` condition to only see the majors without students, use `student_id` in it's condition.
 
 #### HINTS
 
-- hint1
+- The previous query was `SELECT * FROM students RIGHT JOIN majors ON students.major_id = majors.major_id;`
+- Enter the previous query, but add a `WHERE <condition>` at the end to only get the rows you need
+- Use `IS NULL` with the condition
+- The keywords you want are `SELECT`, `FROM`, `RIGHT JOIN`, `ON`, `WHERE` and `IS NULL`
+- Use `student_id IS NULL` as the condition
+- Enter `SELECT * FROM students RIGHT JOIN majors ON students.major_id = majors.major_id WHERE student_id IS NULL;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2245. psql SELECT major students RIGHT JOIN majors WHERE student_id IS NULL
 
 ### 2245.1
 
-SELECT major FROM Students RIGHT JOIN majors on students.major_id=majors.major_id WHERE student_id IS NULL;
+You could have used `HAVING` with `COUNT(*) = 0` there as well. Now you only have the rows you need. Only get the columns you need with it to see the list of majors without students.
 
 #### HINTS
 
-- hint1
+- The previous query was `SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id WHERE student_id IS NULL;`
+- Enter the previous query, but only get the column you need
+- The column you need is the `major` column
+- Enter `SELECT major FROM students RIGHT JOIN majors ON students.major_id = majors.major_id WHERE student_id IS NULL;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2250. psql SELECT * students LEFT JOIN majors
 
 ### 2250.1
 
-“First name, last_name, gpa, and major of students who are taking data science or have a gpa of 3.8 or greater”: left join
+You're doing great. Next, use the most efficient join to get the rows needed if you were asked to get the first name, last name, GPA, and major of students who are taking Data Science or have a gpa of 3.8 or greater.
 
 #### HINTS
 
-- hint1
+- Use the join to get all students but only majors that have a student
+- Only use the join, don't use a `WHERE`, `HAVING`, or any other filters
+- You previously used: `SELECT * FROM students RIGHT JOIN majors ON students.major_id = majors.major_id;`
+- You want to use a `LEFT JOIN` with `students` as the left table
+- Enter `SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2260. psql SELECT students LEFT JOIN majors WHERE major = Data Science OR gpa >= 3.8
 
 ### 2260.1
 
-SELECT * FROM students LEFT JOIN majors ON students.major_id=majors.major_id WHERE major='Data Science' OR gpa >= 3.8;
+Enter the same command, but use `WHERE` to only get the students that meet the requirements. As a reminder, the goal was to find students who are taking Data Science or have a gpa of 3.8 or greater.
 
 #### HINTS
 
-- hint1
+- The previous query was `SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id;`
+- You want to add two conditions one testing the `major` column, and another testing the `gpa` column
+- Here's an example `SELECT * FROM <table_1> LEFT JOIN <table_2> ON <table_1>.<foreign_key> = <table_2>.<foreign> WHERE <condition_1> OR <condition_2>;`
+- The two conditions you want are `major = 'Data Science'` and `gpa >= 3.8`
+- Enter `SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id WHERE major='Data Science' OR gpa >= 3.8;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2265. psql SELECT columns LEFT JOIN WHERE major = Data Science OR gpa >= 3.8
 
 ### 2265.1
 
-SELECT first_name, last_name, gpa FROM students LEFT JOIN majors ON students.major_id=majors.major_id WHERE major='Data Science' OR gpa >= 3.8;
+Now, you have narrowed it down the rows you are looking for. Enter the same command, but only get the columns you need. There was four of them, the students first name, last name, their gpa, and major.
 
 #### HINTS
 
-- hint1
+- The previous query was `SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id WHERE major='Data Science' OR gpa >= 3.8;`
+- Enter the previous query, but only get the columns you need
+- Get the `first_name`, `last_name`, `gpa`, and `major` columns in that order
+- Enter `SELECT first_name, last_name, gpa, major FROM students LEFT JOIN majors ON students.major_id = majors.major_id WHERE major='Data Science' OR gpa >= 3.8;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2270. psql SELECT * students FULL JOIN majors
 
 ### 2270.1
 
-”List of majors that no student is taking or has a student with a 4.0 gpa”: full join
-SELECT * FROM students FULL JOIN majors ON students.major_id=majors.major_id;
+From there, you could put them in a specific order if you wanted or limit the results to a certain number among other things. Lastly, use the join to get the rows needed if you were asked to get the first name and major for students whose `first_name`, or the `major`, contains `ri`.
 
 #### HINTS
 
-- hint1
+- Use the join that gets all students and majors
+- You previously used: `SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id;`
+- You want to use a `FULL JOIN`
+- Enter `SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2280. psql SELECT * students FULL JOIN majors WHERE student_id IS NULL OR gpa = 4.0
 
 ### 2280.1
 
-SELECT * FROM students FULL JOIN majors ON students.major_id=majors.major_id WHERE student_id IS NULL OR gpa = 4.0;
+Add a `WHERE` to the previous query so you only get the rows you need. The rows you wanted were the ones with a first name or major containing `ri`.
 
 #### HINTS
 
-- hint1
+- The previous query was `SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id;`
+- You want to add two conditions one testing the `first_name` column, and another testing the `major` column
+- Here's an example `SELECT * FROM <table_1> LEFT JOIN <table_2> ON <table_1>.<foreign_key> = <table_2>.<foreign> WHERE <condition_1> OR <condition_2>;`
+- The two conditions you want should use the `LIKE` or `ILIKE` keywords
+- They conditions are `WHERE first_name LIKE '%ri%' OR major LIKE '%ri%'`
+- Enter `SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id WHERE first_name LIKE '%ri%' OR major LIKE '%ri%';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2290. psql SELECT major FROM students FULL JOIN majors WHERE student_id IS NULL OR gpa = 4.0
 
 ### 2290.1
 
-SELECT major FROM students FULL JOIN majors ON students.major_id=majors.major_id WHERE student_id IS NULL OR gpa = 4.0;
+Finally, you only wanted to display the `first_name` and `majors` columns. Enter the previous query, but only get the columns you need.
 
 #### HINTS
 
-- hint1
-
-## 2300. psql DISTINCT(major) students FULL JOIN majors WHERE student_id IS NULL OR gpa = 4.0
-
-### 2300.1
-
-SELECT DISTINCT(major) FROM students FULL JOIN majors ON students.major_id=majors.major_id WHERE student_id IS NULL OR gpa = 4.0;
-
-#### HINTS
-
-- hint1
+- The previous query was `SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id WHERE first_name LIKE '%ri%' OR major LIKE '%ri%';`
+- The two columns you want are `first_name` and `major`
+- Enter `SELECT first_name, major FROM students FULL JOIN majors ON students.major_id = majors.major_id WHERE first_name LIKE '%ri%' OR major LIKE '%ri%';` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2310. Add echo query result
 
 ### 2310.1
 
+In you script, add the command to print what the sentence is asking for.
+
+List of majors, in alphabetical order, that either no student is taking or has a student whose first name contains a case insentive 'ma':
 Add echo “select * from students RIGHT JOIN majors on students.major_id=majors.major_id WHERE student_id IS NULL OR first_name ILIKE '%ma%';”
 
 #### HINTS
 
-- hint1
+- Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
+- If you run your script, the last echo statement should print:
+```sh
+Computer Programming
+Database Administration
+Network Engineering
+Web Development
+```
+- Practice the query in the psql prompt to make sure it's getting what you want
+- You want to use the `SELECT`, `FROM`, `<some_kind_of> JOIN`, `ON`, `WHERE`, `IS NULL`, `OR`, `ILIKE`, and `ORDER BY` keywords
+- You previously used `SELECT first_name, major FROM students FULL JOIN majors ON students.major_id = majors.major_id WHERE first_name LIKE '%ri%' OR major LIKE '%ri%';` in the psql prompt
+- Add `echo "$($PSQL "SELECT major FROM students RIGHT JOIN majors ON students.major_id=majors.major_id WHERE student_id IS NULL OR first_name ILIKE '%ma%' ORDER BY major")"` to the bottom of the `student_info.sh` file
 
 ## 2320. ./student_info.sh
 
 ### 2320.1
 
-Run the script to see the output.
+Run the script to see the majors described.
 
 #### HINTS
 
@@ -3438,112 +3589,137 @@ Run the script to see the output.
 
 ### 2330.1
 
-Add echo List of unique courses, in alphabetical order, that no student or ‘Obie Hilpert’ is taking:
+:smile: Almost done. In your script, add a command to print this sentence like the others: `List of unique courses, in alphabetical order, that no student or ‘Obie Hilpert’ is taking:`
 
 #### HINTS
 
+- At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence
 - The new line character is `\n`
 - Here's an example of the command: `echo -e "\n<text_here>"`
 - At the bottom of the `student_info.sh` file, add this:
 ```sh
-echo -e "\n"
+echo -e "\nList of unique courses, in alphabetical order, that no student or ‘Obie Hilpert’ is taking:"
 ```
 
 ## 2340. psql SELECT * FROM students FULL JOIN majors
 
 ### 2340.1
 
+Lets go over a few more things before you figure out how to see the courses a student is taking. Start by doing a `FULL JOIN` on your `students` and `majors` tables.
 SELECT * FROM students FULL JOIN majors ON students.major_id=majors.major_id;
 
 #### HINTS
 
-- hint1
+- Join the `students` and `majors` table with a `FULL JOIN`. Use the `students` table first where applicable
+- Enter `SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2350. psql SELECT students.major_id students FULL JOIN majors
 
 ### 2350.1
 
-select students.major_id from students FULL JOIN JOIN majors ON students.major_id = majors.major_id;
+If you look at the column names, it shows two `major_id` columns. One from the `students` table and one from the `majors` table. If you were to try and query it using `major_id`, you would get an error. You would need to specify what table you want the column from like this: `<table>.<column>`. Enter the same join but only get the `major_id` column from the `students` table.
+select students.major_id from students FULL JOIN majors ON students.major_id = majors.major_id;
 
 #### HINTS
 
-- hint1
+- The previous query was `SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id;`
+- You can get the column you want with `students.major_id`
+- Enter `SELECT students.major_id FROM students FULL JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 2360. psql SELECT * FROM students AS s FULL JOIN majors
+## 2360. psql SELECT students.major_id FROM students FULL JOIN majors AS m
 
 ### 2360.1
 
-select * from students AS s FULL JOIN majors ON s.major_id=majors.major_id;
+Earlier, you used `AS` to rename columns. You can use it to rename tables, or give them aliases, as well. Here's an example: `SELECT * FROM <table> AS <new_name>;`. Enter the same query you just entered, but rename the `majors` table to `m`. Anywhere the `majors` table is referenced, you will need to use `m` instead of `majors`.
 
 #### HINTS
 
-- hint1
+- The previous query was `SELECT students.major_id FROM students FULL JOIN majors ON students.major_id = majors.major_id;`
+- You want to join `majors AS m` and use `m.major_id` when referencing the joining column
+- Enter `SELECT students.major_id FROM students FULL JOIN majors AS m ON students.major_id = m.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 2370. psql SELECT * FROM students AS s FULL JOIN majors AS m
+## 2370. psql SELECT s.major_id FROM students AS s FULL JOIN majors AS m
 
 ### 2370.1
 
-select * from students AS s FULL JOIN majors AS m ON s.major_id=m.major_id;
+Good. Enter the same query, but rename the `students` table to `s`.
 
 #### HINTS
 
-- hint1
-
-## 2380. psql s.major_id SELECT * FROM students AS s FULL JOIN majors AS m
-
-### 2380.1
-
-select s.major_id from students AS s FULL JOIN majors AS m ON s.major_id=m.major_id;
-
-#### HINTS
-
-- hint1
+- The previous query was `SELECT students.major_id FROM students FULL JOIN majors AS m ON students.major_id = m.major_id;`
+- You want to rename `students AS s` and use `s.<column>` when referencing columns from the `students` table
+- Enter `SELECT s.major_id FROM students AS s FULL JOIN majors AS m ON s.major_id = m.major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2390. psql SELECT * FROM students FULL JOIN majors USING
 
 ### 2390.1
 
-SELECT * FROM students FULL JOIN majors USING(major_id);
+There's a shortcut keyword, `USING` to join tables if the foreign key column has the same name in both tables. Here's an example: `SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>);`. Use this method to see **all** the columns in the `students` and `majors` table. Don't use any aliases.
 
 #### HINTS
 
-- hint1
+- Enter `SELECT * FROM students FULL JOIN majors USING(major_id);` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2400. psql SELECT * FROM students FULL JOIN majors USING FULL JOIN major_courses USING
 
 ### 2400.1
 
-SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id);
+There should probably be a `students_courses` table to describe what courses students are taking, but you don't have that here. You will need to join all the tables together to find out. You can add a third table to a join like this: `SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>) FULL JOIN <table_3> USING(<column>)`. This example will join the first two tables into one, turning it into the left table for the second join. Use this method to join the two tables from the previous query with the `majors_courses` table.
 
 #### HINTS
 
-- hint1
+- The previous query was `SELECT * FROM students FULL JOIN majors USING(major_id);`
+- View the details of the `majors_courses` table with `\d majors_courses` to find the foreign key to join on
+- Enter `SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id);` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2410. psql SELECT * students FULL JOIN majors USING JOIN major_courses USING JOIN courses USING
 
 ### 2410.1
 
-SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id) FULL JOIN courses USING(course_id);
+What you're getting there is every unique combination of rows in the database. Students with a major are listed multiple times, one for each course included in the major. The majors without any students are there along with the courses for them. The students without a major are included as well. You can join as many tables together as you want. Join the last table to the previous command to get the names of the courses with all this info. Y
 
 #### HINTS
 
-- hint1
+- The previous query was `SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id);`
+- The last table is the `courses` table
+- View the details of the `courses` table with `\d courses` to find the foreign key to join on
+- Enter `SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id) FULL JOIN courses USING(course_id);` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2420. Add echo query result
 
 ### 2420.1
 
+Same amount of rows, but you get the course names now. In your script, add the command to print the suggested into. 
+
 Add echo “SELECT DISTINCT(course) FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) WHERE (first_name = 'Obie' AND last_name = 'Hilpert') OR student_id IS NULL ORDER BY course;”
 
 #### HINTS
 
-- hint1
+- Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
+- If you run your script, the last echo statement should print:
+```sh
+Computer Programming
+Database Administration
+Network Engineering
+Web Development
+```
+- Practice the query in the psql prompt to make sure it's getting what you want
+- You want to use the `SELECT`, `FROM`, `<some_kind_of> JOIN`, `ON`, `WHERE`, `IS NULL`, `OR`, `ILIKE`, and `ORDER BY` keywords
+- You previously used `SELECT first_name, major FROM students FULL JOIN majors ON students.major_id = majors.major_id WHERE first_name LIKE '%ri%' OR major LIKE '%ri%';` in the psql prompt
+- Add `echo "$($PSQL "SELECT DISTINCT(course) FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) WHERE (first_name = 'Obie' AND last_name = 'Hilpert') OR student_id IS NULL ORDER BY course;")"` to the bottom of the `student_info.sh` file
 
 ## 2430. ./student_info.sh
 
 ### 2430.1
 
-Run the script to see the output.
+Run the script to see courses described.
 
 #### HINTS
 
@@ -3555,32 +3731,45 @@ Run the script to see the output.
 
 ### 2440.1
 
-Add echo List of courses with only one student enrolled:
+Last one. Add a command that prints `List of courses, in alphabetical order, with only one student enrolled:`.
 
 #### HINTS
 
+- At the bottom of the file, use `echo` with the `-e` flag and a new line character again to print the suggested sentence
 - The new line character is `\n`
 - Here's an example of the command: `echo -e "\n<text_here>"`
 - At the bottom of the `student_info.sh` file, add this:
 ```sh
-echo -e "\n"
+echo -e "\nList of courses, in alphabetical order, with only one student enrolled:"
 ```
 
 ## 2450. Add echo query result
 
 ### 2450.1
 
-Add echo $PSQL SELECT count(course), course FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) group by course HAVING count(course)=1;
+Go for it.
 
 #### HINTS
 
-- hint1
+- Add a command at the bottom of the script to print the suggested information
+- Add `echo "$($PSQL "<query_here>")"` to the bottom of the `student_info.sh` file, except with the correct query in it
+- If you run your script, the last echo statement should print:
+```sh
+Network Security
+Server Administration
+UNIX
+```
+- Practice the query in the psql prompt to make sure it's getting what you want
+- You can do it
+- Almost
+- One more try
+- Add `echo "$($PSQL "SELECT course FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) group by course HAVING COUNT(course) = 1 ORDER BY course")"` to the bottom of the `student_info.sh` file
 
 ## 2460. ./student_info.sh
 
 ### 2460.1
 
-Run the script to see the output.
+Run the script one last time. :wave:
 
 #### HINTS
 
