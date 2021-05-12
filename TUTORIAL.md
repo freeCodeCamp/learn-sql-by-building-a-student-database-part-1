@@ -2851,7 +2851,6 @@ The order of the keywords in your query matters. You cannot put `LIMIT` before `
 ### 1840.1
 
 In your script, add the `echo` command to print the rows the sentence is asking for.
-Add echo select course from courses where course like ‘_e%’ OR course like ‘%s’ order by course desc limit 5;
 
 #### HINTS
 
@@ -3520,7 +3519,7 @@ From there, you could put them in a specific order if you wanted or limit the re
 - Enter `SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id;` in the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 2280. psql SELECT * students FULL JOIN majors WHERE student_id IS NULL OR gpa = 4.0
+## 2280. psql SELECT * students FULL JOIN majors WHERE first_name || major LIKE ri
 
 ### 2280.1
 
@@ -3536,7 +3535,7 @@ Add a `WHERE` to the previous query so you only get the rows you need. The rows 
 - Enter `SELECT * FROM students FULL JOIN majors ON students.major_id = majors.major_id WHERE first_name LIKE '%ri%' OR major LIKE '%ri%';` in the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
-## 2290. psql SELECT major FROM students FULL JOIN majors WHERE student_id IS NULL OR gpa = 4.0
+## 2290. psql SELECT major FROM students FULL JOIN majors WHERE WHERE first_name || major LIKE ri
 
 ### 2290.1
 
