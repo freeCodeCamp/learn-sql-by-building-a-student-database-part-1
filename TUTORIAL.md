@@ -2232,7 +2232,7 @@ Use the greater than operator to see majors that come after it alphabetically.
 
 ### 1430.1
 
-Try it with the greater than or equal to operator.
+`Game Design` was not included in the results because it is not `> 'Gane Design'`. Try it with the greater than or equal to operator.
 
 #### HINTS
 
