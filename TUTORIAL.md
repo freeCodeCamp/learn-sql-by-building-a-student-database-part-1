@@ -946,7 +946,7 @@ Run the script. It will go through the test data and insert a major into the dat
 
 - Run your `insert_data.sh` script by executing it
 - Type `./insert_data.sh` in the terminal and press enter
-- Make sure you are in the `project` folder first
+- The `majors` table should have four rows after running the script. If it doesn't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
 ## 625. Delete echo MAJOR_ID
 
@@ -1075,7 +1075,7 @@ Now the database is completely empty. Run the script again to see what gets inse
 
 - Run your `insert_data.sh` script by executing it
 - Type `./insert_data.sh` in the terminal and press enter
-- Make sure you are in the `project` folder first
+- The `majors` table should have four rows after running the script. If it doesn't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
 ## 740. SELECT * FROM majors
 
@@ -1173,7 +1173,7 @@ Run the script to make sure it's not adding the first line anymore.
 
 - Run your `insert_data.sh` script by executing it
 - Type `./insert_data.sh` in the terminal and press enter
-- Make sure you are in the `project` folder first
+- The `majors` table should have three rows after running the script. If it doesn't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
 ## 790. SELECT * FROM majors
 
@@ -1201,7 +1201,7 @@ There's three unique majors in your test data. Those were the three added to the
 
 ### 810.1
 
-You want a nicer message when something get's inserted so it's more infomative. Below your `INSERT_MAJOR_RESULT` variable, add an `if` statement that checks if the variable is equal to `INSERT 0 1`, which was what it was printing. Use `echo` to print `Inserted into majors, $MAJOR` in the statements area of the `if`.
+You want a nicer message when something get's inserted so it's more informative. Below your `INSERT_MAJOR_RESULT` variable, add an `if` statement that checks if the variable is equal to `INSERT 0 1`, which was what it was printing. Use `echo` to print `Inserted into majors, $MAJOR` in the statements area of the `if`.
 
 #### HINTS
 
@@ -1240,7 +1240,7 @@ Check to make sure the table is empty. Then, run the script.
 
 - Run your `insert_data.sh` script by executing it
 - Type `./insert_data.sh` in the terminal and press enter
-- Make sure you are in the `project` folder first
+- The `majors` table should have three rows after running the script. If it doesn't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
 ## 835. Add MAJOR_ID
 
@@ -1358,7 +1358,7 @@ Run the script to see if the courses get inserted into the database.
 
 - Run your `insert_data.sh` script by executing it
 - Type `./insert_data.sh` in the terminal and press enter
-- Make sure you are in the `project` folder first
+- The `majors` and `courses` tables should have three rows each after running the script. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
 ## 877. SELECT * FROM courses
 
@@ -1394,7 +1394,7 @@ Run the script to see if it works.
 
 - Run your `insert_data.sh` script by executing it
 - Type `./insert_data.sh` in the terminal and press enter
-- Make sure you are in the `project` folder first
+- The `majors` and `courses` tables should have three rows each after running the script. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
 ## 900. Add COURSE_ID
 
@@ -1456,7 +1456,7 @@ Run the script. Your tables should get truncated and then it should go through t
 
 - Run your `insert_data.sh` script by executing it
 - Type `./insert_data.sh` in the terminal and press enter
-- Make sure you are in the `project` folder first
+- After running the script, the `majors` and `courses` tables should have three rows each, and the `majors_courses` table should have four. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
 ## 950. SELECT * FROM majors
 
@@ -1565,7 +1565,7 @@ Run the script to see if it prints the `FIRST` (`first_name`) variable correctly
 
 - Run your `insert_data.sh` script by executing it
 - Type `./insert_data.sh` in the terminal and press enter
-- Make sure you are in the `project` folder first
+- After running the script, the `majors` and `courses` tables should have three rows each, and the `majors_courses` table should have four. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
 ## 1020. Delete echo all variables
 
@@ -1667,7 +1667,7 @@ Run the script to see what happens.
 
 - Run your `insert_data.sh` script by executing it
 - Type `./insert_data.sh` in the terminal and press enter
-- Make sure you are in the `project` folder first
+- After running the script, the `majors` and `courses` tables should have three rows each, and the `majors_courses` table should have four. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
 ## 1047. Add if -z MAJOR_ID
 
@@ -1726,7 +1726,7 @@ Run the script.
 
 - Run your `insert_data.sh` script by executing it
 - Type `./insert_data.sh` in the terminal and press enter
-- Make sure you are in the `project` folder first
+- After running the script, the `majors` and `courses` tables should have three rows each, and the `majors_courses` table should have four. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
 ## 1053. Delete echo MAJOR_ID
 
@@ -1797,7 +1797,7 @@ Run the script to see if the students are getting added.
 
 - Run your `insert_data.sh` script by executing it
 - Type `./insert_data.sh` in the terminal and press enter
-- Make sure you are in the `project` folder first
+- After running the script, the `majors` and `courses` tables should have three rows each, and the `majors_courses` and `studnets` tables should have four. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
 ## 1090. SELECT * FROM students
 
@@ -1843,7 +1843,7 @@ Time for the moment of truth. Run the script and see if it works.
 
 - Run your `insert_data.sh` script by executing it
 - Type `./insert_data.sh` in the terminal and press enter
-- Make sure you are in the `project` folder first
+- After running the script, the tables should have this many rows: `majors` has 7, `courses` has 17, `majors_courses` has 28, and `students` should have 31. If they don't, there might be something wrong in the script. You can use the reset button to reset the lesson and run the script again
 
 ## 1150. SELECT * FROM students
 
