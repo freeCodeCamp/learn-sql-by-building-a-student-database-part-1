@@ -1251,7 +1251,7 @@ levels:
       - id: '1850.1'
         setup:
           watchers:
-            - ../bash_history
+            - ../.bash_history
   - id: '1860'
     steps:
       - id: '1860.1'
