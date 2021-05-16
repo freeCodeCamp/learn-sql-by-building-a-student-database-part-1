@@ -3706,7 +3706,7 @@ Algorithms
 ```
 - Practice the query in the psql prompt to make sure it's getting what you want
 - You previously used `SELECT * FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id) FULL JOIN courses USING(course_id);` in the psql prompt
-- Add `echo "$($PSQL "SELECT DISTINCT(course) FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) WHERE (first_name = 'Obie' AND last_name = 'Hilpert') OR student_id IS NULL ORDER BY course;")"` to the bottom of the `student_info.sh` file
+- Add `echo "$($PSQL "SELECT DISTINCT(course) FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) WHERE (first_name = 'Obie' AND last_name = 'Hilpert') OR student_id IS NULL ORDER BY course DESC")"` to the bottom of the `student_info.sh` file
 
 ## 2430. ./student_info.sh
 
@@ -3759,7 +3759,7 @@ UNIX
 - So there's no answers here
 - :confused:
 - Try entering this in the psql prompt: `SELECT COUNT(course), COURSE FROM students FULL JOIN majors USING(major_id) FULL JOIN majors_courses USING(major_id) FULL JOIN courses USING(course_id) GROUP BY course;`
-- Add `echo "$($PSQL "SELECT course FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) group by course HAVING COUNT(course) = 1 ORDER BY course")"` to the bottom of the `student_info.sh` file
+- Add `echo "$($PSQL "SELECT course FROM students RIGHT JOIN majors USING(major_id) INNER JOIN majors_courses USING(major_id) INNER JOIN courses USING(course_id) GROUP BY course HAVING COUNT(course) = 1 ORDER BY course")"` to the bottom of the `student_info.sh` file
 
 ## 2460. ./student_info.sh
 
