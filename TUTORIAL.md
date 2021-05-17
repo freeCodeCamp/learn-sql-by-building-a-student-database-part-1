@@ -3216,7 +3216,7 @@ Use `HAVING` with the last query to only show the rows with less than eight stud
 
 ### 2090.1
 
-Nice job! Back in your script, add the command the print the suggested results.
+Well done. Back in your script, add the command the print the suggested results.
 
 #### HINTS
 
@@ -3280,7 +3280,7 @@ In the psql prompt, join the two tables together with the above method.
 
 ### 2130.1
 
-33 rows. You can see in the table that there are some students without a major, and some majors without any students. The `FULL JOIN` you used will include **all** rows from both tables, whether or not they have a row using that foreign key in the other. From there, you could use any of the previous methods to narrow down, group, order, etc. Use a `LEFT JOIN` to join the same two tables in the same way.
+It's showing all the columns from both tables, the two `major_id` columns are the same in each row for the ones that have it. You can see that there are some students without a major, and some majors without any students. The `FULL JOIN` you used will include **all** rows from both tables, whether or not they have a row using that foreign key in the other. From there, you could use any of the previous methods to narrow down, group, order, etc. Use a `LEFT JOIN` to join the same two tables in the same way.
 
 #### HINTS
 
@@ -3294,7 +3294,7 @@ In the psql prompt, join the two tables together with the above method.
 
 ### 2140.1
 
-31 rows. In the `LEFT JOIN` you used, the `students` table was the left table since it was on the left side of the `JOIN`. `majors` was the right table. A `LEFT JOIN` gets all rows from the left table, but only rows from the right table that are linked to from the left one. Look at the data, you can see that every student was returned, but the majors without any students were not. Join the same two tables with a `RIGHT JOIN` this time.
+There's a few less rows than the last query. In the `LEFT JOIN` you used, the `students` table was the left table since it was on the left side of the `JOIN`. `majors` was the right table. A `LEFT JOIN` gets all rows from the left table, but only rows from the right table that are linked to from the left one. Looking at the data, you can see that every student was returned, but the majors without any students were not. Join the same two tables with a `RIGHT JOIN` this time.
 
 #### HINTS
 
@@ -3308,7 +3308,7 @@ In the psql prompt, join the two tables together with the above method.
 
 ### 2150.1
 
-25 rows. The right join showed all the rows from the right table (`majors`), but only rows from the left table (`students`) if they have a major. There's one more type you should know about. Join the two tables with an `INNER JOIN`.
+The right join showed all the rows from the right table (`majors`), but only rows from the left table (`students`) if they have a major. There's one more type you should know about. Join the two tables with an `INNER JOIN`.
 
 #### HINTS
 
@@ -3322,7 +3322,7 @@ In the psql prompt, join the two tables together with the above method.
 
 ### 2160.1
 
-The `INNER JOIN` only returned students if they have a major and majors that have a student. In other words, it only returned rows if they have a value in the foreign key column (`major_id`) of the opposite table. You should know a little about the four main types of joins now. Use a `LEFT JOIN` to show **all the majors** but only students that have a major.
+The `INNER JOIN` only returned students if they have a major and majors that have a student. In other words, it only returned rows if they have a value in the foreign key column (`major_id`) of the opposite table. You should know a little about the four main types of joins now. Try using a `LEFT JOIN` to show **all the majors** but only students that have a major.
 
 #### HINTS
 
@@ -3337,7 +3337,7 @@ The `INNER JOIN` only returned students if they have a major and majors that hav
 
 ### 2170.1
 
-Excellent. Next, use the appropriate join to show only students that are enrolled in a major, and only majors that have a student enrolled in it.
+Excellent. All the majors are there. Next, use the appropriate join to show only students that are enrolled in a major, and only majors that have a student enrolled in it.
 
 #### HINTS
 
@@ -3353,7 +3353,7 @@ Excellent. Next, use the appropriate join to show only students that are enrolle
 
 ### 2180.1
 
-Try using a right join to show all students but only majors if a student is enrolled in it.
+:thumbsup: Try using a right join to show all students but only majors if a student is enrolled in it.
 
 #### HINTS
 
@@ -3368,7 +3368,7 @@ Try using a right join to show all students but only majors if a student is enro
 
 ### 2190.1
 
-Use the appropriate with the same two table to show all rows in both tables whether they have a value in the foreign key column or not.
+That showed all the students since it was the right table of the `RIGHT JOIN`. Use the appropriate join with the same two table to show all rows in both tables whether they have a value in the foreign key column or not.
 
 #### HINTS
 
