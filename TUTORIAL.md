@@ -3777,7 +3777,7 @@ UNIX
 
 ### 2460.1
 
-Run the script one last time. :wave:
+This is the last step, you have done really well. Run the script one last time. :wave:
 
 #### HINTS
 
