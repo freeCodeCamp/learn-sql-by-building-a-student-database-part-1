@@ -2175,7 +2175,7 @@ echo -e "\nAll course names whose first letter is before 'D' in the alphabet:"
 
 ### 1390.1
 
-Use the psql prompt to view all the data in the `majors` table.
+Practice first. In the psql prompt, view all the data in the `majors` table.
 
 #### HINTS
 
@@ -2201,7 +2201,7 @@ The operators you used with numbers in the last section can be used on text as w
 
 ### 1410.1
 
-View all the rows not equal to `Game Design`.
+Next, view all the rows not equal to `Game Design`.
 
 #### HINTS
 
@@ -2282,7 +2282,6 @@ Algorithms
 ```
 - Add `echo "$($PSQL "SELECT course FROM courses WHERE course < 'D'")"` to the bottom of the `student_info.sh` file
 
-
 ## 1460. ./student_info.sh
 
 ### 1460.1
@@ -2299,7 +2298,7 @@ Run the script to see what course names come before the letter `D`.
 
 ### 1470.1
 
-Add another sentence like the others that says: `First name, last name, and GPA of students whose last name begins with an 'R' or after and have a GPA greater than 3.8 or less than 2.0:`
+Looks like there is five of them. Add another sentence like the others that says: `First name, last name, and GPA of students whose last name begins with an 'R' or after and have a GPA greater than 3.8 or less than 2.0:`
 
 #### HINTS
 
@@ -2430,7 +2429,7 @@ Run the script to see the results.
 
 ### 1560.1
 
-Add another `echo` command, like the others, with a sentence that says: `Last name of students whose last name contains a case insensitive 'sa' or have an 'r' as the second to last letter:`
+Moving along. Add another `echo` command, like the others, with a sentence that says: `Last name of students whose last name contains a case insensitive 'sa' or have an 'r' as the second to last letter:`
 
 #### HINTS
 
@@ -2458,7 +2457,7 @@ Start by viewing everything from the `courses` table in the psql prompt to see h
 
 ### 1580.1
 
-There's a few that contain the word `Algorithms`. You can use `LIKE` to find text matching patterns like this: `WHERE <column> LIKE '<pattern>'`. An underscore (`_`) in a pattern will return rows that have any character in that spot. View the rows in this table with a course name that matches the pattern `'_lgorithms'`.
+There's a few that contain the word `Algorithms`. You can use `LIKE` to find patterns in text like this: `WHERE <column> LIKE '<pattern>'`. An underscore (`_`) in a pattern will return rows that have any character in that spot. View the rows in this table with a course name that matches the pattern `'_lgorithms'`.
 
 #### HINTS
 
@@ -2555,7 +2554,7 @@ Five courses without a space. Try finding the ones that contain an `A`.
 
 ### 1650.1
 
-This showed all the courses with a capital `A`. `ILIKE` will ignore the case of the letters when matching. Use it to see the courses with an `A` or `a`.
+6 rows. This showed all the courses with a capital `A`. `ILIKE` will ignore the case of the letters when matching. Use it to see the courses with an `A` or `a`.
 
 #### HINTS
 
@@ -2569,7 +2568,7 @@ This showed all the courses with a capital `A`. `ILIKE` will ignore the case of 
 
 ### 1670.1
 
-You can put `NOT` in front of `ILIKE` as well. Use it to see the courses that don't contain an `A` or `a`.
+It found 11 rows that time. You can put `NOT` in front of `ILIKE` as well. Use it to see the courses that don't contain an `A` or `a`.
 
 #### HINTS
 
@@ -2764,7 +2763,7 @@ Run the script to see the students that meet those conditions.
 
 ### 1790.1
 
-Moving along. Add another sentence, like the others that says `Course name of the first five courses, in reverse alphabetical order, that have an 'e' as the second letter or end with an 's':`
+There's three of them. Add another sentence, like the others that says `Course name of the first five courses, in reverse alphabetical order, that have an 'e' as the second letter or end with an 's':`
 
 #### HINTS
 
@@ -2780,7 +2779,7 @@ echo -e "\nCourse name of the first five courses, in reverse alphabetical order,
 
 ### 1800.1
 
-You can specify the order you want your results to be in by adding `ORDER BY <column_name>` at the end of a query. View all the info in the students table in order by the GPA's.
+You can specify the order you want your results to be in by adding `ORDER BY <column_name>` at the end of a query. In the psql prompt, view all the info in the `students` table in order by the GPA's.
 
 #### HINTS
 
@@ -2807,7 +2806,7 @@ That put the lowest GPA's at the top. When using `ORDER BY`, it will be in ascen
 
 ### 1820.1
 
-You can add more columns to order by separating them with a comma like this: `ORDER BY <column_1>, <column_2>`. Any matching values in the first ordered column will then be ordered by the next. View all the student info with the highest GPA's at the top, and in alphabetical order by `first_name` if the GPA's match.
+Now, the highest GPA's are at the top. You can add more columns to the order by separating them with a comma like this: `ORDER BY <column_1>, <column_2>`. Any matching values in the first ordered column will then be ordered by the next. View all the student info with the highest GPA's at the top, and in alphabetical order by `first_name` if the GPA's match.
 
 #### HINTS
 
@@ -2988,7 +2987,7 @@ You can round to a specific number of decimal places by adding a comma and numbe
 
 ### 1940.1
 
-You should be able to find what your script is asking for now. Add the command to print what it is asking for.
+You should be able to find what your script is asking for now. Add the command to print it.
 
 #### HINTS
 
@@ -3090,7 +3089,7 @@ Using `major_id` didn't count the `null` values in that column. 23 students have
 
 ### 2010.1
 
-You can get the same results with `GROUP BY`. Here's an example of how to use it: `SELECT <column> FROM <table> GROUP BY <column>`. Use this method to view the unique `major_id` values in the `students` table again.
+There's six unique `major_id` values in the `students` table. You can get the same results with `GROUP BY`. Here's an example of how to use it: `SELECT <column> FROM <table> GROUP BY <column>`. Use this method to view the unique `major_id` values in the `students` table again.
 
 #### HINTS
 
@@ -3133,7 +3132,7 @@ When using `GROUP BY`, any columns in the `SELECT` area must be included in the 
 
 ### 2040.1
 
-Cool. Enter the same query, but add a column that shows you the highest GPA in each major as well.
+Nice job. Enter the same query, but add a column that shows you the highest GPA in each major as well.
 
 #### HINTS
 
@@ -3161,7 +3160,7 @@ Another option with `GROUP BY` is `HAVING`. You can add it at the end like this:
 
 ### 2060.1
 
-Now it only showed the majors that have at least one student with a 4.0 GPA. Looking at the results, the column is named `min`. You can rename a column with `AS` like this: `SELECT <column> AS <new_column_name>` Enter the same command, but rename the `min` column to `min_gpa`.
+Two of your majors have at least one student with a 4.0 GPA. Looking at the results, the column is named `min`. You can rename a column with `AS` like this: `SELECT <column> AS <new_column_name>` Enter the same command, but rename the `min` column to `min_gpa`.
 
 #### HINTS
 
@@ -3175,7 +3174,7 @@ Now it only showed the majors that have at least one student with a 4.0 GPA. Loo
 
 ### 2070.1
 
-Enter the same command, but rename the `max` column to `max_gpa` as well.
+Now the column has a better name. Enter the same command, but rename the `max` column to `max_gpa` as well.
 
 #### HINTS
 
@@ -3185,19 +3184,32 @@ Enter the same command, but rename the `max` column to `max_gpa` as well.
 - Enter `SELECT major_id, MIN(gpa) AS min_gpa, MAX(gpa) AS max_gpa FROM students GROUP BY major_id HAVING MAX(gpa) = 4.0;` in the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
+## 2075. psql - SELECT major_id, COUNT() AS number_of_students FROM students GROUP BY major_id
+
+### 2075.1
+
+That's more descriptive. View the `major_id` and number of students in each `major_id` in a column named `number_of_students`. 
+
+#### HINTS
+
+- Use the `SELECT`, `COUNT`, `AS`, `FROM`, and `GROUP BY` keywords
+- Here's an example: `SELECT <column_1>, COUNT(*) AS <custom_column_name> FROM <table> GROUP BY <column_1>;`
+- You want to `COUNT(*) AS number_of_students` and `GROUP BY major_id`
+- Enter `SELECT major_id, COUNT(*) AS number_of_students FROM students GROUP BY major_id;` in the psql prompt
+- Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
+
 ## 2080. psql SELECT COUNT(*) AS FROM students GROUP BY major_id HAVING COUNT(*) < 8
 
 ### 2080.1
 
-Now, the custom columns are more descriptive. You can rename any columns like this. Use the `SELECT`, `COUNT`, `AS`, `FROM`, `GROUP BY`, and `HAVING` keywords to select the `major_id`, and number of students in each `major_id` in a column named `number_of_students` that have less than eight students in the major.
+Use `HAVING` with the last query to only show the rows with less than eight students in the major.
 
 #### HINTS
 
-- The last query was: `SELECT major_id, MIN(gpa) AS min_gpa, MAX(gpa) FROM students GROUP BY major_id HAVING MAX(gpa) = 4.0;`
+- The last query was: `SELECT major_id, COUNT(*) AS number_of_students FROM students GROUP BY major_id;`
 - Here's an example: `SELECT <column_1>, COUNT(*) AS <custom_column_name> FROM <table> GROUP BY <column_1> HAVING <condition>;`
-- You want to group the `major_id` column
 - The condition you want is `COUNT(*) < 8`
-- Enter `SELECT major_id, COUNT(*) FROM students GROUP BY major_id HAVING COUNT(*) < 8;` in the psql prompt
+- Enter `SELECT major_id, COUNT(*) AS number_of_students FROM students GROUP BY major_id HAVING COUNT(*) < 8;` in the psql prompt
 - Enter `psql --username=freecodecamp --dbname=students` in the terminal to log into the psql prompt if you aren't already
 
 ## 2090. Add echo query result
