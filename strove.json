@@ -2,7 +2,6 @@
   "init": "exit",
   "envVariables": [
     ["CODEROAD_TUTORIAL_URL", "https://raw.githubusercontent.com/moT01/.learn-sql-by-building-a-student-database/main/tutorial.json"],
-    ["CODEROAD_DISABLE_RUN_ON_SAVE", true],
-    ["CODEROAD_ADMIN_MODE", true]
+    ["CODEROAD_DISABLE_RUN_ON_SAVE", true]
   ]
 }
