@@ -1,5 +1,5 @@
 {
-  "version": "0.0.6",
+  "version": "0.0.7",
   "summary": {
     "title": "Learn SQL by Building a Student Database",
     "description": "> Welcome to the SQL Lessons!"
@@ -20,7 +20,7 @@
         "sudo -u postgres psql -c \"CREATE USER freecodecamp WITH CREATEDB;\""
       ],
       "commits": [
-        "e592915db8109f1058a48b0071ec67107d38597c"
+        "a4ee244c50f69cb3aacff0f3c2419bf92d142168"
       ]
     },
     "testRunner": {
@@ -32,7 +32,7 @@
     },
     "repo": {
       "uri": "https://github.com/moT01/.learn-sql-by-building-a-student-database",
-      "branch": "v0.0.6"
+      "branch": "v0.0.7"
     },
     "reset": {
       "commands": [
@@ -60,7 +60,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d9fe3b6fb8da3b72f40efd2b831414178f79bcb9"
+              "05a1c3de00c7bc36f25af420f87c5a86eb40fe66"
             ]
           },
           "content": "**The first thing you need to do is start the terminal.** Do that by clicking the \"hamburger\" menu at the top left of the screen, going to the \"terminal\" section, and clicking \"new terminal\". Once you open a new one, type `echo hello SQL` into the terminal and press enter.",
@@ -84,7 +84,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "be8f3b61d5bc905f52f6371abdc8b1296fa552a6"
+              "92aa472b1712c9a92be36f4c9f934603a5af609e"
             ]
           },
           "content": "You are started with two `.csv` files with info about your computer science students. You should take a look at them. The top row in each file has titles, and the rest are values for those titles. You will be adding all that info to a PostgreSQL database. Log into the psql interactive terminal with `psql --username=freecodecamp --dbname=postgres` to get started.",
@@ -107,7 +107,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "243725fd91398e40c1f5592d2a5442f7819104e2"
+              "853e9a268f7de33a2afe5de5a1b3e7eb49cd8ff2"
             ]
           },
           "content": "View the existing databases with the `\\l` shortcut command to see what's here.",
@@ -130,7 +130,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "9eb9a0db1fc78e4cda834f78208b5c5aca531beb"
+              "fc0ec9fefe75d40ac4b5f3049dc0fa2107b3bdb7"
             ]
           },
           "content": "All the info from the CSV files will go into a single database. Create a new database named `students`.",
@@ -155,7 +155,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "db112d8831b832aa74ee262c25b860ce91945bf1"
+              "17534b7f1a0dad24468c881050ac6a4dce173727"
             ]
           },
           "content": "View the databases again to make sure it got created.",
@@ -179,7 +179,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "4cd39e0ebc0204cd471e258dbc79fd69ab83cb1d"
+              "74091e17026214acb14f3a4c2c2ee7b615ed58b4"
             ]
           },
           "content": "There it is. Connect to your new database so you can start adding tables.",
@@ -204,7 +204,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "ba55dfc3d35682fdd52c257fc910a951784a5073"
+              "dd931f54f9d9ef60dbdc7a87da68ce202d1e8eca"
             ]
           },
           "content": "The CSV files have a bunch of students with info about them, and some courses and majors. You will have four tables. One for the students and their info, one for each major, another for each course, and a final one for showing what courses are included in each major. First, create the `students` table.",
@@ -230,7 +230,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "1038f05abdd2f090c1ca9ed1e170b5dc0b6b67c1"
+              "4d3b7ae0e8731bc5a345d73b33dd7f07835235d2"
             ]
           },
           "content": "The second table will be for each unique major that appears in the data. Create a table named `majors`.",
@@ -256,7 +256,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "95b3f50800d767e1c007e3045cbe20908a5ce8ab"
+              "eb78a5c694ea8edcde215e30246421d2d6736809"
             ]
           },
           "content": "The third table is for each unique course in the data. Create another table named `courses`.",
@@ -282,7 +282,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "3a4897d926b04316518d2f837deb2e987d4e6315"
+              "9db4324729f844cac016efb54a31beba14d70624"
             ]
           },
           "content": "The final table will be a junction table for the majors and courses. Create it with the name `majors_courses`.",
@@ -308,7 +308,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "52834b00a67e7f752fa6fe45b56ba3533d2b42e0"
+              "df37e67ef0823a7b8cf025b4a5bdbdc46210cf8c"
             ]
           },
           "content": "Use the **d**isplay shortcut command to view your tables to make sure your satisfied with them.",
@@ -332,7 +332,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "904104bc5843897555cc5a0980e451bffd358159"
+              "1dd150000e52b4e4a3c18c4ec65e47021d6300cd"
             ]
           },
           "content": "Onto the columns. The `students.csv` file has four fields, you will make a column for each of those as well as an ID column. Add a column to your `students` table named `student_id`. Give it a type of `SERIAL` so it automatically increments and make it a `PRIMARY KEY`",
@@ -358,7 +358,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "bd44911fab0f86bd7c868bacc4218a195c1d610e"
+              "cb5a9358870ab113285bfd5120043a552674acf5"
             ]
           },
           "content": "The first column in `students.csv` is `first_name`. Add a column to the `students` table with that name. Make it a type of `VARCHAR(50)` and give it the `NOT NULL` constraint.",
@@ -384,7 +384,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "6022b4361f206dd500ff0b4d9a7f022cf137a936"
+              "15f14205c6d07bf7d4d396543fa247e80cf88358"
             ]
           },
           "content": "The next column in the data is `last_name`. Add it to the `students` table. Give it the same data type and max-length as `first_name` and make sure it has the `NOT NULL` constraint.",
@@ -411,7 +411,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "8a2477d40b93927ececa7f08863ef84f44b512d0"
+              "0593a1a0d2143cd8ae6d74bc95df94c570c9d5ca"
             ]
           },
           "content": "The next column is for the major. Since you will have each major in another table this column will be a foreign key that references it. Create a column in the `students` table named `major_id`, give it a data type of `INT` for now. You will come back and set the foreign key later.",
@@ -437,7 +437,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "070f9de4baf89e9b1293c7b315c2d7d9e661317d"
+              "beed3b74e289556e7968e5d79ca6ab2aadd865c8"
             ]
           },
           "content": "Create the last column, `gpa`. The data in the CSV shows that they are decimals with a length of `2` and `1` number is to the right of the decimal. So give it a data type of `NUMERIC(2,1)`.",
@@ -463,7 +463,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1f8a81e78a74ee7c7bbcf34993703289fbd50497"
+              "3d84320d8db11896f8f2c2ad618261b5a0982624"
             ]
           },
           "content": "Use the shortcut command to **d**isplay the details of the `students` table to make sure you like it.",
@@ -489,7 +489,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "edfb9e52bfc54adb9c1b1639dfe30e20e536350c"
+              "59cb37644a982519cc1f610220fe9b8b0f169413"
             ]
           },
           "content": "The foreign key is still missing. Let's fill in the `majors` table next. Add a `major_id` column to it. Make it a type of `SERIAL` and the `PRIMARY KEY` for this table.",
@@ -515,7 +515,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "d2aa833e1a6ed97bf79fb04ecf9c8d6065d20ef3"
+              "8af8957341a53480836b25f7488a8e72e67787d4"
             ]
           },
           "content": "This table will only have one other column for the name of the major. Add a column to it named `major`. Make it a `VARCHAR` with a max-length of `50` and give it the `NOT NULL` constraint.",
@@ -542,7 +542,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "5b3c3ea5c04e764f388463e5c9fdc1e0633b8cb6"
+              "bfe17c8d5c77bf31e35dbe055f70bd0f9b6cd762"
             ]
           },
           "content": "View the details of the majors table to make sure you like it.",
@@ -569,7 +569,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "c0529d8cfc92385573c0caaf2b2657bac6f9b5e1"
+              "0dfeeae70395407570dcc67454b94d47ddf34e54"
             ]
           },
           "content": "This table looks good. Now, set the `major_id` column from the `students` table as a foreign key that references the `major_id` column from the `majors` table. Here's an example of how to do that: `ALTER TABLE <table_name> ADD FOREIGN KEY(<column_name>) REFERENCES <referenced_table_name>(<referenced_column_name>);`",
@@ -592,7 +592,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1d18cae4c92ea17c39891e36bf390d064d2adbf6"
+              "ec86aa7c15b56c1f31c33f620a3678af75106eab"
             ]
           },
           "content": "View the details of the `students` table again to make sure the key is there.",
@@ -619,7 +619,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "d8578df70a286779b51960064a3d10211f1cee2d"
+              "ab0d770f79ac9ea5908d6253406a02448882a0b8"
             ]
           },
           "content": "Next, is the `courses` table. Add a `course_id` column to it. Give it a type of `SERIAL` and make it the primary key.",
@@ -645,7 +645,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "26bc4e151b5ffd5a546b7506abf5401c7a3c9793"
+              "6191e9c1bdd99d9c62fc5bd1e968c093a75097ac"
             ]
           },
           "content": "Add a `course` column to the `courses` table that's a type of `VARCHAR`. The course names are a little longer, so give them a max-length of `100`. Also, make sure it can't accept null values.",
@@ -672,7 +672,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "31f045fcf7bc69c6bdb19f7d7b846bb22f147841"
+              "dd817bef92713d86d338ef3ded2041c717eb9f7b"
             ]
           },
           "content": "View the details of the courses table to make sure it looks good.",
@@ -699,7 +699,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "16e44b901c64f511f25aeea21193fd096f5f8e21"
+              "bc74386c0bbb1bdd12e2126e729437f3d81b0d7a"
             ]
           },
           "content": "One more table to go. The `majors_courses` junction table will have two columns, each referencing the primary key from two related table. First, add a `major_id` column to it. Just give it a type of `INT` for now.",
@@ -725,7 +725,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "694a1c3a6f4d18cfb6e9bb2791f321760904e568"
+              "9432ab642ff82b044a0a3eb8cfd944317dd2a72f"
             ]
           },
           "content": "Set the `major_id` column you just created as a foreign key that references the `major_id` column from the `majors` table.",
@@ -751,7 +751,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "7f9b7fbb32c347fb95d24ea978fa9b27d7ca726e"
+              "a060e4ebe115117e35263643e7af6c9e891ebf0d"
             ]
           },
           "content": "Next, add a `course_id` column to the same table. Just give it a type of `INT` again for now.",
@@ -778,7 +778,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "af3ae6bb93a109a5bb66021f1fb9da7a2bdec440"
+              "37866dc5fab5092c298ec69233e4881fb230452e"
             ]
           },
           "content": "Set your new `course_id` column as a foreign key that references the other `course_id` column.",
@@ -805,7 +805,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "bc113772b18ffde1abd03ca66725750bc5636fce"
+              "d4c5956b3a02edc8ad73266b69b9e8c300c9b4c0"
             ]
           },
           "content": "View the details of the table you just worked on to make sure the structure is finished.",
@@ -832,7 +832,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "45c2357bf0ae60be8b48fba6e7910e76ca645446"
+              "101997b02b9ffeab99fecd7cce1422c3957badb9"
             ]
           },
           "content": "There's one thing missing. This table doesn't have a primary key. The data from `courses.csv` will go in this table. A single major will be in it multiple times, and same with a course. So neither of them can be a primary key. But there will never be a row with the same two values as another row. So the two columns together, are unique. You can create a composite primary key that uses more than one column as a unique pair like this: `ALTER TABLE <table_name> ADD PRIMARY KEY(<column_name>, <column_name>);` Add a composite primary key to the table using the two columns.",
@@ -856,7 +856,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "97cb07040b62ef5866af9386b71b8842e41c96c2"
+              "ef0f19815e4d861ee7816ebd62c4c83310a821f1"
             ]
           },
           "content": "View the details of the table again.",
@@ -883,7 +883,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "4e3eb8da12a3799070c6f2f66f140d96ce3f4d0e"
+              "7323fb285728f1b5698fde8103258f3377cbf8dc"
             ]
           },
           "content": "Okay, now it's finished. View all the tables you ended up with.",
@@ -909,7 +909,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "84e1f67fe667da9018bc47f800f55f3b60054ecb"
+              "d847cf44d3146df6ed7a831f0439d31dd160b05c"
             ]
           },
           "content": "Next, you can start adding some info. Since the `students` table needs a `major_id`, you can add a major first. View the details of the `majors` table to see what info it expects.",
@@ -936,7 +936,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "687979fffec1de266ea9f46c74d5aa03383c1bc7"
+              "a16df7b70792fcd0cc867fac94858b0428a84623"
             ]
           },
           "content": "It only needs the name of a major. The ID will be added automatically. Add the first major from the `courses.csv` file into the `majors` table. It's a `VARCHAR`, so make sure to put the value in single quotes.",
@@ -962,7 +962,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "510798f3210c9b1884c79b966425847a03ae5e44"
+              "166481130af38bbfcb0ae515283c56d25c5c4b64"
             ]
           },
           "content": "Use `SELECT` to view all the data in the `majors` table to make sure it got inserted correctly.",
@@ -987,7 +987,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "97ee5792170c9b142842d02e26d9ca89052ee21c"
+              "5063fafd4aff7fe03d2baf225daad99679887068"
             ]
           },
           "content": "Next, insert the first course from `courses.csv` into the `courses` table.",
@@ -1015,7 +1015,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "3e1be4065db469d1941288172155a6a08ecc6740"
+              "6fa784cdcc1106f0a9ef678342a6abb78752b7ff"
             ]
           },
           "content": "View all the data in the `courses` table to make sure it got added.",
@@ -1040,7 +1040,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "637e21321a382ca5175d8f1f58b23114b2d346a8"
+              "2fc22396ee7699532bcbaadc587bc35deddb8c61"
             ]
           },
           "content": "Next, you can add a row into the junction table. View the details of it to see what it expects.",
@@ -1068,7 +1068,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "2d32d93485b3c090b52e2e0204d8c2cfdb07e6af"
+              "cf562ba1f12ef7895a59f8ace9831cfb61ecf6f9"
             ]
           },
           "content": "It wants a `major_id` and `course_id`. Add a row to `majors_courses` for the first entry in `courses.csv`.",
@@ -1094,7 +1094,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "e2e8630304266b5aee35550378877d254f42bc06"
+              "813cccff59f0cbdea69c55970c33c4f0865945fb"
             ]
           },
           "content": "View all the data in the table you just added to.",
@@ -1119,7 +1119,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "cc7af4205d4c5230d718815a32f0292d5fb3a3ea"
+              "ee8fe8c360c1a775badeeb18175e4f5eef5d37c0"
             ]
           },
           "content": "Looks like the row got added. View the details of the `students` table to remind yourself what it expects so you can add the first student to the database.",
@@ -1146,7 +1146,7 @@
               "./.freeCodeCamp/test/queryResults.log"
             ],
             "commits": [
-              "64a1def99630f878983858a7e2a776584da1b6d4"
+              "50c9e5e3b6dadbb7acc80717b49ab97a573f0c7a"
             ]
           },
           "content": "The output shows what the table needs. Insert the first person from `students.csv` into the `students` table.",
@@ -1174,7 +1174,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "67f1051d416baa5fd47dd4a2e1a9ba73a3c0b8c2"
+              "b0e64b01411861b460678e613870f79a146cea07"
             ]
           },
           "content": "Looks like it worked. View all the data in the students table to make sure.",
@@ -1199,7 +1199,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2af3216ce9c1b412803934aa8f0ae0b88298f07b"
+              "3b30bf1d224ee93a10dac1c553d49a54a861ec7a"
             ]
           },
           "content": "Okay, you added a row into each table. It might be wise to review the data and the database structure. Adding the rest of the info one at a time would be tedious. You are going to make a script to do it for you. I recommend \"splitting\" the terminal for this part. You can do that by clicking the \"hamburger\" menu at the top left of the window, going to the \"Terminal\" menu, and clicking \"Split Terminal\". Once you've done that, use the `touch` command to create a file named `insert_data.sh` in your `project` folder.",
@@ -1224,7 +1224,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "46c39ab3ca222f5e54c00116c8747278ae6350d4"
+              "6246310e4ce11c1d92e640d4fe71479b9dd7d8eb"
             ]
           },
           "content": "You should have two terminals open. One connected to PostgreSQL, and one for entering terminal commands. In the one for terminal commands, use the `chmod` command with the `+x` flag to give you new script executable permissions.",
@@ -1250,7 +1250,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "d0ce89bd66b483f1e4d802eac388ee20ed6025cc"
+              "9e675a1c7103851c820713f11a42ca6ed44c970a"
             ]
           },
           "content": "Open your new file and add a \"shebang\" that uses `bash` at the top. It looks like this: `#!/bin/bash`.",
@@ -1273,7 +1273,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "f691444f3931b67d99dd0e879a67f417698ca3b0"
+              "c3afba4560f5065c16a822580fa83c2694c85c92"
             ]
           },
           "content": "Below that, add a single line comment with the text, `Script to insert data from courses.csv and students.csv into students database`.",
@@ -1297,7 +1297,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "ca5309399910a0d85882dce9b88a5587f31f1732"
+              "a6ec18537e7ebb52a49fc26792df4381765ea86e"
             ]
           },
           "content": "First, you should add all the info from the `courses.csv` file since you need the `major_id` for inserting the student info. `cat` is a terminal command for printing the contents of a file. Here's an example: `cat <filename>`. Below the comment you added, use it to print `courses.csv`.",
@@ -1320,7 +1320,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "f1640adc1166b3d4e32a098aa0d4096405268d5a"
+              "6341ed8e1bb431d4ebfd939395ddc7f860312a7b"
             ]
           },
           "content": "Run your script to see if the file contents get printed.",
@@ -1345,7 +1345,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "e8f4e513f8fd0bcddc0d6cf0886e3609f07fd04c"
+              "52f03d2ad00d35f10bfbe7326269d689160660a1"
             ]
           },
           "content": "It worked. Instead of printing the content, you can pipe that output into a while loop so you can go through the rows one at a time. It looks like this:\n\n```sh\ncat courses.csv | while read MAJOR COURSE\ndo\n  <STATEMENTS>\ndone\n```\n\nEach new line will be read into the variables, `MAJOR` and `COURSE`. Add the above to your `cat` command. In the `STATEMENTS` area, use `echo` to print the `MAJOR` variable.",
@@ -1369,7 +1369,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "238f7847488568cb9d02f245f68d9e67703d06d1"
+              "5aaef9e9943a9e983e1cfcaece0e5d1b15881a7f"
             ]
           },
           "content": "Run the script to see if it worked.",
@@ -1394,7 +1394,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "bb9458e3a81a5e6949c8b27d72f5a7570bed1a23"
+              "c734bb4e25f5b26fdf879e4469271bca35826ad1"
             ]
           },
           "content": "It's looping, but the `MAJOR` variable is only being set to the first word. There's a default `IFS` variable in bash. IFS stands for \"Internal Field Separator\". View it with `declare -p IFS`.",
@@ -1417,7 +1417,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "07b59cdf7f5ca6f394b886a80a208a9044571b84"
+              "0f5b8392db55f6520fce58e879bdcc52a523e376"
             ]
           },
           "content": "This variable is used to determine word boundaries. It defaults to spaces, tabs, and new lines. This is why the `MAJOR` variable was set to only the first word on each line from the data. Between the `while` and `read` commands, set the `IFS` to a comma like this: `IFS=\",\"`",
@@ -1440,7 +1440,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "f7dd8c777720ee7497bdde7040f5030ec3fefa32"
+              "351864d5a6bcc900b525e8a1697155052a9c51b0"
             ]
           },
           "content": "Now, it should use the comma in the data to separate words instead of spaces. Run the script again to see if it's working.",
@@ -1465,7 +1465,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "be4727395da11c8305e37cef1b7d167d7c8d9023"
+              "12573516adf04f64ee8f0fa39be0ab9559ebc017"
             ]
           },
           "content": "Looks like that worked. It prints the whole major, including the space. Print the `COURSE` variable on the same line as where you print `MAJOR` to make sure it's all working.",
@@ -1489,7 +1489,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "75c2103946fea1d28a6cc449a3322ce2a814ca2c"
+              "44124467f0ba0f8adcdcb6bf79d1c59b494ad947"
             ]
           },
           "content": "Run the script again to check.",
@@ -1514,7 +1514,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "b8c60683e993c4388fe21243e1292d8bda87f431"
+              "2a239722f0b3a42849e4aba1e4e5ad08a0551123"
             ]
           },
           "content": "Okay, your loop is working. You can use the `MAJOR` and `COURSE` variables to access the major or course when you need to insert data or query the database. Delete the echo line so you can figure out what to do next.",
@@ -1537,7 +1537,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "a0558572319036f5c0b2dd567fec822aae96a480"
+              "6167811fa1066e26ed79c701be6e497c6876309f"
             ]
           },
           "content": "It helps to plan out what you want to happen. For each loop, you will want to add the major to the database if it isn't in there yet. Same for the course. Then add a row to the `majors_courses` table. Add these single line comments in your loop in this order: `get major_id`, `if not found`, `insert major`, `get new major_id`, `get course_id`, `if not found`, `insert course`, `get new course_id`, `insert into majors_courses`.",
@@ -1562,7 +1562,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "cfe079143e38069cdade6c046b304bb92436258f"
+              "bf232a3231c5f8a7260587c7741053da65033aa6"
             ]
           },
           "content": "You used the `psql` command to log in and interact with the database. You can use it to just run a single command and exit. Above your loop, add a `PSQL` variable that looks like this: `PSQL=\"psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c\"`. This will allow you to query your database from your script. The important parts are the `username`, `dbname`, and the `-c` flag that is for running a single command and exiting. The rest of the flags are for formatting.",
@@ -1586,7 +1586,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "e4e7b1f68aec4b767ff00c7e486ac75b91f157de"
+              "4c451e7f21eafbd85c2053b456362f5e634fb381"
             ]
           },
           "content": "Now, you can query your database using the `PSQL` variable like this: `$($PSQL \"<query_here>\")`. Below the `get major_id` comment in your loop, create a `MAJOR_ID` variable. Set it equal to the result of a query that gets the `major_id` of the current `MAJOR` in the loop. Make sure to put your `MAJOR` variable in single quotes.",
@@ -1614,7 +1614,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "2ffdd3fe1fd17fd8b488722c4505088079ccb353"
+              "3f66e6405ffc40c438d6f852dfadceafc7528771"
             ]
           },
           "content": "Below the variable you just created, use `echo` to print it so you can see it's value when you run the script.",
@@ -1637,7 +1637,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "68bd69d8871091786802c99ebb37fe60aaa3b15a"
+              "bff6ce3c1262ea6ed679364bb4442b92f3afa0a5"
             ]
           },
           "content": "Run the script to see what happens.",
@@ -1662,7 +1662,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "01b33bd2ad494dd26035ccf729076c2edfe770cc"
+              "d0e4453a1447b62e995d726cd8b6fcb4887a21f1"
             ]
           },
           "content": "So it went through each major from the CSV file and tried to find `major_id` for each one from the database. Looks like it only found the one you manually inserted earlier. The rest were empty. Below your first `if not found` comment, add an `if` condition that checks if the `MAJOR_ID` variable is empty. You can do that with this test: `[[ -z $MAJOR_ID ]]`. Place the next two comments in the statements area of the `if`.",
@@ -1687,7 +1687,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "77e2280e409c6bd058c08e24d72aeaf100678fe7"
+              "733463d0944b577b146e727425af355144cb6de9"
             ]
           },
           "content": "The loop will go into this `if` whenever a major isn't found. Here, you will want to insert the major and then get the new id. You will need the ID for inserting data into the `majors_courses` table later. Below your `insert major` comment, create an `INSERT_MAJOR_RESULT` variable. Set it's value to a query that inserts the current major into the database. Don't forget to use single quotes around the value.",
@@ -1715,7 +1715,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "b204098145522eeb6b667d040d9e69786aeb1ab9"
+              "d7a6f810c65de4537b162ebcb6d25b326a3083fa"
             ]
           },
           "content": "Below the variable you just created, use `echo` to print it.",
@@ -1738,7 +1738,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "9c551b018703f21e8fd0e58c6a557861d6d8c283"
+              "5fef05d1dd14f584a4f232930e489ee7eb2558e1"
             ]
           },
           "content": "Instead of running through all the data in the CSV file, you should make some test data. In the terminal, use the copy (`cp`) command to copy the `courses.csv` into a new file named `courses_test.csv`.",
@@ -1763,7 +1763,7 @@
               "./courses_test.csv"
             ],
             "commits": [
-              "8653d59e0b95b2b97cbdbf2a7f25072b6a778dba"
+              "405fbe171f76732e5d69873ac3d198f14ac4d898"
             ]
           },
           "content": "In your new file, remove all the data except for the first five lines. Make sure there's a single empty line at the bottom.",
@@ -1789,7 +1789,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "45328fcdf90abfda54d4921cd4c376916a2b88f1"
+              "e35a2237f00d89540b21f0ccca09002df446b3f5"
             ]
           },
           "content": "Back in the `insert_data.sh` script, change your `cat` command to loop through the test file instead of the full one.",
@@ -1813,7 +1813,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d3ecd884d88b1046283dbaceb369bc36d319b2dc"
+              "bd6a460d65adbbc7a142fddd2bb924c65a055be6"
             ]
           },
           "content": "Run the script. It will go through the test data and insert a major into the database each time it doesn't find one already there and print the `MAJOR_ID` and `INSERT_MAJOR_RESULT` variables.",
@@ -1838,7 +1838,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "a44e90492202d1de3508ce10270624a89bb753f7"
+              "b6888d7cdff3a71a32ff6337b0a949ae53b60a49"
             ]
           },
           "content": "Looks like found an ID that was already in the database twice and inserted three new items into the database. You don't need to print the ID anymore so delete the `echo $MAJOR_ID` line.",
@@ -1861,7 +1861,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "48bce993125cb68b2a3b60699ed6e1dce7cc6445"
+              "2366ab0eb8b09f2cfe8f4ca404bde067f5b05c9a"
             ]
           },
           "content": "In the psql prompt, use `SELECT` to view all the data from the `majors` table to see what the script added.",
@@ -1886,7 +1886,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "21c5a5584a5f14e79c868a2b512562849a6ceec0"
+              "dfc417e00c1ab401446a1bac675573b01bfbcf94"
             ]
           },
           "content": "I forgot you inserted `Database Administration` earlier. The script ran and inserted `major` from the top line of the file. Then it added the other two that weren't already in there. You can use `TRUNCATE` to delete all data from a table. In the psql prompt, try to delete all the data in the majors table by entering `TRUNCATE majors;`",
@@ -1910,7 +1910,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "6f812bbe6e069df13a3261a61a7e80b353f2b752"
+              "ff6d57b58a8f7186fb5bcdec591b0859b26c0633"
             ]
           },
           "content": "It says you \"cannot truncate a table referenced in a foreign key constraint.\" The `students` and `majors_courses` tables use the `major_id` from `majors` as a foreign key. So if you want to delete the data from `majors`, you need to delete the data from those two tables at the same time. Use `TRUNCATE` to delete the data from those three tables. Separate the tables with commas.",
@@ -1935,7 +1935,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "2e1dd981490941e332a22293e87614b28c2aefce"
+              "27ad3b678ddf88b9c426d3edea74ad0ee31e7925"
             ]
           },
           "content": "View all the data in the `majors` table to make sure it's empty.",
@@ -1960,7 +1960,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "34795dd9c07c50d6f7a1f11fced103e451f0de69"
+              "bb15836d156287ae4bce2078f120b6716ba7b577"
             ]
           },
           "content": "Looks like it worked. View all the data in the `majors_courses` table to see if that one is empty.",
@@ -1985,7 +1985,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "c0bf9cf17c5adfe84e9e473d8e65af5487b3ff0d"
+              "d8632bef9e1e5e708a368d6bb4661fbe2984853d"
             ]
           },
           "content": "It is, check the `students` table.",
@@ -2010,7 +2010,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "b7f6524be6c937c94951735c66ae0aaa3d7da642"
+              "c1cb2f5006f2bebeead8a276a3858d2b7c80adff"
             ]
           },
           "content": "Last, check the `courses` table.",
@@ -2035,7 +2035,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "df1962c3b3b8c3eb68490b57fffd45a85dfccece"
+              "0b1cb6446bf002769c759ec3da6e9ddd0cf1eeb5"
             ]
           },
           "content": "There should still be one entry in there. Use `TRUNCATE` to delete all the data from the `courses` table. You will need to truncate any tables that use a column from it as a foreign key at the same time.",
@@ -2060,7 +2060,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "f0abdadb948e48a44bd1cabd2d4b0ad3d4d5b0a2"
+              "351b696d4fd047f695521d7d96fa057dd7c54dca"
             ]
           },
           "content": "View all the data in the `courses` table again.",
@@ -2085,7 +2085,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "49346d0c87653c7c2175c6970ab3da0506334b19"
+              "1e1c707f68d802ff2357169cc6b85887716b8187"
             ]
           },
           "content": "Now the database is completely empty. Run the script again to see what gets inserted when the database is empty.",
@@ -2110,7 +2110,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "2036e5f5e8d1c7169fa8862e3ebf3bdaf8c74766"
+              "0f3899df13509c96920e7a361ba96612af51663e"
             ]
           },
           "content": "It inserted four that time. In the psql prompt, view all the data in the `majors` table.",
@@ -2135,7 +2135,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "bf32d5d19bd681d29c27422f1266207a158d5f32"
+              "51b671b3119e87f94992d5baf8245879ce9a7acd"
             ]
           },
           "content": "You won't want to add the first line from the CSV file to the database since those are just titles. In your script, add an `if` condition at the top of your loop that checks if `$MAJOR != major`. Put all the existing code and comments in your loop in it's statements area so it only does any of it if it's not the first line.",
@@ -2159,7 +2159,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "c29a0ad04e7cef8862c6f291a5a40639f54c0722"
+              "26d0696981d640c4872b39fe7827c2fa2a201d80"
             ]
           },
           "content": "In the psql prompt, use `TRUNCATE` to delete all the data in the `majors` table.",
@@ -2186,7 +2186,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "d71da5546748d55e17e1d479e9833baf69e87921"
+              "dd72f885c3a5b3a07f5ee0c56ade74fb02d367aa"
             ]
           },
           "content": "View all the data in `majors` table to make sure it's empty.",
@@ -2211,7 +2211,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "31c2435c225ad8a71723b5c0c00e0108e03bde07"
+              "11aa15099f3130e34b9291b0ebc60fa65f9bde6c"
             ]
           },
           "content": "Run the script to make sure it's not adding the first line anymore.",
@@ -2236,7 +2236,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "b4e1c3ffd3b9bb28b5970b85c4810d82f5f81c24"
+              "00d98f175fd93ced10558cb15795f8f540e21eb1"
             ]
           },
           "content": "It only showed three inserts, that's a good sign. View all the data in `majors` table to make sure it's three you want.",
@@ -2261,7 +2261,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "9c82a296fbe060ba285d01cb274402e0dd6def0e"
+              "ffec8d4b36910971aa94f172966309c70e45ae86"
             ]
           },
           "content": "There's three unique majors in your test data. Those were the three added to the database, so it looks like it's working. Delete the line where you print `INSERT_MAJOR_RESULT`.",
@@ -2284,7 +2284,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "e7be5031458e34ffdf3e23abec23467ae0aed408"
+              "9dd8f497442398a53ec79f4bd475f3a2e0fb10cf"
             ]
           },
           "content": "You want a nicer message when something get's inserted so it's more informative. Below your `INSERT_MAJOR_RESULT` variable, add an `if` statement that checks if the variable is equal to `INSERT 0 1`, which was what it was printing. Use `echo` to print `Inserted into majors, $MAJOR` in the statements area of the `if`.",
@@ -2310,7 +2310,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "4bde5ad8d557f3fcbdfd01996e17cd5003812d6f"
+              "2bf1bb295844c5c140fa297287e33b149ef6515e"
             ]
           },
           "content": "In the psql prompt, truncate the `majors` table again so you can run the script and see the output.",
@@ -2337,7 +2337,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "e6f733b94017e30e580f76c5259d87e97d7f94cf"
+              "021965b408570e64f222afa946fc7039b2e9ac65"
             ]
           },
           "content": "Check to make sure the table is empty. Then, run the script.",
@@ -2362,7 +2362,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "e2186640e5c47d46fe00f0f63ef2de5544ee1585"
+              "e1e21b36a9b38df7f021ee8a548865aeebc43726"
             ]
           },
           "content": "It's starting to come together. Below your `get new major_id` comment, set the `MAJOR_ID` variable to a query that gets the new `major_id` from the database.",
@@ -2391,7 +2391,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "acd4dead765a787e9ed23ddbc62d355c390d2572"
+              "6266c896173d872639cec60e57ceda5aa9263e04"
             ]
           },
           "content": "So the script will insert the majors correctly. Next is the courses. It will be the same steps as for the majors. Below your `get course_id` comment, add a `COURSE_ID` variable that gets the `course_id` from the database. Remember that your `COURSE` variable will have the current course in the loop.",
@@ -2419,7 +2419,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "eaeffdb1e75388890a798275911c30d3ac56ef5e"
+              "e4f8db09de80dda49409109d75db187ccc1ea1a5"
             ]
           },
           "content": "It's the same as the majors, so below the second `if not found` comment, add an `if` statement that checks if the query was empty so you can insert the course if needed. Place the existing `insert course` and `get new course_id` comments in the statements area of the `if`.",
@@ -2444,7 +2444,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "08af87311a5e4bd9cc02c7e842de82cf250f7f1e"
+              "99c0c438097ee1373e18cee309dda8cc15389465"
             ]
           },
           "content": "Below the `insert course` comment, create an `INSERT_COURSE_RESULT` variable that inserts the course into the database.",
@@ -2473,7 +2473,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "398111bb4079ec8762ccc266cb058b6daf4452b1"
+              "5003416c363cc9d6dc4eaaec0edf9f9e1cdf9cf8"
             ]
           },
           "content": "The variable should be `INSERT 0 1` again if something gets inserted. Below the variable you just created, add an `if` condition that checks if it is and print `Inserted into courses, $COURSE` using `echo` in it's statements area.",
@@ -2498,7 +2498,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "9aa9a2912cb74f204db389211cc012ed7de314e1"
+              "4a15b318b26a8ffe5b11dec10fea5865eda4194e"
             ]
           },
           "content": "In the psql prompt, truncate the data from the `majors` table so you can run the script again.",
@@ -2525,7 +2525,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "db3593b552f0f1948c1b14246e5e1d8a50ff8b60"
+              "68be509afb8121da3a4a88346c1fc9c60d130cba"
             ]
           },
           "content": "Run the script to see if the courses get inserted into the database.",
@@ -2550,7 +2550,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "d6567264d42d269c7201b38ae71c6ce67a145467"
+              "cddfb78c4e36e49f4494bd39720ddd6bf3db9891"
             ]
           },
           "content": "It looks like it worked. The test data has three unique courses, and three got added to the database. View the data in the `courses` table to make sure they are correct.",
@@ -2575,7 +2575,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "3018ede5246c775c715ac121c1c6b411b22dc263"
+              "371134492a45feb9950f885c8fd495c98435ae02"
             ]
           },
           "content": "Excellent. Instead of manually deleting the data each time you want to run the script, add the command to do it for you. Near the top of the file below your `PSQL` variable, use `echo` to query the database. In the query, truncate your four tables in this order: `students`, `majors`, `courses`, `majors_courses`.",
@@ -2600,7 +2600,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "6fe182d0a38ad2f4c617dda81d2d1cb4ba8a4f24"
+              "dd4c8b0201adae1e00192a0ef53900891796ff19"
             ]
           },
           "content": "Run the script to see if it works.",
@@ -2625,7 +2625,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "4120d7719af0290aecec1f2f0ec580804fdd6316"
+              "d9b5cebecb10ff9cae799af4b226e192ad46357b"
             ]
           },
           "content": "Awesome. That makes it easier. Below your `get new course_id` comment, set the `COURSE_ID` to the newly inserted `course_id`.",
@@ -2654,7 +2654,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "075512eb4fc644f1c7c5163a97c832f86f80451b"
+              "21dc6743a9bc58e2dbe61a75525a1bbf42c53d35"
             ]
           },
           "content": "One more thing to add for this file. Below the `insert into majors_courses` courses comment, create a `INSERT_MAJORS_COURSES_RESULT` variable. Use it and the `MAJOR_ID` and `COURSE_ID` variables you created to insert a row into the `majors_courses` table. Make sure the query has the `major_id` column first. Also, you won't need and quotes around the values for the ID's.",
@@ -2683,7 +2683,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "1fe198628bd5b3fa494e2fbee5b9ab06f58f29c3"
+              "58593b17429c695b1c3bd9609ae4758f20ab2970"
             ]
           },
           "content": "Below the variable you just created, add an if condition that checks if it's equal to `INSERT 0 1` like the others. In it's statements area, use `echo` to print `Inserted into majors_courses, $MAJOR : $COURSE`.",
@@ -2708,7 +2708,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c246dd1ac6bbf7668f140f3c6dca0402a0f02ff5"
+              "8ce6bbc02d52546aaaa45258e77c5e143d38517e"
             ]
           },
           "content": "Run the script. Your tables should get truncated and then it should go through the loop and add all the data from the `courses_test.csv` into the three tables of the database.",
@@ -2733,7 +2733,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "2088c904015047922cc094748da532c3485d7fcb"
+              "1e44765c3aae51b38ce6f49af05d0455cf93615c"
             ]
           },
           "content": "Looks like it works. You better look around to make sure. View the data in the `majors` table.",
@@ -2759,7 +2759,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1036dd861102b4a2202f75f8cfcffe0ace6faef7"
+              "6b28be24666106e94cf86d88195b355699a01970"
             ]
           },
           "content": "Cool, check the `courses` table.",
@@ -2785,7 +2785,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1f117efa416ba1e83ea0ba372f73c5af38135e6f"
+              "6f693f85f0098ada3b6e4c5dd94c9bd61cdf3c4c"
             ]
           },
           "content": "Lastly, view the data in the `majors_courses` table. There should be four rows.",
@@ -2811,7 +2811,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2f2dfd7a654c302d15e5548f88668ad176022866"
+              "41b3c79ee6dbeb8b55d7cb01cbb2a3cac117896b"
             ]
           },
           "content": "Alright, that part of the script is done. Next, you need to add everything from the `students.csv` file. Make some test data again. In the terminal, use the copy command to copy `students.csv` into a file named `students_test.csv`.\ncp students.csv students_test.csv",
@@ -2836,7 +2836,7 @@
               "./students_test.csv"
             ],
             "commits": [
-              "31d6b6eb6ecef3541dfef338ca994575a17d5532"
+              "4b3498ac5f183bf3bfe6732975ea0e8ffb791a35"
             ]
           },
           "content": "In the `students_test.csv` file, remove everything but the first five lines like you did for the other test file. Make sure there's an empty line at the bottom again.",
@@ -2862,7 +2862,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "ee253fa0b6fe177929aec4c95c02740d219d792a"
+              "5b21008072b9e652be9c9584c04abf53e9ab857e"
             ]
           },
           "content": "You want to loop through all this info like you did for the other CSV file. The process is the same. Below your existing loop, use `cat` to print your new test file. Pipe the results into a `while` loop, setting the `IFS` to a comma again, and then use `read` to create `FIRST`, `LAST`, `MAJOR` and `GPA` variables from the data. In the loop, use `echo` to print the `FIRST` variable.",
@@ -2886,7 +2886,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "b2fe2417c29d1e4a9a5a629155b87c6b85dca242"
+              "49162614d4e944d0c1de821d7fac78d6d976f0ee"
             ]
           },
           "content": "Run the script to see if it prints the `FIRST` (`first_name`) variable correctly. It will take a second since it has to go through the first loop.",
@@ -2911,7 +2911,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "2f500592e3af42b60ce0ef5bc2bbd122931b356d"
+              "86ad779c48de96d4755c5bc394ce62f60d28a870"
             ]
           },
           "content": "It works :sweat_smile: It printed the first item in each row of the CSV file. It's printing the first line again, you will have to take care of that. First, delete the `echo` line.",
@@ -2934,7 +2934,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "0331e960eb379805093ceac17be3238c34316606"
+              "ca7a251da08329ff2ca0dacb7f0c244d4d5fa63a"
             ]
           },
           "content": "Add an if condition to the loop that checks if the `FIRST` variable is not equal to `first_name` so it doesn't do anything for the first line of the file. Don't put anything in the statements area for now.",
@@ -2959,7 +2959,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "d36f2750baea53edf771ac2a1c31da0d0bc8a8e6"
+              "e77cb41457199694a4626fd2d11298dc8f4fc16f"
             ]
           },
           "content": "All the columns in the CSV file can be inserted directly into the database except for the major. You will need to get the `major_id` again for that. There's some `null` values in there as well, so you will need to use `null` if the `major_id` isn't found. Add four single line comments in your loop; `get major_id`, `if not found`, `set to null`, and `insert student` in that order.",
@@ -2984,7 +2984,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "123537bec76a8e766ca177755324d7003f1ae765"
+              "fb9b4ea0eb1dbe7c2dbde934a4d7652bd1ef6b9d"
             ]
           },
           "content": "Below the new `get major_id` comment, set the `MAJOR_ID` variable to a query that gets the `major_id` for the current students major.",
@@ -3012,7 +3012,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "aedf42af6e1acd715df8ea1eadaf2269b20530fb"
+              "fb005901866340d70f229562360b48eca0a5f4d3"
             ]
           },
           "content": "Below that, use `echo` to print the variable so you can see if it's working.",
@@ -3035,7 +3035,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2f1238f0eeb2869795ebeafc83e941497a7424ef"
+              "6dc09a389fa29a494e43892383579d8804e82742"
             ]
           },
           "content": "Run the script to see what happens.",
@@ -3060,7 +3060,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "e3068b0eb6ed628652e91ce7396b446ff6345b45"
+              "ed561891ea2a84716e26890363e547f6c3bbd2ea"
             ]
           },
           "content": "Looking at the test data, it found the ID for all of it except the `null` value. Below the newest `if not found` comment, add an `if` that checks if the variable is empty. Put the `set to null` comment in its statements area.",
@@ -3086,7 +3086,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "909637f605d47c9876dacba045d5174156978dc5"
+              "2fce4876d7298e306373c738152a87a5867d3011"
             ]
           },
           "content": "When you go to insert the student data, you want to use the `MAJOR_ID` if it's found, or `null` if not. Below the `set to null` comment, set the `MAJOR_ID` variable to `null` so you can use it to insert the data.",
@@ -3109,7 +3109,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "85ff402954b8a27b61fc15b708a4d8a981c142bc"
+              "3ddb790bf12e705725ace483c068cb4c35437aad"
             ]
           },
           "content": "Move the `echo $MAJOR_ID` line to below the `if` statement so you can run the script and see the value of the variable if the `major_id` is or isn't found.",
@@ -3132,7 +3132,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "eb3fa8140018e6068a17e6bc43f0fbf456d9cb8d"
+              "78ce916fe929876145926f917c8c230b9a115528"
             ]
           },
           "content": "Run the script.",
@@ -3157,7 +3157,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "7ad815290a4cafd532a274cd1f583614c7b5ab75"
+              "b726f4b123bd71857fcd2d41303d73d37a683b79"
             ]
           },
           "content": "Okay, that should work for inserting the student. Delete the `echo $MAJOR_ID` line.",
@@ -3180,7 +3180,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "cb7c5a7e85eb2545433c4c74915349cee2aa690b"
+              "8ad735d41e2cf82d3c088c5da36b16e10dff234d"
             ]
           },
           "content": "One last thing to add. In the psql prompt, view the details of the `students` table so you can see what columns to add.",
@@ -3208,7 +3208,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "dfcb2112b32ab5d6f94dac50722229c0df3da732"
+              "bfb42a6f23e6db7db677dbf1aa169786325c74a3"
             ]
           },
           "content": "You will need to set the four columns when adding the student info. All of them except `student_id`. Below the `insert student` comment, create an `INSERT_STUDENT_RESULT` variable that adds the student to the database. Add the columns in the order they appear in the data, and make sure to only put the two `VARCHAR` columns in single quotes.",
@@ -3236,7 +3236,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "a4b70856cc65b11022affba87699c09004434f52"
+              "274bba27aabf3872514e4e8b4bb7fea9df153092"
             ]
           },
           "content": "Below the variable you just created, add an `if` statement that checks if it's equal to `INSERT 0 1` like the others. If it is, use `echo` to print `Inserted into students, <first_name> <last_name>`.",
@@ -3262,7 +3262,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "ab156ae5f52c2ae9e48a23070dde5eb6a867ed03"
+              "306bc6966afd77fef299927352a6cc67a9a70219"
             ]
           },
           "content": "Run the script to see if the students are getting added.",
@@ -3287,7 +3287,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "5395ad699344455d1eae37eafe2d1230f3ba7daa"
+              "56521465d960bd4cf7dd0534dc8c1a99127fe18b"
             ]
           },
           "content": "I think it's working. View all the data in the `students` table to make sure it matches the CSV file.",
@@ -3312,7 +3312,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "dcff7e18f7197df56df57647eb715480caa17324"
+              "92a247c534cb95bfb86e39e8d048e1e09d4120a9"
             ]
           },
           "content": "Excellent. It added all the students from the test data. Time to try it with the original files. Change the `cat courses_test.csv` line to use the original file again.",
@@ -3336,7 +3336,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "fd1c0f2c723134d061aee57673a1965dfd4838da"
+              "c851c2b1b4cf550ddc661f9fd0bb7329a27ffbce"
             ]
           },
           "content": "Next, change the `cat students_test.csv` line to use the original file as well.",
@@ -3360,7 +3360,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "61a5935432f7747d3418fe66ecc865905a96d684"
+              "4b0af7bc7327dea33b9cf8e7e708d103c7609c82"
             ]
           },
           "content": "Time for the moment of truth. Run the script and see if it works.",
@@ -3385,7 +3385,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "c09d317d1a77bbb8fb6ed83b9526c3fd26a45cde"
+              "20796a1c055a2694b2b7d49c348a10f031ba06f6"
             ]
           },
           "content": "That was cool. View all the data in the `students` table to see what you ended up with.",
@@ -3410,7 +3410,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "eb5073da5c03fdcdb9279cbcb326a616f9611632"
+              "b24b12ebfc909afabfc608b0d005d4f562e8657f"
             ]
           },
           "content": "31 rows. That's how many are in the CSV file. Perfect. Next, check the `majors` table.",
@@ -3435,7 +3435,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "79efaab9007f86e9f282bbf0fd4bc8895fac5254"
+              "0ace7bfde33f1c32b13f60548b52357198b3914f"
             ]
           },
           "content": "7 rows. There must be 7 unique majors in the CSV file. View what's in the `courses` table.",
@@ -3460,7 +3460,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "3af09a6b7d3a20311af6f50c0e66d9ccb28ef4a9"
+              "c4fca769c3903d10b6478f610450f9e020e4a82b"
             ]
           },
           "content": "Looks like there's 17 unique courses in the CSV file. Last, view the data in `majors_courses`. This should have the same number of rows at the CSV file.",
@@ -3485,7 +3485,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "eeee2db09af29018f386dc0d0c7e63272c2d37ad"
+              "41358506a4edaed3fac2f30d5f0c078b433a2b20"
             ]
           },
           "content": "28 rows, same as the CSV file. I think all the data got added correctly. You don't need your test files anymore. In the terminal, use the list command to check what files are in your project folder.",
@@ -3510,7 +3510,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2a754234ff11b65505c00fdff1ace53e7c832535"
+              "ae3e42ad18cfce74a4d547818eecc33e549a3a7c"
             ]
           },
           "content": "Use the remove command (`rm`) to delete the `students_test.csv` file.",
@@ -3534,7 +3534,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "42368d4e1674f8b5a43978b7be714dfe52921d0e"
+              "b9a54eac4c8330317b59ee1a67903eb1394cbd84"
             ]
           },
           "content": "Use the same command to delete the `courses_test.csv` file.",
@@ -3558,7 +3558,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "39572e0512209d5ea794205c3f238962497cf427"
+              "0dedd7784915dbbdfa9f0fbaeb7cbf6290dd95f9"
             ]
           },
           "content": "List the contents of the folder again to make sure they're gone.",
@@ -3584,7 +3584,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "a4e92882e66a532eca46060c18503248251ffedb"
+              "9938dab856e012bc0486e39bce0dcfeafc66ee93"
             ]
           },
           "content": "Next, you are going to make a script to print info about your students. In the terminal, use `touch` to create a `student_info.sh` file.",
@@ -3609,7 +3609,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "4a0b62f086feb812c528a4971b2c3f67b256b2f5"
+              "3c2e19e78285419b09e409cd05ff3632499ab46e"
             ]
           },
           "content": "Give your file executable permissions.",
@@ -3634,7 +3634,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "2ec8e1f779ad299703de32c8175eae18c0f759dc"
+              "e3667811c7b5da143b402bef21d49a7a2b65bb91"
             ]
           },
           "content": "Add shebang that uses bash to your new script.",
@@ -3658,7 +3658,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "5471e6645ac817a11b34335e26e61100ffca7919"
+              "e47eadc39ce4f331ee5478626809a6ce40b395ea"
             ]
           },
           "content": "Below the shebang, add a comment that says `Info about my computer science students from students database`.",
@@ -3683,7 +3683,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "9039520eada55453e8dc5bd97f83feed2e003674"
+              "83e26f0f46c76eafb6ad7d8f609fa79fc8acc5c1"
             ]
           },
           "content": "In the new script, use `echo` to print `~~ My Computer Science Students ~~`. Use the `-e` flag with it to put a new line at the beginning and end of the text.",
@@ -3708,7 +3708,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "70b860c57fb5a9d0a9e39f316647e6755c725f9d"
+              "9e48a4532191a9aac6b53ebba2eadef2e4baeee5"
             ]
           },
           "content": "Run the script to make sure it's working.",
@@ -3733,7 +3733,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "d9cdd358c852d29dd6f0a5152c247e1284a1d703"
+              "750017745ee6818156ed70419bfb2b8845696d15"
             ]
           },
           "content": "You will want to query the database again to get info about the students to display. Add the same `PSQL` variable from your other script.",
@@ -3757,7 +3757,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "1123272017de1f18b05bd1a11db87ba529fcbcf7"
+              "694dfd8ee8231624006a429f38cbbea8b43f51e6"
             ]
           },
           "content": "Below the PSQL variable you just added, use `echo` to print `First name, last name, and GPA of students with a 4.0 GPA:`. Use the `-e` flag to put a new line at the beginning of the sentence.",
@@ -3782,7 +3782,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "90e6733d5acc3c06fb34940a59d74343c4a192e3"
+              "746ec1020da7a23234643501fb152183805194fc"
             ]
           },
           "content": "You will want to print what that sentence is asking for. You should know how to make that query, but lets practice a little first. `SQL` stands for \"Structured Query Language\". It's the language you have been using to manage your relational databases. In the psql prompt, view all the data in the students table like you have done many times.",
@@ -3807,7 +3807,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "eee82bba2c8d8a4434470ce4af1d93a5e0741456"
+              "c0388f1f3d4b2b16edfacc28a7c5c4c7eee88f1a"
             ]
           },
           "content": "You should look at the column titles that were returned. The `*` gets all columns in a table with your query. You can return specific columns by putting the column name in the query instead of `*`. In the psql prompt, view just the `first_name` column from the `students` table.",
@@ -3833,7 +3833,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "507d93a9d2a573229ea40ff308c119de34014a5c"
+              "3163669ee62ed9e1a7d5abb75f87585f1663a034"
             ]
           },
           "content": "Just the `first_name` column was returned that time. You can specify as many columns you want returned by separating them with commas. View the `first_name`, `last_name` and `gpa` columns from the `students` table.",
@@ -3860,7 +3860,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "2e6e7beae58d384adad9a7d122a3791ea3d9a254"
+              "deb92dbb58bb34e42815d996f17b4a281004a159"
             ]
           },
           "content": "You can return only rows you want by adding `WHERE <condition>` to your query. A condition can consist of a column, an operator, and a value. Use one of these to view the same columns as before but only rows `WHERE gpa < 2.5`.",
@@ -3887,7 +3887,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "c9289dbc05f4e69809b75ffb0bf1e385024207a2"
+              "ebac1f2491f1a0f983259b35c34a8999e6843a46"
             ]
           },
           "content": "The `<` only return rows where the `gpa` column was less than `2.5`. Some other operators are: `<`, `>`, `<=`, `>=`. View the same columns, but only rows for students with a `gpa` greater than or equal to `3.8`.",
@@ -3915,7 +3915,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "001366a3bd629124f6e03f6dedf9e1722c105dd5"
+              "a284215d57a01f1a7864f0437d7a51d975012b56"
             ]
           },
           "content": "That only returned students with a GPA of 3.8 or better. There's equal (`=`) and not equal (`!=`) operators as well. View the same columns for students that don't have a 4.0 gpa.",
@@ -3942,7 +3942,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "e1de35f26e24ee1b6aef2ff41c406f35959dcd3d"
+              "5f3089c796019f387921f1dbb68a7aaee3c05f65"
             ]
           },
           "content": "The right query will get you only the data you are looking for. Back in your `student_info.sh` file, add an `echo` command to the bottom that prints what the sentence above it asks for. Place double quotes around it like this: `echo \"$($PSQL \"<query_here>\")\"`. This will make it so the output isn't all on one line.",
@@ -3970,7 +3970,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "8ef9f942faf9b6902e8b219776f2d2f9b1c428ba"
+              "2e1a1d3f08c9dca52ee35ac4d8fe74e38c6825f4"
             ]
           },
           "content": "Run the script to see your students with the highest GPA's.",
@@ -3995,7 +3995,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "848a1c41cb0f004dd26969c026a72bca1e0bb332"
+              "18d143d9e407b831e1b0b70a3576059d9dfd4c18"
             ]
           },
           "content": "Add another `echo` statement at the bottom of the script. Make it print `All course names whose first letter is before 'D' in the alphabet:`. Put a new line in front of it like the first sentence.",
@@ -4021,7 +4021,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "20234ed7a28b27ff764805d3a8ef1d7866343111"
+              "c2f3c7114a29422a104627042d96b316c1572ce9"
             ]
           },
           "content": "Practice first. In the psql prompt, view all the data in the `majors` table.",
@@ -4046,7 +4046,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "47248f005dc565dfe6d7025f82570be662dcdb37"
+              "d13f616d878ffd1f47787146f4ce9fe3659cc853"
             ]
           },
           "content": "The operators you used with numbers in the last section can be used on text as well. Use the `=` to view all majors named `Game Design`. Don't forget that You need single quotes around text values.",
@@ -4073,7 +4073,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "bbba8103f22926fa24b055666ed5df08989f6747"
+              "b209f2b0272abb58bf4a8a9e645a1f3eb53d51f1"
             ]
           },
           "content": "Next, view all the rows not equal to `Game Design`.",
@@ -4101,7 +4101,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1cee35b461bae2d6c73ca14465ec4eeb448578cb"
+              "3f9c13cb5cb2aab5bd9af50468130454876e1a2d"
             ]
           },
           "content": "Use the greater than operator to see majors that come after it alphabetically.",
@@ -4130,7 +4130,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "23da2fffcd3b797c6fe5242b8e8368162c9e741c"
+              "d269f39e16ffa729233f2d26f9b0d21b3a37ce0d"
             ]
           },
           "content": "`Game Design` was not included in the results because it is not `> 'Game Design'`. Try it with the greater than or equal to operator.",
@@ -4159,7 +4159,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "244dd63a5fbc1d0a9a2e1cf919d428e9532c5956"
+              "40a8b5019fe8d9fc21a2801222f83aa91cdefb6c"
             ]
           },
           "content": "It included `Game Design` in the results that time. So if you want to see results that start with a `G` or after, you could use `major >= 'G'`. View the majors that come before `G`.",
@@ -4187,7 +4187,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "5c67be91d29884f8e3d819f7a85f19d1bdc5546e"
+              "08c23a97584bf0bcda6915dc1d66d5a99f052a16"
             ]
           },
           "content": "In your script, add an `echo` at the bottom to print the suggested info like you did before. Make sure to use double quotes where needed.",
@@ -4216,7 +4216,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "0d5853f6dfe059d25278452c35bf6f21ec19cca8"
+              "6519956904c2bddc0748c830621165247a822cdd"
             ]
           },
           "content": "Run the script to see what course names come before the letter `D`.",
@@ -4241,7 +4241,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "ad7fd61e197db1b23cffc87bb77e6597ea5be87f"
+              "cbc3c2078b1ca2d7000e765d5325984b7a333a03"
             ]
           },
           "content": "Looks like there is five of them. Add another sentence like the others that says: `First name, last name, and GPA of students whose last name begins with an 'R' or after and have a GPA greater than 3.8 or less than 2.0:`",
@@ -4267,7 +4267,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "81d9513ef8c448613365c2306887ab9c8c5f1899"
+              "85c1871f706d8a51548d87e5cbfb9c5f82c66a85"
             ]
           },
           "content": "To find that, start by using the psql prompt to view all the data in the `students` table.",
@@ -4292,7 +4292,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1a769e91ec1ff5ddd85f4cfc5683fffcd37ebcf7"
+              "1de0cffdde8e86221588e201ffe0567282458f5e"
             ]
           },
           "content": "It returned 31 rows. Use the same command, but only return the rows for students whose last name comes before `M` in the alphabet.",
@@ -4320,7 +4320,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "0cd8afaed574884e03db527e0a498fdc77e83999"
+              "7f6a440e9c70396cce849d6502962464fb639f28"
             ]
           },
           "content": "That returned 18 rows. You can use multiple conditions after `WHERE` with `AND` or `OR`, among others. Just add the keyword and another condition. In the psql prompt, use the same command as before, but add an `OR` to also return rows of students with a 3.9 GPA.",
@@ -4349,7 +4349,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "e84c783314d4b8e8d1cbf63890db65d2283bb6e6"
+              "53203a616ab1d3be14da2954f2d6b2a50c88610d"
             ]
           },
           "content": "It showed rows where one of the conditions was true, there was one more than last time. Enter the previous command, but use `AND` to view only students that meet both conditions.",
@@ -4375,7 +4375,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "726653d08c72a9e472ba2e719414512c8c10e09b"
+              "0a30a00ba0436708a3a54ff8698442149c59ce70"
             ]
           },
           "content": "Now it only shows rows where both conditions are true, one person. Enter the previous command, but add a third condition of `OR gpa < 2.3`.",
@@ -4402,7 +4402,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "451d30aa5c12f7ef01f1737e0c59dced0b34eaa7"
+              "5147d3e4f8237ee64b21f311f295298bacf81f4b"
             ]
           },
           "content": "This showed all students whose GPA is less than 2.3 because the final `OR` condition was true for them. It didn't matter what their last name started with. You can group conditions together with parenthesis like this: `WHERE <condition_1> AND (<condition_2> OR <condition_2>)`. This would only return rows where `<condition_1>` is true and one of the others is true. View students whose last name is before `M` that have a GPA of 3.9 or less than 2.3.",
@@ -4428,7 +4428,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "ae4bc9582c3beb1f9aa45880eb25ea2a83b65620"
+              "b51abb2020a15688cb23f151ec916881f192a566"
             ]
           },
           "content": "Two students meet those conditions. Back in the student info file, add an echo command at the bottom to print the suggested rows.",
@@ -4456,7 +4456,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "082fc889d4010a50291f0d45617728344836bbf9"
+              "1f1c4b58dbd0a80a1d1b8f9eb34b16f1dd82ca22"
             ]
           },
           "content": "Run the script to see the results.",
@@ -4481,7 +4481,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "4a88a4853eb4df873b50be405c3ec98c826066c4"
+              "ed7ee41888d7074d97de3c1eba357362729cfcf5"
             ]
           },
           "content": "Moving along. Add another `echo` command, like the others, with a sentence that says: `Last name of students whose last name contains a case insensitive 'sa' or have an 'r' as the second to last letter:`",
@@ -4507,7 +4507,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "5427abac738c360ce6bfa6904a9650c367e98b35"
+              "1b131b75f024a67f6d27cede521378ea0a654d41"
             ]
           },
           "content": "Start by viewing everything from the `courses` table in the psql prompt to see how you might be able to find this out.",
@@ -4532,7 +4532,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "858442760f7bd41974f9ee87908e35d8a028cfc7"
+              "74ee5a4ba2f9f5d88aee0bb5a6c93abd0ed68d53"
             ]
           },
           "content": "There's a few that contain the word `Algorithms`. You can use `LIKE` to find patterns in text like this: `WHERE <column> LIKE '<pattern>'`. An underscore (`_`) in a pattern will return rows that have any character in that spot. View the rows in this table with a course name that matches the pattern `'_lgorithms'`.",
@@ -4557,7 +4557,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ec371f76b829aab3cc10854cb3503a0b7a353210"
+              "b43f3f3adebbe1b359f5e0b2b719df458a66809c"
             ]
           },
           "content": "That pattern matched only rows that had exactly one character, followed by `lgorithms`. Another pattern character is `%`. It means anything can be there. To find names that start with `W`, you could use `W%`. View the courses that end in `lgorithms`.",
@@ -4584,7 +4584,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "4ca27206821d63f4aeb86cdc441c0820e68642f4"
+              "ee9ed01e921505ae9a9617a9ff513ddf84b0ec07"
             ]
           },
           "content": "It found two that time. Try viewing courses that start with `Web`.",
@@ -4611,7 +4611,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "3af40da26b98e16e5acc299eb56233f48665fc7b"
+              "9629df87662613dd742e2fc2a0dcb4f7ba450be9"
             ]
           },
           "content": "Combine the two pattern matching characters to show courses that have a second letter of `e`.",
@@ -4639,7 +4639,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "b6ac45062bcb2cb2abbeda319291b82dc5254291"
+              "9ea10a5e548f3db63899ae338fa531774324ca36"
             ]
           },
           "content": "Nice job! Try viewing the courses with a space in their names.",
@@ -4666,7 +4666,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "2257bdb3bcf96cbf6db28af6b69749fbaa679f92"
+              "76353c6331132467ab4b502cbe0d32bcca8c6749"
             ]
           },
           "content": "There they are. You can use `NOT LIKE` to find things that don't match a pattern. View courses that don't contain a space.",
@@ -4693,7 +4693,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "357241b1c76ec757cab365ed934904e58cae05ac"
+              "c390e98cfd4d4cf33defe43480fd132df314371b"
             ]
           },
           "content": "Five courses without a space. Try finding the ones that contain an `A`.",
@@ -4720,7 +4720,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "d062e0fe156ff7a3acb21165e1185c173f02dbcc"
+              "a3dedfa412fb61efa00813a8e36f999a6f358889"
             ]
           },
           "content": "6 rows. This showed all the courses with a capital `A`. `ILIKE` will ignore the case of the letters when matching. Use it to see the courses with an `A` or `a`.",
@@ -4747,7 +4747,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ac904b6349136cdda59f70c1e17ae10750d02278"
+              "40735b85e394f97f8b79813e2cd50e862d4d725b"
             ]
           },
           "content": "It found 11 rows that time. You can put `NOT` in front of `ILIKE` as well. Use it to see the courses that don't contain an `A` or `a`.",
@@ -4774,7 +4774,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "6e7cf9c706e9e93346f82cc8bdd2d45cddcaf1ab"
+              "f92f8f638b91a01742617c6d4e856225ea20a917"
             ]
           },
           "content": "You combine these like any other conditions. View the courses that don't have a capital or lowercase `A` and have a space.",
@@ -4801,7 +4801,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "1dc8e459231b4faad0e97f18c62aaac21c41d40d"
+              "e1c915a25787e551df90e6d027923ec6924a0c39"
             ]
           },
           "content": "In your student info script, add `echo` statement at the bottom like the other to print the results of the suggested query.",
@@ -4829,7 +4829,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "6f7775055ec766949aac917683bf3dd4afae22d5"
+              "e398fc34944a198e35879e6f2e355d46c0cddeab"
             ]
           },
           "content": "Run the script to see the results.",
@@ -4854,7 +4854,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "9a076df96c1316c322e7cbca24637746b1f5caab"
+              "13abda14dec3483bf0f5f5a895cb7e68eaf2d609"
             ]
           },
           "content": "Looks like five students meet those conditions. Add another `echo` command at the bottom, like the others. Make this one say: `First name, last name, and GPA of students who have not selected a major and either their first name begins with 'D' or they have a GPA greater than 3.0:`",
@@ -4880,7 +4880,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "14f4343982dde390ecfe0c981782944d40521963"
+              "a9ca0c57a9703631dc50659538e255627d8c227c"
             ]
           },
           "content": "Start by looking at all the data in the students table.",
@@ -4905,7 +4905,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "77814e9909a3e07176a576c99330f3195828dccc"
+              "41ed912aa5ad494ef6a40a254bd37b9e37ff86c4"
             ]
           },
           "content": "All the fields that are empty or blank are `null`. You can access them using `IS NULL` as a condition like this: `WHERE <column> IS NULL`. View the students who don't have a GPA.",
@@ -4932,7 +4932,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "23bf73b8b231164dab6af364871cd28de16b7c98"
+              "e73789928bd20ea1bde0b839b681e77f291fabb5"
             ]
           },
           "content": "Inversely, you can use `IS NOT NULL` to see rows that aren't null. View all the info on students that do have a GPA.",
@@ -4959,7 +4959,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "89835ce334204c6dbef96c8fb2759929326d6be3"
+              "fff6c5ab84370ee0ef82720f336f2ce35457cae8"
             ]
           },
           "content": "View all the info on students who haven't chosen a major.",
@@ -4987,7 +4987,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "7175f9de47792ca240446f2e4165114b0626dcb4"
+              "cf0e3b863a52a9ba4dfcb8782aa6174682d1d07c"
             ]
           },
           "content": "View the students who don't have a major, but don't include students without a GPA.",
@@ -5014,7 +5014,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "419767b20b438fb63b55420688437bdb59f56e3d"
+              "5cbf0f96ba370d41a61aac96848f5baf71c5db05"
             ]
           },
           "content": "One more. View the students who don't have a major or gpa.",
@@ -5041,7 +5041,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "f92af9f68c292b2e7094b503ba1333d87f9e3e37"
+              "42cd980d23f272f7be18ea7d384405e89a4c6937"
             ]
           },
           "content": "In your script, add an `echo` command at the bottom to print the results the sentence is looking for.",
@@ -5071,7 +5071,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "f0dbf9fa86b4af076e26d9a40504d37f81adb011"
+              "b33247f2e4470930e5ea63b7da7ef95c1e5a794b"
             ]
           },
           "content": "Run the script to see the students that meet those conditions.",
@@ -5096,7 +5096,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "41f190ee863d1d8dbbccb9e2aa1a995228d99944"
+              "e4a41a457ead082957cf925c37c32cbdb15282d2"
             ]
           },
           "content": "There's three of them. Add another sentence, like the others that says `Course name of the first five courses, in reverse alphabetical order, that have an 'e' as the second letter or end with an 's':`",
@@ -5122,7 +5122,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "c13d8846c9d143d5a005451a38ebdd45c8eb939a"
+              "1732d05f9324a94e7202b591fddb7f3377d0c376"
             ]
           },
           "content": "You can specify the order you want your results to be in by adding `ORDER BY <column_name>` at the end of a query. In the psql prompt, view all the info in the `students` table in order by the GPA's.",
@@ -5149,7 +5149,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "3b1ca442d7ea57c0ceb53ac5076ee7f15a8cff00"
+              "3711a132c2a1b0d3c9a222edc49a3c15dc99c869"
             ]
           },
           "content": "That put the lowest GPA's at the top. When using `ORDER BY`, it will be in ascending (`ASC`) order by default. Add `DESC` (descending) at the end of the last query to put the highest ones at the top.",
@@ -5175,7 +5175,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "a01d5dfd9eb1484b2615f19902ac54ee6018e628"
+              "e47e60bf3dff68e2bb6ecad7e00f2c6d67db002e"
             ]
           },
           "content": "Now, the highest GPA's are at the top. You can add more columns to the order by separating them with a comma like this: `ORDER BY <column_1>, <column_2>`. Any matching values in the first ordered column will then be ordered by the next. View all the student info with the highest GPA's at the top, and in alphabetical order by `first_name` if the GPA's match.",
@@ -5201,7 +5201,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "86051d53818cae794bba9cd8b51e417a217fe78e"
+              "7c384ce08b592a3e6f2dbafb47d85e5877323bcf"
             ]
           },
           "content": "Many times, you only want to return a certain number of rows. You can add `LIMIT <number>` at the end of the query to only get the amount you want. View the students in the same order as the last command, but only return the first 10 rows.",
@@ -5227,7 +5227,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "508d1d085de870872c865dd33de771698cfe5da5"
+              "eaf539cb7f217d0bc2345acadedeb7c4a23ef34a"
             ]
           },
           "content": "The order of the keywords in your query matters. You cannot put `LIMIT` before `ORDER BY`, or either of them before `WHERE`. View the same number of students, in the same order, but don't get the ones who don't have a GPA.",
@@ -5255,7 +5255,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "fc5793e9fd42c3a01f84ca4d250d20f8f3f19bdc"
+              "98aa4ba915bbe3a07dcb95f972df054bc06d2e2d"
             ]
           },
           "content": "In your script, add the `echo` command to print the rows the sentence is asking for.",
@@ -5282,7 +5282,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "4d89145905204b2b77de5d6fa8c72b16cf8cc8be"
+              "85541b9360e0d55689fab6144dfaed3d579c28b9"
             ]
           },
           "content": "Run the script to see the courses.",
@@ -5307,7 +5307,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "9aff45d15ff27291f8a74f837c9aefec2746583b"
+              "021a4a800d6a486c8a6233123dd45ac89fb13262"
             ]
           },
           "content": ":sunglasses: Add another `echo` command at the bottom of the script like the others. Make this one say, `Average GPA of all students rounded to two decimal places:`",
@@ -5333,7 +5333,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "73bc25bbe3ebadd4085408e728a4c37d622ef668"
+              "13c31a28b558f62146668e0c8fe239ba61994a49"
             ]
           },
           "content": "There's a number of mathematic functions to use with numerical columns. One of them is `MIN`, you can use it when selecting a column like this: `SELECT MIN(<column>) FROM <table>`. It will find the lowest value in the column. In the psql prompt, view the lowest value in the `gpa` column of the `students` table.",
@@ -5357,7 +5357,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "9bf35b58d8fff7575186236f65bfa39f350c45fa"
+              "c6bb5d3cd99af179df07a9320f73c4cefe63a7a7"
             ]
           },
           "content": "Another one is `MAX`, use it to see the largest `gpa` of the same table.",
@@ -5382,7 +5382,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "b8f60301d8518be2713d14a2cbccd9d177542936"
+              "dedef71211b07b0377c248a6a2de85d1ffd7515e"
             ]
           },
           "content": "In the same fashion, use a `SUM` function find out what all the values of the `major_id` column in the `students` table add up to.",
@@ -5408,7 +5408,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "f6572b66f57090d8da3339747a30042fb6530042"
+              "9d48afda7c431319441e6dae55a4d16baa887326"
             ]
           },
           "content": "`AVG` will give you the average of all the values in a column. Use it to see the average of the same column.",
@@ -5435,7 +5435,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "e1ac50e989d549b06cabff3a72e2c45c548d0222"
+              "f5b2e27642eeea03baff5b5e4c9b5664225051c3"
             ]
           },
           "content": "You can round decimals up or down to the nearest whole number with `CEIL` and `FLOOR`, respectively. Use `CEIL` to round the average `major_id` up to the nearest whole number. Here's an example: `CEIL(<number_to_round>)`.",
@@ -5462,7 +5462,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1b9a2e7b2d8916633c0af7cecdbc731dbbea3edc"
+              "b806eeea23af9ef754a83de3eccabbabe32d45d4"
             ]
           },
           "content": "Or, you can round a number to the nearest whole number with `ROUND`. Use it to round the average of the `major_id` column to the nearest whole number.",
@@ -5489,7 +5489,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "f06c431b9ab5b01bf171556a1bf9c2868e1b01fe"
+              "b86c82167949513e7d603e16ca29c47a81a37d7c"
             ]
           },
           "content": "You can round to a specific number of decimal places by adding a comma and number to `ROUND`, like this: `ROUND(<number_to_round>, <decimals_places>)`. Round the average of the `major_id` to five decimal places.",
@@ -5515,7 +5515,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "09f116fe113e3af5c795d05971a1adc735d23d14"
+              "2cac8928b063b419a066d21e799f0fc794b20ab5"
             ]
           },
           "content": "You should be able to find what your script is asking for now. Add the command to print it.",
@@ -5542,7 +5542,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "14d226881717bec259c7f96205719f864f8d4ec6"
+              "b43bac59f0dd8c14aeea8382d0c3c27bb8ac20e5"
             ]
           },
           "content": "Run the script to see the average GPA of all your students.",
@@ -5567,7 +5567,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "b70eaa8afa8882c75d35e0977d9eb5b8a1611c3e"
+              "b404845a7557e6b9b6deb052ca865f3516ea427d"
             ]
           },
           "content": "They're doing pretty good. Add another command to print `Major ID, total number of students in a column named 'number_of_students', and average GPA rounded to two decimal places in a column name 'average_gpa', for each major ID in the students table having a student count greater than 1:`",
@@ -5593,7 +5593,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "5226bf7b2b1393d25a5f57982908155bd50de8d5"
+              "7e1cd4be8b9caecbee5d9a1d57240ac2d4600567"
             ]
           },
           "content": "Another function is `COUNT`. You can use it like this: `COUNT(<column>)`. It will tell you how many entries are in a table for the column. Try it out in the psql prompt by using `COUNT(*)` to see how many majors there are.",
@@ -5620,7 +5620,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "4bd07801e6177bb2230e633e076ce7acc5b06730"
+              "d23b1386d99802cf6c5c86675568f2589e56ef6e"
             ]
           },
           "content": "Using the same method, check how many students you have.",
@@ -5648,7 +5648,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ccc4a3666ed19c4d9013874f8817a88486aa7e8b"
+              "f304c3aed05b2a4911c5ef4e9c83549d1b2b85eb"
             ]
           },
           "content": "Using `*` like that told you how many total rows are in the table. View the count of the `major_id` column in the `students` table to see how many of your students have picked a major.",
@@ -5675,7 +5675,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "5fa1b6458080e30e50c540f1d663f001cea04e98"
+              "88e5d10a719bec5e2e65265e5a3970c97a697b18"
             ]
           },
           "content": "Using `major_id` didn't count the `null` values in that column. 23 students have a major. `DISTINCT` is a function that will show you only unique values. You can use it like this: `DISTINCT(<column>)`. View the unique `major_id` values in the `students` table.",
@@ -5702,7 +5702,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "c9bdee884f15be0dd1efd6a6a8051790ebe9cfe0"
+              "5fd627f7283d8664240fa7452594ce92a078bdd3"
             ]
           },
           "content": "There's six unique `major_id` values in the `students` table. You can get the same results with `GROUP BY`. Here's an example of how to use it: `SELECT <column> FROM <table> GROUP BY <column>`. Use this method to view the unique `major_id` values in the `students` table again.",
@@ -5730,7 +5730,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "9b1456b6b7fce5735bae9318bf5b9460169ad000"
+              "cec616a4ada111e3a35bd43f2b0184d48d19c958"
             ]
           },
           "content": "The output was the same as `DISTINCT`, but with `GROUP BY` you can add any of the aggregate functions (`MIN`, `MAX`, `COUNT`, etc) to it to find more information. For instance, if you wanted to see how many students were in each major you could use `SELECT COUNT(*) FROM students GROUP BY major_id`. View the `major_id` column **and** number of students in each `major_id`.",
@@ -5757,7 +5757,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "bf415687c2e92815db5e63cd2861095e76a8e462"
+              "ef6c5eab7135b44034f61f624f65d796291ff00d"
             ]
           },
           "content": "When using `GROUP BY`, any columns in the `SELECT` area must be included in the `GROUP BY` area. Other columns must by used with any of the aggregate functions (`MAX`, `AVG`, `COUNT`, etc). View the unique `major_id` values with `GROUP BY` again, but see what the lowest GPA is in each of them.",
@@ -5784,7 +5784,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "a5acbb6e24bc4682cf14f631f2e9238071b9702d"
+              "7aa87ad5694a90ca9858e91edf5aa0cbd916b01c"
             ]
           },
           "content": "Nice job. Enter the same query, but add a column that shows you the highest GPA in each major as well.",
@@ -5810,7 +5810,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "14edd58d992e548c977d5c4b6f2d3578d64135e0"
+              "368a2559c13be65023705b47b5b3a3b35eb86071"
             ]
           },
           "content": "Another option with `GROUP BY` is `HAVING`. You can add it at the end like this: `SELECT <column> FROM <table> GROUP BY <column> HAVING <condition>`. The condition must be an aggregate function with a test. An example to might be to use `HAVING COUNT(*) > 0` to only show what whatever column is grouped that have at least one row. Use `HAVING` to only show rows from the last query that have a maximum GPA of 4.0.",
@@ -5838,7 +5838,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "a214fa6bfa5341149d7576e430d9bed22af04760"
+              "2f58a5fc8e6d11005cac71cf83b4d9ae0f8ef147"
             ]
           },
           "content": "Two of your majors have at least one student with a 4.0 GPA. Looking at the results, the column is named `min`. You can rename a column with `AS` like this: `SELECT <column> AS <new_column_name>` Enter the same command, but rename the `min` column to `min_gpa`.",
@@ -5865,7 +5865,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "72848cf9cb7a90da5a314ed492552bf4225c7877"
+              "86e0305680ba1a9754a038caf4448f19549df9bc"
             ]
           },
           "content": "Now the column has a better name. Enter the same command, but rename the `max` column to `max_gpa` as well.",
@@ -5917,7 +5917,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "7cb9bee3de1ec1ef7fe2b09129723c9f94ee1baa"
+              "f79e04ae4cf45f153fe229ab51fc7d3eeca534bc"
             ]
           },
           "content": "Use `HAVING` with the last query to only show the rows with less than eight students in the major.",
@@ -5944,7 +5944,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "4200d56a3e743fd55ea4ad3f656273ecbeba01bf"
+              "d109e1120a8f9622d67dce5ea6164e16c52be59f"
             ]
           },
           "content": "Well done. Back in your script, add the command the print the suggested results.",
@@ -5971,7 +5971,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "0f2a84ffa140b5335e20b27b536c0ee59002d3c8"
+              "9d3621825f48d00b5835d2c746824b7f2b615827"
             ]
           },
           "content": "Run the script to see the output.",
@@ -5996,7 +5996,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "7c46dadc71f43bdecbe6bb4566a9598d61d285bb"
+              "0adfe313ee1018a8418b062d978f5b5637a6a7a3"
             ]
           },
           "content": "Add an echo command to your script like the others that prints `List of majors, in alphabetical order, that either no student is taking or has a student whose first name contains a case insensitive 'ma':`",
@@ -6022,7 +6022,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "97e2dd018d2ccefa72f83df310b69982a6e4a366"
+              "4ce7babb39008526d8652b02b76f48b5baad234a"
             ]
           },
           "content": "The `majors` and `students` table are linked with the `major_id` foreign key. If you want to see the name of a major that a student is taking, you need to `JOIN` the two tables into one. Here's an example of how to do that:\n`SELECT * FROM <table_1> FULL JOIN <table_2> ON <table_1>.<foreign_key_column> = <table_2>.<foreign_key_column>;`\n\nIn the psql prompt, join the two tables together with the above method.",
@@ -6047,7 +6047,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "8d2558a3ea9542c5709b3abb9ead2c0cda11622c"
+              "6ded79befbdf58e3cded28f9e2ac84a3d1854cb6"
             ]
           },
           "content": "It's showing all the columns from both tables, the two `major_id` columns are the same in each row for the ones that have it. You can see that there are some students without a major, and some majors without any students. The `FULL JOIN` you used will include **all** rows from both tables, whether or not they have a row using that foreign key in the other. From there, you could use any of the previous methods to narrow down, group, order, etc. Use a `LEFT JOIN` to join the same two tables in the same way.",
@@ -6074,7 +6074,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "c56c54948ca721597a04e022d4aff7f33b3e93c5"
+              "a0dd47dfd7f3a2659c739775aac9ee466787cf26"
             ]
           },
           "content": "There's a few less rows than the last query. In the `LEFT JOIN` you used, the `students` table was the left table since it was on the left side of the `JOIN`. `majors` was the right table. A `LEFT JOIN` gets all rows from the left table, but only rows from the right table that are linked to from the left one. Looking at the data, you can see that every student was returned, but the majors without any students were not. Join the same two tables with a `RIGHT JOIN` this time.",
@@ -6101,7 +6101,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1205c0b8a9cdcb927c324e023da45d468f57be93"
+              "e18d187a2433626f94ac5a4a8aaad2d591565204"
             ]
           },
           "content": "The right join showed all the rows from the right table (`majors`), but only rows from the left table (`students`) if they have a major. There's one more type you should know about. Join the two tables with an `INNER JOIN`.",
@@ -6128,7 +6128,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "44eef274da4dbd08ba0812e60cac891b96dc3924"
+              "54001bcae9491bc64b88ca730730535829f76e36"
             ]
           },
           "content": "The `INNER JOIN` only returned students if they have a major and majors that have a student. In other words, it only returned rows if they have a value in the foreign key column (`major_id`) of the opposite table. You should know a little about the four main types of joins now. Try using a `LEFT JOIN` to show **all the majors** but only students that have a major.",
@@ -6156,7 +6156,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "94b98a03e8817f661ebb12c1999d2e71f38dcc2d"
+              "4029f3521542a49f75a23ed226f3829251b12f50"
             ]
           },
           "content": "Excellent. All the majors are there. Next, use the appropriate join to show only students that are enrolled in a major, and only majors that have a student enrolled in it.",
@@ -6185,7 +6185,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "201eaeee687ea6c410196940e347a9b948cbabed"
+              "32f99737e626dfe226ec844a97298cb2079416cb"
             ]
           },
           "content": ":thumbsup: Try using a right join to show all students but only majors if a student is enrolled in it.",
@@ -6213,7 +6213,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "b164fe5ff80421c7734e320f526640fd13951b9a"
+              "73a6773182585a4725a59a113dad09827e4a7cf6"
             ]
           },
           "content": "That showed all the students since it was the right table of the `RIGHT JOIN`. Use the appropriate join with the same two table to show all rows in both tables whether they have a value in the foreign key column or not.",
@@ -6241,7 +6241,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "35b1984dd935cbaf2f95fc3bcb6e16c60ec86ba1"
+              "c35c1f41837e04284e459728c1b06601d0f045f4"
             ]
           },
           "content": "Lets do some more experiments with joins. Say you wanted to find a list of majors that students are taking. Use the most efficient `JOIN` to only get rows from the tables you need to find that.",
@@ -6270,7 +6270,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "cbfa2974ff3bdbe3338898527ef7def659a9e143"
+              "2d0bf1afb3255eed12ff4a834fabed2ee21320f7"
             ]
           },
           "content": "Good. To get the list, you don't need all the columns, though. Enter the same command, but just get the column you need.",
@@ -6297,7 +6297,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "baa63d04e72f9bf7c3290ae430e74f08ae37b0de"
+              "c3b8fbe3f44599abe6cbf78e9cc55f1f010a7e34"
             ]
           },
           "content": "You also don't want any duplicates. Use `DISTINCT` to only return the unique ones to see the list of majors who have students.",
@@ -6325,7 +6325,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "1c1f6ac8b7114db3f504a284256bb48f0a03c0f7"
+              "208b1b643cf1f598394bfa393ff1c13ae3993c77"
             ]
           },
           "content": "There's your list of majors that students are taking :smile: Next, say you wanted a list of majors that students aren't taking. Use the most efficient join to get only the rows needed.",
@@ -6354,7 +6354,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "8ee9928ec4042fd2d7e11cec6c1a448c685513e0"
+              "0243f4510d4494b06840a85ea44b5944ae5609d7"
             ]
           },
           "content": "That got you all the majors, you can see the ones that don't have any students. Add a `WHERE` condition to only see the majors without students, use `student_id` in it's condition.",
@@ -6383,7 +6383,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "88d36f52faea6d9e28d308c6425c6f70195c49bc"
+              "c663c7de381d1769ff25bf9e1145af764f9cec74"
             ]
           },
           "content": "Now you only have the rows you need. Only get the columns you need with it to see the list of majors without students.",
@@ -6410,7 +6410,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "559c22bc7b3ccf99e3f519d74a3594432ca54d38"
+              "c482b8bfb05e85f3253bbc616e80d1d3dba7fe12"
             ]
           },
           "content": "You're doing great. Next, use the most efficient join to get the rows needed if you were asked to get the first name, last name, major, and GPA of students who are taking Data Science or have a gpa of 3.8 or greater.",
@@ -6438,7 +6438,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "65437ae36829aa7c527eaebdf49b340f07be6abd"
+              "e0f2e564a4c97478369a079e4d69f06d9f98b74a"
             ]
           },
           "content": "Enter the same command, but use `WHERE` to only get the students that meet the requirements. As a reminder, the goal was to find students who are taking Data Science or have a gpa of 3.8 or greater.",
@@ -6466,7 +6466,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "fbf0f13ef85ad22b615a02b7e486253458f9f371"
+              "0dfd134226997c0aca50541ce2aa0208e7c93052"
             ]
           },
           "content": "Now, you have narrowed it down the rows you are looking for. Enter the same command, but only get the columns you need. There was four of them, the students first name, last name, their major, and GPA. Get them in that order.",
@@ -6493,7 +6493,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "eca0568f164b2f60eac79c3d2577478f707a20f3"
+              "055aa3f3de04d1615197cfefa5a68464c9ceff83"
             ]
           },
           "content": "From there, you could put them in a specific order if you wanted or limit the results to a certain number among other things. Lastly, use the join to get the rows needed if you were asked to get the first name and major for students whose `first_name`, or the `major`, contains `ri`.",
@@ -6520,7 +6520,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "86d86120afb9d929d241a366aca22a1cfa154c9c"
+              "47b77b69c3b14be618a21088d060a3e0aa6f3504"
             ]
           },
           "content": "Add a `WHERE` to the previous query so you only get the rows you need. The rows you wanted were the ones with a first name or major containing `ri`.",
@@ -6549,7 +6549,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "ace3375f0fbeeab41b40c010667878aeef55bb97"
+              "79fa5e1fc5ef810be48a9b7e20c3f1e07e242e05"
             ]
           },
           "content": "Finally, you only wanted to display the `first_name` and `majors` columns. Enter the previous query, but only get the columns you need.",
@@ -6575,7 +6575,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "616300454472bc54579983d7999b33ece7737df7"
+              "70f63218abc3b2419927f502a51913ca2e6931f5"
             ]
           },
           "content": "In your script, add the command to print what the sentence is asking for.",
@@ -6602,7 +6602,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "a05b68b53048c8e2bb380cebe18afdb74f9ea532"
+              "5052d21b43c8da297c2ba39b8558ab08f2a90341"
             ]
           },
           "content": "Run the script to see the majors described.",
@@ -6627,7 +6627,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "d6c465832d33ffe1149f3f8055a888b604b25b37"
+              "5e95854e86c283ff8be633179c291c544a658632"
             ]
           },
           "content": ":smile: Almost done. In your script, add a command to print this sentence like the others: `List of unique courses, in reverse alphabetical order, that no student or 'Obie Hilpert' is taking:`",
@@ -6653,7 +6653,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "11d7a2ae4e79f786b14323554c6a17df2b6de7a5"
+              "2da572fc28e9405588abf7ec905b7502407a0b53"
             ]
           },
           "content": "Lets go over a few more things before you figure out how to see the courses a student is taking. Start by doing a `FULL JOIN` on your `students` and `majors` tables.",
@@ -6678,7 +6678,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "2589a1bc7d41184eed338dd17a5cd6dfae586dd0"
+              "9343c0df6d785dac2e77bb72aab74b15041a0641"
             ]
           },
           "content": "If you look at the column names, it shows two `major_id` columns. One from the `students` table and one from the `majors` table. If you were to try and query it using `major_id`, you would get an error. You would need to specify what table you want the column from like this: `<table>.<column>`. Enter the same join but only get the `major_id` column from the `students` table.",
@@ -6704,7 +6704,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "22eb5b2a872eb267d733c112cde0da44e1441f80"
+              "153f8caa072b1ed6c51bd6a1347548edb5300fec"
             ]
           },
           "content": "Earlier, you used `AS` to rename columns. You can use it to rename tables, or give them aliases, as well. Here's an example: `SELECT * FROM <table> AS <new_name>;`. Enter the same query you just entered, but rename the `majors` table to `m`. Anywhere the `majors` table is referenced, you will need to use `m` instead of `majors`.",
@@ -6730,7 +6730,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "a17a9efefae37ab42109365612fa136d77312500"
+              "bc69af1e732c7041cc0af29e9becc93784886716"
             ]
           },
           "content": "This doesn't affect the output. It can just make some queries easier to read. Enter the same query, but rename the `students` table to `s` as well.",
@@ -6756,7 +6756,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "052d8a1605a6a5fb8760e3c3153623ef267c8346"
+              "2e3495fc339122ab14b7f1be16317677e3ec8b8a"
             ]
           },
           "content": "There's a shortcut keyword, `USING` to join tables if the foreign key column has the same name in both tables. Here's an example: `SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>);`. Use this method to see **all** the columns in the `students` and `majors` table. Don't use any aliases.",
@@ -6780,7 +6780,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "58b00995c2a350c5f5cd93c5303898f6f3935e77"
+              "2c485f37c1fb1e86ba84178da0fbfe16cc6024f2"
             ]
           },
           "content": "Note that the two `major_id` columns were turned into one with `USING`. In order to find out what courses a student is taking, you will need to join all the tables together. You can add a third table to a join like this: `SELECT * FROM <table_1> FULL JOIN <table_2> USING(<column>) FULL JOIN <table_3> USING(<column>)`. This example will join the first two tables into one, turning it into the left table for the second join. Use this method to join the two tables from the previous query with the `majors_courses` table.",
@@ -6807,7 +6807,7 @@
               "./.freeCodeCamp/test/pg.log"
             ],
             "commits": [
-              "3f73bf73d527fbd8e6e530ccedbfbf3a8214cd46"
+              "f72cb98e72ebea6f064c0b8b17ea1f2010c185a9"
             ]
           },
           "content": "You may need to adjust the terminal size to align the output. What you're seeing is every unique combination of rows in the database. Students with a major are listed multiple times, one for each course included in the major. The majors without any students are there along with the courses for them. The students without a major are included, they have no courses and are only listed once. You can join as many tables together as you want. Join the last table to the previous command to get the names of the courses with all this info.",
@@ -6834,7 +6834,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "f1b7ba902809c1be8d4463386cc13e9b5ea8099e"
+              "59117863aa9cab51b477ae09539b648281b483f3"
             ]
           },
           "content": "Same amount of rows, but you get the course names now. In your script, add the command to print the suggested info.",
@@ -6861,7 +6861,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "329090f355d11dc538561b506fbd825b561cbf3e"
+              "e811aa6c4c368e66a337de2b33bdc1ad190f1edb"
             ]
           },
           "content": "Run the script to see courses described.",
@@ -6886,7 +6886,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "aab42c06784225d1facb114ecd3725a025df4a12"
+              "4194df5926082972fe2ad5ea3528928da4ad429c"
             ]
           },
           "content": "Last one. Add a command that prints `List of courses, in alphabetical order, with only one student enrolled:`.",
@@ -6912,7 +6912,7 @@
               "./student_info.sh"
             ],
             "commits": [
-              "ec6361af0fbedc87b468424c6fd562b79c30c6f2"
+              "20dd59d583d73b1830044fb2bee0f7061140b37e"
             ]
           },
           "content": "Go for it.",
@@ -6945,7 +6945,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "ce89e943ccc94376d54113f784a1942653f04a6f"
+              "cb1a608cb1f3331d2954665dca25c3bca386946b"
             ]
           },
           "content": "This is the last step, you have done really well. Run the script one last time. :wave:",
