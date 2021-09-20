@@ -9,3 +9,8 @@ Whenever something on the version branch gets changed, add the new branch name a
 ## [v1.0.0]
 
 - Initial soft release with news article
+
+## [v1.0.1]
+
+- Fix all tests that use strove in the path
+- Add missing commit for 2075
