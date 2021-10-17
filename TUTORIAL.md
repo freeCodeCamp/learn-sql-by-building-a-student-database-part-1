@@ -794,7 +794,7 @@ You used the `psql` command to log in and interact with the database. You can us
 
 #### HINTS
 
-- Add the suggested variable between your first command and the loop
+- Add the suggested variable between your first comment and the loop
 - The suggested area should look like this:
 ```sh
 PSQL="psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c"
@@ -1253,7 +1253,7 @@ It's starting to come together. Below your `get new major_id` comment, set the `
 - Here's an example of how to query the database: `MAJOR_ID=$($PSQL "<query_here>")`
 - For the query, you want to use the `SELECT`, `FROM`, and `WHERE` keywords
 - Here's an example of how the query part looks: `SELECT <column_name> FROM <table_name> WHERE <condition>`
-- The condition you want is `major_id='$MAJOR'`
+- The condition you want is `major='$MAJOR'`
 - Here's how the query should look: `SELECT major_id FROM majors WHERE major='$MAJOR'`
 - Here's how the whole line should look: `MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")`
 - Make sure it's in the `if [[ -z $MAJOR_ID ]]` statements area
@@ -1502,7 +1502,7 @@ Lastly, view the data in the `majors_courses` table. There should be four rows.
 ### 970.1
 
 Alright, that part of the script is done. Next, you need to add everything from the `students.csv` file. Make some test data again. In the terminal, use the copy command to copy `students.csv` into a file named `students_test.csv`.
-cp students.csv students_test.csv
+
 
 #### HINTS
 
@@ -2715,7 +2715,7 @@ View the students who don't have a major, but don't include students without a G
 
 ### 1760.1
 
-One more. View the students who don't have a major or gpa.
+One more. View the students who don't have a major and gpa.
 
 #### HINTS
 
@@ -3548,7 +3548,7 @@ Add a `WHERE` to the previous query so you only get the rows you need. The rows 
 
 ### 2290.1
 
-Finally, you only wanted to display the `first_name` and `majors` columns. Enter the previous query, but only get the columns you need.
+Finally, you only wanted to display the `first_name` and `major` columns. Enter the previous query, but only get the columns you need.
 
 #### HINTS
 
