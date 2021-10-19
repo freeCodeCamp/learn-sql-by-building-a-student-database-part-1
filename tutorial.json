@@ -1568,7 +1568,7 @@
           },
           "content": "You used the `psql` command to log in and interact with the database. You can use it to just run a single command and exit. Above your loop, add a `PSQL` variable that looks like this: `PSQL=\"psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c\"`. This will allow you to query your database from your script. The important parts are the `username`, `dbname`, and the `-c` flag that is for running a single command and exiting. The rest of the flags are for formatting.",
           "hints": [
-            "Add the suggested variable between your first command and the loop",
+            "Add the suggested variable between your first comment and the loop",
             "The suggested area should look like this:\n```sh\nPSQL=\"psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c\"\n```"
           ]
         }
@@ -2371,7 +2371,7 @@
             "Here's an example of how to query the database: `MAJOR_ID=$($PSQL \"<query_here>\")`",
             "For the query, you want to use the `SELECT`, `FROM`, and `WHERE` keywords",
             "Here's an example of how the query part looks: `SELECT <column_name> FROM <table_name> WHERE <condition>`",
-            "The condition you want is `major_id='$MAJOR'`",
+            "The condition you want is `major='$MAJOR'`",
             "Here's how the query should look: `SELECT major_id FROM majors WHERE major='$MAJOR'`",
             "Here's how the whole line should look: `MAJOR_ID=$($PSQL \"SELECT major_id FROM majors WHERE major='$MAJOR'\")`",
             "Make sure it's in the `if [[ -z $MAJOR_ID ]]` statements area"
@@ -2815,7 +2815,7 @@
               "5e99aba67587129bd3d0cee7a6bb3da81024ccb6"
             ]
           },
-          "content": "Alright, that part of the script is done. Next, you need to add everything from the `students.csv` file. Make some test data again. In the terminal, use the copy command to copy `students.csv` into a file named `students_test.csv`.\ncp students.csv students_test.csv",
+          "content": "Alright, that part of the script is done. Next, you need to add everything from the `students.csv` file. Make some test data again. In the terminal, use the copy command to copy `students.csv` into a file named `students_test.csv`.",
           "hints": [
             "`cp` is the copy command",
             "Here's an example: `cp <filename> <new_name>`",
@@ -5018,7 +5018,7 @@
               "21ca1e84cef4c6b893b38d75bf939e3ce569d031"
             ]
           },
-          "content": "One more. View the students who don't have a major or gpa.",
+          "content": "One more. View the students who don't have a major and gpa.",
           "hints": [
             "Use the `SELECT`, `FROM`, `WHERE`, `IS NULL`, and `AND` keywords with `*` to view the suggested rows",
             "Here's an example: `SELECT <columns> FROM <table> WHERE <condition_1> AND <condition_2>;`",
@@ -6555,7 +6555,7 @@
               "76b2811628310dfa539d2e1361349ec1762e4587"
             ]
           },
-          "content": "Finally, you only wanted to display the `first_name` and `majors` columns. Enter the previous query, but only get the columns you need.",
+          "content": "Finally, you only wanted to display the `first_name` and `major` columns. Enter the previous query, but only get the columns you need.",
           "hints": [
             "The previous query was `SELECT * FROM students LEFT JOIN majors ON students.major_id = majors.major_id WHERE first_name LIKE '%ri%' OR major LIKE '%ri%';`",
             "The two columns you want are `first_name` and `major`",
