@@ -14,3 +14,10 @@ Whenever something on the version branch gets changed, add the new branch name a
 
 - Fix all tests that use strove in the path
 - Add missing commit for 2075
+
+## [v2.0.0]
+
+- Split tutorial into two parts
+  - Remove commits and lessons > 1210 (All will be in part 2)
+  - Add lessons at the end to dump the database created
+  - Rename repo to `learn-sql-by-building-a-student-database-part-1`
