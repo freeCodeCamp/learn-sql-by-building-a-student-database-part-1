@@ -3561,6 +3561,57 @@
           ]
         }
       ]
+    },
+    {
+      "id": "1220",
+      "title": "pg_dump --help",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1220.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "af46f1ded641e1bb8be9e1359e5aecba6763d2d4"
+            ]
+          },
+          "content": "The database is finished for now. The last thing you are going to do is make a \"dump\" of it. The `pg_dump` command can do that for you. Use the `--help` flag with the command to see what it can do.",
+          "hints": [
+            "Here's an example: `<command> <flag>`",
+            "Enter `pg_dump --help` in the terminal",
+            "The bash terminal, not the psql one",
+            "Press enter until you have seen the whole manual"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1230",
+      "title": "dump database",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "1230.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "bcda0d2ab0195f4c907593b943e8dd9a4d993ef2"
+            ]
+          },
+          "content": "This is the last step. There's quite a few options there. Enter `pg_dump --clean --create --inserts --username=freecodecamp students > students.sql` in the terminal to dump the database into a `students.sql` file. It will save all the commands needed to rebuild it.",
+          "hints": [
+            "Enter the suggested command in the terminal",
+            "The bash terminal, not the psql one",
+            "Make sure you are in the `project` folder first"
+          ]
+        }
+      ]
     }
   ]
 }
