@@ -853,3 +853,15 @@ levels:
         setup:
           watchers:
             - ../.bash_history
+  - id: '1220'
+    steps:
+      - id: '1220.1'
+        setup:
+          watchers:
+            - ../.bash_history
+  - id: '1230'
+    steps:
+      - id: '1230.1'
+        setup:
+          watchers:
+            - ../.bash_history

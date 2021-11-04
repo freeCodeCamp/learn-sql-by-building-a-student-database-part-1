@@ -1938,3 +1938,28 @@ List the contents of the folder again to make sure they're gone.
 - It's the `ls` command
 - Don't use any flags with the command
 - Enter `ls` in the terminal
+
+## 1220. pg_dump --help
+
+### 1220.1
+
+The database is finished for now. The last thing you are going to do is make a "dump" of it. The `pg_dump` command can do that for you. Use the `--help` flag with the command to see what it can do.
+
+#### HINTS
+
+- Here's an example: `<command> <flag>`
+- Enter `pg_dump --help` in the terminal
+- The bash terminal, not the psql one
+- Press enter until you have seen the whole manual
+
+## 1230. dump database
+
+### 1230.1
+
+This is the last step. There's quite a few options there. Enter `pg_dump --clean --create --inserts --username=freecodecamp students > students.sql` in the terminal to dump the database into a `students.sql` file. It will save all the commands needed to rebuild it.
+
+#### HINTS
+
+- Enter the suggested command in the terminal
+- The bash terminal, not the psql one
+- Make sure you are in the `project` folder first
