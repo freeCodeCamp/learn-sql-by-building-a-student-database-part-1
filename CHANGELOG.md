@@ -20,4 +20,8 @@ Whenever something on the version branch gets changed, add the new branch name a
 - Split tutorial into two parts
   - Remove commits and lessons > 1210 (All will be in part 2)
   - Add lessons at the end to dump the database created
-  - Rename repo to `learn-sql-by-building-a-student-database-part-1`
+  - Move pg log files outside of repo - needed because logs would stop working after reset
+    - Change all watchers to that
+    - Change test utils to use that
+    - Changed psqlrc to that
+  - Move startup commands to the reset file and run it instead of the rest of the commands
