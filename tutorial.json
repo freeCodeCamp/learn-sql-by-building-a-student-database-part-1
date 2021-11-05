@@ -2859,7 +2859,8 @@
           "content": "You want to loop through all this info like you did for the other CSV file. The process is the same. Below your existing loop, use `cat` to print your new test file. Pipe the results into a `while` loop, setting the `IFS` to a comma again, and then use `read` to create `FIRST`, `LAST`, `MAJOR` and `GPA` variables from the data. In the loop, use `echo` to print the `FIRST` variable.",
           "hints": [
             "It should look real similar to your other loop like this",
-            "Here's an example:\n```sh\ncat <filename> | while IFS=\",\" read VARIABLE_1 VARIABLE_2 VARIABLE_3 VARIABLE_4\ndo\n  STATEMENTS\ndone\n```\nHere's how it looks:\n```sh\ncat students_test.csv | while IFS=\",\" read FIRST LAST MAJOR GPA\ndo\n  echo $FIRST\ndone\n```"
+            "Here's an example:\n```sh\ncat <filename> | while IFS=\",\" read VARIABLE_1 VARIABLE_2 VARIABLE_3 VARIABLE_4\ndo\n  STATEMENTS\ndone\n```",
+            "Here's how it looks:\n```sh\ncat students_test.csv | while IFS=\",\" read FIRST LAST MAJOR GPA\ndo\n  echo $FIRST\ndone\n```"
           ]
         }
       ]
@@ -3604,7 +3605,7 @@
               "bcda0d2ab0195f4c907593b943e8dd9a4d993ef2"
             ]
           },
-          "content": "This is the last step. There's quite a few options there. Enter `pg_dump --clean --create --inserts --username=freecodecamp students > students.sql` in the terminal to dump the database into a `students.sql` file. It will save all the commands needed to rebuild it.",
+          "content": "This is the last step. There's quite a few options there. Enter `pg_dump --clean --create --inserts --username=freecodecamp students > students.sql` in the terminal to dump the database into a `students.sql` file. It will save all the commands needed to rebuild it. Take a quick look at the file when you are done.",
           "hints": [
             "Enter the suggested command in the terminal",
             "The bash terminal, not the psql one",
