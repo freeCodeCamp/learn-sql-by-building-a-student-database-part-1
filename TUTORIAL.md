@@ -1546,7 +1546,7 @@ do
   STATEMENTS
 done
 ```
-Here's how it looks:
+- Here's how it looks:
 ```sh
 cat students_test.csv | while IFS="," read FIRST LAST MAJOR GPA
 do
@@ -1956,7 +1956,7 @@ The database is finished for now. The last thing you are going to do is make a "
 
 ### 1230.1
 
-This is the last step. There's quite a few options there. Enter `pg_dump --clean --create --inserts --username=freecodecamp students > students.sql` in the terminal to dump the database into a `students.sql` file. It will save all the commands needed to rebuild it.
+This is the last step. There's quite a few options there. Enter `pg_dump --clean --create --inserts --username=freecodecamp students > students.sql` in the terminal to dump the database into a `students.sql` file. It will save all the commands needed to rebuild it. Take a quick look at the file when you are done.
 
 #### HINTS
 
