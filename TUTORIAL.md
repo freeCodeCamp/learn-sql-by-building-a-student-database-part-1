@@ -1,4 +1,4 @@
-# Learn SQL by Building a Student Database
+# Learn SQL by Building a Student Database: Part 1
 
 > Welcome to the SQL Lessons!
 
