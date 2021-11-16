@@ -10,7 +10,7 @@ config:
       tap: --reporter=mocha-tap-reporter
     directory: .freeCodeCamp
   repo:
-    uri: https://github.com/freeCodeCamp/learn-sql-by-building-a-student-database
+    uri: https://github.com/freeCodeCamp/learn-sql-by-building-a-student-database-part-1
     branch: v2.0.0
   reset:
     commands:
