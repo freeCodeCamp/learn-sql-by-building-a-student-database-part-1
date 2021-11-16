@@ -14,3 +14,14 @@ Whenever something on the version branch gets changed, add the new branch name a
 
 - Fix all tests that use strove in the path
 - Add missing commit for 2075
+
+## [v2.0.0]
+
+- Split tutorial into two parts
+  - Remove commits and lessons > 1210 (All will be in part 2)
+  - Add lessons at the end to dump the database created
+  - Move pg log files outside of repo - needed because logs would stop working after reset
+    - Change all watchers to that
+    - Change test utils to use that
+    - Changed psqlrc to that
+  - Move startup commands to the reset file and run it instead of the rest of the commands
