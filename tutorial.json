@@ -2395,7 +2395,7 @@
               "afeb3e084b630f4bb68139b711c5a5f3ebcc0830"
             ]
           },
-          "content": "So the script will insert the majors correctly. Next is the courses. It will be the same steps as for the majors. Below your `get course_id` comment, add a `COURSE_ID` variable that gets the `course_id` from the database. Remember that your `COURSE` variable will have the current course in the loop.",
+          "content": "So the script will insert the majors correctly. Next are the courses. It will be the same steps as for the majors. Below your `get course_id` comment, add a `COURSE_ID` variable that gets the `course_id` from the database. Remember that your `COURSE` variable will have the current course in the loop.",
           "hints": [
             "Here's an example of how to query the database: `COURSE_ID=$($PSQL \"<query_here>\")`",
             "For the query, you want to use the `SELECT`, `FROM`, and `WHERE` keywords",
@@ -2658,7 +2658,7 @@
               "c98b9f250b85c01907f72cb8c460a8a64e3411da"
             ]
           },
-          "content": "One more thing to add for this file. Below the `insert into majors_courses` courses comment, create a `INSERT_MAJORS_COURSES_RESULT` variable. Use it and the `MAJOR_ID` and `COURSE_ID` variables you created to insert a row into the `majors_courses` table. Make sure the query has the `major_id` column first. Also, you won't need and quotes around the values for the ID's.",
+          "content": "One more thing to add for this file. Below the `insert into majors_courses` courses comment, create a `INSERT_MAJORS_COURSES_RESULT` variable. Use it and the `MAJOR_ID` and `COURSE_ID` variables you created to insert a row into the `majors_courses` table. Make sure the query has the `major_id` column first. Also, you won't need any quotes around the values for the ID's.",
           "hints": [
             "Here's an example: `INSERT_MAJORS_COURSES_RESULT=$($PSQL \"<query_here>\")`",
             "For the query, you want to use the `INSERT INTO`, and `VALUES` keywords",
