@@ -1,9 +1,9 @@
 id: 'freeCodeCamp/learn-sql-by-building-a-student-database-part-1:v1.0.0'
-version: '2.0.0'
+version: '2.0.1'
 config:
   setup:
     commands:
-      - sudo bash .freeCodeCamp/reset.sh
+      - ./.freeCodeCamp/reset.sh
       - cd .freeCodeCamp && npm install
   testRunner:
     command: npm run programmatic-test
@@ -12,7 +12,10 @@ config:
     directory: .freeCodeCamp
   repo:
     uri: https://github.com/freeCodeCamp/learn-sql-by-building-a-student-database-part-1
-    branch: v2.0.0
+    branch: v2.0.1
+  continue:
+    commands:
+      - './.freeCodeCamp/reset.sh'
   reset:
     commands:
       - './.freeCodeCamp/reset.sh'
@@ -20,7 +23,7 @@ config:
     - name: node
       version: '>=10'
   webhook:
-    url: 'http://freecodecamp.org/coderoad-challenge-completed'
+    url: 'http://freecodecamp.dev/coderoad-challenge-completed'
     events:
       init: false
       reset: false
