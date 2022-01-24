@@ -30,3 +30,7 @@ Whenever a new version is created, add the new branch name and the changes here
 
 - Add creation of bash history in `reset.sh`
 - Add continue commands
+
+## [v2.0.2]
+
+- Only disconnect user `freecodecamp` from db when resetting
