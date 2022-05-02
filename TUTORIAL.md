@@ -368,7 +368,7 @@ Set your new `course_id` column as a foreign key that references the other `cour
 - Use the `ALTER TABLE`, `ADD FOREIGN KEY`, and `REFERENCES` keywords
 - Here's an example: `ALTER TABLE <table_name> ADD FOREIGN KEY(<column_name>) REFERENCES <referenced_table_name>(<referenced_column_name>);`
 - You previously used: `ALTER TABLE students ADD FOREIGN KEY(major_id) REFERENCES majors(major_id);`
-- Type `ALTER TABLE majors_courses ADD FOREIGN KEY(major_id) REFERENCES majors(major_id);` into the psql prompt
+- Type `ALTER TABLE majors_courses ADD FOREIGN KEY(course_id) REFERENCES courses(course_id);` into the psql prompt
 
 ## 270. \d majors_courses
 
@@ -486,7 +486,7 @@ View all the data in the `courses` table to make sure it got added.
 
 - Use the `SELECT` and `FROM` keywords with `*` to view all the columns
 - Here's an example: `SELECT <columns> FROM <table_name>;`
-- Type `SELECT * FROM majors;` into the psql prompt
+- Type `SELECT * FROM courses;` into the psql prompt
 
 ## 370. \d majors_courses
 
@@ -501,7 +501,7 @@ Next, you can add a row into the junction table. View the details of it to see w
 - Add the table name after the command
 - It's the `\d` command
 - Here's an example: `\d <table_name>`
-- Type `\d majors` into the psql prompt
+- Type `\d majors_courses` into the psql prompt
 
 ## 380. INSERT INTO majors_courses
 
@@ -991,7 +991,7 @@ It says you "cannot truncate a table referenced in a foreign key constraint." Th
 
 - Here's an example: `TRUNCATE <table_1>, <table_2>, <table_3>;`
 - The three tables you want are `majors`, `students`, and `majors_courses`
-- Enter `TRUNCATE majors, students, majors_courses` in the psql prompt
+- Enter `TRUNCATE majors, students, majors_courses;` in the psql prompt
 
 ## 670. SELECT * FROM majors
 
@@ -1051,7 +1051,7 @@ There should still be one entry in there. Use `TRUNCATE` to delete all the data 
 
 - Here's an example: `TRUNCATE <table_1>, <table_2>;`
 - The tables you want are `courses`, and `majors_courses`
-- Enter `TRUNCATE majors, students, majors_courses` in the psql prompt
+- Enter `TRUNCATE courses, majors_courses;` in the psql prompt
 
 ## 720. SELECT * FROM courses
 
