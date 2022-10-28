@@ -811,7 +811,7 @@ Now, you can query your database using the `PSQL` variable like this: `$($PSQL "
 - Here's an example of how it looks: `MAJOR_ID=$($PSQL "<query_here>")`
 - For the query, you want to use the `SELECT`, `FROM`, and `WHERE` keywords
 - Here's an example of how the query part looks: `SELECT <column_name> FROM <table_name> WHERE <condition>`
-- The condition you want is `major_id='$MAJOR'`
+- The condition you want is `major='$MAJOR'`
 - Here's how the query should look: `SELECT major_id FROM majors WHERE major='$MAJOR'`
 - Here's how the whole line should look: `MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major='$MAJOR'")`
 
