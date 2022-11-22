@@ -952,7 +952,7 @@ Run the script. It will go through the test data and insert a major into the dat
 
 ### 625.1
 
-Looks like found an ID that was already in the database twice and inserted three new items into the database. You don't need to print the ID anymore so delete the `echo $MAJOR_ID` line.
+Looks like it found an ID that was already in the database twice and inserted three new items into the database. You don't need to print the ID anymore so delete the `echo $MAJOR_ID` line.
 
 #### HINTS
 
