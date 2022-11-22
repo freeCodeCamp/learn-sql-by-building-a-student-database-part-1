@@ -1848,7 +1848,7 @@
               "333dbe0a1628c0c4fe632d0da3307eaa9955d152"
             ]
           },
-          "content": "Looks like found an ID that was already in the database twice and inserted three new items into the database. You don't need to print the ID anymore so delete the `echo $MAJOR_ID` line.",
+          "content": "Looks like it found an ID that was already in the database twice and inserted three new items into the database. You don't need to print the ID anymore so delete the `echo $MAJOR_ID` line.",
           "hints": [
             "Delete the `echo $MAJOR_ID` line"
           ]
