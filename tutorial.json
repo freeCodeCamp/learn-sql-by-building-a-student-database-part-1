@@ -1596,7 +1596,7 @@
               "ba27d9f766c123ea2eb1c383e5cc20062a11c53e"
             ]
           },
-          "content": "Now, you can query your database using the `PSQL` variable like this: `$($PSQL \"<query_here>\")`. Below the `get major_id` comment in your loop, create a `MAJOR_ID` variable. Set it equal to the result of a query that gets the `major_id` of the current `MAJOR` in the loop. Make sure to put your `MAJOR` variable in single quotes.",
+          "content": "Now, you can query your database using the `PSQL` variable like this: `$($PSQL \"<query_here>\")`. The code in the parenthesis will run in a subshell, which is a separate bash process. Below the `get major_id` comment in your loop, create a `MAJOR_ID` variable. Set it equal to the result of a query that gets the `major_id` of the current `MAJOR` in the loop. Make sure to put your `MAJOR` variable in single quotes.",
           "hints": [
             "Here's an example of how it looks: `MAJOR_ID=$($PSQL \"<query_here>\")`",
             "For the query, you want to use the `SELECT`, `FROM`, and `WHERE` keywords",
