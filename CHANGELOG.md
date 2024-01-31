@@ -42,3 +42,7 @@ Whenever a new version is created, add the new branch name and the changes here
 - Add `exit` flag to mocha so tests can't hang
 - Fixed tests on steps 568, 850, and 1047 for [issue](https://github.com/freeCodeCamp/freeCodeCamp/issues/44897)
 - Fixed bad hints on steps 260, 360, 370, 660, and 710
+
+## [v3.0.0]
+
+- Add Gitpod config
