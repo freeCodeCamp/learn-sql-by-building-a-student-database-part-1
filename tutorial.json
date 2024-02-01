@@ -1,6 +1,6 @@
 {
   "id": "freeCodeCamp/learn-sql-by-building-a-student-database-part-1:v1.0.0",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "summary": {
     "title": "Learn SQL by Building a Student Database: Part 1",
     "description": "> Welcome to the SQL Lessons!"
@@ -12,7 +12,7 @@
         "cd .freeCodeCamp && npm install"
       ],
       "commits": [
-        "d8bb137a5d3ddfd01f8433a7aa3fd40a48122e63"
+        "0e0c18cb758a202d715016c1c1863f98e7ce1bfd"
       ]
     },
     "testRunner": {
@@ -23,8 +23,8 @@
       "directory": ".freeCodeCamp"
     },
     "repo": {
-      "uri": "https://github.com/freeCodeCamp/learn-sql-by-building-a-student-database-part-1",
-      "branch": "v2.0.3"
+      "uri": "https://github.com/moT01/learn-sql-by-building-a-student-database-part-1",
+      "branch": "v3.0.0"
     },
     "continue": {
       "commands": [
@@ -67,7 +67,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "b36c99e719187dcf269d82c018ebe53d6681e4c0"
+              "c33824b959a75c3f91a3d48158884763c9f644a4"
             ]
           },
           "content": "**The first thing you need to do is start the terminal.** Do that by clicking the \"hamburger\" menu at the top left of the screen, going to the \"terminal\" section, and clicking \"new terminal\". Once you open a new one, type `echo hello SQL` into the terminal and press enter.",
@@ -91,7 +91,7 @@
               "../pg.log"
             ],
             "commits": [
-              "33e252df2375a28b265dfbff22b0508b962d713a"
+              "d760c8ef045e4f0912b53484aab9c60d8a8f6f59"
             ]
           },
           "content": "You are started with two `.csv` files with info about your computer science students. You should take a look at them. The top row in each file has titles, and the rest are values for those titles. You will be adding all that info to a PostgreSQL database. Log into the psql interactive terminal with `psql --username=freecodecamp --dbname=postgres` to get started.",
@@ -114,7 +114,7 @@
               "../pg.log"
             ],
             "commits": [
-              "83ae6bb477743f0e35b5a07670575438cbd2f900"
+              "93fb4f30badd20d329be942466d2fde4dfd7ec8e"
             ]
           },
           "content": "View the existing databases with the `\\l` shortcut command to see what's here.",
@@ -137,7 +137,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "fb806971c44542565e015e77d75423c25dd5f249"
+              "7bccb608973f64cc6b940bd015e8ed503b09b19a"
             ]
           },
           "content": "All the info from the CSV files will go into a single database. Create a new database named `students`.",
@@ -162,7 +162,7 @@
               "../pg.log"
             ],
             "commits": [
-              "0d3b97629936895faa4e742069043ef33947f176"
+              "d705c6575841e79a8624afa930d0e396fb3cf8d1"
             ]
           },
           "content": "View the databases again to make sure it got created.",
@@ -186,7 +186,7 @@
               "../pg.log"
             ],
             "commits": [
-              "b515c28892db56f6ad88f8cc973d91d253af1243"
+              "6777141bcb1c29aba7120aa83b2e568bd6a0f08f"
             ]
           },
           "content": "There it is. Connect to your new database so you can start adding tables.",
@@ -211,7 +211,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "a5fff8dafc9dc183fab04aaaa3cd891e5880c3a4"
+              "4cfd1e8ff1f75251dc4c6500aa1672b891fb0984"
             ]
           },
           "content": "The CSV files have a bunch of students with info about them, and some courses and majors. You will have four tables. One for the students and their info, one for each major, another for each course, and a final one for showing what courses are included in each major. First, create the `students` table.",
@@ -237,7 +237,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "9da0fd6f0e03874ef4ce020ed0f98da444acc72e"
+              "ab3e4102a8df4a319af5d92e0f8ecc3c03023a3b"
             ]
           },
           "content": "The second table will be for each unique major that appears in the data. Create a table named `majors`.",
@@ -263,7 +263,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "b9a860d03b5461313ab253bedb5c4de0833be6b8"
+              "7086cc6457ccf2f922bdd443b6a06f95054e632f"
             ]
           },
           "content": "The third table is for each unique course in the data. Create another table named `courses`.",
@@ -289,7 +289,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "d5b1cbede930520528e946548161fa342ccaa2d1"
+              "72ea9c3e828e84b345a8cd2eb40598febb335c7e"
             ]
           },
           "content": "The final table will be a junction table for the majors and courses. Create it with the name `majors_courses`.",
@@ -315,7 +315,7 @@
               "../pg.log"
             ],
             "commits": [
-              "31dda0842c76927c2bb6d5e527bfd23d83a90729"
+              "657dad2712343444eb99d5a21d161ef807f4db96"
             ]
           },
           "content": "Use the **d**isplay shortcut command to view your tables to make sure your satisfied with them.",
@@ -339,7 +339,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "3579f47109491f87dc26dfd0deed159b7d2f917e"
+              "523c021462687ba3afd181737a443bc84cf811b8"
             ]
           },
           "content": "Onto the columns. The `students.csv` file has four fields, you will make a column for each of those as well as an ID column. Add a column to your `students` table named `student_id`. Give it a type of `SERIAL` so it automatically increments and make it a `PRIMARY KEY`",
@@ -365,7 +365,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "d706cac8292f54af8ef06ff56b10b5ce8a4e6725"
+              "2a80fa7491996e62397598faa2c4fa0651f73868"
             ]
           },
           "content": "The first column in `students.csv` is `first_name`. Add a column to the `students` table with that name. Make it a type of `VARCHAR(50)` and give it the `NOT NULL` constraint.",
@@ -391,7 +391,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "273809704a9ff2f1aed1293de513462b9b68adf7"
+              "8db2a9664de7889450b31c420f9128487f399c92"
             ]
           },
           "content": "The next column in the data is `last_name`. Add it to the `students` table. Give it the same data type and max-length as `first_name` and make sure it has the `NOT NULL` constraint.",
@@ -418,7 +418,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "0eb2cda39d8380031d555ddacf1b0429a5069cf7"
+              "00b2a8984aa06ddadcff07db36db869fefed62d0"
             ]
           },
           "content": "The next column is for the major. Since you will have each major in another table this column will be a foreign key that references it. Create a column in the `students` table named `major_id`, give it a data type of `INT` for now. You will come back and set the foreign key later.",
@@ -444,7 +444,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "13b0851aa16fc7bc7803c401b376d398cbb19ec3"
+              "727ab814c817bac1c6359dd719dda411e649a0d1"
             ]
           },
           "content": "Create the last column, `gpa`. The data in the CSV shows that they are decimals with a length of `2` and `1` number is to the right of the decimal. So give it a data type of `NUMERIC(2,1)`.",
@@ -470,7 +470,7 @@
               "../pg.log"
             ],
             "commits": [
-              "76127e5c15093eeacf74bb002eba686646eff464"
+              "136f15180edbd1345c0de325528aacfac183e814"
             ]
           },
           "content": "Use the shortcut command to **d**isplay the details of the `students` table to make sure you like it.",
@@ -496,7 +496,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "5de54b64d39af08d20f083c7c4287bf9852b13aa"
+              "cebcce76b960b51b184bcd791553510ae8e53859"
             ]
           },
           "content": "The foreign key is still missing. Let's fill in the `majors` table next. Add a `major_id` column to it. Make it a type of `SERIAL` and the `PRIMARY KEY` for this table.",
@@ -522,7 +522,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1d9f63a373f4d4905a4f8af2f4cb389d47fbd8a2"
+              "8b45745801e08a048ac40a43ffb4a928020b0be7"
             ]
           },
           "content": "This table will only have one other column for the name of the major. Add a column to it named `major`. Make it a `VARCHAR` with a max-length of `50` and give it the `NOT NULL` constraint.",
@@ -549,7 +549,7 @@
               "../pg.log"
             ],
             "commits": [
-              "6f59656ba2b13d0789124998e209deb183005a10"
+              "42af5da8b72a40af2e68ac2c6b9dc7f4192fe78c"
             ]
           },
           "content": "View the details of the majors table to make sure you like it.",
@@ -576,7 +576,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "81347c85c2088a8e6f4c782da4c3b30ccabecc05"
+              "96122367ef399bcc6ce5a2cd3510e2a6983a3c41"
             ]
           },
           "content": "This table looks good. Now, set the `major_id` column from the `students` table as a foreign key that references the `major_id` column from the `majors` table. Here's an example of how to do that: `ALTER TABLE <table_name> ADD FOREIGN KEY(<column_name>) REFERENCES <referenced_table_name>(<referenced_column_name>);`",
@@ -599,7 +599,7 @@
               "../pg.log"
             ],
             "commits": [
-              "63af9db858398083f3bca9109ddc200427d67343"
+              "9c7f4edf86c9faa354c53f20ac1b7329b1f3cd14"
             ]
           },
           "content": "View the details of the `students` table again to make sure the key is there.",
@@ -626,7 +626,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "f30b7e9e234e24e1bfacda48bc977bc819cf63d0"
+              "1de7076a6c95167601e04fc4d6d2ada2d01ca1b9"
             ]
           },
           "content": "Next, is the `courses` table. Add a `course_id` column to it. Give it a type of `SERIAL` and make it the primary key.",
@@ -652,7 +652,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1ace3ec8508532aee4b8316cb1200de01fa857b9"
+              "acda686a039f0ceff8f30e971d42ece0c9baa896"
             ]
           },
           "content": "Add a `course` column to the `courses` table that's a type of `VARCHAR`. The course names are a little longer, so give them a max-length of `100`. Also, make sure it can't accept null values.",
@@ -679,7 +679,7 @@
               "../pg.log"
             ],
             "commits": [
-              "62ee1894c2dd7161d690cba263af497dd7e00ce4"
+              "c00c667d372726997f7a2102a1f080172fce8231"
             ]
           },
           "content": "View the details of the courses table to make sure it looks good.",
@@ -706,7 +706,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "8ded9c5ee6cb54f66cc1dc5b269c49045aae6a5a"
+              "6c029c32355b3b395e5c6378759077ca8e78a371"
             ]
           },
           "content": "One more table to go. The `majors_courses` junction table will have two columns, each referencing the primary key from two related table. First, add a `major_id` column to it. Just give it a type of `INT` for now.",
@@ -732,7 +732,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "1a2a8fea1f340b744f8910e014b587c1fc0309af"
+              "4b811d191a84d17a3703eb2486c5c9f7e2b8d426"
             ]
           },
           "content": "Set the `major_id` column you just created as a foreign key that references the `major_id` column from the `majors` table.",
@@ -758,7 +758,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "5702177cf418c82b4f2c38127ca3113d94fb1933"
+              "c93219280b1f678d108568e67ed310b1ea7e95ac"
             ]
           },
           "content": "Next, add a `course_id` column to the same table. Just give it a type of `INT` again for now.",
@@ -785,7 +785,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "ab2cb72a209c88ccf0a46d94a771e3e448c6d5cf"
+              "f13d6707691882fdd809671e6ea3497ced0b588b"
             ]
           },
           "content": "Set your new `course_id` column as a foreign key that references the other `course_id` column.",
@@ -812,7 +812,7 @@
               "../pg.log"
             ],
             "commits": [
-              "6ee60bb953250ca78af0543c42dac693a34a2585"
+              "7f11b5b380a70973d490cbfb14708431e5840c92"
             ]
           },
           "content": "View the details of the table you just worked on to make sure the structure is finished.",
@@ -839,7 +839,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "d2b1c7e5e2d0013735c1efb6c242e92797056007"
+              "4b53f089f9d28f90cf4294f2a78f6faf8b8fad12"
             ]
           },
           "content": "There's one thing missing. This table doesn't have a primary key. The data from `courses.csv` will go in this table. A single major will be in it multiple times, and same with a course. So neither of them can be a primary key. But there will never be a row with the same two values as another row. So the two columns together, are unique. You can create a composite primary key that uses more than one column as a unique pair like this: `ALTER TABLE <table_name> ADD PRIMARY KEY(<column_name>, <column_name>);` Add a composite primary key to the table using the two columns.",
@@ -863,7 +863,7 @@
               "../pg.log"
             ],
             "commits": [
-              "a8babe247b2806623e9e96913553dfe0b4d40942"
+              "9d10d4050b3e80cdd0498eafacc6efd85a200d3a"
             ]
           },
           "content": "View the details of the table again.",
@@ -890,7 +890,7 @@
               "../pg.log"
             ],
             "commits": [
-              "d45f8816d1a269f96701b08cca454f3183a9afeb"
+              "02958d43731a360fffa8d320c5f06af6be8603eb"
             ]
           },
           "content": "Okay, now it's finished. View all the tables you ended up with.",
@@ -916,7 +916,7 @@
               "../pg.log"
             ],
             "commits": [
-              "b0dd03b53330e39afbc790391387d625e281b824"
+              "c33d723d1f4fd37935cfa8ceb3c7857715039ec3"
             ]
           },
           "content": "Next, you can start adding some info. Since the `students` table needs a `major_id`, you can add a major first. View the details of the `majors` table to see what info it expects.",
@@ -943,7 +943,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "b90c0d473b0068dcb3f888dced3b51eca8da7a11"
+              "b8a5094b7455463b7a82e9567aa3aa7e0f9f73dd"
             ]
           },
           "content": "It only needs the name of a major. The ID will be added automatically. Add the first major from the `courses.csv` file into the `majors` table. It's a `VARCHAR`, so make sure to put the value in single quotes.",
@@ -969,7 +969,7 @@
               "../pg.log"
             ],
             "commits": [
-              "ff71e59b4472e664d3adefc3a12c92b0e8578840"
+              "fb42c1c1d79046b33785506146b0183e1db6ff05"
             ]
           },
           "content": "Use `SELECT` to view all the data in the `majors` table to make sure it got inserted correctly.",
@@ -994,7 +994,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "fd1a88d30f863b43acc96ca08558c59939f47a47"
+              "8d7d7d7a20e1bcb5d7b13e2926971a16af179bff"
             ]
           },
           "content": "Next, insert the first course from `courses.csv` into the `courses` table.",
@@ -1022,7 +1022,7 @@
               "../pg.log"
             ],
             "commits": [
-              "15d52d5cdcdde3305d8f8d18bde8502e5bd68f47"
+              "4b3a2e0abd817a0dee361747109ec851f35d39b6"
             ]
           },
           "content": "View all the data in the `courses` table to make sure it got added.",
@@ -1047,7 +1047,7 @@
               "../pg.log"
             ],
             "commits": [
-              "9decd330873eff3ddd1f167fb28dbf8377d70f3f"
+              "fdfc11bf11e1035106b936265405a1f59f9ec3ac"
             ]
           },
           "content": "Next, you can add a row into the junction table. View the details of it to see what it expects.",
@@ -1075,7 +1075,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "8b5f24c9e4a49d695a1135c598845417af1c1d60"
+              "5435fdd72883b8b5c09fbafe7fd29937767eec9a"
             ]
           },
           "content": "It wants a `major_id` and `course_id`. Add a row to `majors_courses` for the first entry in `courses.csv`.",
@@ -1101,7 +1101,7 @@
               "../pg.log"
             ],
             "commits": [
-              "fe84e4e3208a72c1dc897be6a3af248e1d9a1bc2"
+              "1fc51f6290d949830a294e879573a0aea8d2cd41"
             ]
           },
           "content": "View all the data in the table you just added to.",
@@ -1126,7 +1126,7 @@
               "../pg.log"
             ],
             "commits": [
-              "55ecb4b0f203cead493fcad9d6cfd00bf0bc7591"
+              "25689b6c350f2dc88db21a610973c70b2b6069c3"
             ]
           },
           "content": "Looks like the row got added. View the details of the `students` table to remind yourself what it expects so you can add the first student to the database.",
@@ -1153,7 +1153,7 @@
               "../queryResults.log"
             ],
             "commits": [
-              "a195a5e7a9a8e69ba1b375ad96b4ef175a5a52d6"
+              "67b0c0484b7c0e59ba8d98b51ce4e3c6e2000662"
             ]
           },
           "content": "The output shows what the table needs. Insert the first person from `students.csv` into the `students` table.",
@@ -1181,7 +1181,7 @@
               "../pg.log"
             ],
             "commits": [
-              "0da6e3525b62e804cc4917866e31227277f89327"
+              "b77064fe86fb28a689dc2970ecc4709118d985d9"
             ]
           },
           "content": "Looks like it worked. View all the data in the students table to make sure.",
@@ -1206,7 +1206,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "07fa7f2090887d9682f43051ec71bec4b99b0b69"
+              "b8eff573e4582d0ee5b4f1b2f3a99e1da473d208"
             ]
           },
           "content": "Okay, you added a row into each table. It might be wise to review the data and the database structure. Adding the rest of the info one at a time would be tedious. You are going to make a script to do it for you. I recommend \"splitting\" the terminal for this part. You can do that by clicking the \"hamburger\" menu at the top left of the window, going to the \"Terminal\" menu, and clicking \"Split Terminal\". Once you've done that, use the `touch` command to create a file named `insert_data.sh` in your `project` folder.",
@@ -1231,7 +1231,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "305e77dc3fae25a2b73bdb6862ad147d952f2538"
+              "e0dee975e3c97ee31aee3c3000167166dd34b3b9"
             ]
           },
           "content": "You should have two terminals open. One connected to PostgreSQL, and one for entering terminal commands. In the one for terminal commands, use the `chmod` command with the `+x` flag to give you new script executable permissions.",
@@ -1257,7 +1257,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "2d11c7b5cf6ff113314feb98522341139ceac0c3"
+              "48585171e54e7f12143fa60bb85fc50788074bb7"
             ]
           },
           "content": "Open your new file and add a \"shebang\" that uses `bash` at the top. It looks like this: `#!/bin/bash`.",
@@ -1280,7 +1280,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "b26c665c4e443f4b75ab50953be37adea7ec9aa3"
+              "677327a1b858960c1bdd7c9981dd5757a7caa133"
             ]
           },
           "content": "Below that, add a single line comment with the text, `Script to insert data from courses.csv and students.csv into students database`.",
@@ -1304,7 +1304,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "20ade77ed66b9dd6dedacce5368040c0b1ab0f81"
+              "e85306b07e19563198d5dfee9bdf0c35a9420319"
             ]
           },
           "content": "First, you should add all the info from the `courses.csv` file since you need the `major_id` for inserting the student info. `cat` is a terminal command for printing the contents of a file. Here's an example: `cat <filename>`. Below the comment you added, use it to print `courses.csv`.",
@@ -1327,7 +1327,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2a1379d06fe71ae486a36cda4c9f4e209ba01f3c"
+              "4c95f457579b70698714814b2ac1fdf8b709511b"
             ]
           },
           "content": "Run your script to see if the file contents get printed.",
@@ -1352,7 +1352,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "cd8ca5f90baecc5ba17efdfeb6b20ca20bf511d6"
+              "af8bc9e527b0b7cdfb796dc1cb798875eabc24b2"
             ]
           },
           "content": "It worked. Instead of printing the content, you can pipe that output into a while loop so you can go through the rows one at a time. It looks like this:\n\n```sh\ncat courses.csv | while read MAJOR COURSE\ndo\n  <STATEMENTS>\ndone\n```\n\nEach new line will be read into the variables, `MAJOR` and `COURSE`. Add the above to your `cat` command. In the `STATEMENTS` area, use `echo` to print the `MAJOR` variable.",
@@ -1376,7 +1376,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d93bfc083b8966040616df9f0292a61fe8f03394"
+              "f2a7928ac66f153f604c255d9e5fd527a8e2d506"
             ]
           },
           "content": "Run the script to see if it worked.",
@@ -1401,7 +1401,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "cef992c11cd9df5baed80fcc8ab66357953f2401"
+              "40aaa9881bfc7845ed7f6b70d1e3189d5026f083"
             ]
           },
           "content": "It's looping, but the `MAJOR` variable is only being set to the first word. There's a default `IFS` variable in bash. IFS stands for \"Internal Field Separator\". View it with `declare -p IFS`.",
@@ -1424,7 +1424,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "a317f2ef15e6ae33fd56fae2b37109549268d447"
+              "ba8d0a9541a32bb5efa8329599a69cd20f38ce7a"
             ]
           },
           "content": "This variable is used to determine word boundaries. It defaults to spaces, tabs, and new lines. This is why the `MAJOR` variable was set to only the first word on each line from the data. Between the `while` and `read` commands, set the `IFS` to a comma like this: `IFS=\",\"`",
@@ -1447,7 +1447,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "10aaf9c4f82527df3e67c4f9e4be099663927a48"
+              "8b11c3bec11af379fb55a8496a955df9cf3afb00"
             ]
           },
           "content": "Now, it should use the comma in the data to separate words instead of spaces. Run the script again to see if it's working.",
@@ -1472,7 +1472,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "7b1baef5231ef7721065cf653739096669339611"
+              "05a675385b9337a1dcb32b129deea07a7287880f"
             ]
           },
           "content": "Looks like that worked. It prints the whole major, including the space. Print the `COURSE` variable on the same line as where you print `MAJOR` to make sure it's all working.",
@@ -1496,7 +1496,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d34a88e99ecad19c432319fd7a1fd4837796b00a"
+              "8e8e360c6fdf69db413115f76fab8276e3e34d93"
             ]
           },
           "content": "Run the script again to check.",
@@ -1521,7 +1521,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "ef38388fea85a13f2d6df8a952468f85558a2fac"
+              "8285801810644cdf5a5da560997bb9b314def7aa"
             ]
           },
           "content": "Okay, your loop is working. You can use the `MAJOR` and `COURSE` variables to access the major or course when you need to insert data or query the database. Delete the echo line so you can figure out what to do next.",
@@ -1544,7 +1544,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "a58cc8dd59a6527c887f7036b24eab3ce0a49d3c"
+              "8f255166beda48fa76c8010a03394baf4e00604c"
             ]
           },
           "content": "It helps to plan out what you want to happen. For each loop, you will want to add the major to the database if it isn't in there yet. Same for the course. Then add a row to the `majors_courses` table. Add these single line comments in your loop in this order: `get major_id`, `if not found`, `insert major`, `get new major_id`, `get course_id`, `if not found`, `insert course`, `get new course_id`, `insert into majors_courses`.",
@@ -1569,7 +1569,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "9298dcbaf97827cfef86c0a9a39dd62cd4b82547"
+              "b53cfc3ea7ddaefe6ebc6cddb647ec49cb184763"
             ]
           },
           "content": "You used the `psql` command to log in and interact with the database. You can use it to just run a single command and exit. Above your loop, add a `PSQL` variable that looks like this: `PSQL=\"psql -X --username=freecodecamp --dbname=students --no-align --tuples-only -c\"`. This will allow you to query your database from your script. The important parts are the `username`, `dbname`, and the `-c` flag that is for running a single command and exiting. The rest of the flags are for formatting.",
@@ -1593,7 +1593,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "ba27d9f766c123ea2eb1c383e5cc20062a11c53e"
+              "e5ab4517503e35078fddc5c678cc647697c16974"
             ]
           },
           "content": "Now, you can query your database using the `PSQL` variable like this: `$($PSQL \"<query_here>\")`. The code in the parenthesis will run in a subshell, which is a separate bash process. Below the `get major_id` comment in your loop, create a `MAJOR_ID` variable. Set it equal to the result of a query that gets the `major_id` of the current `MAJOR` in the loop. Make sure to put your `MAJOR` variable in single quotes.",
@@ -1621,7 +1621,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "f808da1d573cd69c2e9aa3f32bd22118c7fc299e"
+              "d1e6d051906dd3d2f85809662ec17363688fb68a"
             ]
           },
           "content": "Below the variable you just created, use `echo` to print it so you can see it's value when you run the script.",
@@ -1644,7 +1644,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c5b5e64b59891359b41ce897ef3682252ff385f3"
+              "34af44c493fab759fcb875dae84a086cedf84163"
             ]
           },
           "content": "Run the script to see what happens.",
@@ -1669,7 +1669,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "f4978bcd88cee52d093eb426f4b80241ef63154d"
+              "d80c7c6583afe8e819830daeb941e8c413586aea"
             ]
           },
           "content": "So it went through each major from the CSV file and tried to find `major_id` for each one from the database. Looks like it only found the one you manually inserted earlier. The rest were empty. Below your first `if not found` comment, add an `if` condition that checks if the `MAJOR_ID` variable is empty. You can do that with this test: `[[ -z $MAJOR_ID ]]`. Place the next two comments in the statements area of the `if`.",
@@ -1694,7 +1694,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "0445a2b01c2ece375689948555655d7f368a9e85"
+              "c6234ee5cab83a6ce60078f4ac01993184f61b57"
             ]
           },
           "content": "The loop will go into this `if` whenever a major isn't found. Here, you will want to insert the major and then get the new id. You will need the ID for inserting data into the `majors_courses` table later. Below your `insert major` comment, create an `INSERT_MAJOR_RESULT` variable. Set it's value to a query that inserts the current major into the database. Don't forget to use single quotes around the value.",
@@ -1722,7 +1722,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "3b962adb4a264053a0ba5cca5627138d2ba31923"
+              "7d1471bfd4d5b37ad31bbda5d915b0f7f4976ea5"
             ]
           },
           "content": "Below the variable you just created, use `echo` to print it.",
@@ -1745,7 +1745,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "319d5446d07ee767c6a28fd7a9b197c8f0a8c3da"
+              "a495806fad08e73fcdd782a2edd4bdfa1b03b7d6"
             ]
           },
           "content": "Instead of running through all the data in the CSV file, you should make some test data. In the terminal, use the copy (`cp`) command to copy the `courses.csv` into a new file named `courses_test.csv`.",
@@ -1770,7 +1770,7 @@
               "./courses_test.csv"
             ],
             "commits": [
-              "c960bba02f456ef8d26b26b49b8aa1b8f957cf1e"
+              "7d1f797aca01a5b182e8f4c41810b42f0287fc1f"
             ]
           },
           "content": "In your new file, remove all the data except for the first five lines. Make sure there's a single empty line at the bottom.",
@@ -1796,7 +1796,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "dd7a172385741cc02b5246cd41204a450fa670f1"
+              "df140e22ba03e4edaf9d5eb93fb75ff69607d4ba"
             ]
           },
           "content": "Back in the `insert_data.sh` script, change your `cat` command to loop through the test file instead of the full one.",
@@ -1820,7 +1820,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d20392446673b24d30b0d9bc9d2c7031926b5b4f"
+              "56b920a11b3d8438615ca247ec9702bfe298d453"
             ]
           },
           "content": "Run the script. It will go through the test data and insert a major into the database each time it doesn't find one already there and print the `MAJOR_ID` and `INSERT_MAJOR_RESULT` variables.",
@@ -1845,7 +1845,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "333dbe0a1628c0c4fe632d0da3307eaa9955d152"
+              "3a95589d2579e7ac5ecb6df6a35ff2a5b19e22a8"
             ]
           },
           "content": "Looks like it found an ID that was already in the database twice and inserted three new items into the database. You don't need to print the ID anymore so delete the `echo $MAJOR_ID` line.",
@@ -1868,7 +1868,7 @@
               "../pg.log"
             ],
             "commits": [
-              "69018778b17cd1e1ebcfedcd9b762d6a865139b5"
+              "8ec787423ee044e2c47f98191dfdb24ad09b4d7b"
             ]
           },
           "content": "In the psql prompt, use `SELECT` to view all the data from the `majors` table to see what the script added.",
@@ -1893,7 +1893,7 @@
               "../pg.log"
             ],
             "commits": [
-              "28e62e07cdae611e05344b9c2bd451ed51bfe67a"
+              "36f4dc4cb78b2880dff722c1c49e734ad27f35c9"
             ]
           },
           "content": "I forgot you inserted `Database Administration` earlier. The script ran and inserted `major` from the top line of the file. Then it added the other two that weren't already in there. You can use `TRUNCATE` to delete all data from a table. In the psql prompt, try to delete all the data in the majors table by entering `TRUNCATE majors;`",
@@ -1917,7 +1917,7 @@
               "../pg.log"
             ],
             "commits": [
-              "73abe5256c6403db1b3d1428304ff9f38fba2231"
+              "73a892008657004de7503cec69aab4d04f6c5115"
             ]
           },
           "content": "It says you \"cannot truncate a table referenced in a foreign key constraint.\" The `students` and `majors_courses` tables use the `major_id` from `majors` as a foreign key. So if you want to delete the data from `majors`, you need to delete the data from those two tables at the same time. Use `TRUNCATE` to delete the data from those three tables. Separate the tables with commas.",
@@ -1942,7 +1942,7 @@
               "../pg.log"
             ],
             "commits": [
-              "470762c9e9da86562b23410dba3d110ad8ab5a33"
+              "970e9c888155057bbe83b9896c247cf2aba1464d"
             ]
           },
           "content": "View all the data in the `majors` table to make sure it's empty.",
@@ -1967,7 +1967,7 @@
               "../pg.log"
             ],
             "commits": [
-              "95c32943805f2af779035fa24720498536047587"
+              "7c3f930519ef92d2418b775de416518b434c1c99"
             ]
           },
           "content": "Looks like it worked. View all the data in the `majors_courses` table to see if that one is empty.",
@@ -1992,7 +1992,7 @@
               "../pg.log"
             ],
             "commits": [
-              "5907a98df652624350d0f7fdcf6646cef64aa3ee"
+              "686de021756e659f65a1ffd871e1321caef5fa3d"
             ]
           },
           "content": "It is, check the `students` table.",
@@ -2017,7 +2017,7 @@
               "../pg.log"
             ],
             "commits": [
-              "d32ae86f3f1cb027f9fdab1afcf5ce59db2bdb3c"
+              "bae22a386028004b653a22e52487d0a86efa98c0"
             ]
           },
           "content": "Last, check the `courses` table.",
@@ -2042,7 +2042,7 @@
               "../pg.log"
             ],
             "commits": [
-              "bf7f9f218e4f3424e7d018b373a110b87937952e"
+              "a03f02d5d89cdb6ab4ff86a1624a76876c8685ec"
             ]
           },
           "content": "There should still be one entry in there. Use `TRUNCATE` to delete all the data from the `courses` table. You will need to truncate any tables that use a column from it as a foreign key at the same time.",
@@ -2067,7 +2067,7 @@
               "../pg.log"
             ],
             "commits": [
-              "6f070879c5406fae13931b94b210ee250abbca7d"
+              "b6f5f1841622f19f6415228fd24cf440a9633e64"
             ]
           },
           "content": "View all the data in the `courses` table again.",
@@ -2092,7 +2092,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "9c9606782c4ad2cff02b205fa90aac19b7c99f23"
+              "4f59840db97dc202fdc9345de3014790567f680b"
             ]
           },
           "content": "Now the database is completely empty. Run the script again to see what gets inserted when the database is empty.",
@@ -2117,7 +2117,7 @@
               "../pg.log"
             ],
             "commits": [
-              "a0b00772aeb220ccef729179cd8001af54c80bab"
+              "b6389c4d040e671f26e848c81f8a7363250376b8"
             ]
           },
           "content": "It inserted four that time. In the psql prompt, view all the data in the `majors` table.",
@@ -2142,7 +2142,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "cccf58103208b5e03a54bee5b9cff8cc795be980"
+              "3dcef746c3c228ab24fd78142f180dce3f4279c1"
             ]
           },
           "content": "You won't want to add the first line from the CSV file to the database since those are just titles. In your script, add an `if` condition at the top of your loop that checks if `$MAJOR != major`. Put all the existing code and comments in your loop in it's statements area so it only does any of it if it's not the first line.",
@@ -2166,7 +2166,7 @@
               "../pg.log"
             ],
             "commits": [
-              "64b6f23f285a6b0faaa9de06fb5bc490dab46bf6"
+              "1795e2bf2ee92d48b301f8e175049d6dc55a579e"
             ]
           },
           "content": "In the psql prompt, use `TRUNCATE` to delete all the data in the `majors` table.",
@@ -2193,7 +2193,7 @@
               "../pg.log"
             ],
             "commits": [
-              "87d41926dd38e7939726189c1a85ac68073356f5"
+              "da9f03ea0d878729c2dd937f8c22bb5dd9f694eb"
             ]
           },
           "content": "View all the data in `majors` table to make sure it's empty.",
@@ -2218,7 +2218,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "7d89a18b71c719526e2192e9dfe9f04282384b0e"
+              "8bcfad8fbcfababdfc9de7f1d41659663197c413"
             ]
           },
           "content": "Run the script to make sure it's not adding the first line anymore.",
@@ -2243,7 +2243,7 @@
               "../pg.log"
             ],
             "commits": [
-              "229d83093f7f5285a53d4f9cd97fa2f276cab3f4"
+              "5f44f697391dd9cf6e8831d19aef7e1384fdc0e6"
             ]
           },
           "content": "It only showed three inserts, that's a good sign. View all the data in `majors` table to make sure it's three you want.",
@@ -2268,7 +2268,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "ef5d4e49b74b2bf6989f087d3aeedfbdf2a04252"
+              "e51f57b4985ff5a84833d14b17717c4fa16c1540"
             ]
           },
           "content": "There's three unique majors in your test data. Those were the three added to the database, so it looks like it's working. Delete the line where you print `INSERT_MAJOR_RESULT`.",
@@ -2291,7 +2291,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "23823c49bae500dc1f23b2661858a64d29519f47"
+              "20f19c317f557d7c21ac5949c85a960fe47d43e0"
             ]
           },
           "content": "You want a nicer message when something get's inserted so it's more informative. Below your `INSERT_MAJOR_RESULT` variable, add an `if` statement that checks if the variable is equal to `INSERT 0 1`, which was what it was printing. Use `echo` to print `Inserted into majors, $MAJOR` in the statements area of the `if`.",
@@ -2317,7 +2317,7 @@
               "../pg.log"
             ],
             "commits": [
-              "ffb384344fc16f42576855e2cd181225904bb586"
+              "35f2224ef14a08af316501b780d105b2321ecb95"
             ]
           },
           "content": "In the psql prompt, truncate the `majors` table again so you can run the script and see the output.",
@@ -2344,7 +2344,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "5dc4c62090a35f967f4356ec74f491c52764fdf1"
+              "200d352163da78594ddabf333299cf5a4f389a9d"
             ]
           },
           "content": "Check to make sure the table is empty. Then, run the script.",
@@ -2369,7 +2369,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "17632d0f79826493e43bc30b94ae484fc53581a8"
+              "6311b1d2f28b348c5c9496ae2d424affd98e453b"
             ]
           },
           "content": "It's starting to come together. Below your `get new major_id` comment, set the `MAJOR_ID` variable to a query that gets the new `major_id` from the database.",
@@ -2398,7 +2398,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "5e37562265049c52c3c6d298c6e17c5ce5f07d29"
+              "d7663c59d21eca906210b839379d7d7eb8ae0c17"
             ]
           },
           "content": "So the script will insert the majors correctly. Next are the courses. It will be the same steps as for the majors. Below your `get course_id` comment, add a `COURSE_ID` variable that gets the `course_id` from the database. Remember that your `COURSE` variable will have the current course in the loop.",
@@ -2426,7 +2426,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "5af3d4a6a0d8559f3cc190cc8d53f44aff8d57fb"
+              "101616bb6d62605f859e12dab14b61f87d55f6af"
             ]
           },
           "content": "It's the same as the majors, so below the second `if not found` comment, add an `if` statement that checks if the query was empty so you can insert the course if needed. Place the existing `insert course` and `get new course_id` comments in the statements area of the `if`.",
@@ -2451,7 +2451,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "ea0a8a396197f2024284cb61b22cf76fff5b9e58"
+              "a3dfef7178a4b24d70f72ab5c916aea41a56ac3a"
             ]
           },
           "content": "Below the `insert course` comment, create an `INSERT_COURSE_RESULT` variable that inserts the course into the database.",
@@ -2480,7 +2480,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "8f4ee1dc1b1f4125834d583ae4a17b3d67d8cc38"
+              "6e1d3ed1c08b985e485f77efc303f44c4a8bdca5"
             ]
           },
           "content": "The variable should be `INSERT 0 1` again if something gets inserted. Below the variable you just created, add an `if` condition that checks if it is and print `Inserted into courses, $COURSE` using `echo` in it's statements area.",
@@ -2505,7 +2505,7 @@
               "../pg.log"
             ],
             "commits": [
-              "6159fb4473079f38c59513023ca11138606e9bcc"
+              "87dc1abe445fd5db18515dcabf1766638a7672c6"
             ]
           },
           "content": "In the psql prompt, truncate the data from the `majors` table so you can run the script again.",
@@ -2532,7 +2532,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "1ad872762dbe45a135daf56f32d71bf4a55ecd07"
+              "e7eaac04309d55e4a8b7742158b7f720d660a2df"
             ]
           },
           "content": "Run the script to see if the courses get inserted into the database.",
@@ -2557,7 +2557,7 @@
               "../pg.log"
             ],
             "commits": [
-              "53c2aab6cd52c9dc164f5cb4265d086b94157d6c"
+              "4e35b497bc79f22928ab399c8225d3bba637d3a9"
             ]
           },
           "content": "It looks like it worked. The test data has three unique courses, and three got added to the database. View the data in the `courses` table to make sure they are correct.",
@@ -2582,7 +2582,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "8c217233d7c19502bd1096b2752460a624d75f02"
+              "1da7662cbff8fee86d3e3f4291da150f47aedbf8"
             ]
           },
           "content": "Excellent. Instead of manually deleting the data each time you want to run the script, add the command to do it for you. Near the top of the file below your `PSQL` variable, use `echo` to query the database. In the query, truncate your four tables in this order: `students`, `majors`, `courses`, `majors_courses`.",
@@ -2607,7 +2607,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "0e08abfdf6b879b91bece4283accfca9dc3d6449"
+              "97a0f58473c0a5fc5fa0aff07fd3de2172920d25"
             ]
           },
           "content": "Run the script to see if it works.",
@@ -2632,7 +2632,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "b400fb635d769c4b44cee3e7e1044d864226dd4d"
+              "29f5b1e63b8ece9b9f5b7b0366a550be6ed19cde"
             ]
           },
           "content": "Awesome. That makes it easier. Below your `get new course_id` comment, set the `COURSE_ID` to the newly inserted `course_id`.",
@@ -2661,7 +2661,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "d7db56ebc4c0c84ae96776634cda79591b0e79bd"
+              "e854b83b384660370ee8a347d1bfd8a4f4664576"
             ]
           },
           "content": "One more thing to add for this file. Below the `insert into majors_courses` courses comment, create a `INSERT_MAJORS_COURSES_RESULT` variable. Use it and the `MAJOR_ID` and `COURSE_ID` variables you created to insert a row into the `majors_courses` table. Make sure the query has the `major_id` column first. Also, you won't need any quotes around the values for the ID's.",
@@ -2690,7 +2690,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "bc14ea79edbc8d943392923b3a0e9f03d2dd2ab8"
+              "8ee0b7c6543a794b22e77043462373b135d7d0e2"
             ]
           },
           "content": "Below the variable you just created, add an if condition that checks if it's equal to `INSERT 0 1` like the others. In it's statements area, use `echo` to print `Inserted into majors_courses, $MAJOR : $COURSE`.",
@@ -2715,7 +2715,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c47b625bcafbfde2fca309fcb8855e55cb2c51c2"
+              "8e9838ba8aeb5cb4fd5506176bf8a6d1f81ccd52"
             ]
           },
           "content": "Run the script. Your tables should get truncated and then it should go through the loop and add all the data from the `courses_test.csv` into the three tables of the database.",
@@ -2740,7 +2740,7 @@
               "../pg.log"
             ],
             "commits": [
-              "dea6428b26ac0998322bf2c82be46fac01bce908"
+              "632545ceb8c6976ffe2cf383403becca95c86f77"
             ]
           },
           "content": "Looks like it works. You better look around to make sure. View the data in the `majors` table.",
@@ -2766,7 +2766,7 @@
               "../pg.log"
             ],
             "commits": [
-              "6496128baf50fa20dc05ea27a4605d9dbde68b4c"
+              "cc7fa74b0d9578fab1d65c89148906b8d69f4108"
             ]
           },
           "content": "Cool, check the `courses` table.",
@@ -2792,7 +2792,7 @@
               "../pg.log"
             ],
             "commits": [
-              "31f96f62bdc02e7579b63bfc4546dd50f33d484e"
+              "5b0d9498000a2364870be696a5ec30bd7311a8bc"
             ]
           },
           "content": "Lastly, view the data in the `majors_courses` table. There should be four rows.",
@@ -2818,7 +2818,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "f6cc39b7607bcfb0b3725a2d69082f3bcaeb3ec5"
+              "75c3f6495caf38f6346e835c652ab63659aa7a23"
             ]
           },
           "content": "Alright, that part of the script is done. Next, you need to add everything from the `students.csv` file. Make some test data again. In the terminal, use the copy command to copy `students.csv` into a file named `students_test.csv`.",
@@ -2843,7 +2843,7 @@
               "./students_test.csv"
             ],
             "commits": [
-              "c306bafc4eef7b7090e51e81fa55b1dca9ef0272"
+              "01965b8f31f6ea3c0f12f35f029ad8751cc0c492"
             ]
           },
           "content": "In the `students_test.csv` file, remove everything but the first five lines like you did for the other test file. Make sure there's an empty line at the bottom again.",
@@ -2869,7 +2869,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "3007b1fdffb14effaa56ae0d16b2cd00659fc99e"
+              "60ce4f00eeff8ebc341088e3880c9ceb9438b59f"
             ]
           },
           "content": "You want to loop through all this info like you did for the other CSV file. The process is the same. Below your existing loop, use `cat` to print your new test file. Pipe the results into a `while` loop, setting the `IFS` to a comma again, and then use `read` to create `FIRST`, `LAST`, `MAJOR` and `GPA` variables from the data. In the loop, use `echo` to print the `FIRST` variable.",
@@ -2894,7 +2894,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d73e877d9b92c1718f63cae3b33eff1bc8e2c042"
+              "2caf29ae1cab9b83947932b39cc60a3069db4afc"
             ]
           },
           "content": "Run the script to see if it prints the `FIRST` (`first_name`) variable correctly. It will take a second since it has to go through the first loop.",
@@ -2919,7 +2919,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "7279169f4ce845fa3a8f7404b734ef528c609513"
+              "5abae5d4c8c7ebce080ae16150ab7f30a512d5c7"
             ]
           },
           "content": "It works :sweat_smile: It printed the first item in each row of the CSV file. It's printing the first line again, you will have to take care of that. First, delete the `echo` line.",
@@ -2942,7 +2942,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "b706d1f6d830ade6f32edd62758f5cfb0995bb1e"
+              "0cf2da3315ac501be2c0c4f5259570def31d3631"
             ]
           },
           "content": "Add an if condition to the loop that checks if the `FIRST` variable is not equal to `first_name` so it doesn't do anything for the first line of the file. Don't put anything in the statements area for now.",
@@ -2967,7 +2967,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "26e0a06e31a441197aeac8fbe29c502c0721903a"
+              "d5ae813eb64c248b8b1eeb061b925a3021e8b213"
             ]
           },
           "content": "All the columns in the CSV file can be inserted directly into the database except for the major. You will need to get the `major_id` again for that. There's some `null` values in there as well, so you will need to use `null` if the `major_id` isn't found. Add four single line comments in your loop; `get major_id`, `if not found`, `set to null`, and `insert student` in that order.",
@@ -2992,7 +2992,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "638b9fa624bd86d071fd71d054d639ac2d1f945a"
+              "07fc4fa011cefde39342742897a84300e41d071f"
             ]
           },
           "content": "Below the new `get major_id` comment, set the `MAJOR_ID` variable to a query that gets the `major_id` for the current students major.",
@@ -3020,7 +3020,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "e34ed81d372c3042ed3febe66e64d258e95f97d5"
+              "6f106a93dd3d9c621cc585e8ffdcab489e1e0173"
             ]
           },
           "content": "Below that, use `echo` to print the variable so you can see if it's working.",
@@ -3043,7 +3043,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "5a20c0fd53215b09601cb3af337691470efaae50"
+              "bb052c4bd07b367de90f2336f2cfac4c74c54a26"
             ]
           },
           "content": "Run the script to see what happens.",
@@ -3068,7 +3068,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "5a269aa4f8edc57738a834543bf0f13c5ea2952f"
+              "35c76beede334cbbdd729228360e03de959c8c6a"
             ]
           },
           "content": "Looking at the test data, it found the ID for all of it except the `null` value. Below the newest `if not found` comment, add an `if` that checks if the variable is empty. Put the `set to null` comment in its statements area.",
@@ -3094,7 +3094,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "c5c2fadb107da55e5796fdc200de1b5d81e073b4"
+              "ac3ab38853c53d88382ea95ca75b03b8ff6c51cd"
             ]
           },
           "content": "When you go to insert the student data, you want to use the `MAJOR_ID` if it's found, or `null` if not. Below the `set to null` comment, set the `MAJOR_ID` variable to `null` so you can use it to insert the data.",
@@ -3117,7 +3117,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "c5251a4a17b4dcd9f86e083e43acbdfbe25d2291"
+              "ff322bd000d0fd9f567664cbda5c3eb4943b3e21"
             ]
           },
           "content": "Move the `echo $MAJOR_ID` line to below the `if` statement so you can run the script and see the value of the variable if the `major_id` is or isn't found.",
@@ -3140,7 +3140,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "c9ec15d8cecb5bf1a8346b2136f322dd29a99b55"
+              "d734d17518469c3300bba9eb2cbea5e2f674e271"
             ]
           },
           "content": "Run the script.",
@@ -3165,7 +3165,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "bb46f0078f632e46e4f14d90ce30ca069dcb62eb"
+              "9e2fb0bf8d1a933622ed9e775848a7bc8e95cc1f"
             ]
           },
           "content": "Okay, that should work for inserting the student. Delete the `echo $MAJOR_ID` line.",
@@ -3188,7 +3188,7 @@
               "../pg.log"
             ],
             "commits": [
-              "d680679c28f9d69e09ad3c24fd1975d374dffd31"
+              "5f69960dcc591702a9280b83ae8d6702f95a1a72"
             ]
           },
           "content": "One last thing to add. In the psql prompt, view the details of the `students` table so you can see what columns to add.",
@@ -3216,7 +3216,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "2a4992d1b139f581bf5811cf0571b33cb20031ae"
+              "da6cbf6b04d529fd3d8da5617d76285c3c084662"
             ]
           },
           "content": "You will need to set the four columns when adding the student info. All of them except `student_id`. Below the `insert student` comment, create an `INSERT_STUDENT_RESULT` variable that adds the student to the database. Add the columns in the order they appear in the data, and make sure to only put the two `VARCHAR` columns in single quotes.",
@@ -3244,7 +3244,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "7ffe0b14bb84e0c7582182c19508f14dc4bcddd1"
+              "42620a1cbd901b89f0990b972880e7ec70a93369"
             ]
           },
           "content": "Below the variable you just created, add an `if` statement that checks if it's equal to `INSERT 0 1` like the others. If it is, use `echo` to print `Inserted into students, <first_name> <last_name>`.",
@@ -3270,7 +3270,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "bf9fb94f1997cdad05c87ba2606d235a11df036c"
+              "fc9ab73ab293508ace1e1202dc8085ae2c71b522"
             ]
           },
           "content": "Run the script to see if the students are getting added.",
@@ -3295,7 +3295,7 @@
               "../pg.log"
             ],
             "commits": [
-              "f8dc1827774aed9cb4823f9a5e2015218fd182ed"
+              "56c3808caa9305914ff7cdf9e84c1c21f31ab172"
             ]
           },
           "content": "I think it's working. View all the data in the `students` table to make sure it matches the CSV file.",
@@ -3320,7 +3320,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "248590aa3ff81a7ac86151186f20817c5cd2c103"
+              "e5be920db81983230a6c26acdb2d9fd683b25745"
             ]
           },
           "content": "Excellent. It added all the students from the test data. Time to try it with the original files. Change the `cat courses_test.csv` line to use the original file again.",
@@ -3344,7 +3344,7 @@
               "./insert_data.sh"
             ],
             "commits": [
-              "0eaf3384c623b9635044c44f2d27dbb9a62d7fb2"
+              "b74061ba2cc1c8ab2f1b92dc62f2148ab5fd7070"
             ]
           },
           "content": "Next, change the `cat students_test.csv` line to use the original file as well.",
@@ -3368,7 +3368,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "2e4f944b9b89bc17e74f9002229ba5c8569988d9"
+              "b246ad93c8b093a1ede9aeea4c1f28cb33b4348f"
             ]
           },
           "content": "Time for the moment of truth. Run the script and see if it works.",
@@ -3393,7 +3393,7 @@
               "../pg.log"
             ],
             "commits": [
-              "edc4899911b2c867560d6b1182e2b1a6f0d2e219"
+              "fbde1dec5f7ae58f2701a28e58a52fc6bf556ae7"
             ]
           },
           "content": "That was cool. View all the data in the `students` table to see what you ended up with.",
@@ -3418,7 +3418,7 @@
               "../pg.log"
             ],
             "commits": [
-              "2c56384c6503e1b368e9872e04c2774f253ff692"
+              "7ab4a744c1cd5aad9c10fd2301eacbdba5b5d820"
             ]
           },
           "content": "31 rows. That's how many are in the CSV file. Perfect. Next, check the `majors` table.",
@@ -3443,7 +3443,7 @@
               "../pg.log"
             ],
             "commits": [
-              "5390ea15c0072dd2d035dff625341b3909011e6b"
+              "e3188554a353bf530c1e5e71feb674fc5f02389a"
             ]
           },
           "content": "7 rows. There must be 7 unique majors in the CSV file. View what's in the `courses` table.",
@@ -3468,7 +3468,7 @@
               "../pg.log"
             ],
             "commits": [
-              "9077a548438e1da4e8b3e64fa55a0ee2ad23d990"
+              "152fa4236710499943d5f5705e2ab9ff2ea37e3a"
             ]
           },
           "content": "Looks like there's 17 unique courses in the CSV file. Last, view the data in `majors_courses`. This should have the same number of rows at the CSV file.",
@@ -3493,7 +3493,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "ff12cb0d3779cd4405fe28564b11174ad33c96d3"
+              "7cfab44313b083b984a2b950d3222bf639d54ad8"
             ]
           },
           "content": "28 rows, same as the CSV file. I think all the data got added correctly. You don't need your test files anymore. In the terminal, use the list command to check what files are in your project folder.",
@@ -3518,7 +3518,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "d3a4b57d63de96267f8c4306de3e1112ab606ffc"
+              "f5a8b03875f531cc909cf19072fa484bf1364217"
             ]
           },
           "content": "Use the remove command (`rm`) to delete the `students_test.csv` file.",
@@ -3542,7 +3542,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "0a3ca9b423d32b67f8f188d51a64a597c8c53ca0"
+              "d7a3d94ed7b3127606af7be26db41e51923f27d8"
             ]
           },
           "content": "Use the same command to delete the `courses_test.csv` file.",
@@ -3566,7 +3566,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "5390328206e0b74b769a14ce07bdf50c34c76fde"
+              "f4b42f72c4017bddf0f3d380895430f5e7f09626"
             ]
           },
           "content": "List the contents of the folder again to make sure they're gone.",
@@ -3592,7 +3592,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "7b1c6a6319a69391387a0aff5df4a36842390415"
+              "97f81cf86876eda55fa1521e1321d1bb200efa05"
             ]
           },
           "content": "The database is finished for now. The last thing you are going to do is make a \"dump\" of it. The `pg_dump` command can do that for you. Use the `--help` flag with the command to see what it can do.",
@@ -3618,7 +3618,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "85e5235847babf630bb88d9679b051fd422cd7f8"
+              "f03f2586a7c37e185c74ca54c14360d3dd719c3f"
             ]
           },
           "content": "This is the last step. There's quite a few options there. Enter `pg_dump --clean --create --inserts --username=freecodecamp students > students.sql` in the terminal to dump the database into a `students.sql` file. It will save all the commands needed to rebuild it. Take a quick look at the file when you are done.",
