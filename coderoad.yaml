@@ -1,5 +1,5 @@
 id: 'freeCodeCamp/learn-sql-by-building-a-student-database-part-1:v1.0.0'
-version: '2.0.3'
+version: '3.0.0'
 config:
   setup:
     commands:
@@ -12,7 +12,7 @@ config:
     directory: .freeCodeCamp
   repo:
     uri: https://github.com/freeCodeCamp/learn-sql-by-building-a-student-database-part-1
-    branch: v2.0.3
+    branch: v3.0.0
   continue:
     commands:
       - './.freeCodeCamp/reset.sh'
