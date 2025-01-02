@@ -1269,7 +1269,7 @@ So the script will insert the majors correctly. Next are the courses. It will be
 - Here's an example of how to query the database: `COURSE_ID=$($PSQL "<query_here>")`
 - For the query, you want to use the `SELECT`, `FROM`, and `WHERE` keywords
 - Here's an example of how the query part looks: `SELECT <column_name> FROM <table_name> WHERE <condition>`
-- The condition you want is `course_id='$COURSE'`
+- The condition you want is `course='$COURSE'`
 - Here's how the query should look: `SELECT course_id FROM courses WHERE course='$COURSE'`
 - Here's how the whole line should look: `COURSE_ID=$($PSQL "SELECT course_id FROM courses WHERE course='$COURSE'")`
 
