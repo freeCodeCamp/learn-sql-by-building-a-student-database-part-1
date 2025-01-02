@@ -42,7 +42,8 @@
     "CHANGELOG.md": true,
     "coderoad.yaml": true,
     "tutorial.json": true,
-    "TUTORIAL.md": true
+    "TUTORIAL.md": true,
+    "README.md": true
   },
   "html.autoClosingTags": false,
   "npm.fetchOnlinePackageInfo": false,
