@@ -8,7 +8,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  "editor.hover.enabled": false,
+  "editor.hover.enabled": "off",
   "editor.inlineSuggest.enabled": false,
   "editor.minimap.enabled": false,
   "editor.parameterHints.enabled": false,
