@@ -124,7 +124,7 @@ The final table will be a junction table for the majors and courses. Create it w
 
 ### 110.1
 
-Use the **d**isplay shortcut command to view your tables to make sure your satisfied with them.
+Use the **d**isplay shortcut command to view your tables to make sure you are satisfied with them.
 
 #### HINTS
 
