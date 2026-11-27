@@ -318,7 +318,7 @@
               "caf30db914db9212e6c742f7bc6e8c8cd3200e5d"
             ]
           },
-          "content": "Use the **d**isplay shortcut command to view your tables to make sure your satisfied with them.",
+          "content": "Use the **d**isplay shortcut command to view your tables to make sure you are satisfied with them.",
           "hints": [
             "It's the `\\d` shortcut command",
             "Type `\\d` in the psql prompt"
